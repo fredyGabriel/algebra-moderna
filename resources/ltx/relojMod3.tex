@@ -1,0 +1,16 @@
+\documentclass[tikz]{standalone}
+\usepackage[spanish, mexico-com]{babel}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+
+\begin{document}
+	\begin{tikzpicture}[scale=1]
+		\draw[thick] (0,0) circle (1);
+		\draw[] (0, 1) circle (1pt) node[above]{$0$};
+		\draw[] (1, 0) circle (1pt) node[right]{$1$};
+		\draw[] (0, -1) circle (1pt) node[below]{$2$};
+		\draw[] (-1, 0) circle (1pt) node[left]{$3$};
+		\draw[-latex, thick] (.2,.85) arc (80:10:.8);
+	\end{tikzpicture}
+\end{document}

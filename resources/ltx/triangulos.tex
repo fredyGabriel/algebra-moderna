@@ -1,0 +1,22 @@
+\documentclass[tikz]{standalone}
+\usepackage[spanish, mexico-com]{babel}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usetikzlibrary{arrows, patterns, calc}
+
+\begin{document}
+\begin{tikzpicture}
+		% Definir las coordenadas de los vértices del triángulo
+		\coordinate (B) at (0,0);
+		\coordinate (C) at (1,0);
+		\coordinate (A) at (60:1);
+		\coordinate (D) at (.5,0);
+		
+		% Aplicar una transformación para girar el triángulo
+		\begin{scope}
+			% Dibujar el triángulo girado
+			\draw[blue] (A) node[yshift=5]{a} -- (B) node[xshift=-5]{b} -- (C) node[xshift=5] {c} -- cycle;
+			\draw[red] (A) -- (D);
+		\end{scope}
+\end{tikzpicture}
+\end{document}

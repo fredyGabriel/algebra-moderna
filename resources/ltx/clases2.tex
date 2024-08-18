@@ -1,0 +1,59 @@
+\documentclass[tikz]{standalone}
+\usepackage[spanish, mexico-com]{babel}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usetikzlibrary{arrows, calc}
+
+\begin{document}
+	\begin{tikzpicture}[scale=1]
+		% Elementos
+		\coordinate (z1) at (0,1);
+		\coordinate (z2) at (-1.75,-.5);
+		\coordinate (z3) at (1.8,1);
+		\coordinate (z4) at (-1.5,.75);
+		\coordinate (z5) at (1.1,0);
+		\coordinate (z6) at (.5,-1.25);
+		
+		% Elipse
+		\draw[thick] (0,0) ellipse (3 and 2);
+		\node at (-2, 2) {$A$};
+		
+		% Puntos
+		\node at (z1) {$z_1$};
+		\node at (z2) {$z_2$};
+		\node at (z3) {$z_3$};
+		\node at (z4) {$z_4$};
+		\node at (z5) {$z_5$};
+		\node at (z6) {$z_6$};
+		
+		% Flechas curvas
+		\node at (z1) [above] {$\curvearrowleft$};
+		\node at (z2) [above] {$\curvearrowleft$};
+		\node at (z3) [above] {$\curvearrowleft$};
+		\node at (z4) [above] {$\curvearrowleft$};
+		\node at (z5) [above] {$\curvearrowleft$};
+		\node at (z6) [above] {$\curvearrowleft$};
+		
+		% Flechas
+		\draw[->] ($(z1)+(.2,.1)$) -- ($(z3)+(-.2,.1)$);
+		\draw[<-] ($(z1)+(.2,-.05)$) -- ($(z3)+(-.2,-.05)$);
+		
+		\draw[->] ($(z1)+(.2,-.2)$) -- ($(z5)+(-.2,.1)$);
+		\draw[<-] ($(z1)+(0,-.2)$) -- ($(z5)+(-.3,0)$);
+		
+		\draw[->] ($(z5)+(0.05,.35)$) -- ($(z3)+(-.1,-.1)$);
+		\draw[<-] ($(z5)+(.2,.25)$) -- ($(z3)+(0.05,-.15)$);
+		
+		\draw[->] ($(z2)+(0,.35)$) -- ($(z4)+(-.1,-.1)$);
+		\draw[<-] ($(z2)+(.15,.3)$) -- ($(z4)+(0.05,-.15)$);
+		
+		% Partición
+		\draw plot [smooth] coordinates {(0, 2) (-.5,0) (2.95, -.3)};
+		\draw plot [smooth] coordinates {(-.5, 0) (-.5,-1) (-.5, -1.96)};
+		
+		% Clases
+		\node at (2.5, 0) {$[z_1]$};
+		\node at (-1, -1) {$[z_2]$};
+		\node at (2, -1) {$[z_6]$};
+	\end{tikzpicture}
+\end{document}

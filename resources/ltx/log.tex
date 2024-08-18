@@ -1,0 +1,15 @@
+\documentclass[tikz]{standalone}
+\usepackage[spanish, mexico-com]{babel}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usetikzlibrary{arrows, patterns, calc}
+
+\begin{document}
+\begin{tikzpicture}
+	\draw[-latex] (-1, 0) -- (5, 0) node[below]{$x$};  % eje x
+	\draw[-latex] (0, -3) -- (0, 3) node[left]{$y$};  % eje y
+
+	\draw[smooth, domain=0.05:4, blue, thick] plot ({\x}, {ln(\x)}) node[xshift=-30]{$\ln x$};
+	\node at (2.5, -1.5) {Rango: $(-\infty, \infty)$};
+\end{tikzpicture}
+\end{document}

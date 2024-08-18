@@ -1,0 +1,112 @@
+\documentclass[a4paper, 12pt]{report}
+
+%%%%%%%%%%%%
+% Packages %
+%%%%%%%%%%%%
+
+\usepackage[spanish, mexico-com]{babel}
+\usepackage{packages/sleek}
+\usepackage{packages/sleek-title}
+\usepackage[spanish]{packages/sleek-theorems}
+
+%%%%%%%%%%%%%%%%
+% Mis paquetes %
+%%%%%%%%%%%%%%%%
+
+\usepackage{tikz}
+\usetikzlibrary{calc, patterns, arrows, arrows.meta}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.8}
+\usepackage{standalone}
+\usepackage{ifthen}
+\usepackage{venndiagram}
+\usepackage{makecell}
+
+\usepackage{pifont}% http://ctan.org/pkg/pifont
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+
+
+%%%%%%%%%%%%%%
+% Title-page %
+%%%%%%%%%%%%%%
+
+\logo{./resources/img/logo-fiuna}
+\institute{Universidad Nacional de Asunción}
+\faculty{Facultad de Ingeniería}
+%\department{Cátedra de Álgebra Moderna}
+\title{Apuntes de Álgebra Moderna\\{\large En proceso de elaboración}}
+\subtitle{Clases de teoría}
+\author{Fredy Gabriel \textsc{Ramírez Villanueva}}
+%\supervisor{Linus \textsc{Torvalds}}
+\context{versión 0.3}
+\date{\today}
+
+%%%%%%%%%%%%%%%%
+% Bibliography %
+%%%%%%%%%%%%%%%%
+
+\addbibresource{resources/bib/references.bib}
+
+%%%%%%%%%%%%%%%%
+% Mis comandos %
+%%%%%%%%%%%%%%%%
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\K}{\mathbb{K}}
+\newcommand{\bdot}{\boldsymbol{\cdot}}
+
+% Definición del entorno custommatrix
+\newenvironment{custommatrix}[1]
+{
+	\left[ \kern -4pt
+	\begin{array}{#1}
+	}
+	{
+	\end{array} \kern -4pt
+	\right]
+}
+
+% Para mostrar QR en bibliografía
+\DeclareFieldFormat[misc]{qrcode}{
+	\begin{tabular}{c}
+		\includegraphics[width=1cm, color=green]{#1}
+	\end{tabular}
+}
+
+% Para generar QR de la bibliografía
+\newcommand{\myqrcode}[1]{
+	\begin{tabular}{c}
+		\includegraphics[width=1cm]{#1}
+	\end{tabular}
+}
+
+%%%%%%%%%%%%
+% Document %
+%%%%%%%%%%%%
+
+\begin{document}
+    \maketitle
+%    \romantableofcontents
+    \phantomsection
+    \tableofcontents
+
+	% Capí\tableofcontentstulos
+	\include{chapters/setsNfunctions}
+	\include{chapters/logic}
+	\include{chapters/algbrStructs}
+    
+
+    \newpage
+
+    \nocite{*}
+    \printbibliography
+
+    \newpage
+
+    \appendix
+\end{document}

@@ -1,0 +1,46 @@
+\documentclass[tikz]{standalone}
+\usepackage[spanish, mexico-com]{babel}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usetikzlibrary{arrows, calc}
+
+\begin{document}
+	\begin{tikzpicture}[scale=1]
+		% Coordenadas de puntos
+		\coordinate (a) at (0,1.5);
+		\coordinate (b) at (0,.5);
+		\coordinate (c) at (0,-.5);
+		\coordinate (d) at (0,-1.5);
+		
+		\coordinate (B1) at (6,1.5);
+		\coordinate (B2) at (6,.5);
+		\coordinate (B3) at (6,-.5);
+		\coordinate (B4) at (6,-1.5);
+		
+		% Circunferencias
+		\node at (-1.5, 2) {$G$};
+		\node at (7.5, 2) {$G'$};
+		\draw[very thick] (0,0) circle (2);
+		\draw[very thick] (6,0) circle (2);
+		\draw[fill=black!20] (0, -1) ellipse (.6 and 1) node[xshift=-30] {$\ker$};
+		\node at (0, -2.5) {Dominio};
+		\node at (6, -2.5) {Codominio};
+		
+		% Puntos
+		\draw[fill] (a) circle (1mm);
+		\draw[fill] (b) circle (1mm);
+		\draw[fill] (c) circle (1mm) node[below right] {$e$};
+		\draw[fill] (d) circle (1mm);
+		
+		\draw[fill] (B1) circle (1mm);
+		\draw[fill] (B2) circle (1mm);
+		\draw[fill] (B3) circle (1mm) node[right, xshift=5] {$e'$};
+		\draw[fill] (B4) circle (1mm);
+		
+		% flechas
+		\draw[blue, thick, -latex] (c) to [bend left = 10] (B3);
+		\draw[blue, thick, -latex] (d) to [bend left = -10] (B3);
+		
+		\node at (3, .1) {$f$};
+	\end{tikzpicture}
+\end{document}

@@ -1,0 +1,21 @@
+\documentclass[tikz]{standalone}
+\usepackage[spanish, mexico-com]{babel}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usetikzlibrary{arrows, patterns, calc}
+
+\begin{document}
+\begin{tikzpicture}
+\draw[fill=cyan!10] (0,0) ellipse (5 and 3);
+\draw[fill=brown!10] (0,0) ellipse (4 and 2);
+\draw[fill=brown!30] (-.75,0) ellipse (2 and 1.5);
+\draw[fill=brown!30, fill opacity=.5] (.75,0) ellipse (2 and 1.5);
+\draw[fill=green!10] (0,0) ellipse (1 and 1);
+
+\node at (0,0) {Cuerpos};
+\node at (0,1.8) {Anillos};
+\node at (0,2.5) {Grupos};
+\node at (-1.7,.5) [rotate=40]{Conmutativos};
+\node at (1.9,.25) [rotate=-30]{Unitarios};
+\end{tikzpicture}
+\end{document}
