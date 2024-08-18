@@ -215,7 +215,7 @@ Existe una representación visual de los conjuntos dados por diagramas llamados 
 	
 	\item Propiedades:
 	\begin{enumerate}[label=\roman*)]
-		\item Idempotencia: \( A \cup A = A \)
+		\item Idempotencia\footnote{La idempotencia se define en la pág. \pageref{def:idempotencia}, definición \ref{def:idempotencia}.}: \( A \cup A = A \)
 		\item Asociatividad: \( \left( A \cup B \right) \cup C = A \cup \left( B \cup C \right) \)
 		\item Conmutatividad: \( A \cup B = B \cup A\)
 	\end{enumerate}
@@ -637,7 +637,7 @@ Conforme a la definición, las relaciones de equivalencia satisfacen:
 	\[ [a] = \bar{a} = \{ x \in A / x \mathcal{R} a \}\]
 \end{fmd-definition}
 
-\begin{fmd-example}
+\begin{fmd-example}[Clases de equivalencia]
 	Sea $A = \{ z_1, z_2, z_3, z_4, z_5, z_6 \}$ y la relación:
 	\[ \begin{split}
 		\mathcal{R} = \{ & (z_1, z_1), (z_1, z_3), (z_1, z_5), (z_2, z_2), (z_2, z_4), (z_3, z_1), (z_3, z_3),\\
@@ -673,7 +673,7 @@ En la fig. se muestra, en un diagrama, las relaciones.
 	\[ A/\mathcal{R} = \frac{A}{\sim} = \{ [a] / a \in A \}\]
 \end{fmd-definition}
 
-\begin{fmd-example}
+\begin{fmd-example}[Conjunto cociente]
 	Del ejemplo \ref{ex:clases1}, el conjunto cociente es:
 	\[ A/ \mathcal{R} = \frac{A}{\sim} = \{ [z_1], [z_2], [z_6] \} = \left\{ \{ z_1, z_3, z_5 \}, \{ z_2, z_4 \}, \{ z_6 \} \right\} \] 
 \end{fmd-example}
@@ -705,7 +705,7 @@ En la fig. \ref{fig:particion} se muestra en un diagrama, una partición de $A$.
 \subsubsection{Teorema fundamental de las relaciones de equivalencia}
 Toda relación de equivalencia definida en un conjunto no vacío determina una partición de éste en clases de equivalencia.
 
-\begin{fmd-theorem}
+\begin{fmd-theorem}[Fundamental de las relaciones de equivalencia]
 	Si $\sim$ es una relación de equivalencia definida en el conjunto $A \ne \emptyset$, entonces existe un subconjunto $I \subset \N$, tal que cualquiera sea $i \in I$, existe $A_i \subset A$, de modo que se verifican las siguientes proposiciones:
 	\begin{enumerate}[label=\roman*)]
 		\item $i \in I \implies A_i \ne \emptyset$;
@@ -718,7 +718,7 @@ Toda relación de equivalencia definida en un conjunto no vacío determina una p
 
 Las clases de equivalencia conforman una partición del conjunto $A$.
 
-\begin{fmd-example}
+\begin{fmd-example}[Particiones]
 	Del ejemplo \ref{ex:clases1}:
 	
 	\begin{minipage}{.45\textwidth}
@@ -752,7 +752,7 @@ Para denotar que $f$ (o $g$, $h$, etc.) es una función de $A$ en $B$, se escrib
 \[f: A \rightarrow B\]
 se lee: \emph{$f$ es una función o aplicación de $A$ en $B$}, o bien \emph{$f$ es una función con dominio $A$ y codominio $B$}.
 
-\begin{fmd-example} \label{ex:funcion}
+\begin{fmd-example}[Función] \label{ex:funcion}
 	En particular, si $A = \{ -1, 0, 1, 2 \}$, $B = \{ 0, 1, 2, 3, 4 \}$ y $f$ es la relación
 	\[ (x, y) \in f \iff y = x^2 \]
 	se tiene (cada 2da. componente es el cuadrado de la 1ra.):
@@ -833,7 +833,7 @@ o bien:
 	imagen en el codominio.
 \end{itemize}%
 
-\begin{fmd-example}
+\begin{fmd-example}[Funciones]
 	Determinamos si las siguientes relaciones son funciones.
 	\begin{enumerate}
 		\item Sean $A =\{a,b,c,d\}, B=\{1,2,3\}$ y la relación:
@@ -1002,7 +1002,7 @@ y el codominio, del eje vertical.
 				$(2,2)$ & 4
 			\end{tabular}
 		\end{table}
-		El elemento 1 de $B$ carece de antecedente o preimagen en $A$.
+		El elemento 1 de $B$ carece de antecedente o \textit{preimagen}\footnote{Ver definición \ref{def:preimagen}, pág. \pageref{def:preimagen}.}  en $A$.
 	\end{enumerate}
 	
 	\begin{enumerate}
@@ -1159,14 +1159,15 @@ Sea una función $f: A \rightarrow B$
 \end{itemize}
 
 \subsubsection{Función inyectiva}
+\vspace{1em}
 \begin{fmd-definition}[Función inyectiva]
-	$f:A \rightarrow B \mbox{ es inyectiva} \iff \forall x', x'' \in A:
-	x' \ne x'' \implies f(x') \ne f(x'')$
-\end{fmd-definition}\vspace{1mm}
+	Una función $f: A \rightarrow B$ es inyectiva si, y solo si, para cualquier par de elementos distintos $x'$ y $x''$ en el conjunto $A$, sus imágenes bajo la función $f$ también son distintas.
+\end{fmd-definition}
+\vspace{1mm}
 
-Mediante la contrarrecíproca:
-\[ f:A \rightarrow B \mbox{ es inyectiva} \iff \forall x', x'' \in A: 
-f(x') = f(x'') \implies x' = x'' \]
+O, de forma equivalente:
+
+Una función $f: A \rightarrow B$ es inyectiva si, y solo si, cuando dos elementos cualesquiera $x', x'' \in A$ tienen la misma imagen, $f(x') = f(x'')$ entonces esos dos elementos deben ser el mismo elemento ($x' = x''$).
 
 \begin{itemize}
 	\item En la inyectividad no puede darse que elementos distintos del dominio den la misma
@@ -1328,9 +1329,9 @@ f(x') = f(x'') \implies x' = x'' \]
 \end{figure}
 
 \subsubsection{Función sobreyectiva}
+\vspace{1em}
 \begin{fmd-definition}[Función sobreyectiva]
-	$f:A \rightarrow B \mbox{ es sobreyectiva} \iff \forall y \in B, \exists \ x \in A
-	/ y = f(x)$
+	Una función $f: A \rightarrow B$ es \textit{sobreyectiva} si, y solo si, para cada elemento $y \in B$, existe al menos un elemento $x \in A$ tal que $y = f(x)$.
 \end{fmd-definition}
 \begin{itemize}
 	\item El conjunto de las imágenes (\textit{rango} o \textit{recorrido}) se identifica con el codominio de la función. Es decir, no hay elementos del codominio que no sea la imagen de \textit{al menos un} elemento del dominio, en otras palabras, el rango y el codominio coinciden.
@@ -1488,15 +1489,15 @@ f(x') = f(x'') \implies x' = x'' \]
 \end{figure}
 
 \subsubsection{Función biyectiva}
+\vspace{1em}
 \begin{fmd-definition}[Función biyectiva]
-	$f:A \rightarrow B \mbox{ es biyectiva} \iff f \mbox{ es inyectiva y sobreyectiva}$.
+	$f:A \rightarrow B \mbox{ es biyectiva si } f \mbox{ es inyectiva y sobreyectiva}$.
 \end{fmd-definition}
 \begin{itemize}
 	\item Las funciones del ejemplo 3 son biyectivas.
 \end{itemize}
-Negando el antecedente y el consecuente de la doble implicación, se tiene:
-\[ f: A \rightarrow B \mbox{ no es biyectiva } \iff f \mbox{ no es inyectiva o 
-	no es sobreyectiva.} \]
+
+Notar que si  $f: A \rightarrow B$ no es biyectiva, entonces no es inyectiva o no es sobreyectiva.
 
 \begin{figure}[H]
 	\centering
@@ -1744,7 +1745,7 @@ Negando el antecedente y el consecuente de la doble implicación, se tiene:
 	\end{figure}
 \end{fmd-example}
 
-\begin{fmd-example}
+\begin{fmd-example}[Función biyectiva]
 	Sea $f: \mathbb{R} \rightarrow \mathbb{R}$ definida por $f(x) = x^3$.
 	\begin{enumerate}
 		\item $f$ es 1-1. En efecto, sean $x_1$ y $x_2$ en $\mathbb{R}$ tales que
@@ -1956,13 +1957,13 @@ Sean $f: A \rightarrow B$ y $g: B \rightarrow C$
 El codominio de $f$ es dominio de $g$, pero es suficiente que el codominio de la
 primera sea parte del dominio de la segunda, es decir: $B \subset B'$. En la fig. \ref{fig:compos1} se ve gráficamente esta afirmación.
 
-\begin{fmd-definition}
+\begin{fmd-definition}[Composición de funciones]
 	Composición de las funciones $f: A \rightarrow B$ y $g:B \rightarrow C$ es la
 	función $g \circ f : A \rightarrow C$, tal que:
 	$ (g \circ f)(x) = g\left[ f(x) \right] \ \forall x \in A$
 \end{fmd-definition}
 
-\begin{fmd-example}
+\begin{fmd-example}[Composición de funciones discretas]
 	Sean $A = \{ 1, 2, 3 \}$, $B = \{ a, b, c, d \}$, $C = \{ 5, 6 \}$ y las funciones
 	$f: A \rightarrow B$ y $g: B \rightarrow C$ definidas así:
 	\[ f: \{(1, a), (2, b), (3, d)\}; \quad g = \{ (a, 5), (b, 5), (c, 5), (d, 6) \} \]
@@ -2026,7 +2027,7 @@ primera sea parte del dominio de la segunda, es decir: $B \subset B'$. En la fig
 	de $g$ es $C$ y el dominio de $f$ es $A$. Ambas composiciones existen si $C \subset A$.
 \end{fmd-example}
 
-\begin{fmd-example} \label{ex:compos}
+\begin{fmd-example}[Composición de funciones continuas] \label{ex:compos}
 	Sean: \[ \begin{cases}
 		f: \mathbb{R} \rightarrow \mathbb{R} & \mbox{tal que } f(x) = 2x \\
 		g: \mathbb{R} \rightarrow \mathbb{R} & \mbox{tal que } g(x) = x^2
@@ -2189,7 +2190,7 @@ En este caso $g$ es la \textit{inversa derecha} de $f$ \vspace{2mm}
 	$g: B \rightarrow A$ tal que $g \circ f = i_A$ y $f \circ g = i_B$
 \end{mdframed}
 
-\begin{fmd-example}
+\begin{fmd-example}[Función inversa]
 	La función $f: \mathbb{R} \rightarrow \mathbb{R}$ definida por $f(x) = x + 2$ admite
 	inversa $g: \mathbb{R} \rightarrow \mathbb{R}$ tal que $g(x) = x - 2$, pues
 	\[
@@ -2572,41 +2573,37 @@ Sean $f: X \rightarrow Y$ y $A$ y $B$ subconjuntos del dominio.
 
 Sean $f: X \rightarrow Y$ y $A \subset Y$.
 
-\begin{fmd-definition}
+\begin{fmd-definition}[Preimagen] \label{def:preimagen}
 	Imagen inversa o preimagen del subconjunto $A \subset Y$, es el conjunto de los
 	elementos del dominio cuyas imágenes pertenecen a $A$.
+	
+	\begin{figure}[H]
+		\centering
+		\begin{tikzpicture}[scale=1]
+			% Centros
+			\coordinate (x) at (0,0);
+			\coordinate (y) at (5, 0);
+			
+			% Circunferencias
+			\draw[] (x) circle (2);
+			\draw[] (y) circle (2);
+			\filldraw[pattern=north east lines] (x) circle (1);
+			\filldraw[pattern=north west lines] (y) circle (1);
+			
+			\node at ($(x) + (-2,1.5)$) {$X$};
+			\node at ($(y) + (-2,1.5)$) {$Y$};
+			\node at ($(x) + (0,-1.5)$) {$f^{-1}(A)$};
+			\node at ($(y) + (-1,-1)$) {$A$};
+			
+			% Flechas
+			\draw[-latex, blue, thick] (x) to [bend left = 20] (y);
+		\end{tikzpicture}
+	\end{figure}
+	\[ f^{-1}(A) = \{ x \in X / f(x) \in A \} \]
+	Es claro que: $ x \in f^{-1}(A)$ si, y solo si $f(x) \in A $, es decir, un elemento del dominio pertenece a la preimagen de $A$ si y sólo si su imagen pertenece a $A$.
 \end{fmd-definition}
 
-\begin{figure}[H]
-	\centering
-	\begin{tikzpicture}[scale=1]
-		% Centros
-		\coordinate (x) at (0,0);
-		\coordinate (y) at (5, 0);
-		
-		% Circunferencias
-		\draw[] (x) circle (2);
-		\draw[] (y) circle (2);
-		\filldraw[pattern=north east lines] (x) circle (1);
-		\filldraw[pattern=north west lines] (y) circle (1);
-		
-		\node at ($(x) + (-2,1.5)$) {$X$};
-		\node at ($(y) + (-2,1.5)$) {$Y$};
-		\node at ($(x) + (0,-1.5)$) {$f^{-1}(A)$};
-		\node at ($(y) + (-1,-1)$) {$A$};
-		
-		% Flechas
-		\draw[-latex, blue, thick] (x) to [bend left = 20] (y);
-	\end{tikzpicture}
-	\caption{Preimagen}
-\end{figure}
-\[ f^{-1}(A) = \{ x \in X / f(x) \in A \} \]
-Es claro que: $ x \in f^{-1}(A) \iff f(x) \in A $
-
-Es decir, un elemento del dominio pertenece a la preimagen de $A$ si y sólo si su
-imagen pertenece a $A$.
-
-\begin{fmd-example}
+\begin{fmd-example}[Preimagen]
 	Sea $f: \mathbb{R} \rightarrow \mathbb{R} / f(x) = x^2$. Determinamos las preimágenes
 	de los siguientes subconjuntos del codominio
 	\[ (-\infty, -1], (-1, 1], (-1, 1), [4,9] \]
@@ -2763,11 +2760,11 @@ Sean $f:X \rightarrow Y$ y los subconjuntos $A \subset Y$, $B \subset Y$.
 \subsection{Restricción y extensión de una función} \label{sec:restr}
 \vspace{3mm}
 \begin{fmd-definition}[Restricción de una función]
-	Sean $f:X \rightarrow Y$, $A \subset X$ y la función $g: A \rightarrow Y / 
+	Sean $f:X \rightarrow Y$, $A \subset X$ y la función $g: A \rightarrow Y \mid 
 	g(x) = f(x) \, \forall \, x \in A$.
 	
 	Decimos que $g$ es la restricción de la aplicación $f$ al subconjunto $A$, y
-	la denotamos $g:f | A$.
+	la denotamos $g:f \mid A$.
 \end{fmd-definition}
 
 \begin{fmd-definition}[Extensión de una función]

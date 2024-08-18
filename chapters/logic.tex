@@ -388,8 +388,10 @@ Análogamente, en el caso de la doble implicación verdadera, el consecuente $q$
 \subsection{Tautología y contradicción}
 
 \subsubsection{Tautología}
-
-Cuando una proposición compuesta, como por ejemplo $(p \implies q) \land p \implies q$ es verdadera, independientemente de los valores de verdad de las proposiciones componentes, se dice que tal proposición es una \textit{tautología} o \textit{ley lógica}, es decir, una tautología es una proposición lógica que siempre es verdadera.
+\vspace{1em}
+\begin{fmd-definition}[Tautología]
+	Cuando una proposición compuesta, como por ejemplo $(p \implies q) \land p \implies q$ es verdadera, independientemente de los valores de verdad de las proposiciones componentes, se dice que tal proposición es una \textit{tautología} o \textit{ley lógica}, es decir, una tautología es una proposición lógica que siempre es verdadera.
+\end{fmd-definition}
 
 En el cálculo proposicional se utilizan las siguientes leyes o tautologías cuyas demostraciones se reduce a la confección de las correspondientes tablas de verdad.
 
@@ -598,18 +600,16 @@ Dos proposiciones son \textit{equivalentes} si y solo si tienen el mismo valor d
 
 La equivalencia lógica captura la idea de que dos proposiciones, aunque expresadas de manera diferente, representan la misma información desde el punto de vista lógico. Si dos proposiciones son equivalentes, podemos sustituir una por la otra en cualquier contexto lógico sin alterar el significado o la validez del razonamiento.
 
-\subsubsection{Ejemplo}
-
-Dada la proposición compuesta:
-
-\begin{center}
-	\emph{``$x$ es un número positivo si, y solo si, $3x$ es un número positivo''}
-\end{center}
-
-De \textit{$x$ es un número positivo} ($p$) se sigue que \textit{$3x$ es un número positivo} ($q$), (en símbolos $p \implies q$) y, recíprocamente, de \textit{$3x$ es un número positivo} se sigue que \textit{$x$ es un número positivo} ($q \implies p$). Las condiciones de que $x$ sea un número positivo y que $3x$ sea un número positivo son equivalentes entre sí ($p \iff q$).
-
-La condición de ser $x$ un número positivo es \textit{necesaria y suficiente} para que $3x$ sea un número positivo, recíprocamente, para que $x$ sea un número positivo es necesario y suficiente que $3x$ lo sea, es decir, cada una de las proposiciones representa una \textit{condición necesaria y suficiente} para la otra.
-
+\begin{fmd-example}[Proposiciones equivalentes]
+	Dada la proposición compuesta:
+	\begin{center}
+		\emph{``$x$ es un número positivo si, y solo si, $3x$ es un número positivo''}
+	\end{center}
+	
+	De \textit{$x$ es un número positivo} ($p$) se sigue que \textit{$3x$ es un número positivo} ($q$), (en símbolos $p \implies q$) y, recíprocamente, de \textit{$3x$ es un número positivo} se sigue que \textit{$x$ es un número positivo} ($q \implies p$). Las condiciones de que $x$ sea un número positivo y que $3x$ sea un número positivo son equivalentes entre sí ($p \iff q$).
+	
+	La condición de ser $x$ un número positivo es \textit{necesaria y suficiente} para que $3x$ sea un número positivo, recíprocamente, para que $x$ sea un número positivo es necesario y suficiente que $3x$ lo sea, es decir, cada una de las proposiciones representa una \textit{condición necesaria y suficiente} para la otra.
+\end{fmd-example}
 
 \subsubsection{Verificación de equivalencia}
 
@@ -782,7 +782,7 @@ q\\
 y, de acuerdo con lo expuesto, se presentan dos métodos:
 
 \begin{enumerate}[label=\roman*)]
-	\item \textit{Directo}: Si $p$ es $F$, nada hay que probar, pues en este caso $p \implies q$ es $V$. Si $p$ es $V$ hay que establecer que el valor de verdad de $q$ es $V$.
+	\item \textit{Directo}: Si $p = F$, nada hay que probar, pues en este caso $p \implies q$ es $V$. Si $p$ es $V$ hay que establecer que el valor de verdad de $q$ es $V$.
 	\item \textit{Indirecto}:
 	\begin{enumerate}[label=\alph*)]
 		\item Se utiliza la \textit{contrarrecíproca}, es decir, demostrar la verdad de $p \implies q$ es equivalente a probar la verdad de $\neg q \implies \neg p$.
@@ -813,42 +813,43 @@ Es decir, la negación de una implicación no es una implicación, sino la conju
 	Sean las implicaciones:
 	
 	\begin{enumerate}[label=\roman*)]
-		\item Si hoy es lunes, entonces mañana es miércoles.
+		\item Si hoy es lunes ($p$), entonces mañana es miércoles ($q$).
 		
-		Cuya negación es: ``Hoy es lunes y mañana no es miércoles''
+		Cuya negación es: ``Hoy es lunes ($p$) y mañana no es miércoles ($\neg q$)''
 		
-		\item ``Si estudias para el examen, entonces obtendrás una buena calificación''
+		\item ``Si estudias para el examen ($p$), entonces obtendrás una buena calificación ($q$)''
 		
-		La negación de esta afirmación sería: ``Estudias para el examen, pero no obtienes una buena calificación''
+		La negación de esta afirmación sería: ``Estudias para el examen ($p$), pero no obtienes una buena calificación ($\neg q$)''
 		
-		\[ p \implies q  \]
+		\item ``Si un número es divisible por 4, entonces también es divisible por 2'' ($p \implies q$).
 		
-		Hemos negado la implicación original al afirmar que estudias pero no obtienes un buena calificación.
-		
-		\item ``Si un número es divisible por 4, entonces también es divisible por 2''
-		
-		La negación es: ``Hay un número que es divisible por 4, pero no es divisible por 2''
+		La negación es: ``Hay un número que es divisible por 4, pero no es divisible por 2'' ($ p \land \neg q$).
 	\end{enumerate}
 \end{fmd-example}
 
 \subsection{Concepto de argumento y razonamiento deductivo válido}
 
 \subsubsection{Argumento}
-
-Un \textit{argumento} es una secuencia de proposiciones (llamadas premisas) que pretenden respaldar o justificar una proposición final (llamada conclusión). Un argumento se presenta usualmente de la siguiente forma:
-\[ p_1 \land p_2 \land \dots \land p_n \implies q \]
-
-\begin{itemize}[itemsep=-3pt]
-	\item $p_1$: premisa 1
-	\item $p_2$: premisa 2
-	\item $\qquad \vdots$
-	\item $p_n$: premisa $n$
-	\item Por lo tanto, $q$: conclusión.
-\end{itemize}
+\begin{fmd-definition}[Argumento]
+	Un \textit{argumento} es una secuencia de proposiciones (llamadas premisas) que pretenden respaldar o justificar una proposición final (llamada conclusión). Un argumento se presenta usualmente de la siguiente forma:
+	\[ p_1 \land p_2 \land \dots \land p_n \implies q \]
+	
+	\begin{itemize}[itemsep=-3pt]
+		\item $p_1$: premisa 1
+		\item $p_2$: premisa 2
+		\item $\qquad \vdots$
+		\item $p_n$: premisa $n$
+		\item Por lo tanto, $q$: conclusión.
+	\end{itemize}
+\end{fmd-definition}
 
 \subsubsection{Razonamiento deductivo válido}
+\vspace{1em}
+\begin{fmd-definition}
+	Un argumento se considera un \textit{razonamiento deductivo válido} si, y solo si, es imposible que todas sus premisas sean verdaderas y su conclusión sea falsa. En otras palabras, la verdad de las premisas garantiza la verdad de la conclusión. La validez de un argumento depende únicamente de su forma lógica, no del contenido específico de las proposiciones.
+\end{fmd-definition}
 
-El \textit{razonamiento deductivo válido} es un proceso lógico en el que, a partir de premisas o afirmaciones, se llega a una conclusión de manera irrefutable. Un razonamiento es válido si la conclusión sigue necesariamente de las premisas, siguiendo las reglas de la lógica.
+El razonamiento deductivo válido es un proceso lógico en el que, a partir de premisas o afirmaciones, se llega a una conclusión de manera irrefutable. Un razonamiento es válido si la conclusión sigue necesariamente de las premisas, siguiendo las reglas de la lógica.
 
 Por ejemplo:
 \[ \frac{\begin{array}{l}
@@ -857,8 +858,6 @@ Por ejemplo:
 \end{array}}{q} \]
 
 Si tenemos las premisas $(p \Rightarrow q)$ y $(p)$, entonces la conclusión $(q)$ es válida. Esta es la ley del \textit{modus ponens} de la que se hablará más en la pág. \pageref{def:ponens}.
-
-Un argumento se considera un razonamiento deductivo válido si, y solo si, es imposible que todas sus premisas sean verdaderas y su conclusión sea falsa. En otras palabras, la verdad de las premisas garantiza la verdad de la conclusión. La validez de un argumento depende únicamente de su forma lógica, no del contenido específico de las proposiciones.
 
 \subsubsection{Relación entre argumento y razonamiento deductivo válido}
 
@@ -1069,78 +1068,81 @@ Algunos ejemplos:
 \end{itemize}
 
 \subsubsection{Falacias formales}
-
+\vspace{1em}
+\begin{fmd-definition}[Falacias formales]
 Las \textit{falacias formales} son errores de razonamiento que ocurren debido a una estructura lógica incorrecta en un argumento, independientemente de la verdad o falsedad de las proposiciones involucradas. Es decir, el problema radica en la forma del argumento, no en su contenido.
+\end{fmd-definition}
 
 A pesar de parecer convincentes a primera vista, las falacias formales violan las reglas de inferencia válidas, lo que las hace inválidas desde el punto de vista lógico. Identificar y evitar estas falacias es crucial para construir argumentos sólidos y confiables.
 
 Veamos algunos ejemplos comunes de falacias formales:
 
-\subsubsection{Afirmación del consecuente}
-
-\begin{itemize}
-	\item Estructura:
-	\[ \begin{array}{l}
-		p \implies q\\
-		q \\ \hline
-		p
-	\end{array} \]
-	\item Ejemplo:
-	\begin{itemize}
-		\item Si llueve, entonces la calle está mojada.
-		\item La calle está mojada.
-		\item Por lo tanto, está lloviendo. (Incorrecto, la calle podría estar mojada por otras razones)
-	\end{itemize}
-\end{itemize}
+\begin{enumerate}
+	\item \textbf{Afirmación del consecuente}
 	
-\subsubsection{Negación del antecedente}
-\begin{itemize}
-	\item Estructura:
+	\begin{itemize}
+		\item Estructura:
 		\[ \begin{array}{l}
-		p \implies q\\
-		\neg p \\ \hline
-		\neg q
-	\end{array} \]
-	\item Ejemplo:
-	\begin{itemize}[itemsep=-5pt]
-		\item Si estudio mucho, aprobaré el examen
-		\item No estudié mucho
-		\item Por lo tanto, no aprobaré el examen (Incorrecto, podría aprobar por otras razones).
+			p \implies q\\
+			q \\ \hline
+			p
+		\end{array} \]
+		\item Ejemplo:
+		\begin{itemize}
+			\item Si llueve, entonces la calle está mojada.
+			\item La calle está mojada.
+			\item Por lo tanto, está lloviendo. (Incorrecto, la calle podría estar mojada por otras razones)
+		\end{itemize}
 	\end{itemize}
-\end{itemize}
-
-\subsubsection{Falacia del término medio no distribuido}
-\begin{itemize}
-	\item Estructura:
-	\begin{itemize}[itemsep=-5pt]
-		\item Premisa 1: Todo $A$ es $B$
-		\item Premisa 2: Todo $C$ es $B$
-		\item Conclusión: Por lo tanto, todo $A$ es $C$
+	
+	\item \textbf{Negación del antecedente}
+	\begin{itemize}
+		\item Estructura:
+		\[ \begin{array}{l}
+			p \implies q\\
+			\neg p \\ \hline
+			\neg q
+		\end{array} \]
+		\item Ejemplo:
+		\begin{itemize}[itemsep=-5pt]
+			\item Si estudio mucho, aprobaré el examen
+			\item No estudié mucho
+			\item Por lo tanto, no aprobaré el examen (Incorrecto, podría aprobar por otras razones).
+		\end{itemize}
 	\end{itemize}
-	\item Ejemplo:
-	\begin{itemize}[itemsep=-5pt]
-		\item Todos los perros son mamíferos
-		\item Todos los gatos son mamíferos
-		\item Por lo tanto, todos los perros son gatos (Incorrecto)
+	
+	\item \textbf{Falacia del término medio no distribuido}
+	\begin{itemize}
+		\item Estructura:
+		\begin{itemize}[itemsep=-5pt]
+			\item Premisa 1: Todo $A$ es $B$
+			\item Premisa 2: Todo $C$ es $B$
+			\item Conclusión: Por lo tanto, todo $A$ es $C$
+		\end{itemize}
+		\item Ejemplo:
+		\begin{itemize}[itemsep=-5pt]
+			\item Todos los perros son mamíferos
+			\item Todos los gatos son mamíferos
+			\item Por lo tanto, todos los perros son gatos (Incorrecto)
+		\end{itemize}
 	\end{itemize}
-\end{itemize}
-
-\subsubsection{Falacia de la división}
-\begin{itemize}
-	\item Estructura:
-	\begin{itemize}[itemsep=-5pt]
-		\item Premisa 1: El todo tiene la propiedad $x$
-		\item Conclusión: Por lo tanto, cada parte del todo tiene la propiedad $x$
+	
+	\item \textbf{Falacia de la división}
+	\begin{itemize}
+		\item Estructura:
+		\begin{itemize}[itemsep=-5pt]
+			\item Premisa 1: El todo tiene la propiedad $x$
+			\item Conclusión: Por lo tanto, cada parte del todo tiene la propiedad $x$
+		\end{itemize}
+		\item Ejemplo
+		\begin{itemize}[itemsep=-5pt]
+			\item El equipo de fútbol es el mejor del mundo
+			\item Por lo tanto, cada jugador es el mejor en su posición (Incorrecto)
+		\end{itemize}
 	\end{itemize}
-	\item Ejemplo
-	\begin{itemize}[itemsep=-5pt]
-		\item El equipo de fútbol es el mejor del mundo
-		\item Por lo tanto, cada jugador es el mejor en su posición (Incorrecto)
-	\end{itemize}
-\end{itemize}
+\end{enumerate}
 
 Reconocer las falacias formales es esencial para evaluar críticamente los argumentos y evitar ser engañado por razonamientos que parecen válidos pero que en realidad son lógicamente defectuosos. Al estudiar y comprender estas falacias, podemos fortalecer nuestras habilidades de razonamiento y construir argumentos más sólidos y persuasivos.
-
 
 
 \section{Lógica predicativa}
@@ -1149,7 +1151,7 @@ La lógica predicativa, también conocida como lógica de primer orden o cálcul
 
 
 \subsubsection{Conceptos clave}
-
+\vspace{1em}
 \begin{fmd-definition}[Función proposicional $P(x)$]
 	Función proposicional en una variable o indeterminada $x$ es toda oración en la que figura $x$ como sujeto u objeto directo, la cual se convierte en proposición para cada especificación de $x$.
 \end{fmd-definition}
@@ -1180,14 +1182,14 @@ Los cuantificadores nos permiten expresar afirmaciones sobre la cantidad de obje
 El cuantificador existencial se utiliza para afirmar que existe al menos un elemento en un conjunto o dominio que cumple una determinada propiedad o relación.
 \begin{itemize}
 	\item Símbolo: $\exists$ (se lee ``existe'' o ``hay'')
-	\item Estructura: $\exists x \ P(x)$, donde:
+	\item Estructura: $\exists \, x \ P(x)$, donde:
 	\begin{itemize}
-		\item $\exists x$: Indica que existe al menos un elemento x en el dominio que satisface la afirmación.
+		\item $\exists \, x$: Indica que existe al menos un elemento x en el dominio que satisface la afirmación.
 		\item $P(x)$: Es un predicado que expresa una propiedad o relación sobre el elemento $x$.
 	\end{itemize}
 	\item Ejemplo:
 	
-	``Algunos estudiantes aprobaron el examen'' se formalizaría como: \[\exists x \left( E(x) \land A(x) \right)\] donde $E(x)$ significa ``$x$ es un estudiante'' y $A(x)$ significa ``$x$ aprobó el examen''.
+	``Algunos estudiantes aprobaron el examen'' se formalizaría como: \[\exists \, x \left( E(x) \land A(x) \right)\] donde $E(x)$ significa ``$x$ es un estudiante'' y $A(x)$ significa ``$x$ aprobó el examen''.
 \end{itemize}
 
 \subsection{Cuantificador universal}
@@ -1203,39 +1205,37 @@ El cuantificador universal se utiliza para afirmar que una propiedad o relación
 	\end{itemize}
 	\item Ejemplo:
 	
-``Todos los perros ladran'' se formalizaría como: $\forall x \ \left(P(x) \implies L(x)\right)$ donde $P(x)$ significa ``x es un perro'' y $L(x)$ significa ``x ladra''.
+``Todos los perros ladran'' se formalizaría como: $\forall x \ \left(P(x) \implies L(x)\right)$ donde $P(x)$ significa ``$x$ es un perro'' y $L(x)$ significa ``$x$ ladra''.
 \end{itemize}
 
 \subsection{Negación de cuantificadores}
 La negación de una proposición universal es una proposición existencial, y viceversa.
 
 \begin{enumerate}[label=\roman*)]
-	\item $\neg \left( \forall x \ P(x) \right) \equiv \exists x \ \neg P(x)$
+	\item $\neg \left( \forall x \ P(x) \right) \equiv \exists \ x \ \neg P(x)$
 	
 	Esto es:
 	\begin{itemize}
 		\item Proposición original: $\forall x \ P(x)$, ``Para todo $x$, $P(x)$ es verdadero
-		\item Negación: $\exists x \ \neg P(x)$, ``Existe al menos una $x$ para la cual $P(x)$ es falso''
+		\item Negación: $\exists \, x \ \neg P(x)$, ``Existe al menos una $x$ para la cual $P(x)$ es falso''
 	\end{itemize}
 	Ejemplo:
 	\begin{itemize}
 		\item Original: ``Todos los gatos son negros'', ($\forall x \ P(x)$, donde $x$ es un gato, $P(x)$ ``$x$ es negro'')
-		\item Negación: ``Existe al menos un gato que no es negro'', ($\exists x \ \neg P(x)$).
+		\item Negación: ``Existe al menos un gato que no es negro'', ($\exists \ x \ \neg P(x)$).
 	\end{itemize}
-	\item $\neg \left( \exists x \ P(x) \right) \equiv \forall x \ \neg P(x)$
+	\item $\neg \left( \exists \, x \ P(x) \right) \equiv \forall x \ \neg P(x)$
 	
 	Esto es:
 	\begin{itemize}
-		\item Proposición original: $\exists x \ P(x)$, ``Existe al menos una $x$ para la cual $P(x)$ es verdadero
+		\item Proposición original: $\exists \, x \ P(x)$, ``Existe al menos una $x$ para la cual $P(x)$ es verdadero
 		\item Negación: $\forall x \ \neg P(x)$, ``Para toda $x$, $P(x)$ es falso'' 
 	\end{itemize}
 	Ejemplo:
 	\begin{itemize}
-		\item Original: ``Algunos estudiantes aprobaron el examen'' o ``Al menos un estudiante aprobó el examen'' ($\exists x \ P(x)$, donde $x$ es un estudiante, $P(x)$ ``$x$ aprobó el examen'')
+		\item Original: ``Algunos estudiantes aprobaron el examen'' o ``Al menos un estudiante aprobó el examen'' ($\exists \, x \ P(x)$, donde $x$ es un estudiante, $P(x)$ ``$x$ aprobó el examen'')
 		\item Negación: ``Ningún estudiante aprobó el examen'' o, dicho de otra manera, ``todos los estudiantes no aprobaron el examen'' ($\forall x \ \neg P(x)$).
 	\end{itemize}
-	
-	
 \end{enumerate}
 
 

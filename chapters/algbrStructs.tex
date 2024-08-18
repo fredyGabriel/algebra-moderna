@@ -68,7 +68,7 @@ Por lo tanto, un grupo es una estructura algebraica que consta de:
 	El par $(M, *)$, donde $M \ne \emptyset$, y $*$ es una función, es un monoide\footnote{Corresponde a la definición dada en \cite{rojoAlgebra8vaEd}.} si y solo si $*$ es una \textit{ley de composición interna} en $M$.
 \end{fmd-definition}
 
-\begin{definition}[Idempotencia]
+\begin{definition}[Idempotencia] \label{def:idempotencia}
 	Si $(G, *)$ es un monoide, es decir, una estructura algebraica con una ley de composición interna, se dice que $g \in G$ es idempotente si $g * g = g$
 	
 	La idempotencia es la propiedad de realizar una operación determinada varias veces y aún así obtener siempre el mismo resultado que se obtendría si se realizase una sola vez.
@@ -725,7 +725,7 @@ Los grupos de simetrías para diferentes triángulos son:
 \end{itemize}
 
 \textbf{Tarea:}
-Escribe el grupo de simetrías del cuadrado.
+Escribe el grupo de simetrías del cuadrado y del rectángulo.
 
 \textbf{Composición de funciones en $S_3$}
 
@@ -1510,7 +1510,7 @@ Un anillo es un conjunto equipado con dos operaciones binarias, una aditiva y ot
 Como la sustracción se puede definir en términos de la adición, vagamente hablando en un anillo se puede sumar, restar y multiplicar.
 
 \subsection{Definición y propiedades básicas}
-
+\vspace{1em}
 \begin{fmd-definition}[Anillo] \label{def:anillo}
 	La terna $(A, *, \bdot)$ es un anillo si y sólo si:
 	\begin{enumerate}
@@ -2096,7 +2096,7 @@ Claramente, si el anillo es conmutativo, la distinción de ideales laterales es 
 
 
 \section{Cuerpos}
-También llamados campos. Los cuerpos son estructuras algebraicas más específicas y más ricas en propiedades que los anillos y los grupos. En la fig. \ref{fig:gak} se ve un esquema que relaciona estas estructuras.
+También llamados \textit{campos}. Los cuerpos son estructuras algebraicas más específicas y más ricas en propiedades que los anillos y los grupos. En la fig. \ref{fig:gak} se ve un esquema que relaciona estas estructuras.
 
 \begin{figure}[H]
 	\centering
@@ -2138,24 +2138,102 @@ Los conjuntos $\Q$: números racionales y $\Z_5$: enteros múdulo 5, tienen en c
 \begin{fmd-definition}[Cuerpo]
 	Sea $(\K, +, \bdot)$ un anillo unitario conmutativo, y denotemos mediante $1 \in \K$ el elemento unidad. Diremos que $(\K, +, \bdot)$ es un \textbf{cuerpo} si para todo elemento $x \in \K$ distinto del neutro aditivo (el cual denotaremos con 0) existe un elemento $x^{-1} \in \K$ tal que $xx^{-1} = 1$.
 \end{fmd-definition}
-	
-\subsubsection{Propiedades de los cuerpos}
+
+\subsubsection{Axiomas de cuerpo}
+
+Sea $\K$ un conjunto no vacío dotado de dos operaciones internas, que llamaremos suma ($+$) y producto ($\bdot$), que cumplen los siguientes axiomas:
+
 \begin{enumerate}
-	\item Los cuerpos no admiten divisores de cero;
-	\item En todo cuerpo vale la ley cancelativa del producto para todo elemento no nulo del mismo;
-	\item Si $a\ne 0$, entonces la ecuación $ax = b$ admite solución única en $\K$;
-	\item El recíproco del opuesto, de todo elemento no nulo, es igual al opuesto de su recíproco;
-	\item En todo cuerpo se verifica:
-	\[ \frac{x}{y} = \frac{x'}{y'} \iff xy' = yx'\]
+	\item \textbf{Axiomas de la Suma}
+	
+	\begin{itemize}
+		\item[(A1)] \textit{Asociatividad de la suma}.
+		
+		$\forall a, b, c \in \K$:
+		\[(a+b)+c=a+(b+c) \]
+		\item[(A2)] \textit{Conmutatividad de la suma}:
+		
+		$\forall a, b \in \K$:
+		\[ a + b = b + a \]
+		\item[(A3)] \textit{Existencia del elemento neutro de la suma}:
+		
+		Existe un elemento en $\K$, denotado por $0$, tal que $\forall a \in \K$:
+		\[ a + 0 = a \]
+		\item[(A4)] \textit{Existencia de elemento inverso de la suma}:
+		
+		$\forall a \in \K$, existe un elemento en $\K$, denotado por $-a$, tal que:
+		\[ a + (-a) = 0 \]
+	\end{itemize}
+	
+	\item \textbf{Axiomas del Producto}
+	
+	\begin{itemize}
+		\item[(M1)] \textit{Asociatividad del producto}:
+		
+		\( \forall a, b, c \in \K \):
+		\[ (a \cdot b) \cdot c = a \cdot (b \cdot c) \]
+		\item[(M2)] \textit{Conmutatividad del producto}:
+		
+		\( \forall a, b \in \K \):
+		\[a \cdot b = b \cdot a\]
+		\item[(M3)] \textit{Existencia de elemento neutro del producto}:
+		
+		Existe un elemento en $\K$, denotado por $1$, distinto de $0$, tal que $\forall a \in \K$: \[a \cdot 1 = a\]
+		\item[(M4)] \textit{Existencia de elemento inverso del producto}:
+		
+		$\forall a \in \K$,  con $a \ne 0$, existe un elemento en $\K$, denotado por $a^{-1}$, tal que:
+		\[a \cdot a^{-1} = 1\]
+	\end{itemize}
+	
+	\item \textbf{Axioma de Distributividad}
+	\begin{itemize}
+		\item[(D)] \textit{Distributividad del producto respecto de la suma}:
+		
+		$\forall a, b, c \in \K$:
+		\[a \bdot (b+c) = (a \cdot b) + (a \bdot c)\]
+	\end{itemize}
+\end{enumerate}
+
+	
+\subsection{Propiedades generales}
+
+Sea $(\K, +, \cdot)$ un cuerpo. Algunas de sus propiedades generales son las siguientes:
+
+\begin{enumerate}
+	\item \textbf{Unicidad de los elementos neutros}: El elemento neutro de la suma (0) y el elemento neutro del producto (1) son únicos.
+	
+	\item \textbf{Unicidad de los elementos inversos}: Para cada elemento $a \in K$, su inverso aditivo $-a$ y, si $a \neq 0$, su inverso multiplicativo $a^{-1}$ son únicos.
+	
+	\item \textbf{Ley de cancelación para la suma}: $\forall a, b, c \in K$, si $a + c = b + c$, entonces $a = b$.
+	
+	\item \textbf{Ley de cancelación para el producto}: $\forall a, b, c \in K$ con $c \neq 0$, si $a \cdot c = b \cdot c$, entonces $a = b$.
+	
+	\item \textbf{Producto por cero}: $ \forall a \in K$, se cumple que $a \cdot 0 = 0$.
+	
+	\item \textbf{Solubilidad única de ecuaciones lineales}: Si $a\ne 0$, entonces la ecuación $ax = b$ admite solución y es única en $\K$;
+	
+	\item \textbf{Regla de los signos}:
+	 $\forall a, b \in K$:
+	 \begin{itemize}
+	 	\item $(-a) \cdot b = a \cdot (-b) = -(a \cdot b)$
+	 	\item $(-a) \cdot (-b) = a \cdot b$
+	 \end{itemize}
+	
+	\item \textbf{No existen divisores de cero}: Si $a, b \in K$ y $a \cdot b = 0$, entonces $a = 0$ o $b = 0$.
+	
+	\item \textbf{Elemento opuesto del opuesto}: $\forall a \in K$, se cumple que $-(-a) = a$.
+	
+	\item \textbf{Inverso del inverso}: $\forall a \in K$ con $a \neq 0$, se cumple que $(a^{-1})^{-1} = a$
 \end{enumerate}
 
 \subsubsection{Subcuerpo}
+\vspace{1em}
 \begin{fmd-definition}[Subcuerpo]
 	Dado un cuerpo $\K$, un subconjunto $\mathbb{F} \subset \K$ es un \textbf{subcuerpo} si es en sí mismo un cuerpo con las operaciones heredadas de $\K$.
 \end{fmd-definition}
 
 \subsection{Homomorfismo de cuerpos}
-
+\vspace{1em}
 \begin{fmd-definition}[Homomorfismo de cuerpos]
 	Sean $(\K, +, \bdot)$, $(\mathbb{L}, +, \bdot)$ cuerpos. Una aplicación $f: \K \rightarrow \mathbb{L}$ se dice que es un homomorfismo entre cuerpos, si y sólo si $f$ es un homomorfismo entre los anillos $(\K, +, \bdot)$ y $(\mathbb{L}, +, \bdot)$ con imagen no trivial, es decir $Im(f) \ne \{ 0 \}$
 \end{fmd-definition}
@@ -2190,6 +2268,99 @@ De acuerdo con la definición anterior.
 \end{enumerate}
 \end{fmd-proof}
 
-\subsection{Ejemplos}
-
 \subsection{Cuerpos ordenados}
+
+Un \textit{cuerpo ordenado} es un cuerpo $(\K, +, \bdot)$ en el que además se define una relación de orden total, denotada por $\leq$, que es compatible con las operaciones del cuerpo. Es decir, satisface los siguientes axiomas adicionales:
+
+\begin{enumerate}
+	\item \textbf{Axiomas de Orden Total}
+	
+	\begin{enumerate}[label=\roman*)]
+		\item \textit{Reflexividad:} $\forall a \in K$, $a \leq a$.
+		\item \textit{Antisimetría:} $\forall a, b \in K$, si $a \leq b$ y $b \leq a$, entonces $a = b$.
+		\item \textit{Transitividad:} $\forall a, b, c \in K$, si $a \leq b$ y $b \leq c$, entonces $a \leq c$.
+		\item \textit{Totalidad:} $\forall a, b \in K$, se cumple que $a \leq b$ o $b \leq a$.
+	\end{enumerate}
+	
+	\item \textbf{Compatibilidad con las Operaciones}
+	
+	\begin{itemize}
+		\item \textit{Compatibilidad con la suma:} $\forall a, b, c \in K$, si $a \leq b$, entonces $a + c \leq b + c$.
+		\item \textit{Compatibilidad con el producto:} $\forall a, b, c \in K$, si $a \leq b$ y $0 \leq c$, entonces $a \cdot c \leq b \cdot c$.
+	\end{itemize}
+\end{enumerate}
+
+\begin{fmd-example}[Cuerpos ordenados]
+\begin{itemize}
+	\item Los números racionales $\mathbb{Q}$ con el orden usual.
+	\item Los números reales $\mathbb{R}$ con el orden usual.
+	\item \textit{No es un cuerpo ordenado:} El cuerpo de los números complejos $\mathbb{C}$, ya que no se puede definir un orden total en $\mathbb{C}$ que sea compatible con sus operaciones.
+\end{itemize}
+\end{fmd-example}
+
+\begin{lgremark}
+	La existencia de un orden en un cuerpo permite introducir conceptos como positivo, negativo, valor absoluto, y desigualdades, enriqueciendo el análisis y la geometría en estos cuerpos.
+\end{lgremark}
+
+\subsubsection{Cotas}
+
+Sea $(\K, +, \bdot, \leq)$ un cuerpo ordenado.
+
+\begin{itemize}
+	\item \textbf{Cota superior}: Un elemento $M \in \K$ es una \textit{cota superior} de un conjunto $S \subseteq \K$ si $\forall s \in S$, se cumple que $s \leq M$.
+	\item \textbf{Cota inferior}: Un elemento $m \in K$ es una \textit{cota inferior} de un conjunto $S \subseteq \K$ si $\forall s \in S$, se cumple que $m \leq s$.
+	\item \textbf{Conjunto acotado}: Un conjunto $S \subset K$ es \textit{acotado superiormente} si tiene una cota superior, y es \textit{acotado inferiormente} si tiene una cota inferior. Si $S$ es acotado superior e inferiormente, se dice simplemente que es \textbf{acotado}.
+\end{itemize}
+
+\begin{fmd-example}[Cotas]
+	Ejemplos en $\R$
+	\begin{itemize}
+		\item El conjunto $S = \{x \in \mathbb{R} : 0 < x < 1\}$ es acotado.
+		\item Cotas superiores: Cualquier número real mayor o igual a 1.
+		\item Cotas inferiores: Cualquier número real menor o igual a 0.
+		\item El conjunto $\mathbb{N}$ es acotado inferiormente (cota inferior: 0), pero no superiormente.
+	\end{itemize}
+\end{fmd-example}
+
+\subsubsection{Valor Absoluto}
+
+El \textbf{valor absoluto} de un elemento $a \in K$ se define como:
+\[ |a| =
+\begin{cases}
+	a, & \text{si } a \geq 0 \\
+	-a, & \text{si } a < 0
+\end{cases} \]
+
+\textbf{Propiedades del Valor Absoluto en un Cuerpo Ordenado}
+
+\begin{itemize}
+	\item $|a| \geq 0$ para todo $a \in K$.
+	\item $|a| = 0$ si y solo si $a = 0$.
+	\item $|a \cdot b| = |a| \cdot |b|$ para todo $a, b \in K$.
+	\item $|a + b| \leq |a| + |b|$ para todo $a, b \in K$ (Desigualdad Triangular).
+\end{itemize}
+
+\subsubsection{Intervalos}
+
+Sean $a, b \in K$ con $a < b$. Se definen los siguientes intervalos:
+
+\begin{itemize}
+	\item \textit{Intervalo abierto}: $(a, b) = \{x \in K : a < x < b\}$
+	\item \textit{Intervalo cerrado}: $[a, b] = \{x \in K : a \leq x \leq b\}$
+	\item \textit{Intervalos semiabiertos}:
+	\begin{itemize}
+		\item $(a, b] = \{x \in K : a < x \leq b\}$
+		\item $[a, b) = \{x \in K : a \leq x < b\}$
+	\end{itemize}
+\end{itemize}
+
+\begin{fmd-example}[Intervalos]
+	En $\R$:
+	\begin{itemize}
+		\item $(-2, 3)$ representa todos los números reales estrictamente entre -2 y 3.
+		\item $[0, 1]$ representa todos los números reales entre 0 y 1, incluyendo 0 y 1.
+	\end{itemize}
+\end{fmd-example}
+
+
+
