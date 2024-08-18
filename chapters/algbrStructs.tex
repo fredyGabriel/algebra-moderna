@@ -418,8 +418,8 @@ Notar que:
 \[ SL_n(\R) \subset GL_n(\R) \subset \mathbf{M}_n(\R)\]
 
 \subsection{Homomorfismo de grupos} \label{sec:homogrupo}
-
-\begin{fmd-definition}[Homomorfismo]
+\vspace{1em}
+\begin{fmd-definition}[Homomorfismo de grupos]
 	Dados los grupos $(G, \ast)$ y $(H, \bdot)$, un homomorfismo de $G$ a $H$ es una función $\phi: G \rightarrow H \, / \,  \forall a, b \in G \implies \phi(a*b) = \phi(a) \bdot \phi(b)$.
 \end{fmd-definition}
 \begin{figure}[H]
@@ -466,7 +466,7 @@ Notar que:
 	\caption{}
 \end{figure}
 
-\subsubsection{Propiedades}
+\subsubsection{Propiedades básicas}
 \begin{enumerate}
 	\item La imagen del neutro de $G$ es el neutro de $H$: $\phi(e_G) = e_H$.
 	\[ \phi(a) = \phi(a*e_G) = \phi(a) \bdot \phi(e_G) = \phi(a) \bdot e_H \implies \phi(e_G) = e_H\]
@@ -2135,13 +2135,13 @@ Los conjuntos $\Q$: números racionales y $\Z_5$: enteros múdulo 5, tienen en c
 
 \subsection{Definición y propiedades básicas}
 \vspace{3mm}
-\begin{fmd-definition}[Cuerpo]
+\begin{fmd-definition}[Cuerpo] \label{def:cuerpo}
 	Sea $(\K, +, \bdot)$ un anillo unitario conmutativo, y denotemos mediante $1 \in \K$ el elemento unidad. Diremos que $(\K, +, \bdot)$ es un \textbf{cuerpo} si para todo elemento $x \in \K$ distinto del neutro aditivo (el cual denotaremos con 0) existe un elemento $x^{-1} \in \K$ tal que $xx^{-1} = 1$.
 \end{fmd-definition}
 
 \subsubsection{Axiomas de cuerpo}
 
-Sea $\K$ un conjunto no vacío dotado de dos operaciones internas, que llamaremos suma ($+$) y producto ($\bdot$), que cumplen los siguientes axiomas:
+La definición \ref{def:cuerpo} se traduce en axiomas. Sea $\K$ un conjunto no vacío dotado de dos operaciones internas, que llamaremos suma ($+$) y producto ($\bdot$), que cumplen los siguientes axiomas:
 
 \begin{enumerate}
 	\item \textbf{Axiomas de la Suma}
@@ -2324,41 +2324,90 @@ Sea $(\K, +, \bdot, \leq)$ un cuerpo ordenado.
 
 \subsubsection{Valor Absoluto}
 
-El \textbf{valor absoluto} de un elemento $a \in K$ se define como:
+El \textbf{valor absoluto} de un elemento $a \in \K$ se define como:
 \[ |a| =
 \begin{cases}
 	a, & \text{si } a \geq 0 \\
 	-a, & \text{si } a < 0
 \end{cases} \]
 
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[axis lines=middle, xlabel={$\K$}, ylabel={$\K^{+}$},
+			xticklabels={}, yticklabels={}, ymin=-1, ymax=2.5, scale mode=scale uniformly,
+			scale=.6, xmin=-2.5, xmax=2.5]
+			\addplot[thick, domain=0:2] {x};
+			\addplot[thick, domain=-2:0] {-x};
+		\end{axis}
+	\end{tikzpicture}
+	\caption{Valor absoluto}
+\end{figure}
+
 \textbf{Propiedades del Valor Absoluto en un Cuerpo Ordenado}
 
-\begin{itemize}
-	\item $|a| \geq 0$ para todo $a \in K$.
-	\item $|a| = 0$ si y solo si $a = 0$.
-	\item $|a \cdot b| = |a| \cdot |b|$ para todo $a, b \in K$.
-	\item $|a + b| \leq |a| + |b|$ para todo $a, b \in K$ (Desigualdad Triangular).
-\end{itemize}
+\begin{enumerate}
+	\item $|a| \geq 0, \forall a \in \K$.
+	\item $|a| = 0 \iff a = 0$.
+	\item $|a \cdot b| = |a| \cdot |b|, \quad \forall a, b \in \K$.
+	\item $|a + b| \leq |a| + |b|, \quad \forall a, b \in \K$ (desigualdad triangular).
+\end{enumerate}
 
 \subsubsection{Intervalos}
 
-Sean $a, b \in K$ con $a < b$. Se definen los siguientes intervalos:
+Sean $a, b \in \K$ con $a < b$. Se definen los siguientes intervalos:
 
 \begin{itemize}
-	\item \textit{Intervalo abierto}: $(a, b) = \{x \in K : a < x < b\}$
-	\item \textit{Intervalo cerrado}: $[a, b] = \{x \in K : a \leq x \leq b\}$
+	\item \textit{Intervalo abierto}: $(a, b) = \{x \in \K \mid a < x < b\}$
+	\begin{figure}[H]
+		\centering
+		\begin{tikzpicture}
+			\draw[latex-latex] (-3,0) -- (3,0) node[right] {$\K$} ; % Eje horizontal
+			\draw[very thick] (-1,0) -- (2,0); % Línea entre a y b
+			\draw[thick, fill=white] (-1,0) circle (2.5pt) node[below=2pt] {$a$}; % Punto abierto a
+			\draw[thick, fill=white] (2,0) circle (2.5pt) node[below=2pt] {$b$}; % Punto abierto b
+		\end{tikzpicture}
+	\end{figure}
+	\item \textit{Intervalo cerrado}: $[a, b] = \{x \in \K \mid a \leq x \leq b\}$
+	\begin{figure}[H]
+		\centering
+		\begin{tikzpicture}
+			\draw[latex-latex] (-3,0) -- (3,0) node[right] {$\K$} ; % Eje horizontal
+			\draw[very thick] (-1,0) -- (2,0); % Línea entre a y b
+			\draw[thick, fill=black] (-1,0) circle (2.5pt) node[below=2pt] {$a$}; % Punto abierto a
+			\draw[thick, fill=black] (2,0) circle (2.5pt) node[below=2pt] {$b$}; % Punto abierto b
+		\end{tikzpicture}
+	\end{figure}
 	\item \textit{Intervalos semiabiertos}:
 	\begin{itemize}
-		\item $(a, b] = \{x \in K : a < x \leq b\}$
-		\item $[a, b) = \{x \in K : a \leq x < b\}$
+		\item $(a, b] = \{x \in \K \mid a < x \leq b\}$
+			\begin{figure}[H]
+			\centering
+			\begin{tikzpicture}
+				\draw[latex-latex] (-3,0) -- (3,0) node[right] {$\K$} ; % Eje horizontal
+				\draw[very thick] (-1,0) -- (2,0); % Línea entre a y b
+				\draw[thick, fill=white] (-1,0) circle (2.5pt) node[below=2pt] {$a$}; % Punto abierto a
+				\draw[thick, fill=black] (2,0) circle (2.5pt) node[below=2pt] {$b$}; % Punto abierto b
+			\end{tikzpicture}
+		\end{figure}
+		\item $[a, b) = \{x \in \K \mid a \leq x < b\}$
+			\begin{figure}[H]
+			\centering
+			\begin{tikzpicture}
+				\draw[latex-latex] (-3,0) -- (3,0) node[right] {$\K$} ; % Eje horizontal
+				\draw[very thick] (-1,0) -- (2,0); % Línea entre a y b
+				\draw[thick, fill=black] (-1,0) circle (2.5pt) node[below=2pt] {$a$}; % Punto abierto a
+				\draw[thick, fill=white] (2,0) circle (2.5pt) node[below=2pt] {$b$}; % Punto abierto b
+			\end{tikzpicture}
+		\end{figure}
 	\end{itemize}
 \end{itemize}
 
 \begin{fmd-example}[Intervalos]
 	En $\R$:
 	\begin{itemize}
-		\item $(-2, 3)$ representa todos los números reales estrictamente entre -2 y 3.
-		\item $[0, 1]$ representa todos los números reales entre 0 y 1, incluyendo 0 y 1.
+		\item $(-2, 3)$ es un intervalo abierto por ambos lados, que representa todos los números reales estrictamente entre -2 y 3.
+		\item $[0, 1]$ es un intervalo cerrado por ambos lados, representa todos los números reales entre 0 y 1, incluyendo 0 y 1.
 	\end{itemize}
 \end{fmd-example}
 
