@@ -915,7 +915,11 @@ La idea de inferencia es: \textit{de premisas verdaderas se obtienen sólo concl
 
 \begin{enumerate}[label=\alph*)]
 	\item Ley del \textit{modus ponens}: \label{def:ponens}
-	\[ (p \implies q) \land p \implies q \]
+	\[ p \implies q, \ p \ \vdash \ q \]
+	Donde:
+	\begin{itemize}
+		\item $\vdash$ denota la relación de inferencia lógica (``se deduce'').
+	\end{itemize}
 	
 	Se utiliza para derivar una conclusión a partir de una afirmación condicional y su antecedente.
 	
@@ -931,9 +935,7 @@ La idea de inferencia es: \textit{de premisas verdaderas se obtienen sólo concl
 	\begin{fmd-example}[Modus ponens]
 		Supongamos que tenemos la afirmación:
 		
-		\begin{center}
-			$p \implies q$: ``Si sigues comiendo de esa manera, entonces no lograrás tu peso ideal''
-		\end{center}
+		$p \implies q$: ``Si sigues comiendo de esa manera, entonces no lograrás tu peso ideal''
 		
 		\begin{itemize}			
 			\item Si se verifica $p$: ``sigues comiendo de esa manera''
@@ -942,7 +944,7 @@ La idea de inferencia es: \textit{de premisas verdaderas se obtienen sólo concl
 	\end{fmd-example}
 	
 	\item Ley del \textit{modus tollens}:
-	\[ (p \implies q) \land \neg q \implies \neg p \]
+	\[ (p \implies q), \neg q \ \vdash \ \neg p \]
 	
 	Es otra regla de inferencia que se utiliza para derivar una conclusión negando el consecuente de una afirmación condicional.
 	
@@ -968,8 +970,8 @@ La idea de inferencia es: \textit{de premisas verdaderas se obtienen sólo concl
 		\end{itemize}
 	\end{fmd-example}
 	
-	\item Ley del silogismo hipotético:
-	\[ \left[(p \implies q) \land (q \implies r)\right] \implies \left( p \implies r \right)  \]
+	\item Ley del \textit{silogismo hipotético}:
+	\[ (p \implies q), (q \implies r) \vdash \left( p \implies r \right)  \]
 	
 	Nos permite combinar dos afirmaciones condicionales para obtener una nueva afirmación condicional
 	
@@ -989,8 +991,83 @@ La idea de inferencia es: \textit{de premisas verdaderas se obtienen sólo concl
 			\item Por lo tanto, $p \implies r$: si no me despierto a hora, entonces no me van a pagar mi sueldo.
 		\end{itemize}
 	\end{fmd-example}
+	
+	\item Ley del \textit{silogismo disyuntivo} (modus tollendo ponens)
+	
+	\[ p \lor q, \neg p \vdash q \]
+	o también:
+	\[ p \lor q, \neg q \vdash p \]
+	
+	o
+	\[
+	\begin{array}{l}
+		p  \lor q\\
+		\neg q \\ \hline
+		q
+	\end{array} \qquad \qquad \begin{array}{l}
+	p  \lor q\\
+	\neg q \\ \hline
+	p
+	\end{array}
+	\]
+	
+	Esta ley de inferencia establece que si tenemos una disyunción de dos proposiciones y sabemos que una de ellas es falsa, entonces podemos concluir que la otra proposición debe ser verdadera.
+	
+	La ley del silogismo disyuntivo se basa en la idea de que si tenemos dos opciones ($p$ o $q$) y descartamos una de ellas ($\neg p$ o $\neg q$), la otra opción debe ser la correcta.
+	
+	\begin{fmd-example}[Silogismo disyuntivo]
+		\begin{itemize}
+			\item \textit{Premisa 1}: ``Hoy iré al cine o me quedaré en casa estudiando'' ($p \lor q$)
+			\item \textit{Premisa 2}: ``No iré al cine hoy'' ($\neg p$)
+			\item \textit{Conclusión}: ``Por lo tanto, me quedaré en casa estudiando'' ($q$)
+		\end{itemize}
+	\end{fmd-example}
+	
+	\item Ley de \textit{adición} o adición disyuntiva:
+	\[ p \vdash p \lor q \]
+	Notación clásica:
+	\[
+	\begin{array}{l}
+		p\\ \hline
+		\therefore p \lor q
+	\end{array}
+	\]
+	Donde:
+	\begin{itemize}
+		\item $\therefore$ significa ``entonces''.
+	\end{itemize}
+	
+	Si sabemos que una proposición $p$ es verdadera, entonces añadir otra proposición $q$ a través de una disyunción no cambia el hecho de que al menos una de las dos es verdadera (en este caso, $p$). Por lo tanto, la disyunción completa $p \lor q$ también será verdadera.
+	
+	\begin{fmd-example}[Adición]
+		\begin{itemize}
+			\item \textit{Premisa}: ``Está lloviendo'' ($p$)
+			\item \textit{Conclusión}: ``Por lo tanto, está lloviendo o estoy comiendo pizza'' ($p \lor q$), donde $q$ es ``estoy comiendo pizza''
+		\end{itemize}
+	\end{fmd-example}
+	
+	\item Ley de \textit{adjunción} o adición conjuntiva:
+	\[ p, q \ \vdash \ p \lor q \]
+	Notación clásica:
+	\[
+	\begin{array}{l}
+		p\\
+		q\\ \hline
+		\therefore p \land q
+	\end{array}
+	\]
+	Si sabemos que dos proposiciones $p$ y $q$ son ambas verdaderas, entonces su combinación mediante una conjunción (AND) también debe ser verdadera, ya que la conjunción solo es verdadera cuando todas sus componentes lo son.
+	
+	\begin{fmd-example}[Adjunción]
+		\begin{itemize}
+			\item \textit{Premisa 1}: ``El cielo es azul'' ($p$)
+			\item \textit{Premisa 2}: ``La hierva es verde'' ($q$)
+			\item \textit{Conclusión}: ``Por lo tanto, el cielo es azul y la hierva es verde'' ($p \land q$)
+		\end{itemize}
+	\end{fmd-example}
 \end{enumerate}
 
+\textbf{Ejercicios:}
 \begin{fmd-example}
 	\begin{enumerate}
 		\item Justificar la validez del razonamiento:
@@ -1053,7 +1130,8 @@ Una \textit{falacia} es un razonamiento incorrecto pero con apariencia de correc
 	\mbox{Ad populum}\\
 	\mbox{Ad verecundiam}\\
 	\mbox{Ad ignorantiam}\\
-	\mbox{Tu quoque}
+	\mbox{Tu quoque}\\
+	\mbox{Hombre de paja}
 \end{cases}\]
 
 Algunos ejemplos:
@@ -1067,6 +1145,11 @@ Algunos ejemplos:
 	\item \textbf{Ad verecundiam}: \textit{``La raíz de 2 es irracional, porque lo dijo Euclides''}
 	\item \textbf{Ad ignorantiam}: \textit{``Nadie ha demostrado que hay vida en otros planetas, luego no la hay''}
 	\item \textbf{Tu quoque}: \textit{``Tu también''} o \textit{``tu más''}.
+	\item \textbf{Hombre de paja}, del espantapájaros o del monigote:
+	\begin{itemize}
+		\item A: \textit{``Creo que es malo que los adolescentes vayan solos de vacaciones''}
+		\item B (refutación falaz): \textit{``Obligar a nuestros hijos a quedarse encerrados en casa es perjudicial para su desarrollo emocional''}
+	\end{itemize}
 \end{itemize}
 
 \subsubsection{Falacias formales}
@@ -1189,10 +1272,11 @@ El cuantificador existencial se utiliza para afirmar que existe al menos un elem
 		\item $\exists \, x$: Indica que existe al menos un elemento x en el dominio que satisface la afirmación.
 		\item $P(x)$: Es un predicado que expresa una propiedad o relación sobre el elemento $x$.
 	\end{itemize}
-	\item Ejemplo:
-	
-	``Algunos estudiantes aprobaron el examen'' se formalizaría como: \[\exists \, x \left( E(x) \land A(x) \right)\] donde $E(x)$ significa ``$x$ es un estudiante'' y $A(x)$ significa ``$x$ aprobó el examen''.
 \end{itemize}
+
+\begin{fmd-example}[Cuantificador existencial]
+	``Algunos estudiantes aprobaron el examen'' se formalizaría como: \[\exists \, x \left( E(x) \land A(x) \right)\] donde $E(x)$ significa ``$x$ es un estudiante'' y $A(x)$ significa ``$x$ aprobó el examen''.
+\end{fmd-example}
 
 \subsection{Cuantificador universal}
 
@@ -1205,10 +1289,11 @@ El cuantificador universal se utiliza para afirmar que una propiedad o relación
 		\item $\forall x$: Indica que la afirmación se aplica a todos los elementos $x$ en el dominio.
 		\item $P(x)$: Es un predicado que expresa una propiedad o relación sobre el elemento $x$.
 	\end{itemize}
-	\item Ejemplo:
-	
-``Todos los perros ladran'' se formalizaría como: $\forall x \ \left(P(x) \implies L(x)\right)$ donde $P(x)$ significa ``$x$ es un perro'' y $L(x)$ significa ``$x$ ladra''.
 \end{itemize}
+
+\begin{fmd-example}[Cuantificador universal]
+	``Todos los perros ladran'' se formalizaría como: $\forall x \ \left(P(x) \implies L(x)\right)$ donde $P(x)$ significa ``$x$ es un perro'' y $L(x)$ significa ``$x$ ladra''.
+\end{fmd-example}
 
 \subsection{Negación de cuantificadores}
 La negación de una proposición universal es una proposición existencial, y viceversa.
@@ -1221,11 +1306,14 @@ La negación de una proposición universal es una proposición existencial, y vi
 		\item Proposición original: $\forall x \ P(x)$, ``Para todo $x$, $P(x)$ es verdadero
 		\item Negación: $\exists \, x \ \neg P(x)$, ``Existe al menos una $x$ para la cual $P(x)$ es falso''
 	\end{itemize}
-	Ejemplo:
-	\begin{itemize}
-		\item Original: ``Todos los gatos son negros'', ($\forall x \ P(x)$, donde $x$ es un gato, $P(x)$ ``$x$ es negro'')
-		\item Negación: ``Existe al menos un gato que no es negro'', ($\exists \ x \ \neg P(x)$).
-	\end{itemize}
+	
+	\begin{fmd-example}[Negación del universal]
+		\begin{itemize}
+			\item Original: ``Todos los gatos son negros'', ($\forall x \ P(x)$, donde $x$ es un gato, $P(x)$ ``$x$ es negro'')
+			\item Negación: ``Existe al menos un gato que no es negro'', ($\exists \ x \ \neg P(x)$).
+		\end{itemize}
+	\end{fmd-example}
+	
 	\item $\neg \left( \exists \, x \ P(x) \right) \equiv \forall x \ \neg P(x)$
 	
 	Esto es:
@@ -1233,11 +1321,14 @@ La negación de una proposición universal es una proposición existencial, y vi
 		\item Proposición original: $\exists \, x \ P(x)$, ``Existe al menos una $x$ para la cual $P(x)$ es verdadero
 		\item Negación: $\forall x \ \neg P(x)$, ``Para toda $x$, $P(x)$ es falso'' 
 	\end{itemize}
-	Ejemplo:
-	\begin{itemize}
+	
+	\begin{fmd-example}[Negación del existencial]
+		\begin{itemize}
 		\item Original: ``Algunos estudiantes aprobaron el examen'' o ``Al menos un estudiante aprobó el examen'' ($\exists \, x \ P(x)$, donde $x$ es un estudiante, $P(x)$ ``$x$ aprobó el examen'')
+		
 		\item Negación: ``Ningún estudiante aprobó el examen'' o, dicho de otra manera, ``todos los estudiantes no aprobaron el examen'' ($\forall x \ \neg P(x)$).
-	\end{itemize}
+		\end{itemize}
+	\end{fmd-example}
 \end{enumerate}
 
 
