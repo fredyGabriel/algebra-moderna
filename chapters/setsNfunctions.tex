@@ -1,9 +1,30 @@
 \chapter{Conjuntos y funciones}
 
-\section{Conjuntos} \label{sec:conjuntos}
-\subsection{Definición intuitiva de conjunto}
+\section{Introducción}
 
-Un conjunto es una colección o agrupación de objetos o elementos que comparten una característica común. Estos objetos pueden ser números, letras, personas, animales, o cualquier otra cosa que deseemos considerar juntos. En otras palabras, un conjunto es como una ``caja'' que contiene elementos relacionados.
+Este capítulo introduce los conceptos fundamentales de conjuntos y funciones, herramientas matemáticas esenciales en diversas áreas de la ingeniería. Se aborda la definición de conjunto, sus diferentes representaciones (extensión y comprensión), y las operaciones básicas entre conjuntos como unión, intersección, diferencia y complemento. Se estudian las relaciones de pertenencia e inclusión entre conjuntos, y el concepto de conjunto vacío y conjunto universal.
+
+Además, se introduce el concepto de función, tipos de funciones (inyectiva, sobreyectiva, biyectiva) y su representación cartesiana. Se estudian operaciones entre funciones como la composición y la función inversa, y se analizan ejemplos de funciones especiales relevantes en matemáticas.
+
+
+\subsection{Relevancia en ingeniería}
+
+\begin{itemize}
+	\item \textit{Modelado de sistemas}: Los conjuntos se utilizan para representar colecciones de objetos o elementos en un sistema, como por ejemplo, un conjunto de usuarios de una red de telecomunicaciones, un conjunto de componentes en un circuito eléctrico o para analizar las propiedades del suelo de un terreno;
+	\item \textit{Análisis de datos}: Las funciones son esenciales para modelar relaciones entre variables en el análisis de datos, como la resistencia de un material en función del tiempo o modelación de fenómenos espaciales, como la altitud de un terreno.
+	\item \textit{Programación}: Los conceptos de conjuntos y funciones son fundamentales en la programación, donde se utilizan para definir estructuras de datos y algoritmos.
+	\item \textit{Optimización}: Las funciones se utilizan en problemas de optimización para representar la función objetivo que se busca maximizar o minimizar.
+\end{itemize}
+
+\section{Conjuntos} \label{sec:conjuntos}
+
+\subsection{Definición intuitiva de conjunto}
+\vspace{1em}
+\begin{fmd-definition}[Conjunto]
+	Un \gls{conjunto} es una colección o agrupación de objetos, llamados \glspl{elemento} que comparten una característica común.
+\end{fmd-definition}
+
+Estos objetos pueden ser números, letras, personas, animales, o cualquier otra cosa que deseemos considerar juntos. En otras palabras, un conjunto es como una ``caja'' que contiene elementos relacionados.
 
 \subsubsection{Ejemplos de conjuntos}
 
@@ -43,33 +64,34 @@ Las notaciones usuales para caracterizar conjuntos numéricos son las siguientes
 \subsubsection{Conjuntos especiales}
 
 \begin{itemize}
-	\item El \textbf{conjunto universal}, denotado como \(U\), es el que contiene todos los elementos posibles que estamos considerando en un contexto particular. Es el conjunto más grande en ese contexto y actúa como un marco de referencia para otros conjuntos más pequeños.
+	\item El \gls{conjuntouniversal}, denotado como \glsentrysymbol{conjuntouniversal}, es el que contiene todos los elementos posibles que estamos considerando en un contexto particular. Es el conjunto más grande en ese contexto y actúa como un marco de referencia para otros conjuntos más pequeños.
 	
 	Por ejemplo, si estamos trabajando con números naturales, el conjunto universal sería \(\mathbb{N}\), que incluye todos los números positivos enteros: \(\{1, 2, 3, 4, \ldots\} \).
 	
-	\item El \textbf{conjunto vacío}, denotado como \( \emptyset \), es aquel que no contiene ningún elemento. El conjunto vacío es único, es decir todos los conjuntos vacíos son iguales.
+	\item El \gls{conjuntovacio}, denotado como \glsentrysymbol{conjuntovacio}, es aquel que no contiene ningún elemento. El conjunto vacío es único, en otras palabras, todos los conjuntos vacíos son iguales.
 	
-	Por ejemplo, el conjunto vacío puede representar el conjunto de números reales que son mayores que 10 y menores que 5. Dado que no hay números que cumplan esta condición, el conjunto resultante es vacío: \( \emptyset \).
+	Por ejemplo, el conjunto vacío puede representar el conjunto de números reales que son mayores que 10 y menores que 5. Dado que no hay números que cumplan esta condición, el conjunto resultante es vacío: \glsentrysymbol{conjuntovacio}.
 	
-	\item Un \textbf{conjunto unitario} está formado por un único elemento. Ejemplo $A = \{ a \}$.
+	\item Un \gls{conjuntounitario} está formado por un único elemento. Ejemplo $A = \{ a \}$.
 \end{itemize}
 
 \subsection{Relaciones de pertenencia e inclusión}
 
-\subsubsection{Pertenencia}
+\subsubsection{Relación de pertenencia}
 
-Para indicar la pertenencia de un elemento a un conjunto será utilizado el símbolo $\in$.
+Para indicar la \gls{pertenencia} de un elemento a un conjunto será utilizado el símbolo \glsentrysymbol{pertenencia}.
 
 La proposición $a \in A$ se lee ``$a$ \textit{pertenece} a $A$'', o bien ``el elemento $a$ \textit{pertenece} al conjunto $A$''. Su negación es $a \not \in A$, que se lee ``$a$ \textit{no pertenece} a $A$''
 
 \subsubsection{Notación por extensión}
 
-En la notación por extensión, enumeramos todos los elementos de un conjunto de manera explícita, es decir, listamos cada elemento individualmente. Algunos ejemplos:
+La notación por extensión lista cada elemento del conjunto de forma individual.
+
+Ejemplos:
 
 \begin{enumerate}
 	\item Conjunto de números pares menores que 10: $E = \{2, 4, 6, 8\}$
 	\item Conjunto de vocales: \(V = \{a, e, i, o, u\}\)
-	
 	\item Conjunto de meses del año: \(M = \{\text{enero}, \text{febrero}, \ldots, \text{diciembre}\}\)
 \end{enumerate}
 
@@ -79,11 +101,11 @@ En la notación por comprensión, describimos las propiedades o características
 
 En general su estructura tiene la forma:
 \[ A = \{ x \in U \mid P(x) \}\]
-es decir, el conjunto cuyos elementos verifican la propiedad $P(x)$, o más brevemente, si $U$ está sobreentendido:
+el conjunto cuyos elementos verifican la propiedad $P(x)$, o más brevemente, si $U$ está sobreentendido:
 \[ A = \{ x \mid P(x) \}\]
 se lee: ``$A$ es el conjunto formado por los elementos $x$, tales que $P(x)$'', en donde $P(x)$ es un función proposicional.
 
-Un objeto $a$ del universal pertenece al conjunto $A$, si y sólo si verifica la propiedad $P(x)$, es decir:
+Un objeto $a$ del universal pertenece al conjunto $A$ \textbf{si y sólo si} verifica la propiedad $P(x)$. En símbolos:
 \[ a \in A \iff P(a) \]
 en consecuencia:
 \[ a \not \in A \iff \neg P(a) \]
@@ -101,7 +123,7 @@ en consecuencia:
 		
 		``El conjunto de elementos $x$ tal que $x$ es una letra del alfabeto''
 		
-		\item El conjunto vacío puede definirse simbólicamente como: $\emptyset = \{ x \mid x \ne x \}$
+		\item El \gls{conjuntovacio} puede definirse simbólicamente como: $\emptyset = \{ x \mid x \ne x \}$
 		
 		``Los elementos $x$ tal que cada $x$ es distinto de sí mismo'' (no existen tales elementos).
 		
@@ -113,16 +135,12 @@ en consecuencia:
 \end{fmd-example}
 
 \subsubsection{Inclusión}
+La \gls{inclusion} tiene la siguiente definición:
 
 \begin{fmd-definition}[Inclusión]
 	Sean $A$ y $B$ dos conjuntos, si ocurre que todo elemento de $A$ pertenece a $B$, diremos que $A$ está incluido en $B$, o que $A$ es parte de $B$, o que $A$ es un subconjunto de $B$.
 	
 	Notación:  \[A \subset B\]
-	
-	Formalmente:
-	\[ A \subset B \iff \forall x : x \in A \implies x \in B \]
-	
-	Esta definición tiene el siguiente significado: si sabemos que $A \subset B$, entonces la proposición $ \forall x : x \in A \implies x \in B$ es verdadera; recíprocamente, si esta proposición es verdadera, entonces se verifica que $A \subset B$.
 \end{fmd-definition}
 
 \begin{itemize}
@@ -157,7 +175,7 @@ en consecuencia:
 	\item Observaciones:
 	
 	\begin{enumerate}
-		\item En repetidas ocasiones se necesitará demostrar que un conjunto es parte de otro; entonces, de acuerdo con la definición, será suficiente demostrar que cualquier elemento del primero pertenece al segundo, es decir, en la inclusión no puede darse que haya un elemento de $A$ que no pertenezca a $B$.
+		\item En repetidas ocasiones se necesitará demostrar que un conjunto es parte de otro; entonces, de acuerdo con la definición, será suficiente demostrar que cualquier elemento del primero pertenece al segundo, esto significa que en la inclusión no puede darse que haya un elemento de $A$ que no pertenezca a $B$.
 		\[ A \subset B \implies x \in A \implies x \in B \]
 		
 		\item El conjunto vacío es subconjunto de cualquier conjunto.
@@ -167,7 +185,7 @@ en consecuencia:
 
 \subsubsection{Diagrama de Venn}
 
-Existe una representación visual de los conjuntos dados por diagramas llamados de Venn. En este sentido, el conjunto universal suele representarse por un rectángulo y los conjuntos por recintos cerrados. Es claro que todo elemento de $A$ pertenece a $U$, es decir, $A \subset U$. $A$, $B$ y $C$ subconjuntos de $U$, como indica el diagrama de la fig. \ref{fig:Venn}.
+El \gls{venn} es una representación visual de los conjuntos utilizando diagramas llamados de Venn en homenaje a su autor\footnote{John Venn (1834-1923), matemático y lógico británico.}. En este sentido, el conjunto universal suele representarse por un rectángulo y los conjuntos por recintos cerrados. Es claro que todo elemento de $A$ pertenece a $U$, o sea, $A \subset U$. $A$, $B$ y $C$ subconjuntos de $U$, como indica el diagrama de la fig. \ref{fig:Venn}.
 
 \begin{figure}[H]
 	\centering
@@ -190,10 +208,10 @@ Existe una representación visual de los conjuntos dados por diagramas llamados 
 
 \subsection{Operaciones con conjuntos}
 
-\subsubsection{Unión $\cup$}
+\subsubsection{Unión \glsentrysymbol{union}}
 \vspace{1em}
 \begin{fmd-definition}[Unión]
-	La unión de dos conjuntos \(A\) y \(B\) consiste en todos los elementos que pertenecen a \(A\), a \(B\), o a ambos conjuntos.
+	La \gls{union} de dos conjuntos \(A\) y \(B\) consiste en todos los elementos que pertenecen a \(A\), a \(B\), o a ambos conjuntos.
 	
 	Notación: \(A \cup B\)
 	
@@ -221,10 +239,10 @@ Existe una representación visual de los conjuntos dados por diagramas llamados 
 	\end{enumerate}
 \end{itemize}
 
-\subsubsection{Intersección $\cap$}
+\subsubsection{Intersección \glsentrysymbol{interseccion}}
 \vspace{1em}
 \begin{fmd-definition}[Intersección]
-	La intersección de dos conjuntos \(A\) y \(B\) contiene los elementos que pertenecen tanto a \(A\) como a \(B\).
+	La \gls{interseccion} de dos conjuntos \(A\) y \(B\) contiene los elementos que pertenecen tanto a \(A\) como a \(B\).
 	
 	Notación: \(A \cap B\)
 	
@@ -256,7 +274,7 @@ Existe una representación visual de los conjuntos dados por diagramas llamados 
 \vspace{1em}
 
 \begin{fmd-definition}[Complemento]
-	El complemento de un conjunto \(A\) con respecto a un conjunto universal \(U\) contiene todos los elementos que no están en \(A\).
+	El \gls{complemento} de un conjunto \(A\) con respecto a un conjunto universal \(U\) contiene todos los elementos que no están en \(A\).
 	Notación: \(A^c\) o \(\overline{A}\) o \(A'\)
 	
 	Formalmente:
@@ -293,7 +311,7 @@ Existe una representación visual de los conjuntos dados por diagramas llamados 
 
 \vspace{1em}
 
-\begin{fmd-definition}[Diferencia]
+\begin{fmd-definition}[Diferencia de conjuntos]
 	La diferencia entre dos conjuntos \(A\) y \(B\) contiene los elementos que están en \(A\) pero no en \(B\).
 	
 	Notación: \(A - B\) o \( A \setminus B \)
@@ -323,7 +341,7 @@ Existe una representación visual de los conjuntos dados por diagramas llamados 
 \vspace{1em}
 
 \begin{fmd-definition}[Diferencia simétrica]
-	La diferencia simétrica de dos conjuntos \(A\) y \(B\), es el conjunto que contiene los elementos que pertenecen a \(A\) o a \(B\), pero no a ambos.
+	La \gls{difsimetrica} de dos conjuntos \(A\) y \(B\), es el conjunto que contiene los elementos que pertenecen a \(A\) o a \(B\), pero no a ambos.
 	
 	Notación: \(A \triangle B\)
 	
@@ -377,12 +395,12 @@ Existe una representación visual de los conjuntos dados por diagramas llamados 
 \vspace{1em}
 
 \begin{fmd-definition}[Conjunto potencia]
-	Dado un conjunto \(A\), el conjunto potencia o conjunto de partes de \(A\), denotado por \(\mathcal{P}(A)\) o \(2^A\), es el conjunto de todos los subconjuntos de \(A\). 
+	Dado un conjunto \(A\), el \gls{conjuntopotencia} o conjunto de partes de \(A\), denotado por \glsentrysymbol{conjuntopotencia} o \(2^A\), es el conjunto de todos los subconjuntos de \(A\). 
 	
 	Formalmente:
 	$$\mathcal{P}(A) = \{B \mid B \subseteq A\}$$
 	
-	Es decir, el conjunto potencia de un conjunto \(A\) es una colección que contiene a todos los posibles subconjuntos de \(A\), incluyendo el conjunto vacío (\(\emptyset\)) y el propio conjunto \(A\).
+	El conjunto potencia de un conjunto \(A\) es una colección que contiene a todos los posibles subconjuntos de \(A\), incluyendo el conjunto vacío (\(\emptyset\)) y el propio conjunto \(A\).
 \end{fmd-definition}
 
 \begin{itemize}
@@ -410,7 +428,7 @@ Existe una representación visual de los conjuntos dados por diagramas llamados 
 \vspace{1em}
 
 \begin{fmd-definition}[Producto cartesiano]
-	El producto cartesiano de dos conjuntos \(A\) y \(B\), es el conjunto de todos los pares ordenados \((a, b)\) donde el primer elemento \(a\) pertenece al conjunto \(A\) y el segundo elemento \(b\) pertenece al conjunto \(B\).
+	El \gls{productocartesiano} de dos conjuntos \(A\) y \(B\), es el conjunto de todos los pares ordenados \((a, b)\) donde el primer elemento \(a\) pertenece al conjunto \(A\) y el segundo elemento \(b\) pertenece al conjunto \(B\).
 
 	Notación: \(A \times B\)
 	
@@ -434,7 +452,7 @@ Existe una representación visual de los conjuntos dados por diagramas llamados 
 	\item Observaciones:
 	
 	\begin{enumerate}
-		\item El producto cartesiano no es conmutativo, es decir, en general, \(A \times B \neq B \times A\).
+		\item El producto cartesiano no es conmutativo, esto es, en general, \(A \times B \neq B \times A\).
 		\item Si \(A\) tiene \(m\) elementos y \(B\) tiene \(n\) elementos, entonces \(A \times B\) tiene \(m \cdot n\) elementos.
 		\item El producto cartesiano se puede extender a más de dos conjuntos. Por ejemplo, el producto cartesiano de tres conjuntos \(A\), \(B\) y \(C\) es:
 		$$A \times B \times C = \{(a, b, c) \mid a \in A, b \in B, c \in C\}$$
@@ -569,7 +587,7 @@ Existe una representación visual de los conjuntos dados por diagramas llamados 
 	Formalmente, una colección de conjuntos \(\{A_i\}_{i \in I}\) es una colección de uniones disjuntas si:
 	\[A_i \cap A_j = \emptyset \quad \forall i, j \in I \mbox{ con } i \neq j\]
 	
-	Es decir, los conjuntos en una unión disjunta no comparten ningún elemento\footnote{La noción de uniones disjuntas se puede generalizar a un número infinito de conjuntos.}.
+	Los conjuntos en una unión disjunta no comparten ningún elemento\footnote{La noción de uniones disjuntas se puede generalizar a un número infinito de conjuntos.}.
 	
 	Notación:
 	
@@ -745,8 +763,7 @@ Esta sección está basada en \cite{rojoAlgebra8vaEd} cap. 4.
 
 Sean A y B dos conjuntos no vacíos, que llamaremos \textit{dominio} y \textit{codominio} respectivamente. \par
 
-Una \textbf{función} de $A$ en $B$ es toda regla que hace corresponder a cada elemento
-de $A$ un único elemento de $B$.
+Una \textbf{función} de $A$ en $B$ asigna a cada elemento de $A$ un único elemento de $B$.
 
 Para denotar que $f$ (o $g$, $h$, etc.) es una función de $A$ en $B$, se escribe:
 \[f: A \rightarrow B\]
@@ -822,16 +839,13 @@ o bien:
 \textbf{Observaciones}:
 \begin{itemize}
 	\item Si $(a, b) \in f$ decimos que $b$ es el correspondiente o \textit{imagen} de $a$,
-	por $f$, y suele escribirse $b = f(a)$, es decir, $b$ es el transformado de $a$
+	por $f$, y suele escribirse $b = f(a)$, en otras palabras, $b$ es el transformado de $a$
 	por la función $f$.
-	\item Si $f$ es como arriba, una aplicación o un \textit{mapeo} de $A$ a $B$ a menudo se escribe $x \mapsto f(x)$ para denotar la imagen de $x$ por $f$. Por ejemplo: Si $A = \R$ y  $B = \R^{+}$, sea $f: \R \rightarrow \R^{+}$ la aplicación $f(x) = x^2$, es decir, el mapeo cuyo valor en $x$ es $x^2$. Podemos también decir: $f$ es la aplicación tal que $x \mapsto x^2$ ($x$ se mapea a $x^2$ o $x$ se transforma en $x^2$ o $x$ se aplica a $x^2$). En este caso la imagen de $f$ es el conjunto de números reales no negativos.
+	\item Si $f$ es como arriba, una aplicación o un \textit{mapeo} de $A$ a $B$ a menudo se escribe $x \mapsto f(x)$ para denotar la imagen de $x$ por $f$. Por ejemplo: Si $A = \R$ y  $B = \R^{+}$, sea $f: \R \rightarrow \R^{+}$ la aplicación $f(x) = x^2$, significa el mapeo cuyo valor en $x$ es $x^2$. Podemos también decir: $f$ es la aplicación tal que $x \mapsto x^2$ ($x$ se mapea a $x^2$ o $x$ se transforma en $x^2$ o $x$ se aplica a $x^2$). En este caso la imagen de $f$ es el conjunto de números reales no negativos.
 	\item Una función queda especificada si se da el dominio $A$, el codominio $B$,
 	y además la relación $f \subset A \times B$, que satisface las condiciones 1 y
 	2 de la definición.
-	\item Por ser un conjunto, $f$ puede estar dado por \textit{extensión}, es decir,
-	como conjunto de pares ordenados, o bien por \textit{comprensión}, mediante una
-	fórmula o ley de correspondencia que permita asignar a cada objeto del dominio su
-	imagen en el codominio.
+	\item Por ser un conjunto, $f$ puede estar dado por \textit{extensión}, como conjunto de pares ordenados, o bien por \textit{comprensión}, mediante una fórmula o ley de correspondencia que permita asignar a cada objeto del dominio su imagen en el codominio.
 \end{itemize}%
 
 \begin{fmd-example}[Funciones]
@@ -991,7 +1005,7 @@ y el codominio, del eje vertical.
 \begin{example}
 	Consideremos $A = \{1, 2\}$, $B = \{1,2,3,4\}$ y la función:
 	\[ f: A^2 \rightarrow B \]
-	que asigna a cada elemento del dominio $A^2$, la suma de sus componentes, es decir:
+	que asigna a cada elemento del dominio $A^2$, la suma de sus componentes:
 	\[ f(x, y) = x + y \]
 	\begin{enumerate}
 		\item Representación en una tabla de simple entrada.
@@ -1337,7 +1351,7 @@ Una función $f: A \rightarrow B$ es inyectiva si, y solo si, cuando dos element
 	Una función $f: A \rightarrow B$ es \textit{sobreyectiva} si, y solo si, para cada elemento $y \in B$, existe al menos un elemento $x \in A$ tal que $y = f(x)$.
 \end{fmd-definition}
 \begin{itemize}
-	\item El conjunto de las imágenes (\textit{rango} o \textit{recorrido}) se identifica con el codominio de la función. Es decir, no hay elementos del codominio que no sea la imagen de \textit{al menos un} elemento del dominio, en otras palabras, el rango y el codominio coinciden.
+	\item El conjunto de las imágenes (\textit{rango} o \textit{recorrido}) se identifica con el codominio de la función. No hay elementos del codominio que no sea la imagen de \textit{al menos un} elemento del dominio, en otras palabras, el rango y el codominio coinciden.
 	\item El ejemplo 3 corresponde a funciones sobreyectivas.
 	\item Es usual nombrar a las funciones sobreyectivas como ``sobre'' o ``suryectiva''
 \end{itemize}
@@ -1691,7 +1705,7 @@ Notar que si  $f: A \rightarrow B$ no es biyectiva, entonces no es inyectiva o n
 \begin{fmd-example}
 	Sean $A = \{ 1,2,3 \}$ y $B = \{ 1,2 \}$.
 	
-	Definimos $f: P(A) \rightarrow P(B)$ mediante $f(X) = X \cap B$, es decir, la imagen
+	Definimos $f: P(A) \rightarrow P(B)$ mediante $f(X) = X \cap B$, la imagen
 	de todo subconjunto de $A$ es su intersección con $B$.
 	
 	El diagrama muestra que $f$ es sobreyectiva pero no inyectiva.
@@ -1752,13 +1766,13 @@ Notar que si  $f: A \rightarrow B$ no es biyectiva, entonces no es inyectiva o n
 	Sea $f: \mathbb{R} \rightarrow \mathbb{R}$ definida por $f(x) = x^3$.
 	\begin{enumerate}
 		\item $f$ es 1-1. En efecto, sean $x_1$ y $x_2$ en $\mathbb{R}$ tales que
-		$f(x_1) = f(x_2)$, es decir, $x_1^3 = x_2^3$, o $x_1^3 - x_2^3 = 0$,
+		$f(x_1) = f(x_2)$, esto significa: $x_1^3 = x_2^3$, o $x_1^3 - x_2^3 = 0$,
 		factorizando: \[(x_1 - x_2)(x_1^2 + x_1x_2 + x_2^2) = 0\]
 		\[ x_1 - x_2 = 0 \implies x_1 = x_2 \]
 		de $x_1^2 + x_1x_2 + x_2^2=0$ se tiene:
 		\[ x_1 = \frac{-x_2 \pm \sqrt{x_2^2 - 4 x_2} }{2} =
 		\frac{-x_2 \pm \sqrt{-3x_2^2}}{2} \]
-		Es decir:
+		De donde:
 		\begin{equation} \label{eq:x1}
 			x_1 = \left( -\frac{1}{2} \pm i \frac{\sqrt{3}}{2} \right) x_2
 		\end{equation}
@@ -1808,7 +1822,7 @@ Notar que si  $f: A \rightarrow B$ no es biyectiva, entonces no es inyectiva o n
 	
 	Se tiene: $i_A = \{ (x, x) / x \in A \}$
 	
-	Es decir, la identidad en $A$ es la diagonal de $A^2$. Como relación es reflexiva,
+	La identidad en $A$ es la diagonal de $A^2$. Como relación es reflexiva,
 	simétrica y transitiva, o sea, de equivalencia en $A$; además es antisimétrica.\vspace{1mm}
 	
 	La función $i_A$ es obviamente \textbf{biyectiva}.
@@ -1873,10 +1887,9 @@ Notar que si  $f: A \rightarrow B$ no es biyectiva, entonces no es inyectiva o n
 		\[ \varphi(x) = K_x = [x] \]
 	\end{fmd-definition}
 	
-	Dos elementos equivalentes pertenecen a la misma clase y en consecuencia admiten la misma imagen, es decir, la aplicación canónica \textbf{no es inyectiva}, salvo en caso de clases unitarias.
+	Dos elementos equivalentes pertenecen a la misma clase y en consecuencia admiten la misma imagen, significa que la aplicación canónica \textbf{no es inyectiva}, salvo en caso de clases unitarias.
 	
-	Como cada clase es no vacía, ocurre que siempre \textbf{es sobreyectiva}, es
-	decir:
+	Como cada clase es no vacía, ocurre que siempre \textbf{es sobreyectiva}:
 	\[ \forall \, [u] \in A / \mathcal{R}, \exists \ x \in A / \varphi(x) = [u]  \]
 	Vale la siguiente proposición:
 	\[ a \equiv b \iff \varphi(a) = \varphi(b)\]
@@ -1902,7 +1915,7 @@ Notar que si  $f: A \rightarrow B$ no es biyectiva, entonces no es inyectiva o n
 	
 	\begin{figure}[H]
 		\centering
-		\begin{tikzpicture}[scale=1.5]
+		\begin{tikzpicture}[scale=1.3]
 			% Ejes x e y
 			\draw[->] (-3,0) -- (4,0) node[below] {$x$};
 			\draw[->] (0,-2.5) -- (0,2.5) node[right] {$y$};
@@ -1958,7 +1971,7 @@ Sean $f: A \rightarrow B$ y $g: B \rightarrow C$
 	\label{fig:compos1}
 \end{figure}
 El codominio de $f$ es dominio de $g$, pero es suficiente que el codominio de la
-primera sea parte del dominio de la segunda, es decir: $B \subset B'$. En la fig. \ref{fig:compos1} se ve gráficamente esta afirmación.
+primera sea parte del dominio de la segunda: $B \subset B'$. En la fig. \ref{fig:compos1} se ve gráficamente esta afirmación.
 
 \begin{fmd-definition}[Composición de funciones]
 	Composición de las funciones $f: A \rightarrow B$ y $g:B \rightarrow C$ es la
@@ -2242,7 +2255,7 @@ En este caso $g$ es la \textit{inversa derecha} de $f$ \vspace{2mm}
 			La imagen por $g$ es $g[f(x')] = g[f(x'')] $, o,
 			$(g \circ f)(x') = (g \circ f)(x'')$
 			
-			siendo $g \circ f = i_A$, se tiene $i_A(x') = i_A(x'')$, es decir
+			siendo $g \circ f = i_A$, se tiene $i_A(x') = i_A(x'')$ o, lo que es lo mismo:
 			$x' = x''$.
 			
 			Por tanto $f$ es 1-1.
@@ -2252,8 +2265,8 @@ En este caso $g$ es la \textit{inversa derecha} de $f$ \vspace{2mm}
 		Según definición, hay que probar $\forall \, y \in B, \exists \, x \in A /
 		f(x) = y$\vspace{2mm}
 		
-		Sea $y \in B$, entonces $y = i_B(y)$, y como $i_B = f \circ g$, se tiene
-		\[ y = (f \circ f)(y), \mbox{ es decir } y= f[g(x)] \]
+		Sea $y \in B$, entonces $y = i_B(y)$, y como $i_B = f \circ g$, se tiene:
+		\[ y = (f \circ f)(y), \mbox{ es decir, } y= f[g(x)] \]
 		por tanto, a expensas de $y \in B$, hemos determinado $x = g(y)$ en $A$,
 		tal que $f(x) = y$
 	\end{enumerate}
@@ -2300,7 +2313,7 @@ Siendo $f$ inyectiva y sobreyectiva resulta biyectiva.
 		de composición, por (1) y por identidad en $B$.
 		
 		\[ (f \circ g)(y) = f[g(y)] = f(x) = y = i_B(y) \]
-		Es decir:
+		Con lo cual:
 		\[ f \circ g = i_B \]
 	\end{enumerate}
 \end{proof}
@@ -2337,15 +2350,14 @@ La función $g$ se llama inversa y se denota por $f^{-1}$.
 		\item $f$ es sobreyectiva
 		
 		Sea $y \in (-1, 1)$. Si $\exists \, x \in \mathbb{R} / f(x) = y$, entonces 
-		$\dfrac{x}{1 + |x|} = y$, notar que $x$ y $y$ tienen signos iguales, es decir 
-		$\mathrm{sg}(x) = \mathrm{sg}(y)$.
+		$\dfrac{x}{1 + |x|} = y$, notar que $x$ y $y$ tienen signos iguales, $\mathrm{sg}(x) = \mathrm{sg}(y)$.
 		
 		Operando (siendo $|y| < 1$):
 		\[ x = y + y|x| \rightarrow x = y + y \, x \, \mathrm{sg}(x) \rightarrow
 		x = y + x \, y \, \mathrm{sg}(y) \rightarrow x - x \, y \, \mathrm{sg}(y) = y \]
 		\[ \rightarrow x(1 - |y|) = y \rightarrow x = \frac{y}{1 - |y|}\]
 	
-		Es decir: $\forall \, y \in (-1, 1), \exists \, x = \dfrac{y}{1 - |y|}$ tal que:
+		de donde: $\forall \, y \in (-1, 1), \exists \, x = \dfrac{y}{1 - |y|}$ tal que:
 		\[ f(x) = f \left( \frac{y}{1 - |y|} \right) = \frac{\dfrac{y}{1-|y|}}{1 - 
 			\left| \dfrac{y}{1 - |y|} \right|} = \frac{\dfrac{y}{1 - |y|}}{1 - \dfrac{|y|}
 			{1 - |y|}} = y \]
@@ -2412,7 +2424,7 @@ La función $g$ se llama inversa y se denota por $f^{-1}$.
 		ser $f$ inyectiva. Ahora bien:
 		
 		\[ (g \circ f)(x) = g[f(x)] = g(y) = x = i_A(x) \]
-		es decir: \[ g \circ f = i_A \]
+		luego: \[ g \circ f = i_A \]
 	\end{proof}
 	
 	\begin{enumerate}
@@ -2502,7 +2514,7 @@ $f(\varnothing) = \varnothing$. $f$ es sobreyectiva si y sólo si $f(X) = Y$.
 Sean $f: X \rightarrow Y$ y $A$ y $B$ subconjuntos del dominio.
 \begin{enumerate}[label=\textbf{\alph*)}]
 	\item Si un subconjunto del dominio es parte de otro, entonces la misma relación
-	vale para sus imágenes. Es decir:
+	vale para sus imágenes.
 	\[ f: X \rightarrow Y, A \subset B, B \subset X \mbox{ y } A \subset B \implies
 	f(A) \subset f(B)\]
 	En efecto, sea
@@ -2514,7 +2526,7 @@ Sean $f: X \rightarrow Y$ y $A$ y $B$ subconjuntos del dominio.
 \begin{enumerate}[label=\textbf{\alph*)}]
 	\setcounter{enumi}{1}
 	\item La imagen de la unión de dos subconjuntos del dominio, es igual a la 
-	unión de sus imágenes. Es decir:
+	unión de sus imágenes.
 	\[ f: X \rightarrow Y , A \subset X \land B \subset X \implies f\left( A 
 	\cup B \right) = f(A) \cup f(B) \]
 	\begin{figure}[H]
@@ -2603,7 +2615,7 @@ Sean $f: X \rightarrow Y$ y $A \subset Y$.
 		\end{tikzpicture}
 	\end{figure}
 	\[ f^{-1}(A) = \{ x \in X / f(x) \in A \} \]
-	Es claro que: $ x \in f^{-1}(A)$ si, y solo si $f(x) \in A $, es decir, un elemento del dominio pertenece a la preimagen de $A$ si y sólo si su imagen pertenece a $A$.
+	Es claro que: $ x \in f^{-1}(A)$ si, y solo si $f(x) \in A $, en palabras, un elemento del dominio pertenece a la preimagen de $A$ si y sólo si su imagen pertenece a $A$.
 \end{fmd-definition}
 
 \begin{fmd-example}[Preimagen]
@@ -2716,7 +2728,7 @@ Sean $f:X \rightarrow Y$ y los subconjuntos $A \subset Y$, $B \subset Y$.
 
 \begin{fmd-example}
 	El conjunto $\Omega$ consiste en los posibles resultados que se obtienen al lanzar
-	una moneda, es decir: $\Omega = \{ c, s \}$.
+	una moneda: $\Omega = \{ c, s \}$.
 	
 	Se define $f: \Omega \rightarrow \mathbb{R}$ mediante $f(c) = 1, \ f(s) = 0$.
 	El diagrama es:

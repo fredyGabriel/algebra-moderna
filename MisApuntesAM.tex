@@ -22,6 +22,15 @@
 \usepackage{venndiagram}
 \usepackage{makecell}
 
+% Paquete para el glosario
+%\usepackage[acronym, nonumberlist]{glossaries}
+%\usepackage[acronym,symbols,nomain,nonumberlist]{glossaries-extra}
+
+\usepackage[automake, toc, nonumberlist, symbols]{glossaries}
+
+\makeglossaries
+
+
 \usepackage{pifont}% http://ctan.org/pkg/pifont
 \newcommand{\cmark}{\ding{51}}%
 \newcommand{\xmark}{\ding{55}}%
@@ -36,7 +45,7 @@
 \faculty{Facultad de Ingeniería}
 %\department{Cátedra de Álgebra Moderna}
 \title{Apuntes de Álgebra Moderna\\{\large En proceso de elaboración}}
-\subtitle{Clases de teoría}
+\subtitle{Notas de teoría}
 \author{Fredy Gabriel \textsc{Ramírez Villanueva}}
 %\supervisor{Linus \textsc{Torvalds}}
 \context{versión 0.1.0-alpha}
@@ -85,9 +94,13 @@
 	\end{tabular}
 }
 
+
 %%%%%%%%%%%%
 % Document %
 %%%%%%%%%%%%
+
+% Cargar el glosario desde el archivo externo
+\loadglsentries{resources/bib/glossary}
 
 \begin{document}
     \maketitle
@@ -96,11 +109,13 @@
     \tableofcontents
 
 	% Capí\tableofcontentstulos
-	\include{chapters/setsNfunctions}
-	\include{chapters/logic}
-	\include{chapters/algbrStructs}
+	\input{chapters/setsNfunctions}
+	\input{chapters/logic}
+	\input{chapters/algbrStructs}
     
-
+    \newpage
+    \printglossary[type=main, title={Glosario}]
+    \printsymbols[title=Lista de símbolos]
     \newpage
 
     \nocite{*}

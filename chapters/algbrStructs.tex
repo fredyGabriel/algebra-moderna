@@ -1,5 +1,23 @@
 \chapter{Estructuras algebraicas}
 
+
+\section{Introducción}
+
+Este capítulo introduce las estructuras algebraicas, incluyendo grupos, anillos y cuerpos. Se definen los grupos, sus propiedades y se presentan ejemplos como el grupo de números enteros con la suma, el grupo de matrices invertibles con la multiplicación y los grupos de simetrías.
+Se explora el concepto de anillo, con ejemplos como el anillo de números enteros y el anillo de polinomios. Finalmente, se define el cuerpo, un anillo conmutativo con unidad donde todo elemento no nulo tiene inverso multiplicativo. Se presentan ejemplos como el cuerpo de los números racionales, el cuerpo de los números reales y el cuerpo de los números complejos.
+
+\subsection{Relevancia en ingeniería}:
+
+\begin{itemize}
+	\item \textit{Análisis de estructuras}: Los grupos se usan para analizar la simetría de estructuras y en la mecánica de sólidos;
+	\item \textit{Teoría de codificación y criptografía}: Las estructuras algebraicas, como los grupos y los cuerpos finitos, son la base de muchos algoritmos criptográficos modernos, cruciales para la seguridad informática en la industria.
+	\item \textit{Procesamiento de señales}: La transformada de Fourier discreta, una herramienta esencial en el procesamiento de señales. El análisis de imágenes satelitales en la cartografía, se basa en la teoría de grupos.
+	\item \textit{Álgebra lineal}:  Las matrices, un tipo de estructura algebraica, son fundamentales en el álgebra lineal, una rama de las matemáticas con amplias aplicaciones en ingeniería.
+	\item \textit{Robótica}: Los grupos se utilizan en robótica para describir las rotaciones y movimientos de los robots.
+\end{itemize}
+
+\subsection{Preliminares}
+
 Una estructura algebraica es una par $(G, *)$, en donde $G$ es un conjunto no vacío y $*$ es una operación aplicable a los elementos dicho conjunto. Podrían haber más operaciones aplicables, por ejemplo, sin son aplicables las operaciones $*$ y $\bdot$, la estructura algebraica sería $(G, *, \bdot)$.
 
 En general, una estructura algebraica es una $n-tupla: (a_1, a_2, \dots, a_n)$, donde $a_1$ es un conjunto no vacío dado, y $\{ a_2, \dots, a_n \}$ es un conjunto de operaciones aplicables a los elementos del conjunto $a_1$.
@@ -57,7 +75,7 @@ Por lo tanto, un grupo es una estructura algebraica que consta de:
 \begin{enumerate}[label=\roman*)]
 	\item Se dice que la operación $(*)$ es \textbf{cerrada} en el conjunto $G$, si $*: G \times G \rightarrow G$, en este caso, se dice que $(G, *)$ tiene una regla o \textbf{ley de composición interna}.
 	
-	\item Cuando $(G, *)$ es abeliana, es común llamar \textit{suma} o \textit{adición} a $*$, se dice que $*$ es aditiva, suele usarse el signo $+$, su inverso es el \textit{opuesto} y se indica $a' = -a$. Es común llamar \textit{cero} al neutro y denotarlo por $0$;
+	\item Cuando $(G, *)$ es abeliana, es común llamar \textit{suma} o \textit{adición} a $*$, se dice que $*$ es aditiva, suele usarse el signo $+$, su inverso se denomina \textit{simétrico}, \textit{opuesto} o \textit{inverso aditivo} y se indica $a' = -a$. Es común llamar \textit{cero} al neutro y denotarlo por $0$;
 	\item Cuando $(G, *)$ es \textit{no abeliana} (o no lo sabemos), decimos que $*$ es multiplicativa, se usa ``$\bdot$'', su inverso se dice \textit{recíproco} y se utiliza $a' = a^{-1}$. Es usual llamar \textit{unidad} al neutro y denotarlo $1$.
 	\item Cuando la cardinalidad\footnote{Ver sección \ref{sec:finitos}} $|G|$ es finita, decimos que el grupo es \textit{finito}.
 	\item Dado un grupo $(G, *)$, $a\in G$ y $m \in \mathbb{Z}$, por convención $a^m = a*a* \cdots *a$, con $m$ factores si $m>0$, y $a^m = (a^{|m|})^{-1} =$ $\left(a*a* \cdots *a\right)' = a'*a'* \cdots *a'$ con $|m|$ factores $a'$ si $m<0$.
@@ -159,7 +177,7 @@ Los conjuntos correspondientes a los grupos de orden 1, 2 y 3 son $\{ e \}$, $\{
 	\item Notar que cada fila y columna contiene todos los elementos del grupo. No existen duplicados en ninguna fila ni columna.
 	
 	\item Estos grupos son abelianos ya que las tablas son simétricas respecto de la diagonal principal.
-	\item Notar la similitud con las operaciones entre números enteros, si convertimos $* \rightarrow +, e \rightarrow 0, a \rightarrow 1, b \rightarrow 2$, que se muestran en la tabla \ref{tab:cayley2}, en este caso se dice que el grupo $(G, *)$ es \textbf{isomorfo} con su correspondiente $(\Z_n, +)$. Más adelante se verán estos conceptos con más detalle.
+	\item Notar la similitud con las operaciones entre números enteros, si reemplazamos $*$ por $+$, $e$ por $0$, $a$ por $1$ y $b$ por $2$ que se muestran en la tabla \ref{tab:cayley2}, en este caso se dice que el grupo $(G, *)$ es \textbf{isomorfo} con su correspondiente $(\Z_n, +)$. Más adelante se verán estos conceptos con más detalle.
 \end{itemize}
 
 \begin{table}[H]
@@ -184,7 +202,7 @@ Los conjuntos correspondientes a los grupos de orden 1, 2 y 3 son $\{ e \}$, $\{
 \textbf{Tarea}: Realizar las tablas de Cayley para grupos de orden 4.
 
 \begin{fmd-example}[Grupo de Klein]
-	El grupo de Klein\footnote{En honor al matemático alemán Felix Klein (1849-1925).} es abeliano con 4 elementos, en el cual cada elemento es su propio inverso (\textit{propiedad involutiva}), y componiendo cualesquiera dos de ellos, a excepción del neutro, produce el tercero, es decir:
+	El grupo de Klein\footnote{En honor al matemático alemán Felix Klein (1849-1925).} es abeliano con 4 elementos, en el cual cada elemento es su propio inverso (\textit{propiedad involutiva}), y componiendo cualesquiera dos de ellos, a excepción del neutro, produce el tercero:
 	\[ V = \{ e, a, b, c \}; \quad a^2 = b^2 = (ab)^2 = c^2 = e \]
 	\vspace{-15mm}
 	\begin{table}[H]
@@ -249,7 +267,7 @@ Consideremos $\mathbf{M}_{m\times n}(\R)$, el conjunto de todas las matrices $m 
 
 \subsubsection{Suma de matrices}
 
-Dadas las matrices $A = (a_{ij})$ y $B = (b_{ij})$, se define la suma: $S = A + B = (s_{ij})$ de modo que $s_{ij} = a_{ij} + b_{ij}$, es decir, la matriz $S$ tiene como elementos la suma de los elementos correspondientes de $A$ y $B$.
+Dadas las matrices $A = (a_{ij})$ y $B = (b_{ij})$, se define la suma: $S = A + B = (s_{ij})$ de modo que $s_{ij} = a_{ij} + b_{ij}$, en otras palabras, la matriz $S$ tiene como elementos la suma de los elementos correspondientes de $A$ y $B$.
 
 Ejemplo:
 \[ \begin{bmatrix}
@@ -360,13 +378,13 @@ Ejemplo:
 \textbf{Notas}:
 
 \begin{enumerate}[label=\roman*)]
-	\item La operación es $\bdot : \textbf{M}_{m \times n} \times \mathbf{M}_{n \times r} \rightarrow \mathbf{M}_{m \times r}$, es decir, $(A, B) \rightarrow C$. El número de columnas de $A$ debe ser igual al número de filas de $B$ para que se realizable el producto. La matriz $C$ es de orden igual al número de filas de $A$ por el número de columnas de $B$.
+	\item La operación es $\bdot : \textbf{M}_{m \times n} \times \mathbf{M}_{n \times r} \rightarrow \mathbf{M}_{m \times r}$, esto es, $(A, B) \rightarrow C$. El número de columnas de $A$ debe ser igual al número de filas de $B$ para que se realizable el producto. La matriz $C$ es de orden igual al número de filas de $A$ por el número de columnas de $B$.
 	
 	\item Las matrices de orden $m\times n$ con $m \ne n$ son llamadas \textbf{matrices rectangulares} y cuando $m = n$ se dice que son \textbf{cuadradas}.
 	
-	\item El producto de matrices es asociativo, es decir: \[(A_{m\times n} \cdot B_{n \times r}) \cdot C_{r \times s} = A_{m \times n} \cdot (B_{n \times r} \cdot C_{r \times s})\] Como puede comprobarse de la definición.
+	\item El producto de matrices es asociativo: \[(A_{m\times n} \cdot B_{n \times r}) \cdot C_{r \times s} = A_{m \times n} \cdot (B_{n \times r} \cdot C_{r \times s})\] Como puede comprobarse de la definición.
 	
-	\item Las matrices rectangulares con la operación de multiplicación definida en \eqref{eq:cij} no forman un grupo, pues la operación no es \textbf{cerrada}, es decir, en general las matrices $A, B, C$, con $C = AB$ no son del mismo orden, en otras palabras, no son del mismo conjunto, de donde no se cumple la condición $\bdot: G \times G \rightarrow G$, dada en la definición de grupo.
+	\item Las matrices rectangulares con la operación de multiplicación definida en \eqref{eq:cij} no forman un grupo, pues la operación no es \textbf{cerrada}, significa que, en general las matrices $A, B, C$, con $C = AB$ no son del mismo orden, en otras palabras, no son del mismo conjunto, de donde no se cumple la condición $\bdot: G \times G \rightarrow G$, dada en la definición de grupo.
 \end{enumerate}
 
 Consideremos solo matrices cuadradas $\mathbf{M}_{n \times n}(\R) = \mathbf{M}_n(\R)$, en este caso, la operación de multiplicación $(\cdot)$ es cerrada, esto es:
@@ -598,7 +616,7 @@ Notación $S_A \coloneqq \{ f: A \rightarrow A | \, f \mbox{ es biyectiva}\}$.
 Conforme a todo lo dicho:
 \[ (S_A, \circ ) \mbox{ es un grupo.}\]
 
-En particular, consideremos un conjunto finito $A = \{ a_1, \dots, a_n \}$, de $n$ elementos, es decir, $|A| = n$. En este caso se escribe $S_A = S_n$, el cual recibe el nombre de \textbf{grupo de simetrías} de $A$.
+En particular, consideremos un conjunto finito $A = \{ a_1, \dots, a_n \}$, de $n$ elementos, esto es, $|A| = n$. En este caso se escribe $S_A = S_n$, el cual recibe el nombre de \textbf{grupo de simetrías} de $A$.
 
 Por ejemplo: para $n = 3$ el conjunto sería $A = \{a, b, c\}$, y el de simetrías denotamos por $S_3$.
 
@@ -688,7 +706,7 @@ Si colocamos los elementos de $A$ en un triángulo equilátero, trazando bisectr
 	\end{itemize}
 	\item Rotaciones $(\phi)$: los elementos \textit{giran}\footnote{El giro es de $60 \unit{\degree}$ (en general $360/n$), en sentido antihorario de acuerdo a cómo fueron colocados $a, b, c$ en la fig. \ref{fig:gtriang}} y se reubican en nuevos vértices.
 	\begin{itemize}
-		\item $\phi_1$: $a \mapsto b, b \mapsto c, c \mapsto a $, es decir:  $(a, b, c) \mapsto (b, c, a)$
+		\item $\phi_1$: $a \mapsto b, b \mapsto c, c \mapsto a $, significa:  $(a, b, c) \mapsto (b, c, a)$
 		\item $\phi_2$: $a \mapsto c, c \mapsto b, b \mapsto a $, es decir: $(a, c, b) \mapsto (c, b, a)$
 	\end{itemize}
 \end{itemize}
@@ -918,7 +936,7 @@ Observemos que los enteros pares forman subgrupo de $(\Z, +)$ pero los impares n
 			-1 & -1 & -i & 1 & i\\
 			-i & -i & 1 & i & -1 
 		\end{array} \]
-		Notar que el grupo es abeliano y cíclico, generado por $i$, es decir $G = \langle i \rangle$. El elemento neutro es el 1.
+		Notar que el grupo es abeliano y cíclico, generado por $i$, $G = \langle i \rangle$. El elemento neutro es el 1.
 		
 		El orden del elemento $-1$ es 2, porque $(-1)^2 = 1$, el orden del elemento generador $i$ es 4, porque $i^4 = 1$, que es igual al orden $|G|$ del subgrupo generado.
 	\end{fmd-example}
@@ -1014,7 +1032,7 @@ Observemos que los enteros pares forman subgrupo de $(\Z, +)$ pero los impares n
 
 	\subsubsection{Relación de equivalencia y clases}
 	
-	Sea $(H, *)$ un subgrupo de $(G, *)$. Definimos en $G$ la relación $\sim$ mediante: $a \sim b \iff a' * b \in H$, es decir, dos elementos está relacionados si y sólo si la composición del inverso del primero con el segundo pertenece a $H$.
+	Sea $(H, *)$ un subgrupo de $(G, *)$. Definimos en $G$ la relación $\sim$ mediante: $a \sim b \iff a' * b \in H$, en otras palabras, dos elementos está relacionados si y sólo si la composición del inverso del primero con el segundo pertenece a $H$.
 	
 	La relación es de equivalencia pues verifica la reflexividad $a \sim a$, simetría $a\sim b \implies b \sim a$ y transitividad $a\sim b \land b \sim c \implies a \sim c$, en efecto
 	
@@ -1054,7 +1072,7 @@ Observemos que los enteros pares forman subgrupo de $(\Z, +)$ pero los impares n
 	\end{enumerate}
 	
 	\begin{proposition}[Subgrupos de grupos abelianos] \label{prop:subgrupo}
-		Todo subgrupo de un grupo abeliano es normal, es decir: $\forall x, y: x\in G \land y \in H \implies xyx^{-1} = xx^{-1}y = ey = y \in H$;
+		Todo subgrupo de un grupo abeliano es normal: $\forall x, y: x\in G \land y \in H \implies xyx^{-1} = xx^{-1}y = ey = y \in H$;
 	\end{proposition}
 	
 	\begin{definition}[Grupo simple]
@@ -1072,11 +1090,11 @@ Observemos que los enteros pares forman subgrupo de $(\Z, +)$ pero los impares n
 		\[a^{-1} (\ker f) a \in \ker f\]
 	\end{proof}
 	
-	La definición \ref{def:normal} es equivalente a decir que si  $H$ es un subgrupo normal de $G$, entonces las clases laterales izquierda y derecha de $H$ son iguales, es decir:
+	La definición \ref{def:normal} es equivalente a decir que si  $H$ es un subgrupo normal de $G$, entonces las clases laterales izquierda y derecha de $H$ son iguales:
 	\begin{equation} \label{eq:normal}
 		H \triangleleft G \implies gH = Hg
 	\end{equation}
-	La expresión $Hg$ no es otra cosa que operar $h * g = hg \, \forall \, h \in H$ y $g \in G$.
+	La expresión $Hg$ no es otra cosa que operar $h * g = hg \ \forall \, h \in H$, $g \in G$.
 	
 	\begin{fmd-example}
 		Recordemos el grupo $(S_3, \circ)$ con la tabla \ref{tab:compos}, que reescribimos aquí:
@@ -1203,7 +1221,7 @@ Si $H$ es un subgrupo de orden $k$ del grupo finito $G$, entonces toda clase izq
 	
 	Si $H$ es un subgrupo  de $G$ y $o(H) = k$ por el teorema \ref{teo:finito} el cardinal de toda coclase a izquierda de $H$ es $k$, y como estas son disjuntas, resulta:
 	\[ o(G) = mk = m o(H) \]
-	es decir:
+	luego:
 	\[ o(H) \mid o(G) \]
 \end{fmd-proof}
 
@@ -1407,7 +1425,7 @@ $\bar{0}$ es el conjunto de todos los múltiplos de 3 $(3\Z)$, o lo que es lo mi
 Se observa que $\Z/3\Z$ tiene 3 clases, $\Z/4\Z$ tendrá 4 clases, en general $\Z/n\Z$ tiene $n$ clases de conformidad con el teorema \ref{teo:finito}.
 
 
-Este es precisamente el conjunto cociente, es decir:
+Este es precisamente el conjunto cociente:
 \[ \frac{\Z}{\sim} = \Z / 3\Z = \{ \bar{0}, \bar{1}, \bar{2} \}\]
 En general
 \[ \Z / n \Z = \{ \bar{0}, \bar{1}, \dots, \overline{n-1} \} \]
@@ -1495,7 +1513,7 @@ Las operaciones de suma entre las clases de congruencia de $\Z/n\Z$ se ven en la
 		\item \textbf{?`Es inyectiva?}
 		La función es inyectiva, si:
 		\[ a \ne b \implies f(a) \ne f(b) \]
-		de la definción de $f$ puede observarse que es así, es decir, $f$ es inyectiva.
+		de la definción de $f$ puede observarse que efectivamente es así, $f$ es inyectiva.
 		
 		\item \textbf{?`Es sobreyectiva?}
 		Se observa que el codominio coincide con el rango, por lo que $f$ es sobreyectiva.		
@@ -1656,7 +1674,7 @@ En $\Z$, los enteros 2 y 3 admiten a $-1$ y 1 como divisores comunes. Estos son 
 	\begin{itemize}
 		\item \textbf{Parte 1}: Si $n$ es primo, entonces el anillo no tiene divisores de cero
 		
-		Supongamos que $n$ es un número primo. Queremos demostrar que en el anillo $(\mathbb{Z}_n, +, \bdot)$, no existen divisores de cero, es decir, no hay elementos $a, b \in \mathbb{Z}_n$ tales que $a \cdot b \equiv 0 \mod n$ con $a \not\equiv 0 \mod n$ y $b \not\equiv 0 \mod n$.
+		Supongamos que $n$ es un número primo. Queremos demostrar que en el anillo $(\mathbb{Z}_n, +, \bdot)$, no existen divisores de cero, esto es, no hay elementos $a, b \in \mathbb{Z}_n$ tales que $a \cdot b \equiv 0 \mod n$ con $a \not\equiv 0 \mod n$ y $b \not\equiv 0 \mod n$.
 		
 		Dado que $n$ es primo, los únicos elementos no nulos en $\mathbb{Z}_n$ son aquellos que son coprimos con $n$. Esto significa que si $a$ y $b$ no son congruentes con $0$ módulo $n$, entonces $a$ y $b$ son coprimos con $n$. En otras palabras, el máximo común divisor de $a$ y $n$ es $1$, y el máximo común divisor de $b$ y $n$ también es $1$.
 		
@@ -1808,7 +1826,7 @@ Se vió en \ref{sec:matrices}, que el conjunto de matrices con coeficientes real
 	\item[A9] Identidad: $\exists I \in \R^{n \times n} / \forall A \in \R^{n \times n}: A I = I A = A $ \cmark
 	\item[A10] Conmutatividad: $AB \ne BA$  \xmark
 \end{itemize}
-Existen divisores de cero, es decir, matrices no nulas pueden dar producto no nulo. Por ejemplo, en el caso $(\R^{2 \times 2}, +, \bdot)$:
+Existen divisores de cero, o sea, matrices no nulas pueden dar producto no nulo. Por ejemplo, en el caso $(\R^{2 \times 2}, +, \bdot)$:
 
 \[ A = \begin{bmatrix}
 	1 & 1\\
@@ -1906,7 +1924,7 @@ Ahora, hagamos un repaso de la suma y multiplicación de polinomios.
 			=& a_0b_0 + (a_0b_1 + a_1b_0)x + (a_0b_2 + a_1b_1 + a_2b_0)x^2 + (a_1b_2 + a_2b_1)x^3 + a_2b_2x^4\\
 			=& c_0 + c_1x + c_2x^2 + c_3x^3 + c_4x^4
 			\end{split} \]
-			Se observa que la suma de los subíndices de los coeficientes, siempre es igual al exponente de $x$, es decir, los términos entre paréntesis son de la forma $a_jb_{i-j}x^{i}$ y se puede escribir, por ejemplo:
+			Se observa que la suma de los subíndices de los coeficientes, siempre es igual al exponente de $x$, en consecuencia, los términos entre paréntesis son de la forma $a_jb_{i-j}x^{i}$ y se puede escribir, por ejemplo:
 			\[ c_3 = a_1b_2 + a_2b_1 = {\color{red} a_0b_3} + a_1b_2 + a_2b_1 + {\color{red} a_3b_0} \]
 			considerando que $a_3 = b_3 = 0$ para en general poner:
 			\[ c_i = \sum_{j=0}^{i} a_jb_{i-j}x^{i}\]
@@ -1918,7 +1936,7 @@ Ahora estamos listos para analizar anillos de polinomios.
 
 \subsubsection{Sucesión de elementos de un anillo}
 
-Consideremos un anillo conmutativo $A$, y una sucesión de elementos de $A$, $(a_i)_{i \in \N}$, que cumplen $a_{n+1} = 0$ desde un cierto $n$ en adelante, es decir:
+Consideremos un anillo conmutativo $A$, y una sucesión de elementos de $A$, $(a_i)_{i \in \N}$, que cumplen $a_{n+1} = 0$ desde un cierto $n$ en adelante:
 \[ (a_i)_{i \in \N} = (a_0, a_1, a_2, \dots, a_n, 0, 0, \dots)\]
 
 \subsubsection{Operaciones internas}
@@ -2001,7 +2019,7 @@ Las operaciones en $A[x]$ se pueden poner como:
 		\vdots \\
 		A[x_1, \dots, x_n] \equiv \left( A[x_1, \dots x_{n-1}] \right)[x_n]
 	\end{array} \]
-	es decir:
+	con lo cual:
 	\[ A[x_1, \dots, x_n] \equiv A[x_1][x_2]\cdots [x_{n-1}][x_n] \]
 	y los polinomios de $A[x_1, \dots, x_n]$ se expresan como suma de monomios
 	\[ p(x_1, \dots, x_n) = \sum a_{i_1,\dots, i_n}x_1^{i_1} \cdots x_n^{i_n} \]
@@ -2029,7 +2047,7 @@ Como $(A, +)$ es un grupo abeliano $\implies$ $(I, +) \trianglelefteq (A, +)$, e
 En general, como $(A, +)$ es abeliano todo subgrupo es normal\footnote{Ver proposición \ref{prop:subgrupo}.}, por lo tanto el primer requerimiento para $(I, +)$ es que sea un subgrupo de $(A, +)$.
 \[ (I, +) \le (A, +) \]
 
-Ahora bien, para construir el grupo cociente $A/I$ con la operación de adición (por ejemplo la clase de $x \in A$ será $\bar{x} = x + I \in A/I$), como $A$ es un anillo, debemos buscar la posibilidad de multiplicar entre sí los elementos de $A/I$ tal que el resultado esté en $A/I$, es decir:
+Ahora bien, para construir el grupo cociente $A/I$ con la operación de adición (por ejemplo la clase de $x \in A$ será $\bar{x} = x + I \in A/I$), como $A$ es un anillo, debemos buscar la posibilidad de multiplicar entre sí los elementos de $A/I$ tal que el resultado esté en $A/I$:
 \[ \forall x, y \in A: (x + I)(y + I) = x y + I \]
 Veamos qué debe pasar para que esto se cumpla. Tomemos cualesquiera $i_1, i_2 \in I$
 \[ (x + i_1) (y + i_2) = xy + i_1y + xi_2 + i_1i_2 \implies i_1y + xi_2 + i_1i_2 = i_3 \in I\]
@@ -2235,7 +2253,7 @@ Sea $(\K, +, \cdot)$ un cuerpo. Algunas de sus propiedades generales son las sig
 \subsection{Homomorfismo de cuerpos}
 \vspace{1em}
 \begin{fmd-definition}[Homomorfismo de cuerpos]
-	Sean $(\K, +, \bdot)$, $(\mathbb{L}, +, \bdot)$ cuerpos. Una aplicación $f: \K \rightarrow \mathbb{L}$ se dice que es un homomorfismo entre cuerpos, si y sólo si $f$ es un homomorfismo entre los anillos $(\K, +, \bdot)$ y $(\mathbb{L}, +, \bdot)$ con imagen no trivial, es decir $Im(f) \ne \{ 0 \}$
+	Sean $(\K, +, \bdot)$, $(\mathbb{L}, +, \bdot)$ cuerpos. Una aplicación $f: \K \rightarrow \mathbb{L}$ se dice que es un homomorfismo entre cuerpos, si y sólo si $f$ es un homomorfismo entre los anillos $(\K, +, \bdot)$ y $(\mathbb{L}, +, \bdot)$ con imagen no trivial, $Im(f) \ne \{ 0 \}$
 \end{fmd-definition}
 
 \textbf{Observaciones}
@@ -2270,7 +2288,7 @@ De acuerdo con la definición anterior.
 
 \subsection{Cuerpos ordenados}
 
-Un \textit{cuerpo ordenado} es un cuerpo $(\K, +, \bdot)$ en el que además se define una relación de orden total, denotada por $\leq$, que es compatible con las operaciones del cuerpo. Es decir, satisface los siguientes axiomas adicionales:
+Un \textit{cuerpo ordenado} es un cuerpo $(\K, +, \bdot)$ en el que además se define una relación de orden total, denotada por $\leq$, que es compatible con las operaciones del cuerpo. Esto significa que, satisface los siguientes axiomas adicionales:
 
 \begin{enumerate}
 	\item \textbf{Axiomas de Orden Total}

@@ -1,5 +1,19 @@
 \chapter{Lógica matemática}
-La lógica matemática es una disciplina que se ocupa del estudio de los principios y reglas que rigen el razonamiento válido. A través de símbolos y estructuras formales, la lógica nos permite analizar argumentos, deducir conclusiones y establecer conexiones entre proposiciones. A continuación, exploraremos los conceptos básicos de la lógica.
+
+\section{Introducción}
+
+Este capítulo introduce los principios y reglas de la lógica matemática, una disciplina que permite analizar argumentos, deducir conclusiones y establecer conexiones entre proposiciones. Se estudian los conceptos de proposición, operadores lógicos (conjunción, disyunción, negación, implicación, bicondicional), tablas de verdad y equivalencias lógicas.
+Se analizan las tautologías y contradicciones, proposiciones compuestas que siempre son verdaderas o siempre son falsas, respectivamente. Se introduce la lógica predicativa, una extensión de la lógica proposicional que permite expresar relaciones entre objetos y cuantificar sobre ellos utilizando cuantificadores universales y existenciales.
+Finalmente, se presenta el sistema axiomático de Peano, un conjunto de axiomas que permite construir formalmente los números naturales y demostrar teoremas básicos de la aritmética, como el principio de inducción matemática.
+
+\subsection{Relevancia en ingeniería}
+
+\begin{itemize}
+	\item \textit{Diseño de circuitos digitales}: La lógica matemática es la base del diseño de circuitos digitales, donde se utilizan compuertas lógicas para implementar funciones booleanas.
+	\item \textit{Verificación y validación de software}: Para demostrar la corrección de programas y sistemas.
+	\item \textit{Inteligencia artificial}: La lógica matemática es una herramienta fundamental en la inteligencia artificial, especialmente en áreas como el razonamiento automático y la representación del conocimiento.
+	\item \textit{Sistemas de control}: Se aplica en el diseño de sistemas de control para puentes y estructuras, garantizando respuestas adecuadas ante diferentes condiciones.
+\end{itemize}
 
 \section{Lógica proposicional}
 
@@ -72,7 +86,7 @@ La negación de una proposición $p$ se denota como $\neg p$ o $\sim p$. Represe
 	\end{tabular}
 \end{table}
 
-La operación de negación ($\neg$) es análoga a la complementación ($^c$) de la teoría de conjuntos. El paralelismo se construye al considerar la pertenencia de un conjunto como una proposición $p$, si un elemento pertenece a $A$, $p$ es verdadero. El complemento $A^c$ contiene todos los elementos que no pertenecen a $A$, entonces $p$ es falso, es decir $\neg p$ es verdadero.
+La operación de negación ($\neg$) es análoga a la complementación ($^c$) de la teoría de conjuntos. El paralelismo se construye al considerar la pertenencia de un conjunto como una proposición $p$, si un elemento pertenece a $A$, $p$ es verdadero. El complemento $A^c$ contiene todos los elementos que no pertenecen a $A$, entonces $p$ es falso, por lo tanto $\neg p$ es verdadero.
 
 \begin{figure}[h]
 	\centering
@@ -147,7 +161,7 @@ La disyunción de dos proposiciones $p$ y $q$ se denota como $p \lor q$. Represe
 	\end{tabular}
 \end{table}
 
-La operación lógica de disyunción es análoga a la unión de la teoría de conjuntos. La unión $A \cup B$ contiene los elementos que pertenecen a $A$ o a $B$ o a ambos, es decir, siempre y cuando un elemento pertenezca a $A$ o a $B$ o a ambos $p \lor q$ será $V$.
+La operación lógica de disyunción es análoga a la unión de la teoría de conjuntos. La unión $A \cup B$ contiene los elementos que pertenecen a $A$ o a $B$ o a ambos, en otras palabras, siempre y cuando un elemento pertenezca a $A$ o a $B$ o a ambos $p \lor q$ será $V$.
 
 \begin{figure}[h]
 	\centering
@@ -363,14 +377,14 @@ Resumiendo, si $p \implies q$ es $V$, entonces $p$ es condición suficiente para
 		\item $q$: $T$ es isósceles.
 	\end{itemize}
 	
-	$p$ es condición suficiente para $q$, es decir, que un triángulo sea equilátero es suficiente para asegurar que sea isósceles. Por otra parte, $T$ es equilátero sólo si es isósceles; es decir, que un triángulo sea isósceles es necesario para que sea equilátero.
+	$p$ es condición suficiente para $q$, en este ejemplo, que un triángulo sea equilátero es suficiente para asegurar que sea isósceles. Por otra parte, $T$ es equilátero sólo si es isósceles; es decir, que un triángulo sea isósceles es necesario para que sea equilátero.
 \end{fmd-example}
 
 \subsubsection{Condición necesaria y suficiente}
 
-Sea ahora la doble implicación $p \iff q$, es decir $(p \implies q) \land (q \implies p)$. Si $p \iff q$ es $V$, entonces $p \implies q$ es $V$ y $q \implies p$, es $V$. Se tiene, atendiendo a la primera, que $p$ es condición suficiente para $q$; y, teniendo en cuenta la segunda implicación, ocurre que $p$ es condición necesaria para $q$.
+Sea ahora la doble implicación $p \iff q$, esto significa $(p \implies q) \land (q \implies p)$. Si $p \iff q$ es $V$, entonces $p \implies q$ es $V$ y $q \implies p$, es $V$. Se tiene, atendiendo a la primera, que $p$ es condición suficiente para $q$; y, teniendo en cuenta la segunda implicación, ocurre que $p$ es condición necesaria para $q$.
 
-Es decir, si $p \implies q$ es $V$, entonces el antecedente $p$ es condición necesaria y suficiente para el consecuente $q$.
+Si $p \implies q$ es $V$, entonces el antecedente $p$ es condición necesaria y suficiente para el consecuente $q$.
 
 Análogamente, en el caso de la doble implicación verdadera, el consecuente $q$ es también condición necesaria y suficiente para el antecedente $p$.
 
@@ -390,7 +404,7 @@ Análogamente, en el caso de la doble implicación verdadera, el consecuente $q$
 \subsubsection{Tautología}
 \vspace{1em}
 \begin{fmd-definition}[Tautología]
-	Cuando una proposición compuesta, como por ejemplo $(p \implies q) \land p \implies q$ es verdadera, independientemente de los valores de verdad de las proposiciones componentes, se dice que tal proposición es una \textit{tautología} o \textit{ley lógica}, es decir, una tautología es una proposición lógica que siempre es verdadera.
+	Cuando una proposición compuesta, como por ejemplo $(p \implies q) \land p \implies q$ es verdadera, independientemente de los valores de verdad de las proposiciones componentes, se dice que tal proposición es una \textit{tautología} o \textit{ley lógica}, o sea, una tautología es una proposición lógica que siempre es verdadera.
 \end{fmd-definition}
 
 En el cálculo proposicional se utilizan las siguientes leyes o tautologías cuyas demostraciones se reduce a la confección de las correspondientes tablas de verdad.
@@ -410,7 +424,7 @@ En el cálculo proposicional se utilizan las siguientes leyes o tautologías cuy
 	
 	\item Involución o doble negación
 	\[ \neg (\neg p) \iff p \]
-	La doble negación es equivalente a una afirmación, es decir: ``no, no $p$, equivale a $p$''
+	La doble negación es equivalente a una afirmación: ``no, no $p$, equivale a $p$''
 	\item Idempotencia
 	\[ (p \land p) \iff p \quad y \quad (p \lor p) \iff p\]
 	\item Conmutatividad
@@ -486,7 +500,7 @@ La mayoría de estas leyes lógicas tienen sus análogas en teoría de conjuntos
 
 \subsubsection{Contradicción}
 
-Una contradicción es una proposición lógica que siempre es falsa, sin importar los valores de verdad de sus componentes. Es decir, es una fórmula que es falsa en todas las interpretaciones posibles.
+Una contradicción es una proposición lógica que siempre es falsa, sin importar los valores de verdad de sus componentes. Es una fórmula que es falsa en todas las interpretaciones posibles.
 
 Ejemplos de contradicciones:
 \begin{itemize}
@@ -596,7 +610,7 @@ A partir de estos operadores básicos, podemos construir funciones booleanas má
 
 Al unir dos proposiciones cualesquiera por medio de la frase \textit{``si y sólo si''}, (cuyo símbolo es \( \iff \)) se obtiene una proposición compuesta que se llama \textit{equivalencia}. Las proposiciones conectadas de esta manera reciben los nombres de \textit{miembro izquierdo} y \textit{miembro derecho} de la equivalencia. Al afirmar la equivalencia de las proposiciones, se excluye la posibilidad de que una sea verdadera y la otra falsa; por lo tanto, una equivalencia es verdadera si sus miembros izquierdo y derecho son o bien ambos verdaderos o bien ambos falsos; en caso contrario la equivalencia es falsa.
 
-Dos proposiciones son \textit{equivalentes} si y solo si tienen el mismo valor de verdad en todas las posibles combinaciones de valores de verdad de sus proposiciones componentes. Es decir, sus tablas de verdad son idénticas.
+Dos proposiciones son \textit{equivalentes} si y solo si tienen el mismo valor de verdad en todas las posibles combinaciones de valores de verdad de sus proposiciones componentes. En otras palabras, sus tablas de verdad son idénticas.
 
 La equivalencia lógica captura la idea de que dos proposiciones, aunque expresadas de manera diferente, representan la misma información desde el punto de vista lógico. Si dos proposiciones son equivalentes, podemos sustituir una por la otra en cualquier contexto lógico sin alterar el significado o la validez del razonamiento.
 
@@ -608,7 +622,7 @@ La equivalencia lógica captura la idea de que dos proposiciones, aunque expresa
 	
 	De \textit{$x$ es un número positivo} ($p$) se sigue que \textit{$3x$ es un número positivo} ($q$), (en símbolos $p \implies q$) y, recíprocamente, de \textit{$3x$ es un número positivo} se sigue que \textit{$x$ es un número positivo} ($q \implies p$). Las condiciones de que $x$ sea un número positivo y que $3x$ sea un número positivo son equivalentes entre sí ($p \iff q$).
 	
-	La condición de ser $x$ un número positivo es \textit{necesaria y suficiente} para que $3x$ sea un número positivo, recíprocamente, para que $x$ sea un número positivo es necesario y suficiente que $3x$ lo sea, es decir, cada una de las proposiciones representa una \textit{condición necesaria y suficiente} para la otra.
+	La condición de ser $x$ un número positivo es \textit{necesaria y suficiente} para que $3x$ sea un número positivo, recíprocamente, para que $x$ sea un número positivo es necesario y suficiente que $3x$ lo sea, significa que, cada una de las proposiciones representa una \textit{condición necesaria y suficiente} para la otra.
 \end{fmd-example}
 
 \subsubsection{Verificación de equivalencia}
@@ -785,10 +799,10 @@ y, de acuerdo con lo expuesto, se presentan dos métodos:
 	\item \textit{Directo}: Si $p = F$, nada hay que probar, pues en este caso $p \implies q$ es $V$. Si $p$ es $V$ hay que establecer que el valor de verdad de $q$ es $V$.
 	\item \textit{Indirecto}:
 	\begin{enumerate}[label=\alph*)]
-		\item Se utiliza la \textit{contrarrecíproca}, es decir, demostrar la verdad de $p \implies q$ es equivalente a probar la verdad de $\neg q \implies \neg p$.
+		\item Se utiliza la \textit{contrarrecíproca}, estos es, demostrar la verdad de $p \implies q$ es equivalente a probar la verdad de $\neg q \implies \neg p$.
 		\item Por \textit{contradicción} o \textit{reducción al absurdo}:
 		\begin{enumerate}
-			\item Se supone que la tesis ($q$) es falsa, es decir, se parte del caso $p = V$ y $q = F$;
+			\item Se supone que la tesis ($q$) es falsa, con lo cual, se parte del caso $p = V$ y $q = F$;
 			\item Se derivan otras afirmaciones utilizando reglas lógicas;
 			\item Si se llega a una contradicción (por ejemplo $q \land \neg q = V$), se concluye que $q = V$.
 		\end{enumerate}
@@ -809,7 +823,7 @@ En consecuencia, la negación de la primera equivale a la negación de la segund
 y por la propiedad de \textit{involución} se tiene:
 \[ \neg (p \implies q) \iff (p \land \neg q) \]
 
-Es decir, la negación de una implicación no es una implicación, sino la conjunción del antecedente con la negación del consecuente.
+La negación de una implicación no es una implicación, sino la conjunción del antecedente con la negación del consecuente.
 
 \begin{fmd-example}[Negación de una implicación \(\neg (p \implies q) \iff (p \land \neg q)  \)]
 	Sean las implicaciones:
@@ -863,7 +877,7 @@ Si tenemos las premisas $(p \Rightarrow q)$ y $(p)$, entonces la conclusión $(q
 
 \subsubsection{Relación entre argumento y razonamiento deductivo válido}
 
-Un argumento puede ser válido o inválido. Un argumento válido es aquel en el que la conclusión se sigue necesariamente de las premisas, es decir, representa un razonamiento deductivo válido. Por otro lado, un argumento inválido es aquel en el que la conclusión no se sigue lógicamente de las premisas, incluso si las premisas son verdaderas.
+Un argumento puede ser válido o inválido. Un argumento válido es aquel en el que la conclusión se sigue necesariamente de las premisas, de esta manera, representa un razonamiento deductivo válido. Por otro lado, un argumento inválido es aquel en el que la conclusión no se sigue lógicamente de las premisas, incluso si las premisas son verdaderas.
 
 
 \begin{fmd-example}[Argumento válido]
@@ -909,7 +923,7 @@ La idea de inferencia es: \textit{de premisas verdaderas se obtienen sólo concl
 \begin{itemize}
 	\item \textit{Validez}: Una regla de inferencia es válida si, siempre que las premisas sean verdaderas, la conclusión deducida también es verdadera.
 	\item \textit{Forma lógica}: Las reglas de inferencia se basan en la forma lógica de las proposiciones, no en su contenido específico. Esto significa que se pueden aplicar a cualquier conjunto de proposiciones que tengan la misma estructura lógica, independientemente de su significado.
-	\item \textit{Deducción}: Las reglas de inferencia nos permiten realizar deducciones, es decir, pasar de proposiciones conocidas a nuevas proposiciones que se siguen lógicamente de ellas.
+	\item \textit{Deducción}: Las reglas de inferencia nos permiten realizar deducciones, esto es, pasar de proposiciones conocidas a nuevas proposiciones que se siguen lógicamente de ellas.
 \end{itemize}
 
 
@@ -1155,7 +1169,7 @@ Algunos ejemplos:
 \subsubsection{Falacias formales}
 \vspace{1em}
 \begin{fmd-definition}[Falacias formales]
-Las \textit{falacias formales} son errores de razonamiento que ocurren debido a una estructura lógica incorrecta en un argumento, independientemente de la verdad o falsedad de las proposiciones involucradas. Es decir, el problema radica en la forma del argumento, no en su contenido.
+Las \textit{falacias formales} son errores de razonamiento que ocurren debido a una estructura lógica incorrecta en un argumento, independientemente de la verdad o falsedad de las proposiciones involucradas. Por lo tanto, el problema radica en la forma del argumento, no en su contenido.
 \end{fmd-definition}
 
 A pesar de parecer convincentes a primera vista, las falacias formales violan las reglas de inferencia válidas, lo que las hace inválidas desde el punto de vista lógico. Identificar y evitar estas falacias es crucial para construir argumentos sólidos y confiables.
@@ -1455,7 +1469,7 @@ Previos:
 	\[P \coloneqq \{ p \in \mathbb{N}; p \ne 1 \mbox{ y } p \mbox{ no es primo ni es producto de factores primos} \}\]
 	Si la afirmación del teorema fuese falso, el conjunto $P$ sería no vacío, y por lo tanto, por el
 	Principio del Buen Orden, debe tener un elemento mínimo. Llamemos $p_0$ a dicho elemento.
-	Tenemos que $p_0 \ne 1$, y $p_0$ no es primo, por lo cual tiene factores $q$, $n$ distintos de 1 y del propio $p_0$, es decir, tenemos $p_0 = qn$, con $q$ y $n$ ambos menores que $p_0$, y ambos distintos del 1. Pero $p_0$ tampoco es producto de factores primos, por lo cual o bien $q$ o bien $n$ no es primo. Pero esto contradice la minimalidad de $p_0$ como elemento de $P$. Esta contradicción indica que debemos tener $P = \emptyset$.
+	Tenemos que $p_0 \ne 1$, y $p_0$ no es primo, por lo cual tiene factores $q$, $n$ distintos de 1 y del propio $p_0$, luego, tenemos $p_0 = qn$, con $q$ y $n$ ambos menores que $p_0$, y ambos distintos del 1. Pero $p_0$ tampoco es producto de factores primos, por lo cual o bien $q$ o bien $n$ no es primo. Pero esto contradice la minimalidad de $p_0$ como elemento de $P$. Esta contradicción indica que debemos tener $P = \emptyset$.
 \end{fmd-proof}
 Falta probar la unicidad de la descomposición prima.
 
@@ -1477,7 +1491,7 @@ Falta probar la unicidad de la descomposición prima.
 	\item Si $X = \emptyset$ decimos que tiene 0 elementos;
 	\item Si $f: I_n \rightarrow X$ es una biyección, decimos que $X$ tiene $n$ elementos;
 	\item Llamamos a $n$ la \textbf{cardinalidad} de $X$, se suele escribir: $|X| = n$.
-	\item Si $g: X \rightarrow Y$ es una biyección, entonces $f:I_n \rightarrow X$ será una biyección si y sólo si, $g \circ f:I_n \rightarrow Y$ es una biyección. Es decir, $X$ será finito si $Y$ es finito y tendrán la misma cardinalidad $n$.
+	\item Si $g: X \rightarrow Y$ es una biyección, entonces $f:I_n \rightarrow X$ será una biyección si y sólo si, $g \circ f:I_n \rightarrow Y$ es una biyección. En otras palabras, $X$ será finito si $Y$ es finito y tendrán la misma cardinalidad $n$.
 \end{itemize}
 
 \subsubsection{Numerabilidad}
@@ -1493,7 +1507,7 @@ No todos los conjuntos infinitos tienen la misma cardinalidad. Un conjunto es \t
 \end{fmd-example}
 
 \begin{fmd-theorem}[Teorema de Cantor]
-	El conjunto potencia $\mathcal{P}(A)$ de cualquier conjunto $A$ tiene una cardinalidad estrictamente mayor que la cardinalidad de $A$, es decir:
+	El conjunto potencia $\mathcal{P}(A)$ de cualquier conjunto $A$ tiene una cardinalidad estrictamente mayor que la cardinalidad de $A$:
 	\[ |\mathcal{P}(A)| >  |A| \]
 	
 	\begin{proof}
