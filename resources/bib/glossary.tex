@@ -1,5 +1,8 @@
+%%%%%%%%%%%%%%%%%
+%%% CONJUNTOS %%%
+%%%%%%%%%%%%%%%%%
 \newglossaryentry{conjunto}{name=conjunto,
-	description={Colección de objetos o elementos que comparten una característica común},
+	description={Colección de objetos que comparten una característica común},
 	text=conjunto,
 	plural=conjuntos}
 
@@ -10,7 +13,7 @@
 	}
 
 \newglossaryentry{pertenencia}{name=pertenencia (\ensuremath{\in}), symbol={\ensuremath{\in}},
-	text=pertenencia, description={Relación que indica si un elemento está o no en un conjunto.}}
+	text=pertenencia, description={Indica que un elemento está o no en un conjunto.}}
 	
 \newglossaryentry{siysolosi}{
 	name={si y sólo si (\ensuremath{\iff})},
@@ -20,10 +23,10 @@
 }
 
 \newglossaryentry{inclusion}{name=inclusión (\ensuremath{\subset}), symbol={\ensuremath{\subset}}, text=inclusión,
-	description={Relación entre conjuntos donde un conjunto (subconjunto) está completamente contenido en otro}}
+	description={Relación donde un conjunto (subconjunto) está completamente contenido en otro}}
 
 \newglossaryentry{igualdad_conjuntos}{
-	name={Igualdad de conjuntos},
+	name={igualdad de conjuntos},
 	description={Dos conjuntos son iguales si tienen exactamente los mismos elementos}
 }
 
@@ -43,7 +46,7 @@
 	plural=conjuntos universales}
 
 \newglossaryentry{union}{name=unión (\ensuremath{\cup}), symbol={\ensuremath{\cup}},
-	description={La unión de dos conjuntos $A$ y $B$ consiste en todos los elementos que pertenecen tanto a $A$, a $B$ o a ambos},
+	description={$A \cup B$ consiste en todos los elementos que pertenecen tanto a $A$, a $B$ o a ambos},
 	text=unión,
 	plural=uniones}
 	
@@ -58,7 +61,7 @@
 }
 	
 \newglossaryentry{interseccion}{name=intersección (\ensuremath{\cap}), symbol={\ensuremath{\cap}},
-		description={La intersección de dos conjuntos $A$ y $B$ contiene los elementos que pertenecen tanto a $A$ como a $B$},
+		description={$A \cap B$ contiene los elementos que pertenecen tanto a $A$ como a $B$},
 		text=intersección,
 		plural=intersecciones}
 		
@@ -72,12 +75,12 @@
 	plural=diagramas de Venn}
 	
 \newglossaryentry{difsimetrica}{name=diferencia simétrica (\ensuremath{\triangle}),
-text=diferencia simétrica, symbol={\ensuremath{\triangle}}, description={Es el conjunto que contiene los elementos que pertenecen al sustraendo y no al minuendo}}
+text=diferencia simétrica, symbol={\ensuremath{\triangle}}, description={Conjunto que contiene los elementos que pertenecen al sustraendo y no al minuendo}}
 
 \newglossaryentry{conjuntopotencia}{name=conjunto potencia (\ensuremath{\mathcal{P}(A)}),
 	text=conjunto potencia,
 	symbol={\ensuremath{\mathcal{P}(A)}},
-	description={Conjunto de todos los subconjuntos de un conjunto dado \ensuremath{A}},
+	description={Conjunto de todos los subconjuntos del conjunto \ensuremath{A}},
 	plural=conjuntos potencia}
 
 \newglossaryentry{productocartesiano}{name=producto cartesiano \ensuremath{(A \times B)},
@@ -101,7 +104,7 @@ text=diferencia simétrica, symbol={\ensuremath{\triangle}}, description={Es el 
 \newglossaryentry{clasequiv}{
 	name=clase de equivalencia (\ensuremath{[a]}),
 	text=clase de equivalencia,
-	description={El conjunto de elementos que tienen relación de equivalencia con $a$},
+	description={Conjunto de elementos que tienen relación de equivalencia con $a$},
 	plural=clases de equivalencia
 }
 
@@ -111,6 +114,9 @@ text=diferencia simétrica, symbol={\ensuremath{\triangle}}, description={Es el 
 	plural=conjuntos cociente
 }
 
+%%%%%%%%%%%%%%%%%
+%%% FUNCIONES %%%
+%%%%%%%%%%%%%%%%%
 \newglossaryentry{particion}{
 	name=partición,
 	description={Partes no vacías de un conjunto que no se intersectan},
@@ -165,6 +171,9 @@ text=diferencia simétrica, symbol={\ensuremath{\triangle}}, description={Es el 
 	text={composición de funciones},
 	description={Aplicación sucesiva de dos funciones, donde la salida de la primera función ($f$) se convierte en la entrada de la segunda función ($g$)}}
 
+%%%%%%%%%%%%%%
+%%% LÓGICA %%%
+%%%%%%%%%%%%%%
 \newglossaryentry{proposicion}{name=proposición,
 	description={Enunciado que puede ser verdadero o falso},
 	plural=proposiciones}
@@ -212,19 +221,27 @@ text=diferencia simétrica, symbol={\ensuremath{\triangle}}, description={Es el 
 	description={Proposición compuesta que siempre es falsa},
 	plural=contradicciones}
 	
+\newglossaryentry{contingencia}{name=contingencia,
+		description={Proposición verdadera o falsa, dependiendo de las circunstancias},
+		plural=contingencias}
+	
 \newglossaryentry{argumento}{name=argumento,
 	description={Secuencia de premisas que pretende justificar una conclusión},
 	plural=argumentos}
+	
+\newglossaryentry{razonamiento}{name={razonamiento deductivo válido},
+	description={La verdad de las premisias garantiza la verdad de la conclusión},
+	plural={razonamientos deductivos válidos}}
 
 \newglossaryentry{cuantificadore}{name=cuantificador existencial (\ensuremath{\exists}),
 	text=cuantificador existencial,
 	symbol={\ensuremath{\exists}},
-	description={Indica que existe al menos un elemento que cumple una propiedad},
+	description={Indica que existe al menos un elemento que cumple una propiedad dada},
 	plural=cuantificadores existenciales}
 
 \newglossaryentry{cuantificadoru}{name=cuantificador universal (\ensuremath{\forall}),
 	text=cuantificador universal,
-	symbol={\ensuremath{\forall}}, description={Indica que todos los elementos cumplen una propiedad}}
+	symbol={\ensuremath{\forall}}, description={Indica que todos los elementos cumplen una propiedad dada}}
 
 \newglossaryentry{reglasinferencia}{name=reglas de inferencia,
 	description={Patrones lógicos válidos que permiten deducir nuevas proposiciones a partir de premisas dadas}, plural=reglas de inferencia}

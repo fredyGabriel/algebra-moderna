@@ -177,7 +177,7 @@ La \gls{inclusion} tiene la siguiente definición: \index{inclusión}
 	
 	\begin{enumerate}
 		\item En repetidas ocasiones se necesitará demostrar que un conjunto es parte de otro; entonces, de acuerdo con la definición, será suficiente demostrar que cualquier elemento del primero pertenece al segundo, esto significa que en la inclusión no puede darse que haya un elemento de $A$ que no pertenezca a $B$.
-		\[ A \subset B \implies x \in A \implies x \in B \]
+		\[A \subset B \mbox{ significa que, si } x \in A \mbox{ también } x \in B \]
 		
 		\item El conjunto vacío es subconjunto de cualquier conjunto.
 		\[ \emptyset \subset A \]
@@ -187,9 +187,9 @@ La \gls{inclusion} tiene la siguiente definición: \index{inclusión}
 \subsubsection{Igualdad de conjuntos}
 \vspace{1em}
 \index{conjuntos!igualdad}
-\begin{fmd-definition}[\gls{igualdad_conjuntos}] \label{def:igualdad_conjuntos}
-	Dos conjuntos son iguales si tienen exactamente los mismos elementos. Una forma práctica de establecer si dos conjuntos son iguales es determinar si se contienen el uno al otro, esto es:
-	Si \[ A \subset B \mbox{ y } B \subset A \mbox{ entonces } A = B \]
+\begin{fmd-definition}[Igualdad de conjuntos] \label{def:igualdad_conjuntos}
+	Dos conjuntos $A$ y $B$ son iguales, es decir, se cumple la \gls{igualdad_conjuntos} $A = B$, si y solo si todo elemento de $A$ pertenece a $B$ y todo elemento de $B$ pertenece a $A$, en otras palabras, dos conjuntos son iguales si se contienen mutuamente.
+	\[A = B \mbox{ si y sólo si } A \subset B \mbox{ y } B \subset A \]
 \end{fmd-definition}
 
 \subsubsection{Diagrama de Venn}

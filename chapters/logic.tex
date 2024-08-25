@@ -325,7 +325,7 @@ Paralelismo con la tabla de verdad:
 \end{itemize}
 
 
-\subsubsection{Doble implicación o bicondicional $\iff$} \index{implicación!doble} \index{implicación!condicional} \index{bicondicional} \index{si y solo si}
+\subsubsection{Doble implicación o bicondicional $\iff$} \index{implicación!doble} \index{implicación!condicional} \index{bicondicional} \index{si y solo si} \label{sec:bicondicional}
  La doble implicación, o \gls{bicondicional}, o proposición ``si y solo si'' se denota como $p \iff q$. Representa la idea de que $p$ es verdadero si y solo si $q$ también lo es. Puede verse, si es verdadera, como cumplimiento en ambos sentidos las implicaciones $p \implies q$ y $q \implies b$. Tabla \ref{tab:bicondicional}.
 
 \begin{table}[H]
@@ -411,7 +411,7 @@ Análogamente, en el caso de la doble implicación verdadera, el consecuente $q$
 	Aquella es $V$, y cualquiera de las dos proposiciones es condición necesaria y suficiente de la otra.
 \end{fmd-example}
 
-\subsection{Tautología y contradicción}
+\subsection{Tautología, contradicción y contingencia}
 
 \subsubsection{Tautología} \index{tautología}
 \vspace{1em}
@@ -421,36 +421,36 @@ Análogamente, en el caso de la doble implicación verdadera, el consecuente $q$
 
 En el cálculo proposicional se utilizan las siguientes leyes o tautologías cuyas demostraciones se reduce a la confección de las correspondientes tablas de verdad.
 
-\begin{itemize}
-	\item Identidad
+\begin{enumerate}
+	\item \textbf{Identidad}
 	\[ p \implies p; \qquad p \iff p \]
 	
 	\[ p \land \mbox{verdadero} = p \quad \mbox{y} \quad p \lor \mbox{falso} = p \]
 	
-	\item Ley del tercero excluido
+	\item \textbf{Ley del tercero excluido}
 	\[ p \lor \neg p = V\]
 	Una proposición es verdadera o su negación es verdadera.
 	
-	\item No contradicción
+	\item \textbf{No contradicción}
 	\[ p \land \neg p = F \]
 	
-	\item Involución o doble negación
+	\item \textbf{Involución o doble negación}
 	\[ \neg (\neg p) \iff p \]
 	La doble negación es equivalente a una afirmación: ``no, no $p$, equivale a $p$''
 	\item Idempotencia
 	\[ (p \land p) \iff p \quad y \quad (p \lor p) \iff p\]
-	\item Conmutatividad
+	\item \textbf{Conmutatividad}
 	\begin{enumerate}[label=\alph*)]
 		\item De la conjunción: $p \land q \iff q \land p$. 		
 		\item De la disyunción: $p \lor q \iff q \lor p$.
 	\end{enumerate}
-	\item Asociatividad
+	\item \textbf{Asociatividad}
 	\begin{enumerate}[label=\alph*)]
 		\item De la conjunción: $(p \land q) \land r \iff p \land (q \land r)$,
 		
 		\item De la disyunción: $(p \lor q) \lor r \iff p \lor (q \lor r)$
 	\end{enumerate}
-	\item Distributividad
+	\item \textbf{Distributividad}
 	\begin{enumerate}[label=\alph*)]
 		\item De la conjunción respecto de la disyunción:
 		\[ p \lor (q \land r) \iff (p \land r) \lor (q \land r) \]
@@ -464,7 +464,7 @@ En el cálculo proposicional se utilizan las siguientes leyes o tautologías cuy
 		\item De la implicación respecto de la conjunción
 		\[ \left( p \implies q \land r \right) \iff \left( (p \implies q) \land (p \implies r) \right) \]
 	\end{enumerate}
-	\item Leyes de De Morgan
+	\item \textbf{Leyes de De Morgan}
 	\begin{enumerate}[label=\alph*)]
 		\item La negación de una disyunción es equivalente a la conjunción de las negaciones:
 		\[ \neg (p \lor q) \iff \neg p \land \neg q\]
@@ -472,56 +472,77 @@ En el cálculo proposicional se utilizan las siguientes leyes o tautologías cuy
 		\[ \neg (p \land q) \iff \neg p \lor \neg q \]
 	\end{enumerate}
 	
-	\item Leyes de absorción total
+	\item \textbf{Leyes de absorción total}
 	\begin{enumerate}
 		\item Primera forma: \[ p \lor (p \land q) \iff p \]
 		\item Segunda forma: \[ p \land (p \lor q) \iff p \]
 	\end{enumerate}
 	Si $p$ es verdadero (o falso) ambos miembros son verdaderos (o falsos) independientemente de $q$.
 	
-	\item Leyes de absorción parcial
+	\item \textbf{Leyes de absorción parcial}
 	\begin{enumerate}
 		\item \( p \lor \left(\neg p \land q\right) \iff p \lor q \)
 		\item \( p \land \left(\neg p \lor q\right) \iff p \land q \)
 	\end{enumerate}
-\end{itemize}
+\end{enumerate}
 
 La mayoría de estas leyes lógicas tienen sus análogas en teoría de conjuntos, algunas de las cuales se listan en la tabla \ref{tab:logica_conjuntos}.
 
-\begin{table}[h]
+\begin{table}[H]
 	\centering
 	\small
-	\begin{tabular}{|c|l|c|c|}
+	\begin{tabular}{|l|c|c|}
 		\hline
-		\textbf{N$\unit{\degree}$} & \textbf{Ley} & \textbf{Lógica} & \textbf{Conjuntos} \\ \hline
-		1 & Identidad & \makecell{ \( p \implies p \) \\ \( p \iff p \) \\ \( p \land \text{V} = p \) \\ \( p \lor \text{F} = p \)} & \makecell{ \(A = A\) \\ \\ \( A \cap U = A \) \\ \( A \cup \emptyset = A \)} \\ \hline
-		2 & Tercero excluido & \( p \lor \neg p = \text{V} \) & \( A \cup A^c = U \) \\ \hline
-		3 & No contradicción & \( p \land \neg p = \text{F} \) & \( A \cap A^c = \emptyset \) \\ \hline
-		4 & Involución & \( \neg(\neg p) \iff p \) & \( \left(A^c\right)^c = A \) \\ \hline
-		5 & Idempotencia & \makecell{ \( p \land p \iff p \) \\ \( p \lor p \iff p \)} & \makecell{ \( A \cap A = A \) \\ \( A \cup A = A \)} \\ \hline
-		6 & Conmutatividad & \makecell{\( p \land q \iff q \land p \) \\ \( p \lor q \iff q \lor p \)} & \makecell{\( A \cap B = B \cap A \) \\ \( A \cup B = B \cup A \)} \\ \hline
-		7 & Asociatividad & \makecell{ \( (p \land q) \land r \iff p \land (q \land r) \) \\ \( (p \lor q) \lor r \iff p \lor (q \lor r) \)} & \makecell{\( (A \cap B) \cap C = A \cap (B \cap C) \) \\ \( (A \cup B) \cup C = A \cup (B \cup C) \)} \\ \hline
-		8 & Distributividad & \makecell{\( p \land (q \lor r) \iff (p \land q) \lor (p \land r) \) \\ \( p \lor (q \land r) \iff (p \lor q) \land (p \lor r) \)} & \makecell{\( A \cap (B \cup C) = (A \cap B) \cup (A \cap C) \) \\ \( A \cup (B \cap C) = (A \cup B) \cap (A \cup C) \)} \\ \hline
-		9 & Leyes de De Morgan & \makecell{ \( \neg(p \lor q) \iff \neg p \land \neg q \) \\ \( \neg(p \land q) \iff \neg p \lor \neg q \)} & \makecell{\( (A \cup B)^c = A^c \cap B^c \) \\ \( (A \cap B)^c = A^c \cup B^c \)} \\ \hline
-		10 & Ley de absorción & \makecell{\( p \lor (p \land q) \iff p \) \\ \( p \land (p \lor q) \iff p \)} & \makecell{\( A \cup (A \cap B) = A \) \\ \( A \cap (A \cup B) = A \)} \\ \hline
+		\textbf{Ley} & \textbf{Lógica} & \textbf{Conjuntos} \\ \hline
+		Identidad & \makecell{ \( p \implies p \) \\ \( p \iff p \) \\ \( p \land \text{V} = p \) \\ \( p \lor \text{F} = p \)} & \makecell{ \(A = A\) \\ \\ \( A \cap U = A \) \\ \( A \cup \emptyset = A \)} \\ \hline
+		Tercero excluido & \( p \lor \neg p = \text{V} \) & \( A \cup A^c = U \) \\ \hline
+		No contradicción & \( p \land \neg p = \text{F} \) & \( A \cap A^c = \emptyset \) \\ \hline
+		Involución & \( \neg(\neg p) \iff p \) & \( \left(A^c\right)^c = A \) \\ \hline
+		Idempotencia & \makecell{ \( p \land p \iff p \) \\ \( p \lor p \iff p \)} & \makecell{ \( A \cap A = A \) \\ \( A \cup A = A \)} \\ \hline
+		Conmutatividad & \makecell{\( p \land q \iff q \land p \) \\ \( p \lor q \iff q \lor p \)} & \makecell{\( A \cap B = B \cap A \) \\ \( A \cup B = B \cup A \)} \\ \hline
+		Asociatividad & \makecell{ \( (p \land q) \land r \iff p \land (q \land r) \) \\ \( (p \lor q) \lor r \iff p \lor (q \lor r) \)} & \makecell{\( (A \cap B) \cap C = A \cap (B \cap C) \) \\ \( (A \cup B) \cup C = A \cup (B \cup C) \)} \\ \hline
+		Distributividad & \makecell{\( p \land (q \lor r) \iff (p \land q) \lor (p \land r) \) \\ \( p \lor (q \land r) \iff (p \lor q) \land (p \lor r) \)} & \makecell{\( A \cap (B \cup C) = (A \cap B) \cup (A \cap C) \) \\ \( A \cup (B \cap C) = (A \cup B) \cap (A \cup C) \)} \\ \hline
+		Leyes de De Morgan & \makecell{ \( \neg(p \lor q) \iff \neg p \land \neg q \) \\ \( \neg(p \land q) \iff \neg p \lor \neg q \)} & \makecell{\( (A \cup B)^c = A^c \cap B^c \) \\ \( (A \cap B)^c = A^c \cup B^c \)} \\ \hline
+		Ley de absorción & \makecell{\( p \lor (p \land q) \iff p \) \\ \( p \land (p \lor q) \iff p \)} & \makecell{\( A \cup (A \cap B) = A \) \\ \( A \cap (A \cup B) = A \)} \\ \hline
 	\end{tabular}
 	\caption{Paralelismo entre las leyes lógicas y las de conjuntos.}
 	\label{tab:logica_conjuntos}
 \end{table}
 
-
 \subsubsection{Contradicción}
 \index{contradicción}
 Una \gls{contradiccion} es una proposición lógica que siempre es falsa, sin importar los valores de verdad de sus componentes. Es una fórmula que es falsa en todas las interpretaciones posibles.
 
-Ejemplos de contradicciones:
-\begin{itemize}
-	\item Conjunción de una proposición y su negación:
-	\[ p \land \neg p \]
-	
-	\item Negación de una tautología:
-	\[ \neg \left( p \lor \neg p \right) \]
-\end{itemize}
+\begin{fmd-example}[Contradicción]
+	\begin{itemize}
+		\item Conjunción de una proposición y su negación:
+		\[ p \land \neg p \]
+		
+		\item Negación de una tautología:
+		\[ \neg \left( p \lor \neg p \right) \]
+	\end{itemize}
+\end{fmd-example}
+
+\subsubsection{Contingencia} \index{contingencia}
+Una \gls{contingencia} es una proposición que puede ser tanto verdadera como falsa, dependiendo de las circunstancias. Su valor de verdad depende de la situación o el contexto.
+
+\begin{fmd-example}[Contingencia]
+	\begin{itemize}
+		\item \textbf{Afirmaciones sobre el futuro}: ``\textit{Lloverá mañana en Caaguazú}''. Esta afirmación es contingente porque depende de factores meteorológicos que aún no se han determinado.
+		\item \textbf{Juicios de valor}: ``\textit{La pizza es más rica que la pasta}''. Esta afirmación es contingente porque depende de las preferencias personales de cada individuo.
+		\item \textbf{Hipótesis científicas}: ``\textit{La materia oscura existe}''. Aunque hay evidencia que la apoya, aún no se ha probado de manera concluyente, por lo que es una afirmación contingente.
+		\item \textbf{Eventos históricos}: ``\textit{La Segunda Guerra Mundial comenzó en 1939}''. Esta afirmación es contingente en el sentido de que pudo haber ocurrido de otra manera si diferentes factores históricos hubieran sido distintos.
+	\end{itemize}
+\end{fmd-example}
+
+\textbf{?`Qué hace a una proposición contingente?}
+
+\begin{enumerate}
+	\item \textit{Dependencia del contexto}: Su valor de verdad depende completamente de las circunstancias específicas en las que se evalúa.
+	\item \textit{Posibilidad y necesidad}: Una contingencia es posible (puede ser verdadera) y al mismo tiempo, es posible que no sea verdadera (puede ser falsa).
+	\item \textit{No es una verdad necesaria}: A diferencia de las tautologías, las contingencias no son verdades universales que se mantienen en todos los mundos posibles.
+	\item \textit{No es una falsedad necesaria}: Tampoco son falsedades absolutas como las contradicciones.
+\end{enumerate}
 
 \subsection{Funciones booleanas}
 En lógica simbólica, las \textit{funciones booleanas} son aquellas que toman uno o más valores de verdad (verdadero o falso) como entrada y producen un único valor de verdad como salida. Estas funciones se construyen utilizando operadores lógicos homónimos, que son:
@@ -620,7 +641,7 @@ A partir de estos operadores básicos, podemos construir funciones booleanas má
 
 \subsection{Proposiciones equivalentes}
 \index{proposición!equivalente}
-Al unir dos proposiciones cualesquiera por medio de la frase \textit{``si y sólo si''}, (cuyo símbolo es \( \iff \)) se obtiene una proposición compuesta que se llama \textit{equivalencia}. Las proposiciones conectadas de esta manera reciben los nombres de \textit{miembro izquierdo} y \textit{miembro derecho} de la equivalencia. Al afirmar la equivalencia de las proposiciones, se excluye la posibilidad de que una sea verdadera y la otra falsa; por lo tanto, una equivalencia es verdadera si sus miembros izquierdo y derecho son o bien ambos verdaderos o bien ambos falsos; en caso contrario la equivalencia es falsa.
+Al unir dos proposiciones cualesquiera por medio de la frase \textit{``si y sólo si''} cuyo símbolo\footnote{Sección \ref{sec:bicondicional}, pág. \pageref{sec:bicondicional}.} es \( \iff \)) se obtiene una proposición compuesta que se llama \textit{equivalencia}. Las proposiciones conectadas de esta manera reciben los nombres de \textit{miembro izquierdo} y \textit{miembro derecho} de la equivalencia. Al afirmar la equivalencia de las proposiciones, se excluye la posibilidad de que una sea verdadera y la otra falsa; por lo tanto, una equivalencia es verdadera si sus miembros izquierdo y derecho son o bien ambos verdaderos o bien ambos falsos; en caso contrario la equivalencia es falsa.
 
 Dos proposiciones son \textit{equivalentes} si y solo si tienen el mismo valor de verdad en todas las posibles combinaciones de valores de verdad de sus proposiciones componentes. En otras palabras, sus tablas de verdad son idénticas.
 
@@ -855,12 +876,12 @@ La negación de una implicación no es una implicación, sino la conjunción del
 	\end{enumerate}
 \end{fmd-example}
 
-\subsection{Concepto de argumento y razonamiento deductivo válido}
+\subsection{Argumento y razonamiento deductivo válido}
 
 \subsubsection{Argumento} \index{argumento}
 \begin{fmd-definition}[Argumento]
 	Un \gls{argumento} es una secuencia de proposiciones (llamadas premisas) que pretende respaldar o justificar una proposición final (llamada conclusión). Un argumento se presenta usualmente de la siguiente forma:
-	\[ p_1 \land p_2 \land \dots \land p_n \implies q \]
+	\[ p_1, p_2, \dots, p_n \implies q \]
 	
 	\begin{itemize}[itemsep=-3pt]
 		\item $p_1$: premisa 1
@@ -874,7 +895,7 @@ La negación de una implicación no es una implicación, sino la conjunción del
 \subsubsection{Razonamiento deductivo válido}
 \vspace{1em} \index{razonamiento!válido}
 \begin{fmd-definition}
-	Un argumento se considera un \textit{razonamiento deductivo válido} si, y solo si, es imposible que todas sus premisas sean verdaderas y su conclusión sea falsa. En otras palabras, la verdad de las premisas garantiza la verdad de la conclusión. La validez de un argumento depende únicamente de su forma lógica, no del contenido específico de las proposiciones.
+	Un argumento se considera un \gls{razonamiento} si, y solo si, es imposible que todas sus premisas sean verdaderas y su conclusión sea falsa. En otras palabras, la verdad de las premisas garantiza la verdad de la conclusión. La validez de un argumento depende únicamente de su forma lógica, no del contenido específico de las proposiciones.
 \end{fmd-definition}
 
 El razonamiento deductivo válido es un proceso lógico en el que, a partir de premisas o afirmaciones, se llega a una conclusión de manera irrefutable. Un razonamiento es válido si la conclusión sigue necesariamente de las premisas, siguiendo las reglas de la lógica.
