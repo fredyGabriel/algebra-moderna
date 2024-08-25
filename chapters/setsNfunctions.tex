@@ -89,7 +89,7 @@ La proposición $a \in A$ se lee ``$a$ \textit{pertenece} a $A$'', o bien ``el e
 
 \subsubsection{Notación por extensión}
 
-La \gls{notacionextension} \index{conjunto!por extensión} lista cada elemento del conjunto de forma individual.
+La \gls{notacionextension} \index{conjunto!extensión} lista cada elemento del conjunto de forma individual.
 
 \begin{fmd-example}[Notación por extensión]
 	\begin{enumerate}
@@ -100,7 +100,7 @@ La \gls{notacionextension} \index{conjunto!por extensión} lista cada elemento d
 \end{fmd-example}
 
 \subsubsection{Notación por comprensión}
-\index{conjunto!por comprensión}
+\index{conjunto!comprensión}
 En la \gls{notacioncompresion}, describimos las propiedades o características que deben cumplir los elementos del conjunto, luego, utilizamos una condición lógica para definir el conjunto.
 
 En general su estructura tiene la forma:
@@ -186,14 +186,14 @@ La \gls{inclusion} tiene la siguiente definición: \index{inclusión}
 
 \subsubsection{Igualdad de conjuntos}
 \vspace{1em}
-\index{igualdad de conjuntos} \index{conjuntos!igualdad de}
+\index{conjuntos!igualdad}
 \begin{fmd-definition}[\gls{igualdad_conjuntos}] \label{def:igualdad_conjuntos}
 	Dos conjuntos son iguales si tienen exactamente los mismos elementos. Una forma práctica de establecer si dos conjuntos son iguales es determinar si se contienen el uno al otro, esto es:
 	Si \[ A \subset B \mbox{ y } B \subset A \mbox{ entonces } A = B \]
 \end{fmd-definition}
 
 \subsubsection{Diagrama de Venn}
-\index{diagrama de Venn}
+\index{diagrama Venn}
 
 El \gls{venn} es una representación visual de los conjuntos utilizando diagramas llamados de Venn en homenaje a su autor\footnote{John Venn (1834-1923), matemático y lógico británico.}. En este sentido, el conjunto universal suele representarse por un rectángulo y los conjuntos por recintos cerrados. Es claro que todo elemento de $A$ pertenece a $U$, o sea, $A \subset U$. $A$, $B$ y $C$ subconjuntos de $U$, como indica el diagrama de la fig. \ref{fig:Venn}.
 
@@ -358,7 +358,7 @@ El \gls{venn} es una representación visual de los conjuntos utilizando diagrama
 
 \subsubsection{Diferencia simétrica $\triangle$}
 \vspace{1em}
-\index{conjunto!diferencia simétrica}
+\index{conjunto!dif. sim.}
 \begin{fmd-definition}[Diferencia simétrica]
 	La \gls{difsimetrica} de dos conjuntos \(A\) y \(B\), es el conjunto que contiene los elementos que pertenecen a \(A\) o a \(B\), pero no a ambos.
 	
@@ -495,7 +495,7 @@ El \gls{venn} es una representación visual de los conjuntos utilizando diagrama
 
 
 \subsection{Álgebra de conjuntos} \label{sec:algebra_conjuntos}
-\index{álgebra!de conjuntos}
+\index{álgebra!conjuntos}
 \subsubsection{Propiedades fundamentales}
 
 \begin{itemize}
@@ -642,7 +642,7 @@ Algunas aplicaciones:
 
 
 \section{Relaciones y particiones}
-\index{relaciones!y particiones}
+\index{relaciones!particiones}
 	Una \gls{relacion} es un vínculo o una correspondencia. Se trata de la correspondencia que existe entre dos conjuntos: a cada elemento del primer conjunto le corresponde al menos un elemento del segundo conjunto.
 	
 	Cuando a cada elemento de un conjunto le corresponde solo uno del otro, se habla de \gls{funcion}. Esto quiere decir que las funciones siempre son, a su vez, relaciones, pero que las relaciones no siempre son funciones.
@@ -653,7 +653,7 @@ Algunas aplicaciones:
 \end{fmd-definition}
 
 \subsection{Relaciones de equivalencia}
-\vspace{3mm} \index{relaciones!de equivalencia}
+\vspace{3mm} \index{relaciones!equivalencia}
 \begin{fmd-definition}[Relación de equivalencia]
 	$\mathcal{R} \subset A^2$ es una \gls{relequivalencia} en $A$ si y sólo si es reflexiva, simétrica y transitiva
 \end{fmd-definition}
@@ -674,7 +674,7 @@ Conforme a la definición, las relaciones de equivalencia satisfacen:
 \end{enumerate}
 
 \subsubsection{Clases de equivalencia y conjunto cociente}
-\vspace{3mm} \index{clases de equivalencia}
+\vspace{3mm} \index{clases!equivalencia}
 \begin{fmd-definition}[Clase de equivalencia]
 	Sea $A$ un conjunto y $\mathcal{R}$ una relación de equivalencia en $A$. Para cada elemento $a \in A$, la \gls{clasequiv} de $a$, que se denota $[a]$ o $\bar{a}$, es el conjunto de todos los elementos $x \in A$ tales que $x$ está relacionado con $a$ en $\mathcal{R}$.
 	\[ [a] = \bar{a} = \{ x \in A / x \mathcal{R} a \}\]
@@ -1971,7 +1971,7 @@ Una función $f: A \rightarrow B$ es inyectiva si, y solo si, cuando dos element
 \end{fmd-example}
 
 \subsection{Composición de funciones} \label{sec:compos}
-\index{composición de funciones} \index{funciones!composición de}
+\index{composición!funciones} \index{funciones!composición}
 Sean $f: A \rightarrow B$ y $g: B \rightarrow C$
 \begin{figure}[H]
 	\centering
@@ -2803,7 +2803,7 @@ Sean $f:X \rightarrow Y$ y los subconjuntos $A \subset Y$, $B \subset Y$.
 
 
 \subsection{Restricción y extensión de una función} \label{sec:restr}
-\vspace{3mm} \index{función!restricción de} \index{restricción de una función}
+\vspace{3mm} \index{función!restricción} \index{restricción!función}
 \begin{fmd-definition}[Restricción de una función]
 	Sean $f:X \rightarrow Y$, $A \subset X$ y la función $g: A \rightarrow Y \mid 
 	g(x) = f(x) \, \forall \, x \in A$.
@@ -2812,7 +2812,7 @@ Sean $f:X \rightarrow Y$ y los subconjuntos $A \subset Y$, $B \subset Y$.
 	la denotamos $g:f \mid A$.
 \end{fmd-definition}
 
-\begin{fmd-definition}[Extensión de una función] \index{extensión de una función} \index{función!extension de}
+\begin{fmd-definition}[Extensión de una función] \index{extensión!función} \index{función!extension}
 	Si $g$ es la restricción de $f$ al subconjunto $A$, entonces $f: X \rightarrow
 	Y$ es una extensión de la función $g$ sobre el conjunto $X$.
 \end{fmd-definition}

@@ -26,7 +26,7 @@ Las estructuras algebraicas nos permiten estudiar y clasificar objetos matemáti
 
 \section{Grupos}
 \index{grupo}
-\subsection{Axiomas de grupo} \label{sec:axiomas-grupo} \index{axiomas!de grupo}
+\subsection{Axiomas de grupo} \label{sec:axiomas-grupo} \index{axiomas!grupo}
 \vspace{2mm}
 \begin{fmd-definition}[Grupo] \index{operación!binaria}
 	Dado un conjunto $G$, no vacío, una operación binaria o función $*: G \times G \rightarrow G$, define en $G$ una estructura de \gls{grupo} $(G, *)$ si se cumplen las siguientes propiedades:
@@ -97,7 +97,7 @@ Por lo tanto, un grupo es una estructura algebraica que consta de:
 \end{fmd-definition}
 
 \begin{proposition}[Unicidad del neutro]
-	En cualquier grupo el neutro es único. \index{unicidad!del neutro}
+	En cualquier grupo el neutro es único. \index{unicidad!neutro}
 \end{proposition}
 \begin{proof}
 	Sae $(G, *)$ un grupo cualquiera. Supongamos $e, e' \in G$ dos elementos que cumplen la propiedad del neutro:
@@ -115,7 +115,7 @@ Por lo tanto, un grupo es una estructura algebraica que consta de:
 \end{proof}
 
 
-\begin{fmd-proposition}[Ley de corte o de cancelación] \index{ley!de corte} \index{ley!de cancelación}
+\begin{fmd-proposition}[Ley de corte o de cancelación] \index{ley!corte} \index{ley!cancelación}
 	Sea $(G, *)$ un grupo. $\forall a, b, c \in G$ se cumple:
 	
 	\begin{enumerate}[label=\alph*)]
@@ -129,7 +129,7 @@ Por lo tanto, un grupo es una estructura algebraica que consta de:
 
 Se dice que los elementos son \textbf{regulares} si se cumple la ley de corte.
 
-\begin{proposition}[Unicidad del inverso] \index{unicidad!del inverso}
+\begin{proposition}[Unicidad del inverso] \index{unicidad!inverso}
 	Para cualquier elemento $x \in G$ existe un inverso y es único.
 	
 	\begin{proof}
@@ -145,13 +145,13 @@ Se dice que los elementos son \textbf{regulares} si se cumple la ley de corte.
 	\end{proof}
 \end{proposition}
 
-\begin{fmd-definition}[Orden de un grupo] \index{orden!de un grupo}
+\begin{fmd-definition}[Orden de un grupo] \index{orden!grupo}
 	Sea $(G, *)$ grupo. Llamamos orden de $G$ al número de elementos de $G$ (si $G$ es finito). Lo denotamos por $o(G) \coloneqq |G| = \mbox{card} (G) = \# (G)$
 \end{fmd-definition}
 
 Decimos que $G$ es de \textbf{orden par} u \textbf{orden impar} si $o(G)$ es par o impar respectivamente.
 
-El grupo de orden 1, llamado \textbf{grupo trivial}, es el que consta de un solo elemento, el cual debe ser el neutro para cumplir con las propiedades de grupo. Es común utilizar tablas para representar las operaciones, denominadas \textbf{tablas de Cayley}\footnote{En homenaje al matemático británico Arthur Cayley (1821-1895)}. \index{tabla!de Cayley}
+El grupo de orden 1, llamado \textbf{grupo trivial}, es el que consta de un solo elemento, el cual debe ser el neutro para cumplir con las propiedades de grupo. Es común utilizar tablas para representar las operaciones, denominadas \textbf{tablas de Cayley}\footnote{En homenaje al matemático británico Arthur Cayley (1821-1895)}. \index{tabla!Cayley}
 
 Los conjuntos correspondientes a los grupos de orden 1, 2 y 3 son $\{ e \}$, $\{ e, a \}$, $\{e, a, b\}$. Sus respectivas tablas de Cayley se muestran en la tabla \ref{tab:cayley}:
 
@@ -201,7 +201,7 @@ Los conjuntos correspondientes a los grupos de orden 1, 2 y 3 son $\{ e \}$, $\{
 
 \textbf{Tarea}: Realizar las tablas de Cayley para grupos de orden 4.
 
-\begin{fmd-example}[Grupo de Klein] \index{grupo!de Klein}
+\begin{fmd-example}[Grupo de Klein] \index{grupo!Klein}
 	El grupo de Klein\footnote{En honor al matemático alemán Felix Klein (1849-1925).} es abeliano con 4 elementos, en el cual cada elemento es su propio inverso (\textit{propiedad involutiva}), y componiendo cualesquiera dos de ellos, a excepción del neutro, produce el tercero:
 	\[ V = \{ e, a, b, c \}; \quad a^2 = b^2 = (ab)^2 = c^2 = e \]
 	\vspace{-15mm}
@@ -220,8 +220,8 @@ Los conjuntos correspondientes a los grupos de orden 1, 2 y 3 son $\{ e \}$, $\{
 \end{fmd-example}
 
 \subsection{Grupos de números}
-\index{grupos!de números}
-\textbf{Sistemas numéricos}. \index{sistemas numéricos}
+\index{grupos!números}
+\textbf{Sistemas numéricos}. \index{sistemas!numéricos}
 
 Veamos el concepto de grupo para los \textit{sistemas numéricos} $\N, \Z, \Q, \R, \C$ y las operaciones usuales de suma $(+)$ y multiplicación $(\bdot)$.
 
@@ -253,7 +253,7 @@ Notar que, a partir de $(\Z, \bdot)$ se deduce que restringiendo al par $\left(\
 
 
 \subsection{Grupos de matrices} \label{sec:matrices}
-\index{grupo!de matrices}
+\index{grupo!matrices}
 Consideremos $\mathbf{M}_{m\times n}(\R)$, el conjunto de todas las matrices $m \times n$ con $m, n \in \N$ y elementos reales, el conjunto también puede ser representado por $\R^{m \times n}$.
 
 \begin{equation}
@@ -300,7 +300,7 @@ por tanto:
 El producto indicado $m \times n$ se conoce como \textbf{orden de la matriz}, así se dice por ejemplo de $A_{2 \times 3}$ es una matriz de orden $2 \times 3$.
 
 \subsubsection{Grupos de vectores}
-\index{grupo!de vectores}
+\index{grupo!vectores}
 Un caso especial de matrices son los vectores. Consideremos, el conjunto de vectores en $\R^n$:
 \begin{equation}
 	\mathbf{M}_{1 \times n}(\R) = \left\{ \begin{bmatrix}
@@ -337,7 +337,7 @@ Los vectores en $\R^2$ se representan en la fig. \ref{fig:grupoR2}:
 \end{enumerate}
 
 \subsubsection{Producto de matrices}
-\index{producto!de matrices}
+\index{producto!matrices}
 Dadas las matrices $A = (a_{ik}) \in \mathbf{M}_{m\times n}$ y $B = (b_{kj}) \in \mathbf{M}_{n\times r}$,
 
 \begin{equation}
@@ -413,7 +413,7 @@ de donde, en general las matrices cuadradas de orden $n$ con la operación de mu
 Se llaman \textbf{matrices invertibles} aquellas que admiten inversa. La inversa de $A$ se denota como $A^{-1}$. Esto nos lleva a la definición siguiente: \index{matriz!invertible}
 
 \begin{fmd-definition}[Grupo General Lineal]
-	\index{grupo!general lineal}
+	\index{grupo!gral. lineal}
 	Dado el conjunto de matrices cuadradas invertibles con entradas en $\R$:
 	\[ GL_n(\R) = \left\{ A \in \mathbf{M}_n(\R) \mid \exists A^{-1} \right\} \subset \mathbf{M}_n(\R) \]
 	y la operación de multiplicación de matrices $(\bdot)$.
@@ -426,7 +426,7 @@ Notar que $(GL_n(\R), \bdot)$ es efectivamente un grupo.
 Se verá más adelante en el curso que el determinante de matrices invertibles es distinto de cero. Incorporando este concepto de determinante definimos otro grupo más pequeño que el anterior.
 
 \begin{fmd-definition}[Grupo Especial Lineal]
-	\index{grupo!especial lineal}
+	\index{grupo!esp. lineal}
 	El conjunto de matrices cuadradas invertibles con determinantes iguales a uno:
 	\[ SL_n(\R) = \left\{ A \in \mathbf{M}_n(\R) \mid \det A = 1 \right\} \]
 	
@@ -435,7 +435,7 @@ Se verá más adelante en el curso que el determinante de matrices invertibles e
 Notar que:
 \[ SL_n(\R) \subset GL_n(\R) \subset \mathbf{M}_n(\R)\]
 
-\subsection{Homomorfismo de grupos} \label{sec:homogrupo} \index{homomorfismo!de grupos}
+\subsection{Homomorfismo de grupos} \label{sec:homogrupo} \index{homomorfismo!grupos}
 \vspace{1em}
 \begin{fmd-definition}[Homomorfismo de grupos]
 	Dados los grupos $(G, \ast)$ y $(H, \bdot)$, un homomorfismo de $G$ a $H$ es una función $\phi: G \rightarrow H \, / \,  \forall a, b \in G \implies \phi(a*b) = \phi(a) \bdot \phi(b)$.
@@ -589,8 +589,8 @@ A veces deja de escribirse $*$ y $\bdot$ de modo que $\phi(ab) = \phi(a)\phi(b)$
 \end{fmd-example}
 
 \subsection{Grupos de simetría}
-\index{grupos!de simetría}
-\subsubsection{Grupos de funciones} \index{grupo!de funciones}
+\index{grupos!simetría}
+\subsubsection{Grupos de funciones} \index{grupo!funciones}
 ?`Cómo construimos grupos cuyos elementos sean funciones? ?`Cuál debe ser la operación?
 
 Una función asigna a un elemento de $A$ un único elemento de $B$, $f: A \rightarrow B$, es una regla de correspondencia, por lo que la opción natural es adoptar la operación de composición, ahora bien, la composición, en general ``cambia de conjunto''  \[A \xrightarrow{f} B \xrightarrow{g} C = A \xrightarrow{g \circ f} C\]
@@ -606,7 +606,7 @@ Como la composición es asociativa y tiene elemento neutro, hasta aquí podemos 
 No es un grupo porque no toda función tiene inversa, en este sentido es similar al caso de las matrices visto en \ref{sec:matrices}, para que una función admita inversa debe ser biyectiva (ver \ref{sec:finversas}). 
 
 \subsubsection{Grupos de permutaciones}
-\index{grupos!de permutaciones}
+\index{grupos!permutaciones}
 \begin{fmd-definition}[Permutación]
 	Dado un conjunto $A$, una \textbf{permutación} sobre $A$ es una función biyectiva $f: A \rightarrow A$
 \end{fmd-definition}
@@ -914,7 +914,7 @@ Observemos que los enteros pares forman subgrupo de $(\Z, +)$ pero los impares n
 	\[ \langle y \rangle = \{ \dots, -3y, -2y, -y, 0, y, 2y, 3y,  \dots \} \]
 
 
-	\begin{fmd-definition}[Orden de un elemento] \index{orden!de un elemento}
+	\begin{fmd-definition}[Orden de un elemento] \index{orden!elemento}
 		Sean $(G, *)$ un grupo y $a \in G$. Consideremos al conjunto $\{ n \in \mathbb{Z}^{+}: a^n = 1_G \}$. Se define el \textit{orden} de $a$ como:
 		\[ o(a) = |a| = \min \{ n \in \mathbb{Z}^{+}: a^n = 1_G\} \in \mathbb{Z}^{+} \]
 		en este caso diremos que $a$ es de orden finito.
@@ -1009,7 +1009,7 @@ Observemos que los enteros pares forman subgrupo de $(\Z, +)$ pero los impares n
 	\end{proof}
 
 
-	\begin{fmd-definition}[Imagen de un homomorfismo] \index{imagen!de un homomorfismo} \index{homomorfismo!imagen de}
+	\begin{fmd-definition}[Imagen de un homomorfismo] \index{imagen!homomorfismo} \index{homomorfismo!imagen}
 		Es la totalidad de las imágenes de los elementos del primer grupo.
 	\end{fmd-definition}
 	
