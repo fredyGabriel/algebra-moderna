@@ -5,6 +5,7 @@
 %%%%%%%%%%%%
 
 \usepackage[spanish, mexico-com]{babel}
+\selectlanguage{spanish}
 \usepackage{packages/sleek}
 \usepackage{packages/sleek-title}
 \usepackage[spanish]{packages/sleek-theorems}
@@ -27,8 +28,10 @@
 %\usepackage[acronym,symbols,nomain,nonumberlist]{glossaries-extra}
 
 \usepackage[automake, toc, nonumberlist, symbols]{glossaries}
+\usepackage{makeidx}
 
 \makeglossaries
+\makeindex
 
 
 \usepackage{pifont}% http://ctan.org/pkg/pifont
@@ -115,7 +118,7 @@
     
     \newpage
     \printglossary[type=main, title={Glosario}]
-    \printsymbols[title=Lista de símbolos]
+    \printindex
     \newpage
 
     \nocite{*}

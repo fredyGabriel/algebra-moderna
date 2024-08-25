@@ -1,10 +1,10 @@
 \newglossaryentry{conjunto}{name=conjunto,
-	description={Colección de objetos o elementos que comparten una característica común.},
+	description={Colección de objetos o elementos que comparten una característica común},
 	text=conjunto,
 	plural=conjuntos}
 
 \newglossaryentry{elemento}{name=elemento,
-	description={Objeto individual dentro de un conjunto.},
+	description={Objeto individual dentro de un conjunto},
 	text=elemento,
 	plural=elementos
 	}
@@ -13,35 +13,35 @@
 	text=pertenencia, description={Relación que indica si un elemento está o no en un conjunto.}}
 
 \newglossaryentry{inclusion}{name=inclusión (\ensuremath{\subset}), symbol={\ensuremath{\subset}}, text=inclusión,
-	description={Relación entre conjuntos donde un conjunto (subconjunto) está completamente contenido en otro.}}
+	description={Relación entre conjuntos donde un conjunto (subconjunto) está completamente contenido en otro}}
 
 \newglossaryentry{conjuntovacio}{name=conjunto vacío (\ensuremath{\emptyset}) , symbol={\ensuremath{\emptyset}},
-	description={Conjunto que no contiene ningún elemento.},
+	description={Conjunto que no contiene ningún elemento},
 	text=conjunto vacío,
 	plural=conjuntos vacíos}
 
 \newglossaryentry{conjuntounitario}{name=conjunto unitario,
-	description={Conjunto que contiene un solo elemento.},
+	description={Conjunto que contiene un solo elemento},
 	text=conjunto unitario,
 	plural=conjuntos unitarios}
 
 \newglossaryentry{conjuntouniversal}{name=conjunto universal (\ensuremath{U}), symbol={\ensuremath{U}},
-	description={Conjunto que contiene todos los elementos considerados en un contexto particular.},
+	description={Conjunto que contiene todos los elementos considerados en un contexto particular},
 	text=conjunto universal,
 	plural=conjuntos universales}
 
 \newglossaryentry{union}{name=unión (\ensuremath{\cup}), symbol={\ensuremath{\cup}},
-	description={La unión de dos conjuntos $A$ y $B$ consiste en todos los elementos que pertenecen tanto a $A$, a $B$ o a ambos.},
+	description={La unión de dos conjuntos $A$ y $B$ consiste en todos los elementos que pertenecen tanto a $A$, a $B$ o a ambos},
 	text=unión,
 	plural=uniones}
 	
 \newglossaryentry{interseccion}{name=intersección (\ensuremath{\cap}), symbol={\ensuremath{\cap}},
-		description={La intersección de dos conjuntos $A$ y $B$ contiene los elementos que pertenecen tanto a $A$ como a $B$.},
+		description={La intersección de dos conjuntos $A$ y $B$ contiene los elementos que pertenecen tanto a $A$ como a $B$},
 		text=intersección,
 		plural=intersecciones}
 		
 \newglossaryentry{complemento}{name=complemento \ensuremath{A^c},
-	description={Contiene todos los elementos que no están en $A$.},
+	description={Contiene todos los elementos que no están en $A$},
 	text=complemento,
 	plural=complementos}
 	
@@ -50,143 +50,199 @@
 	plural=diagramas de Venn}
 	
 \newglossaryentry{difsimetrica}{name=diferencia simétrica (\ensuremath{\triangle}),
-text=diferencia simétrica, symbol={\ensuremath{\triangle}}, description={Es el conjunto que contiene los elementos que pertenecen al sustraendo y no al minuendo.}}
+text=diferencia simétrica, symbol={\ensuremath{\triangle}}, description={Es el conjunto que contiene los elementos que pertenecen al sustraendo y no al minuendo}}
 
 \newglossaryentry{conjuntopotencia}{name=conjunto potencia (\ensuremath{\mathcal{P}(A)}),
 	text=conjunto potencia,
-	description={Conjunto de todos los subconjuntos de un conjunto dado \ensuremath{A}.},
+	description={Conjunto de todos los subconjuntos de un conjunto dado \ensuremath{A}},
 	plural=conjuntos potencia}
 
 \newglossaryentry{productocartesiano}{name=producto cartesiano \ensuremath{(A \times B)},
 	text={producto cartesiano},
-	description={Conjunto de todos los pares ordenados posibles tomando el primer elemento de $A$ y el segundo de $B$.}}
+	description={Conjunto de todos los pares ordenados posibles tomando el primer elemento de $A$ y el segundo de $B$}}
+	
+\newglossaryentry{uniondisjunta}{
+	name=unión disjunta,
+	description={Cuando los conjuntos son mutuamente excluyentes},
+	plural=uniones disjuntas
+}
+
+\newglossaryentry{relacion}{
+	name=relación (\ensuremath{\mathcal{R}}),
+	text=relación,
+	symbol={\ensuremath{\mathcal{R}}},
+	description={Alguna regla de correspondencia entre elementos de dos conjuntos},
+	plural=relaciones
+}
+
+\newglossaryentry{clasequiv}{
+	name=clase de equivalencia (\ensuremath{[a]}),
+	text=clase de equivalencia,
+	description={El conjunto de elementos que tienen relación de equivalencia con $a$},
+	plural=clases de equivalencia
+}
+
+\newglossaryentry{conjuntocociente}{
+	name=conjunto cociente,
+	description={Conjunto formado por las clases de equivalencia},
+	plural=conjuntos cociente
+}
+
+\newglossaryentry{particion}{
+	name=partición,
+	description={Partes no vacías de un conjunto que no se intersectan},
+	plural=particiones
+}
+
+\newglossaryentry{relequivalencia}{
+	name=relación de equivalencia (\ensuremath{\equiv}),
+	text=relación de equivalencia,
+	symbol={\ensuremath{\equiv}},
+	description={Toda relación reflexiva, simétrica y transitiva},
+	plural=relaciones de equivalencia
+}
 
 \newglossaryentry{funcion}{name=función,
-	description={Regla que asigna a cada elemento de un conjunto (dominio) un único elemento de otro conjunto (codominio).},
+	description={Regla que asigna a cada elemento de un conjunto (dominio) un único elemento de otro conjunto (codominio)},
 	plural=funciones}
 
 \newglossaryentry{dominio}{name=dominio,
-	description={Conjunto de partida en una función.},
+	description={Conjunto de partida en una función},
 	plural=dominios}
 
 \newglossaryentry{codominio}{name=codominio,
-	description={Conjunto de llegada en una función.},
+	description={Conjunto de llegada en una función},
 	plural=codominios}
 
 \newglossaryentry{rango}{name=rango, 
-	description={Conjunto de todos los valores que toma una función (imagen del dominio).},
+	description={Conjunto de todos los valores que toma una función (imagen del dominio)},
 	plural=rangos}
+	
+\newglossaryentry{preimagen}{name=preimagen, 
+		description={Elemento del dominio que al ser evaluado por una función produce un valor en el codominio},
+		plural=rangos}
 
 \newglossaryentry{funcioninyectiva}{name=función inyectiva,
-	description={Función donde cada elemento del dominio se mapea a un elemento distinto del codominio.},
+	description={Función donde cada elemento del dominio se mapea a un elemento distinto del codominio},
 	plural=funciones inyectivas}
 
 \newglossaryentry{funcionsobreyectiva}{name=función sobreyectiva,
-	description={Función donde cada elemento del codominio tiene al menos un elemento del dominio que se mapea a él.},
+	description={Función donde cada elemento del codominio tiene al menos un elemento del dominio que se mapea a él},
 	plural=funciones sobreyectivas}
 
 \newglossaryentry{funcionbiyectiva}{name=función biyectiva,
-	description={Función que es a la vez inyectiva y sobreyectiva.},
+	description={Función que es a la vez inyectiva y sobreyectiva},
 	plural=funciones biyectivas}
 
 \newglossaryentry{funcioninversa}{name=función inversa,
-	description={Función que "deshace" la acción de otra función.},
+	description={Función que "deshace" la acción de otra función},
 	plural=funciones inversas}
 
 \newglossaryentry{composicion}{name=composición de funciones \ensuremath{(g \circ f)},
 	text={composición de funciones},
-	description={Aplicación sucesiva de dos funciones, donde la salida de la primera función ($f$) se convierte en la entrada de la segunda función ($g$).}}
+	description={Aplicación sucesiva de dos funciones, donde la salida de la primera función ($f$) se convierte en la entrada de la segunda función ($g$)}}
 
 \newglossaryentry{proposicion}{name=proposición,
-	description={Enunciado que puede ser verdadero o falso.},
+	description={Enunciado que puede ser verdadero o falso},
 	plural=proposiciones}
 
 \newglossaryentry{operadorlogico}{name=operador lógico,
-	description={Símbolos que conectan proposiciones para formar proposiciones compuestas.},
+	description={Símbolos que conectan proposiciones para formar proposiciones compuestas},
 	plural=operadores lógicos}
 
 \newglossaryentry{negacion}{name=negación (\ensuremath{\neg}), text=negación, symbol={\ensuremath{\neg}},
-	description={Niega una proposición.}}
+	description={Niega una proposición}}
 
 \newglossaryentry{conjuncion}{name=conjunción (\ensuremath{\land}),
 	text=conjunción,
 	symbol={\ensuremath{\land}},
-	description={Verdadera si ambas proposiciones son verdaderas.}}
+	description={Verdadera si ambas proposiciones son verdaderas}}
 
 \newglossaryentry{disyuncion}{name=disyunción (\ensuremath{\lor}),
 	text=disyunción,
 	symbol={\ensuremath{\lor}},
-	description={Verdadera si al menos una de las proposiciones es verdadera.}}
+	description={Verdadera si al menos una de las proposiciones es verdadera}}
 
-\newglossaryentry{disyuncione}{name=disyunción exclusiva (\ensuremath{\oplus}),
-	text=disyunción exclusiva,
+\newglossaryentry{disyuncione}{name=disyunción excluyente (\ensuremath{\oplus}),
+	text=disyunción excluyente,
 	symbol={\ensuremath{\oplus}},
-	description={Verdadera si solo una de las proposiciones es verdadera.}}
+	description={Verdadera si solo una de las proposiciones es verdadera}}
 
 \newglossaryentry{implicacion}{name=implicación (\ensuremath{\implies}),
 	text=implicación,
 	symbol={\ensuremath{\implies}},
-	description={Verdadera a menos que el antecedente sea verdadero y el consecuente falso.}}
+	description={Verdadera a menos que el antecedente sea verdadero y el consecuente falso}}
 
 \newglossaryentry{bicondicional}{name=bicondicional (\ensuremath{\iff}),
 	text=bicondicional,
-	symbol={\ensuremath{\iff}}, description={Verdadera si ambas proposiciones tienen el mismo valor de verdad.}}
+	symbol={\ensuremath{\iff}}, description={Verdadera si ambas proposiciones tienen el mismo valor de verdad}}
 
 \newglossaryentry{tablav}{name=tabla de verdad,
-	description={Herramienta para determinar el valor de verdad de una proposición compuesta para todas las combinaciones posibles de valores de verdad de sus componentes.}}
+	description={Herramienta para determinar el valor de verdad de una proposición compuesta para todas las combinaciones posibles de valores de verdad de sus componentes},
+	plural=tablas de verdad}
 
 \newglossaryentry{tautologia}{name=tautología,
-	description={Proposición compuesta que siempre es verdadera.},
+	description={Proposición compuesta que siempre es verdadera},
 	plural=tautologías}
 
 \newglossaryentry{contradiccion}{name=contradicción,
-	description={Proposición compuesta que siempre es falsa.},
+	description={Proposición compuesta que siempre es falsa},
 	plural=contradicciones}
+	
+\newglossaryentry{argumento}{name=argumento,
+	description={Secuencia de premisas que pretende justificar una conclusión},
+	plural=argumentos}
 
 \newglossaryentry{cuantificadore}{name=cuantificador existencial (\ensuremath{\exists}),
 	text=cuantificador existencial,
 	symbol={\ensuremath{\exists}},
-	description={Indica que existe al menos un elemento que cumple una propiedad.}}
+	description={Indica que existe al menos un elemento que cumple una propiedad},
+	plural=cuantificadores existenciales}
 
 \newglossaryentry{cuantificadoru}{name=cuantificador universal (\ensuremath{\forall}),
 	text=cuantificador universal,
-	symbol={\ensuremath{\forall}}, description={Indica que todos los elementos cumplen una propiedad.}}
+	symbol={\ensuremath{\forall}}, description={Indica que todos los elementos cumplen una propiedad}}
 
-\newglossaryentry{reglasi}{name=reglas de inferencia,
-	description={Patrones lógicos válidos que permiten deducir nuevas proposiciones a partir de premisas dadas.}}
+\newglossaryentry{reglasinferencia}{name=reglas de inferencia,
+	description={Patrones lógicos válidos que permiten deducir nuevas proposiciones a partir de premisas dadas}, plural=reglas de inferencia}
+	
+\newglossaryentry{falacia}{name=falacia,
+		description={Razonamiento incorrecto con apariencia de correcto},
+		plural=falacias}
 
-\newglossaryentry{falacia}{name=falacia formal,
-	description={Argumento que parece válido pero que viola las reglas de la lógica.}}
+\newglossaryentry{falaciaformal}{name=falacia formal,
+	description={Argumento que parece válido pero que viola las reglas de la lógica},
+	plural=falacias formales}
 
 \newglossaryentry{grupo}{name=grupo,
-	description={Conjunto no vacío con una operación binaria que cumple las propiedades de cierre, asociatividad, elemento neutro e inverso.},
+	description={Conjunto no vacío con una operación binaria que cumple las propiedades de cierre, asociatividad, elemento neutro e inverso},
 	plural=grupos}
 
 \newglossaryentry{grupoabeliano}{name=grupo abeliano,
-	description={Grupo en el que la operación es conmutativa.},
+	description={Grupo en el que la operación es conmutativa},
 	plural=grupos abelianos}
 
 \newglossaryentry{subgrupo}{name=subgrupo,
-	description={Subconjunto de un grupo que también es un grupo bajo la misma operación.},
+	description={Subconjunto de un grupo que también es un grupo bajo la misma operación},
 	plural=subgrupos}
 
 \newglossaryentry{subgrupon}{name=subgrupo normal,
-	description={Subgrupo que cumple la propiedad de que para cualquier elemento del grupo, el conjunto de productos a izquierda y a derecha con elementos del subgrupo son iguales.}, plural=subgrupos normales}
+	description={Subgrupo que cumple la propiedad de que para cualquier elemento del grupo, el conjunto de productos a izquierda y a derecha con elementos del subgrupo son iguales}, plural=subgrupos normales}
 
 \newglossaryentry{anillo}{name=anillo,
-	description={Conjunto no vacío con dos operaciones binarias (suma y multiplicación) que cumple las propiedades de grupo abeliano bajo la suma, semigrupo bajo la multiplicación, y distributividad de la multiplicación sobre la suma.}, plural=anillos}
+	description={Conjunto no vacío con dos operaciones binarias (suma y multiplicación) que cumple las propiedades de grupo abeliano bajo la suma, semigrupo bajo la multiplicación, y distributividad de la multiplicación sobre la suma}, plural=anillos}
 
 \newglossaryentry{anilloconmutativo}{name=anillo conmutativo,
-	description={Anillo en el que la multiplicación es conmutativa.}, plural=anillos conmutativos}
+	description={Anillo en el que la multiplicación es conmutativa}, plural=anillos conmutativos}
 
 \newglossaryentry{anillou}{name=anillo con unidad,
-	description={Anillo que tiene un elemento neutro para la multiplicación.}, plural=anillos con unidad}
+	description={Anillo que tiene un elemento neutro para la multiplicación}, plural=anillos con unidad}
 
 \newglossaryentry{dominioi}{name=dominio de integridad,
 	description={Anillo conmutativo con unidad que no tiene divisores de cero (elementos no nulos cuyo producto es cero).}, plural=dominios de integridad}
 
 \newglossaryentry{cuerpo}{name=cuerpo,
-	description={Anillo conmutativo con unidad donde todo elemento no nulo tiene un inverso multiplicativo.}, plural=cuerpos}
+	description={Anillo conmutativo con unidad donde todo elemento no nulo tiene un inverso multiplicativo}, plural=cuerpos}
 
 \newglossaryentry{subcuerpo}{name=subcuerpo,
-	description={Subconjunto de un cuerpo que también es un cuerpo bajo las mismas operaciones.}, plural=subcuerpos}
+	description={Subconjunto de un cuerpo que también es un cuerpo bajo las mismas operaciones}, plural=subcuerpos}

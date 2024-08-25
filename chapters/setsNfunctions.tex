@@ -2,7 +2,7 @@
 
 \section{Introducción}
 
-Este capítulo introduce los conceptos fundamentales de conjuntos y funciones, herramientas matemáticas esenciales en diversas áreas de la ingeniería. Se aborda la definición de conjunto, sus diferentes representaciones (extensión y comprensión), y las operaciones básicas entre conjuntos como unión, intersección, diferencia y complemento. Se estudian las relaciones de pertenencia e inclusión entre conjuntos, y el concepto de conjunto vacío y conjunto universal.
+Este capítulo introduce los conceptos fundamentales de \glspl{conjunto} y \glspl{funcion}, herramientas matemáticas esenciales en diversas áreas de la ingeniería. Se aborda la definición de conjunto, sus diferentes representaciones (extensión y comprensión), y las operaciones básicas entre conjuntos como unión, intersección, diferencia y complemento. Se estudian las relaciones de pertenencia e inclusión entre conjuntos, y el concepto de conjunto vacío y conjunto universal.
 
 Además, se introduce el concepto de función, tipos de funciones (inyectiva, sobreyectiva, biyectiva) y su representación cartesiana. Se estudian operaciones entre funciones como la composición y la función inversa, y se analizan ejemplos de funciones especiales relevantes en matemáticas.
 
@@ -17,6 +17,8 @@ Además, se introduce el concepto de función, tipos de funciones (inyectiva, so
 \end{itemize}
 
 \section{Conjuntos} \label{sec:conjuntos}
+
+\index{conjunto}
 
 \subsection{Definición intuitiva de conjunto}
 \vspace{1em}
@@ -64,11 +66,11 @@ Las notaciones usuales para caracterizar conjuntos numéricos son las siguientes
 \subsubsection{Conjuntos especiales}
 
 \begin{itemize}
-	\item El \gls{conjuntouniversal}, denotado como \glsentrysymbol{conjuntouniversal}, es el que contiene todos los elementos posibles que estamos considerando en un contexto particular. Es el conjunto más grande en ese contexto y actúa como un marco de referencia para otros conjuntos más pequeños.
+	\item El \gls{conjuntouniversal}, \index{conjunto!universal} denotado como \glsentrysymbol{conjuntouniversal}, es el que contiene todos los elementos posibles que estamos considerando en un contexto particular. Es el conjunto más grande en ese contexto y actúa como un marco de referencia para otros conjuntos más pequeños.
 	
 	Por ejemplo, si estamos trabajando con números naturales, el conjunto universal sería \(\mathbb{N}\), que incluye todos los números positivos enteros: \(\{1, 2, 3, 4, \ldots\} \).
 	
-	\item El \gls{conjuntovacio}, denotado como \glsentrysymbol{conjuntovacio}, es aquel que no contiene ningún elemento. El conjunto vacío es único, en otras palabras, todos los conjuntos vacíos son iguales.
+	\item El \gls{conjuntovacio}, \index{conjunto!vacío}  denotado como \glsentrysymbol{conjuntovacio}, es aquel que no contiene ningún elemento. El conjunto vacío es único, en otras palabras, todos los conjuntos vacíos son iguales.
 	
 	Por ejemplo, el conjunto vacío puede representar el conjunto de números reales que son mayores que 10 y menores que 5. Dado que no hay números que cumplan esta condición, el conjunto resultante es vacío: \glsentrysymbol{conjuntovacio}.
 	
@@ -79,13 +81,13 @@ Las notaciones usuales para caracterizar conjuntos numéricos son las siguientes
 
 \subsubsection{Relación de pertenencia}
 
-Para indicar la \gls{pertenencia} de un elemento a un conjunto será utilizado el símbolo \glsentrysymbol{pertenencia}.
+Para indicar la \gls{pertenencia} \index{pertenencia} de un elemento a un conjunto será utilizado el símbolo \glsentrysymbol{pertenencia}.
 
 La proposición $a \in A$ se lee ``$a$ \textit{pertenece} a $A$'', o bien ``el elemento $a$ \textit{pertenece} al conjunto $A$''. Su negación es $a \not \in A$, que se lee ``$a$ \textit{no pertenece} a $A$''
 
 \subsubsection{Notación por extensión}
 
-La notación por extensión lista cada elemento del conjunto de forma individual.
+La notación por extensión \index{conjunto!por extensión} lista cada elemento del conjunto de forma individual.
 
 Ejemplos:
 
@@ -97,7 +99,7 @@ Ejemplos:
 
 \subsubsection{Notación por comprensión}
 
-En la notación por comprensión, describimos las propiedades o características que deben cumplir los elementos del conjunto, luego, utilizamos una condición lógica para definir el conjunto.
+En la notación por comprensión \index{conjunto!por comprensión}, describimos las propiedades o características que deben cumplir los elementos del conjunto, luego, utilizamos una condición lógica para definir el conjunto.
 
 En general su estructura tiene la forma:
 \[ A = \{ x \in U \mid P(x) \}\]
@@ -135,7 +137,7 @@ en consecuencia:
 \end{fmd-example}
 
 \subsubsection{Inclusión}
-La \gls{inclusion} tiene la siguiente definición:
+La \gls{inclusion} tiene la siguiente definición: \index{inclusión}
 
 \begin{fmd-definition}[Inclusión]
 	Sean $A$ y $B$ dos conjuntos, si ocurre que todo elemento de $A$ pertenece a $B$, diremos que $A$ está incluido en $B$, o que $A$ es parte de $B$, o que $A$ es un subconjunto de $B$.
@@ -184,6 +186,7 @@ La \gls{inclusion} tiene la siguiente definición:
 \end{itemize}
 
 \subsubsection{Diagrama de Venn}
+\index{diagrama de Venn}
 
 El \gls{venn} es una representación visual de los conjuntos utilizando diagramas llamados de Venn en homenaje a su autor\footnote{John Venn (1834-1923), matemático y lógico británico.}. En este sentido, el conjunto universal suele representarse por un rectángulo y los conjuntos por recintos cerrados. Es claro que todo elemento de $A$ pertenece a $U$, o sea, $A \subset U$. $A$, $B$ y $C$ subconjuntos de $U$, como indica el diagrama de la fig. \ref{fig:Venn}.
 
@@ -209,7 +212,7 @@ El \gls{venn} es una representación visual de los conjuntos utilizando diagrama
 \subsection{Operaciones con conjuntos}
 
 \subsubsection{Unión \glsentrysymbol{union}}
-\vspace{1em}
+\vspace{1em} \index{unión}
 \begin{fmd-definition}[Unión]
 	La \gls{union} de dos conjuntos \(A\) y \(B\) consiste en todos los elementos que pertenecen a \(A\), a \(B\), o a ambos conjuntos.
 	
@@ -233,14 +236,14 @@ El \gls{venn} es una representación visual de los conjuntos utilizando diagrama
 	
 	\item Propiedades:
 	\begin{enumerate}[label=\roman*)]
-		\item Idempotencia\footnote{La idempotencia se define en la pág. \pageref{def:idempotencia}, definición \ref{def:idempotencia}.}: \( A \cup A = A \)
+		\item Idempotencia\footnote{La idempotencia se define en la pág. \index{idempotencia} \pageref{def:idempotencia}, definición \ref{def:idempotencia}.}: \( A \cup A = A \)
 		\item Asociatividad: \( \left( A \cup B \right) \cup C = A \cup \left( B \cup C \right) \)
 		\item Conmutatividad: \( A \cup B = B \cup A\)
 	\end{enumerate}
 \end{itemize}
 
 \subsubsection{Intersección \glsentrysymbol{interseccion}}
-\vspace{1em}
+\vspace{1em} \index{intersección}
 \begin{fmd-definition}[Intersección]
 	La \gls{interseccion} de dos conjuntos \(A\) y \(B\) contiene los elementos que pertenecen tanto a \(A\) como a \(B\).
 	
@@ -264,14 +267,14 @@ El \gls{venn} es una representación visual de los conjuntos utilizando diagrama
 	
 	\item Propiedades:
 	\begin{enumerate}[label=\roman*)]
-		\item Idempotencia: \( A \cap A = A \)
-		\item Asociatividad: \( \left( A \cap B \right) \cap C = A \cap \left( B \cap C \right) \)
-		\item Conmutatividad: \( A \cap B = B \cap A\)
+		\item Idempotencia: \( A \cap A = A \) \index{idempotencia}
+		\item Asociatividad: \( \left( A \cap B \right) \cap C = A \cap \left( B \cap C \right) \) \index{asociatividad}
+		\item Conmutatividad: \( A \cap B = B \cap A\) \index{conmutatividad}
 	\end{enumerate}
 \end{itemize}
 
 \subsubsection{Complemento $(A^c)$}
-\vspace{1em}
+\vspace{1em} \index{complemento}
 
 \begin{fmd-definition}[Complemento]
 	El \gls{complemento} de un conjunto \(A\) con respecto a un conjunto universal \(U\) contiene todos los elementos que no están en \(A\).
@@ -310,7 +313,7 @@ El \gls{venn} es una representación visual de los conjuntos utilizando diagrama
 \subsubsection{Diferencia $(-, \setminus)$}
 
 \vspace{1em}
-
+\index{conjunto!diferencia}
 \begin{fmd-definition}[Diferencia de conjuntos]
 	La diferencia entre dos conjuntos \(A\) y \(B\) contiene los elementos que están en \(A\) pero no en \(B\).
 	
@@ -339,7 +342,7 @@ El \gls{venn} es una representación visual de los conjuntos utilizando diagrama
 
 \subsubsection{Diferencia simétrica $\triangle$}
 \vspace{1em}
-
+\index{conjunto!diferencia simétrica}
 \begin{fmd-definition}[Diferencia simétrica]
 	La \gls{difsimetrica} de dos conjuntos \(A\) y \(B\), es el conjunto que contiene los elementos que pertenecen a \(A\) o a \(B\), pero no a ambos.
 	
@@ -393,7 +396,7 @@ El \gls{venn} es una representación visual de los conjuntos utilizando diagrama
 
 \subsubsection{Conjunto potencia o conjunto de partes $\mathcal{P}(A)$}
 \vspace{1em}
-
+\index{conjunto!potencia} \index{conjunto!de partes}
 \begin{fmd-definition}[Conjunto potencia]
 	Dado un conjunto \(A\), el \gls{conjuntopotencia} o conjunto de partes de \(A\), denotado por \glsentrysymbol{conjuntopotencia} o \(2^A\), es el conjunto de todos los subconjuntos de \(A\). 
 	
@@ -426,7 +429,7 @@ El \gls{venn} es una representación visual de los conjuntos utilizando diagrama
 
 \subsubsection{Producto cartesiano}
 \vspace{1em}
-
+\index{producto!cartesiano}
 \begin{fmd-definition}[Producto cartesiano]
 	El \gls{productocartesiano} de dos conjuntos \(A\) y \(B\), es el conjunto de todos los pares ordenados \((a, b)\) donde el primer elemento \(a\) pertenece al conjunto \(A\) y el segundo elemento \(b\) pertenece al conjunto \(B\).
 
@@ -470,7 +473,7 @@ El \gls{venn} es una representación visual de los conjuntos utilizando diagrama
 
 
 \subsection{Álgebra de conjuntos} \label{sec:algebra_conjuntos}
-
+\index{álgebra!de conjuntos}
 \subsubsection{Propiedades fundamentales}
 
 \begin{itemize}
@@ -530,7 +533,7 @@ El \gls{venn} es una representación visual de los conjuntos utilizando diagrama
 \subsubsection{Operaciones generalizadas}
 
 \begin{itemize}
-	\item \textbf{Unión generalizada}
+	\item \textbf{Unión generalizada} \index{unión!generalizada}
 	
 	Dada una colección finita de conjuntos \( \{ A_1, A_2, \dots, A_n \} \) la unión generalizada de estos conjuntos se denota por:
 	\[ A_1 \cup A_2 \cup \dots \cup A_n = \bigcup_{i=1}^n A_i  \]
@@ -544,7 +547,7 @@ El \gls{venn} es una representación visual de los conjuntos utilizando diagrama
 	Si el conjunto $I_n$ se identifica con $\N$ (conjunto de números naturales):
 	\[ \bigcup_{i=1}^\infty A_i = \left\{ x \ | \ x \in A_i \mbox{ para algún } i \in \N \right\} \]
 	
-	\item \textbf{Intersección generalizada}
+	\item \textbf{Intersección generalizada} \index{intersección!generalizada}
 	
 	Dada una colección finita de conjuntos \( \{ A_1, A_2, \dots, A_n \} \) la intersección generalizada de estos conjuntos se denota por:
 	\[ A_1 \cap A_2 \cap \dots \cap A_n = \bigcap_{i=1}^n A_i  \]
@@ -580,9 +583,9 @@ El \gls{venn} es una representación visual de los conjuntos utilizando diagrama
 
 \subsubsection{Uniones disjuntas}
 \vspace{1em}
-
+\index{unión!disjunta}
 \begin{fmd-definition}[Uniones disjuntas]
-	Se dice que una colección de conjuntos tiene \textit{uniones disjuntas} si los conjuntos son mutuamente excluyentes, es decir, si la intersección de cualquier par de conjuntos de la colección es el conjunto vacío.
+	Se dice que una colección de conjuntos tiene \glspl{uniondisjunta} si los conjuntos son mutuamente excluyentes, es decir, si la intersección de cualquier par de conjuntos de la colección es el conjunto vacío.
 	
 	Formalmente, una colección de conjuntos \(\{A_i\}_{i \in I}\) es una colección de uniones disjuntas si:
 	\[A_i \cap A_j = \emptyset \quad \forall i, j \in I \mbox{ con } i \neq j\]
@@ -617,23 +620,23 @@ Algunas aplicaciones:
 
 
 \section{Relaciones y particiones}
-
+\index{relaciones!y particiones}
 	Una \textit{relación} es un vínculo o una correspondencia. Se trata de la correspondencia que existe entre dos conjuntos: a cada elemento del primer conjunto le corresponde al menos un elemento del segundo conjunto.
 	
 	Cuando a cada elemento de un conjunto le corresponde solo uno del otro, se habla de \textit{función}. Esto quiere decir que las funciones siempre son, a su vez, relaciones, pero que las relaciones no siempre son funciones.
 
-\begin{fmd-definition}[Relaciones]
-	Dados dos conjuntos $A$ y $B$, una \textbf{relación} entre ellos es un subconjunto $\mathcal{R} \subset A \times B$, en el que el par ordenado $(a, b) \in \mathcal{R}$ con $a \in A$ y $b \in B$, así decimos que $a$ está relacionado con $b$ y se denota:
+\begin{fmd-definition}[Relaciones] \index{relaciones}
+	Dados dos conjuntos $A$ y $B$, una \gls{relacion} entre ellos es un subconjunto $\mathcal{R} \subset A \times B$, en el que el par ordenado $(a, b) \in \mathcal{R}$ con $a \in A$ y $b \in B$, así decimos que $a$ está relacionado con $b$ y se denota:
 	\[ a \mathcal{R} b \]
 \end{fmd-definition}
 
 \subsection{Relaciones de equivalencia}
-\vspace{3mm}
+\vspace{3mm} \index{relaciones!de equivalencia}
 \begin{fmd-definition}[Relación de equivalencia]
-	La relación $\mathcal{R} \subset A^2$ es de equivalencia en $A$ si y sólo si es reflexiva, simétrica y transitiva
+	$\mathcal{R} \subset A^2$ es una \gls{relequivalencia} en $A$ si y sólo si es reflexiva, simétrica y transitiva
 \end{fmd-definition}
 
-Se suele utilizar el símbolo ``$\equiv$'' o ``$\sim$''. La notación $a \sim b$ o $a \equiv b$ se lee ``$a$ es equivalente a $b$''.
+Se suele utilizar el símbolo ``\glsentrysymbol{relequivalencia}'' o ``$\sim$''. La notación $a \sim b$ o $a \equiv b$ se lee ``$a$ es equivalente a $b$''.
 
 Conforme a la definición, las relaciones de equivalencia satisfacen:
 
@@ -649,9 +652,9 @@ Conforme a la definición, las relaciones de equivalencia satisfacen:
 \end{enumerate}
 
 \subsubsection{Clases de equivalencia y conjunto cociente}
-\vspace{3mm}
+\vspace{3mm} \index{clases de equivalencia}
 \begin{fmd-definition}[Clase de equivalencia]
-	Sea $A$ un conjunto y $\mathcal{R}$ una relación de equivalencia en $A$. Para cada elemento $a \in A$, la \textbf{clase de equivalencia} de $a$, que se denota $[a]$ o $\bar{a}$, es el conjunto de todos los elementos $x \in A$ tales que $x$ está relacionado con $a$ en $\mathcal{R}$.
+	Sea $A$ un conjunto y $\mathcal{R}$ una relación de equivalencia en $A$. Para cada elemento $a \in A$, la \gls{clasequiv} de $a$, que se denota $[a]$ o $\bar{a}$, es el conjunto de todos los elementos $x \in A$ tales que $x$ está relacionado con $a$ en $\mathcal{R}$.
 	\[ [a] = \bar{a} = \{ x \in A / x \mathcal{R} a \}\]
 \end{fmd-definition}
 
@@ -686,8 +689,8 @@ En la fig. se muestra, en un diagrama, las relaciones.
 \label{ex:clases1}
 \end{fmd-example}
 
-\begin{fmd-definition}[Conjunto cociente]
-	Sea $A$ un conjunto y $\mathcal{R}$ (o $\sim$)una relación de equivalencia en $A$. El \textbf{conjunto cociente} se define por:
+\begin{fmd-definition}[Conjunto cociente] \index{conjunto!cociente}
+	Sea $A$ un conjunto y $\mathcal{R}$ (o $\sim$)una relación de equivalencia en $A$. El \gls{conjuntocociente} se define por:
 	\[ A/\mathcal{R} = \frac{A}{\sim} = \{ [a] / a \in A \}\]
 \end{fmd-definition}
 
@@ -699,8 +702,8 @@ En la fig. se muestra, en un diagrama, las relaciones.
 \subsection{Particiones} \label{sec:particiones}
 \vspace{3mm}
 
-\begin{fmd-definition}[Partición]
-	Dado un conjunto no vacío $A$, una \textbf{partición} de $A$ es una colección finita o infinita de conjuntos de $A$ que cumplen:
+\begin{fmd-definition}[Partición] \index{partición}
+	Dado un conjunto no vacío $A$, una \gls{particion} de $A$ es una colección finita o infinita de conjuntos de $A$ que cumplen:
 	\[ A_i \cap A_j = \emptyset \; \forall \, i \ne j \quad \land \quad \cup_{i=1}^n A_i = A \]
 \end{fmd-definition}
 
@@ -758,18 +761,19 @@ Las clases de equivalencia conforman una partición del conjunto $A$.
 \end{fmd-example}
 
 \section{Funciones}
-Esta sección está basada en \cite{rojoAlgebra8vaEd} cap. 4.
+Esta sección está basada en \cite{rojoAlgebra8vaEd} cap. 4. \index{funciones}
 \subsection{Relaciones funcionales} \label{sec:relaciones}
 
-Sean A y B dos conjuntos no vacíos, que llamaremos \textit{dominio} y \textit{codominio} respectivamente. \par
+Sean $A$ y $B$ dos conjuntos no vacíos, que llamaremos \gls{dominio} y \gls{codominio} respectivamente. \par
 
-Una \textbf{función} de $A$ en $B$ asigna a cada elemento de $A$ un único elemento de $B$.
+Una \gls{funcion} de $A$ en $B$ asigna a cada elemento de $A$ un único elemento de $B$.
 
 Para denotar que $f$ (o $g$, $h$, etc.) es una función de $A$ en $B$, se escribe:
 \[f: A \rightarrow B\]
 se lee: \emph{$f$ es una función o aplicación de $A$ en $B$}, o bien \emph{$f$ es una función con dominio $A$ y codominio $B$}.
+\index{función}
 
-\begin{fmd-example}[Función] \label{ex:funcion}
+\begin{fmd-example}[Función] \label{ex:funcion} \index{función}
 	En particular, si $A = \{ -1, 0, 1, 2 \}$, $B = \{ 0, 1, 2, 3, 4 \}$ y $f$ es la relación
 	\[ (x, y) \in f \iff y = x^2 \]
 	se tiene (cada 2da. componente es el cuadrado de la 1ra.):
@@ -820,7 +824,7 @@ se lee: \emph{$f$ es una función o aplicación de $A$ en $B$}, o bien \emph{$f$
 \end{fmd-example}
 
 
-\begin{fmd-definition}[Función]
+\begin{fmd-definition}[Función] \index{función}
 	$f$ es una función o aplicación de $A$ en $B$ si y sólo si $f$ es una relación
 	entre $A$ y $B$, tal que todo elemento de $A$ tiene un único correspondiente en
 	$B$.
@@ -1019,7 +1023,7 @@ y el codominio, del eje vertical.
 				$(2,2)$ & 4
 			\end{tabular}
 		\end{table}
-		El elemento 1 de $B$ carece de antecedente o \textit{preimagen}\footnote{Ver definición \ref{def:preimagen}, pág. \pageref{def:preimagen}.}  en $A$.
+		El elemento 1 de $B$ carece de antecedente o \gls{preimagen}\footnote{Ver definición \ref{def:preimagen}, pág. \pageref{def:preimagen}.}  en $A$.
 	\end{enumerate}
 	
 	\begin{enumerate}
@@ -1168,15 +1172,15 @@ y el codominio, del eje vertical.
 Sea una función $f: A \rightarrow B$
 \begin{itemize}
 	\item Si ocurre que elementos distintos del dominio tienen imágenes distintas 
-	en el codominio, entonces $f$ se llama función \textit{inyectiva} o uno a uno.
+	en el codominio, entonces $f$ se llama \gls{funcioninyectiva} o uno a uno.
+	\index{función!inyectiva}
 	\item Por otra parte, si todo elemento del codominio es imagen de algún elemento 
-	del dominio, la función se llama \textit{sobreyectiva}.
-	\item Cuando se presentan ambas situaciones simultáneamente, la función se llama 
-	\textit{biyectiva} o correspondencia biunívoca.
+	del dominio, se llama \gls{funcionsobreyectiva}. \index{función!sobreyectiva}
+	\item Cuando se presentan ambas situaciones simultáneamente, se llama \gls{funcionbiyectiva} o correspondencia biunívoca. \index{función!biyectiva}
 \end{itemize}
 
 \subsubsection{Función inyectiva}
-\vspace{1em}
+\vspace{1em} \index{función!inyectiva}
 \begin{fmd-definition}[Función inyectiva]
 	Una función $f: A \rightarrow B$ es inyectiva si, y solo si, para cualquier par de elementos distintos $x'$ y $x''$ en el conjunto $A$, sus imágenes bajo la función $f$ también son distintas.
 \end{fmd-definition}
@@ -1345,13 +1349,13 @@ Una función $f: A \rightarrow B$ es inyectiva si, y solo si, cuando dos element
 	\end{minipage}
 \end{figure}
 
-\subsubsection{Función sobreyectiva}
+\subsubsection{Función sobreyectiva} \index{función!sobreyectiva}
 \vspace{1em}
 \begin{fmd-definition}[Función sobreyectiva]
 	Una función $f: A \rightarrow B$ es \textit{sobreyectiva} si, y solo si, para cada elemento $y \in B$, existe al menos un elemento $x \in A$ tal que $y = f(x)$.
 \end{fmd-definition}
 \begin{itemize}
-	\item El conjunto de las imágenes (\textit{rango} o \textit{recorrido}) se identifica con el codominio de la función. No hay elementos del codominio que no sea la imagen de \textit{al menos un} elemento del dominio, en otras palabras, el rango y el codominio coinciden.
+	\item El conjunto de las imágenes (\gls{rango} o \textit{recorrido}) \index{rango} se identifica con el codominio de la función. No hay elementos del codominio que no sea la imagen de \textit{al menos un} elemento del dominio, en otras palabras, el rango y el codominio coinciden.
 	\item El ejemplo 3 corresponde a funciones sobreyectivas.
 	\item Es usual nombrar a las funciones sobreyectivas como ``sobre'' o ``suryectiva''
 \end{itemize}
@@ -1506,7 +1510,7 @@ Una función $f: A \rightarrow B$ es inyectiva si, y solo si, cuando dos element
 \end{figure}
 
 \subsubsection{Función biyectiva}
-\vspace{1em}
+\vspace{1em} \index{función!biyectiva}
 \begin{fmd-definition}[Función biyectiva]
 	$f:A \rightarrow B \mbox{ es biyectiva si } f \mbox{ es inyectiva y sobreyectiva}$.
 \end{fmd-definition}
@@ -1787,9 +1791,9 @@ Notar que si  $f: A \rightarrow B$ no es biyectiva, entonces no es inyectiva o n
 \end{fmd-example}
 
 \subsection{Funciones especiales} \label{sec:especiales}
-
+\index{funciones!especiales}
 \begin{itemize}
-	\item \textbf{Función constante}
+	\item \textbf{Función constante} \index{función!constante}
 	
 	La función $f: A \rightarrow B$, que asigna a todos los elementos del dominio el
 	elemento $b \in B$, se llama constante.
@@ -1813,7 +1817,7 @@ Notar que si  $f: A \rightarrow B$ no es biyectiva, entonces no es inyectiva o n
 \end{figure}
 
 \begin{itemize}
-	\item \textbf{Función identidad}
+	\item \textbf{Función identidad} \index{función!identidad}
 	
 	Identidad en $A$ es la aplicación que asigna a cada elemento de $A$ el mismo elemento.
 	$ i_A: A \rightarrow A \mbox{ tal que } i_A(x) = x$.
@@ -1839,7 +1843,7 @@ Notar que si  $f: A \rightarrow B$ no es biyectiva, entonces no es inyectiva o n
 \end{itemize}
 
 \begin{itemize}
-	\item \textbf{Función proyección}
+	\item \textbf{Función proyección} \index{función!proyección}
 	
 	Consideremos $A \times B$, y las funciones $P_1: A \times B \rightarrow A$;
 	$P_2: A \times B \rightarrow B$ definidas por $ P_1(a, b) = a \quad \mbox{y}
@@ -1874,7 +1878,7 @@ Notar que si  $f: A \rightarrow B$ no es biyectiva, entonces no es inyectiva o n
 \end{itemize}
 
 \begin{itemize}
-	\item \textbf{Función canónica}
+	\item \textbf{Función canónica} \index{función!canónica}
 	
 	Sea $\sim$ o $\mathcal{R}$ una relación de equivalencia definida en el conjunto \textit{no vacío}
 	$A$. Por el teorema fundamental de las relaciones de equivalencia, queda determinado
@@ -1937,7 +1941,7 @@ Notar que si  $f: A \rightarrow B$ no es biyectiva, entonces no es inyectiva o n
 \end{fmd-example}
 
 \subsection{Composición de funciones} \label{sec:compos}
-
+\index{composición de funciones} \index{funciones!composición de}
 Sean $f: A \rightarrow B$ y $g: B \rightarrow C$
 \begin{figure}[H]
 	\centering
@@ -1974,7 +1978,7 @@ El codominio de $f$ es dominio de $g$, pero es suficiente que el codominio de la
 primera sea parte del dominio de la segunda: $B \subset B'$. En la fig. \ref{fig:compos1} se ve gráficamente esta afirmación.
 
 \begin{fmd-definition}[Composición de funciones]
-	Composición de las funciones $f: A \rightarrow B$ y $g:B \rightarrow C$ es la
+	La \gls{composicion} entre $f: A \rightarrow B$ y $g:B \rightarrow C$ es la
 	función $g \circ f : A \rightarrow C$, tal que:
 	$ (g \circ f)(x) = g\left[ f(x) \right] \ \forall x \in A$
 \end{fmd-definition}
@@ -2059,7 +2063,7 @@ primera sea parte del dominio de la segunda: $B \subset B'$. En la fig. \ref{fig
 	distintas, por diferir en la ley de asignación.
 \end{fmd-example}
 
-\begin{definition}[Funciones iguales]
+\begin{definition}[Funciones iguales] \index{funciones!iguales}
 	Dos funciones $f:A \rightarrow B$ y $g: A \rightarrow B$ son iguales si y sólo si
 	para todo $x$ de $A$ se verifica $f(x) = g(x)$
 \end{definition}\vspace{2mm}
@@ -2181,7 +2185,7 @@ A \rightarrow C$ es biyectiva.
 	la segunda es sobreyectiva.
 \end{fmd-example}
 
-\subsection{Funciones inversas} \label{sec:finversas}
+\subsection{Funciones inversas} \label{sec:finversas} \index{función!inversa}
 Cabe preguntarse si, para la función $f: A \rightarrow B$, la relación inversa
 es una función. En general la respuesta es negativa, como se ve a través del ejemplo 2,
 diapositiva \ref{frame:ejm2}, donde $A = \{-1,0,1,2\}$, $B=\{0,1,2,3,4\}$ y $f(x) =x^2$
@@ -2195,7 +2199,7 @@ condición de unicidad, ya que 1 tiene dos correspondientes en $A$.
 Sea, en cambio, el siguiente caso $A = \{1,2,3\}$, $B=\{a,b,c\}$ y 
 $f(x) =\{(1, a), (2, c), (3,b) \}$. La relación inversa es:
 \[ g = \{ (a,1), (b,3), (c,2) \} \]
-es claramente una función de $B$ en $A$, llamada función inversa de $f$. La composición
+es claramente una función de $B$ en $A$, llamada \gls{funcioninversa} de $f$. La composición
 \[ g \circ f = \{ (1,1),(2,2),(3,3) \} = i_A \]
 en donde $g$ es la \textit{inversa izquierda} de $f$
 y \[ f \circ g = \{ (a, a), (b,b), (c,c) \} = i_B\]
@@ -2468,7 +2472,7 @@ La función $g$ se llama inversa y se denota por $f^{-1}$.
 
 
 \subsection{Imágenes de subconjuntos del dominio} \label{sec:imasub}
-Sean $f : X \rightarrow Y$ y $A \subset X$
+Sean $f : X \rightarrow Y$ y $A \subset X$ \index{imagen}
 \begin{fmd-definition}[Imagen de subconjuntos]
 	Imagen del subconjunto $A \subset X$ es el conjunto cuyos elementos son las
 	imágenes de los elementos de $A$.
@@ -2585,10 +2589,10 @@ Sean $f: X \rightarrow Y$ y $A$ y $B$ subconjuntos del dominio.
 \end{enumerate}
 
 \subsection{Imágenes inversas de subconjuntos del codominio} \label{sec:invcon}
-
+\index{imagen!inversa}
 Sean $f: X \rightarrow Y$ y $A \subset Y$.
 
-\begin{fmd-definition}[Preimagen] \label{def:preimagen}
+\begin{fmd-definition}[Preimagen] \label{def:preimagen} \index{preimagen}
 	Imagen inversa o preimagen del subconjunto $A \subset Y$, es el conjunto de los
 	elementos del dominio cuyas imágenes pertenecen a $A$.
 	
@@ -2773,7 +2777,7 @@ Sean $f:X \rightarrow Y$ y los subconjuntos $A \subset Y$, $B \subset Y$.
 
 
 \subsection{Restricción y extensión de una función} \label{sec:restr}
-\vspace{3mm}
+\vspace{3mm} \index{función!restricción de} \index{restricción de una función}
 \begin{fmd-definition}[Restricción de una función]
 	Sean $f:X \rightarrow Y$, $A \subset X$ y la función $g: A \rightarrow Y \mid 
 	g(x) = f(x) \, \forall \, x \in A$.
@@ -2782,7 +2786,7 @@ Sean $f:X \rightarrow Y$ y los subconjuntos $A \subset Y$, $B \subset Y$.
 	la denotamos $g:f \mid A$.
 \end{fmd-definition}
 
-\begin{fmd-definition}[Extensión de una función]
+\begin{fmd-definition}[Extensión de una función] \index{extensión de una función} \index{función!extension de}
 	Si $g$ es la restricción de $f$ al subconjunto $A$, entonces $f: X \rightarrow
 	Y$ es una extensión de la función $g$ sobre el conjunto $X$.
 \end{fmd-definition}

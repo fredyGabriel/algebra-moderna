@@ -16,11 +16,11 @@ Finalmente, se presenta el sistema axiomático de Peano, un conjunto de axiomas 
 \end{itemize}
 
 \section{Lógica proposicional}
-
+\index{lógica!proposicional}
 \subsection{Proposiciones}
 \vspace{1em}
-\begin{fmd-definition}[Proposición]
-	Una \textit{proposición} es una oración que puede ser verdadera o falsa.
+\begin{fmd-definition}[Proposición] \index{proposición}
+	Una \gls{proposicion} es una oración que puede ser verdadera o falsa.
 \end{fmd-definition}
 
 \begin{fmd-example}
@@ -70,11 +70,11 @@ Ahora, veamos ejemplos de oraciones que \textbf{no son proposiciones}:
 Las proposiciones se representan mediante letras (como $p$, $q$, $r$) y se combinan para formar argumentos más complejos.
 
 \subsection{Operadores lógicos} \label{sec:operadores_logicos}
+\index{operador!lógico}
+A continuación presentamos varios \glspl{operadorlogico} y sus correspondientes \gls{tablav}. En una tabla de verdad se evalúan todos los posibles valores de verdad de las proposiciones componentes y se determina el valor de verdad resultante de la proposición completa. \index{tabla!de verdad}
 
-A continuación presentamos varios operadores lógicos y sus correspondientes \textit{tablas de verdad}. En una tabla de verdad se evalúan todos los posibles valores de verdad de las proposiciones componentes y se determina el valor de verdad resultante de la proposición completa.
-
-\subsubsection{Negación $\neg$}
-La negación de una proposición $p$ se denota como $\neg p$ o $\sim p$. Representa la idea de que algo no es verdadero. Por ejemplo, si $p$ es ``llueve'', entonces $\neg p$ sería ``no llueve''. Su tabla de verdad es la siguiente:
+\subsubsection{Negación $\neg$} \index{negación}
+La \gls{negacion} de una proposición $p$ se denota como $\neg p$ o $\sim p$. Representa la idea de que algo no es verdadero. Por ejemplo, si $p$ es ``llueve'', entonces $\neg p$ sería ``no llueve''. Su tabla de verdad es la siguiente:
 
 \begin{table}[h]
 	\centering
@@ -103,8 +103,8 @@ La operación de negación ($\neg$) es análoga a la complementación ($^c$) de 
 	\caption*{\(A^c\) es equivalente a $\neg p$}
 \end{figure}
 
-\subsubsection{Conjunción $\land$}
-La conjunción de dos proposiciones $p$ y $q$ se denota como $p \land q$. Representa la idea de que ambas proposiciones son verdaderas. Por ejemplo, si $p$ es ``es lunes'' y $q$ es ``tengo una reunión'', entonces $p \land q$ sería ``es lunes y tengo una reunión''. Su tabla de verdad es:
+\subsubsection{Conjunción \glsentrysymbol{conjuncion}} \index{conjunción}
+La \gls{conjuncion} de dos proposiciones $p$ y $q$ se denota como $p \land q$. Representa la idea de que ambas proposiciones son verdaderas. Por ejemplo, si $p$ es ``es lunes'' y $q$ es ``tengo una reunión'', entonces $p \land q$ sería ``es lunes y tengo una reunión''. Su tabla de verdad es:
 
 \begin{table}[h]
 	\centering
@@ -147,8 +147,8 @@ La operación lógica de conjunción es análoga a la intersección de la teorí
 \caption*{$A \cap B$ equivalente a $p \land q$}
 \end{figure}
 
-\subsubsection{Disyunción inclusiva $\lor$}
-La disyunción de dos proposiciones $p$ y $q$ se denota como $p \lor q$. Representa la idea de que al menos una de las proposiciones es verdadera. Por ejemplo, si $p$ es ``estudiaré'' y $q$ es ``veré una película'', entonces $p \lor q$ sería ``estudiaré o veré una película''. La tabla de verdad correspondiente es:
+\subsubsection{Disyunción inclusiva \glsentrysymbol{disyuncion}} \index{disyunción!inclusiva}
+La \gls{disyuncion} de dos proposiciones $p$ y $q$ se denota como $p \lor q$. Representa la idea de que al menos una de las proposiciones es verdadera. Por ejemplo, si $p$ es ``estudiaré'' y $q$ es ``veré una película'', entonces $p \lor q$ sería ``estudiaré o veré una película''. La tabla de verdad correspondiente es:
 
 \begin{table}[h]
 	\centering
@@ -193,8 +193,8 @@ La operación lógica de disyunción es análoga a la unión de la teoría de co
 \end{figure}
 
 \subsubsection{Diferencia simétrica o disyunción excluyente $\oplus$}
-
-La diferencia simétrica o disyunción excluyente es verdadera cuando \textit{exactamente una} de las dos proposiciones es verdadera, por ejemplo ``$p$ o $q$ pero no ambos''. Se denota por $p \oplus q$ o $p \nleftrightarrow q$ o $p \underline{\vee} q$. La tabla de verdad correspondiente es:
+\index{diferencia simétrica} \index{disyunción!excluyente}
+La diferencia simétrica o \gls{disyuncione} es verdadera cuando \textit{exactamente una} de las dos proposiciones es verdadera, por ejemplo ``$p$ o $q$ pero no ambos''. Se denota por $p \oplus q$ o $p \nleftrightarrow q$ o $p \underline{\vee} q$. La tabla de verdad correspondiente es:
 
 \begin{table}[H]
 	\centering
@@ -253,8 +253,8 @@ Esta operación es análoga a la diferencia simétrica de la teoría de conjunto
 \end{figure}
 
 
-\subsubsection{Implicación o condicional $\implies$}
-Si se combinan dos proposiciones por medio de las palabras \textit{``si..., entonces...''} se obtiene un \textit{implicación} o \textit{proposición condicional}. La implicación de una proposición $p$ a otra $q$ se denota como $p \implies q$. Representa la idea de que si $p$ es verdadero, entonces $q$ también debe serlo. Por ejemplo, si $p$ es ``estudiaré'', entonces $q$ es ``aprobaré el examen''. La tabla de verdad es:
+\subsubsection{Implicación o condicional $\implies$} \index{implicación} \index{condicional}
+Si se combinan dos proposiciones por medio de las palabras \textit{``si..., entonces...''} se obtiene un \gls{implicacion} o \textit{proposición condicional}. La implicación de una proposición $p$ a otra $q$ se denota como $p \implies q$. Representa la idea de que si $p$ es verdadero, entonces $q$ también debe serlo. Por ejemplo, si $p$ es ``estudiaré'', entonces $q$ es ``aprobaré el examen''. La tabla de verdad es:
 
 \begin{table}[H]
 	\centering
@@ -313,8 +313,8 @@ Paralelismo con la tabla de verdad:
 \end{itemize}
 
 
-\subsubsection{Doble implicación o bicondicional $\iff$}
- La doble implicación o proposición ``si y solo si'' se denota como $p \iff q$. Representa la idea de que $p$ es verdadero si y solo si $q$ también lo es. Puede verse, si es verdadera, como cumplimiento en ambos sentidos las implicaciones $p \implies q$ y $q \implies b$. Su tabla de verdad es la siguiente:
+\subsubsection{Doble implicación o bicondicional $\iff$} \index{doble implicación} \index{implicación!doble} \index{implicación!condicional} \index{bicondicional} \index{si y solo si}
+ La doble implicación, o \gls{bicondicional}, o proposición ``si y solo si'' se denota como $p \iff q$. Representa la idea de que $p$ es verdadero si y solo si $q$ también lo es. Puede verse, si es verdadera, como cumplimiento en ambos sentidos las implicaciones $p \implies q$ y $q \implies b$. Su tabla de verdad es la siguiente:
 
 \begin{table}[H]
 	\centering
@@ -341,7 +341,7 @@ Paralelismo con la tabla de verdad:
 En la teoría de conjuntos, su equivalente es la \textbf{igualdad de conjuntos}. Si definimos, igual que antes, $p$: pertenencia al conjunto $A$ y $q$: pertenencia al conjunto $B$, la doble implicación $p \iff q$ se interpreta como: un elemento está en A si y solo si está en B.
 
 \subsection{Condiciones necesarias y suficientes}
-
+\index{condición!necesaria} \index{condición!suficiente}
 \subsubsection{Condición necesaria y condición suficiente}
 
 Consideremos la tabla de verdad de la implicación, tabla \ref{tab:implicacion}, que, reescribimos a continuación:
@@ -401,10 +401,10 @@ Análogamente, en el caso de la doble implicación verdadera, el consecuente $q$
 
 \subsection{Tautología y contradicción}
 
-\subsubsection{Tautología}
+\subsubsection{Tautología} \index{tautología}
 \vspace{1em}
 \begin{fmd-definition}[Tautología]
-	Cuando una proposición compuesta, como por ejemplo $(p \implies q) \land p \implies q$ es verdadera, independientemente de los valores de verdad de las proposiciones componentes, se dice que tal proposición es una \textit{tautología} o \textit{ley lógica}, o sea, una tautología es una proposición lógica que siempre es verdadera.
+	Cuando una proposición compuesta, como por ejemplo $(p \implies q) \land p \implies q$ es verdadera, independientemente de los valores de verdad de las proposiciones componentes, se dice que tal proposición es una \gls{tautologia} o \textit{ley lógica}, o sea, una tautología es una proposición lógica que siempre es verdadera.
 \end{fmd-definition}
 
 En el cálculo proposicional se utilizan las siguientes leyes o tautologías cuyas demostraciones se reduce a la confección de las correspondientes tablas de verdad.
@@ -499,8 +499,8 @@ La mayoría de estas leyes lógicas tienen sus análogas en teoría de conjuntos
 
 
 \subsubsection{Contradicción}
-
-Una contradicción es una proposición lógica que siempre es falsa, sin importar los valores de verdad de sus componentes. Es una fórmula que es falsa en todas las interpretaciones posibles.
+\index{contradicción}
+Una \gls{contradiccion} es una proposición lógica que siempre es falsa, sin importar los valores de verdad de sus componentes. Es una fórmula que es falsa en todas las interpretaciones posibles.
 
 Ejemplos de contradicciones:
 \begin{itemize}
@@ -607,7 +607,7 @@ A partir de estos operadores básicos, podemos construir funciones booleanas má
 \end{enumerate}
 
 \subsection{Proposiciones equivalentes}
-
+\index{proposición!equivalente}
 Al unir dos proposiciones cualesquiera por medio de la frase \textit{``si y sólo si''}, (cuyo símbolo es \( \iff \)) se obtiene una proposición compuesta que se llama \textit{equivalencia}. Las proposiciones conectadas de esta manera reciben los nombres de \textit{miembro izquierdo} y \textit{miembro derecho} de la equivalencia. Al afirmar la equivalencia de las proposiciones, se excluye la posibilidad de que una sea verdadera y la otra falsa; por lo tanto, una equivalencia es verdadera si sus miembros izquierdo y derecho son o bien ambos verdaderos o bien ambos falsos; en caso contrario la equivalencia es falsa.
 
 Dos proposiciones son \textit{equivalentes} si y solo si tienen el mismo valor de verdad en todas las posibles combinaciones de valores de verdad de sus proposiciones componentes. En otras palabras, sus tablas de verdad son idénticas.
@@ -670,7 +670,7 @@ La forma más directa de comprobar si dos proposiciones son equivalentes es cons
 El concepto de equivalencia lógica es fundamental en la simplificación de expresiones lógicas, en la demostración de teoremas y en la resolución de problemas lógicos. Nos permite manipular y transformar proposiciones manteniendo su significado original, lo que facilita el análisis y la comprensión de argumentos lógicos complejos.
 
 \subsection{Álgebra de proposiciones}
-
+\index{álgebra!de proposiciones}
 El álgebra de proposiciones nos proporciona un marco formal para combinar y manipular proposiciones utilizando operadores lógicos, lo que nos permite analizar y razonar sobre argumentos y demostraciones de manera rigurosa.
 
 \begin{fmd-example}[Simplificación de expresiones lógicas]
@@ -708,11 +708,11 @@ El álgebra de proposiciones nos proporciona un marco formal para combinar y man
 \end{fmd-example}
 
 \subsection{Proposiciones condicionales}
-
+\index{proposiciones!condicionales}
 Cuando tenemos una proposición en forma de implicación (como $p \implies q$,  ``si $p$, entonces $q$''), podemos derivar tres proposiciones adicionales, estas son la recíproca, la proposición contraria (o la negación de la proposición original) y la proposición contrarrecíproca.
 
 \begin{enumerate}
-	\item \textbf{Proposición recíproca} ($q \implies p$): Se forma al \textit{invertir la implicación} de una proposición dada. Ejemplo con el teorema de Pitágoras:
+	\item \textbf{Proposición recíproca} ($q \implies p$): Se forma al \textit{invertir la implicación} de una proposición dada. Ejemplo con el teorema de Pitágoras: \index{proposición!recíproca} \index{recíproca}
 	\begin{itemize}
 		\item Este teorema establece que: ``en un triángulo rectángulo, la suma de los cuadrados de los catetos es igual al cuadrado de la hipotenusa'' ($p \implies q$).
 		
@@ -720,7 +720,7 @@ Cuando tenemos una proposición en forma de implicación (como $p \implies q$,  
 		\item La proposición recíproca afirmaría que: ``si la suma de los cuadrados de los catetos es igual al cuadrado de la hipotenusa, entonces el triángulo es rectángulo'' ($q \implies q$).
 	\end{itemize}
 	
-	\item \textbf{Proposición Contraria} ($\neg p \implies \neg q$):
+	\item \textbf{Proposición Contraria} ($\neg p \implies \neg q$): \index{proposición!contraria} \index{contraria}
 	Se obtiene al reemplazar tanto el antecedente como el consecuente de la proposición original por sus negaciones. Por ejemplo:
 	
 	\begin{itemize}
@@ -728,7 +728,7 @@ Cuando tenemos una proposición en forma de implicación (como $p \implies q$,  
 		\item Contraria:``Si no llueve, entonces la calle no estará mojada'' ($\neg p \implies \neg q$).
 	\end{itemize}
 	
-	\item \textbf{Proposición Contrarrecíproca} ($\neg q \implies \neg p$): La contrarrecíproca es el resultado de intercambiar el antecedente y el consecuente en la proposición contraria. Por ejemplo:
+	\item \textbf{Proposición Contrarrecíproca} ($\neg q \implies \neg p$): La contrarrecíproca es el resultado de intercambiar el antecedente y el consecuente en la proposición contraria. Por ejemplo: \index{proposición!contrarrecíproca} \index{contrarrecíproca}
 	\begin{itemize}
 		\item Proposición original: ``Si estudio, entonces saco buenas notas'' ($p \implies q$)
 		\item Proposición contraria: ``Si no estudio, entonces no saco buenas notas'' ($\neg p \implies \neg q$).
@@ -784,7 +784,7 @@ Es fácil verificar que las implicaciones contrarrecíprocas son equivalentes, e
 Si la implicación directa es $V$, también lo es la contrarrecíproca, y no podemos afirmar la verdad de la recíproca o de la contraria. Pero, si son verdaderos un condicional y su recíproco o contrario, entonces son verdaderos los cuatro, y las proposiciones antecedente y consecuente son equivalentes.
 
 \subsubsection{Demostración matemática}
-
+\index{demostración matemática}
 Se presenta continuamente la necesidad de demostrar la verdad de
 \[ \begin{array}{c}
 	p\\
@@ -813,7 +813,7 @@ y, de acuerdo con lo expuesto, se presentan dos métodos:
 También se tiene el \textit{método de inducción} del que se hablará en la sección \ref{sec:induccion}, pág. \pageref{sec:induccion}.
 \end{lgnote}
 
-\subsubsection{Negación de una implicación}
+\subsubsection{Negación de una implicación} \index{negación!de una implicación}
 Las proposiciones $p \implies q$ y $\neg (p \land \neg q)$ son equivalentes, por implicación material y ley de De Morgan:
 \[ p \implies q \equiv \neg p \lor q \equiv \neg \left( p \land \neg q \right) \]
 
@@ -845,9 +845,9 @@ La negación de una implicación no es una implicación, sino la conjunción del
 
 \subsection{Concepto de argumento y razonamiento deductivo válido}
 
-\subsubsection{Argumento}
+\subsubsection{Argumento} \index{argumento}
 \begin{fmd-definition}[Argumento]
-	Un \textit{argumento} es una secuencia de proposiciones (llamadas premisas) que pretenden respaldar o justificar una proposición final (llamada conclusión). Un argumento se presenta usualmente de la siguiente forma:
+	Un \gls{argumento} es una secuencia de proposiciones (llamadas premisas) que pretende respaldar o justificar una proposición final (llamada conclusión). Un argumento se presenta usualmente de la siguiente forma:
 	\[ p_1 \land p_2 \land \dots \land p_n \implies q \]
 	
 	\begin{itemize}[itemsep=-3pt]
@@ -860,7 +860,7 @@ La negación de una implicación no es una implicación, sino la conjunción del
 \end{fmd-definition}
 
 \subsubsection{Razonamiento deductivo válido}
-\vspace{1em}
+\vspace{1em} \index{razonamiento deductivo válido}
 \begin{fmd-definition}
 	Un argumento se considera un \textit{razonamiento deductivo válido} si, y solo si, es imposible que todas sus premisas sean verdaderas y su conclusión sea falsa. En otras palabras, la verdad de las premisas garantiza la verdad de la conclusión. La validez de un argumento depende únicamente de su forma lógica, no del contenido específico de las proposiciones.
 \end{fmd-definition}
@@ -873,14 +873,14 @@ Por ejemplo:
 		p
 \end{array}}{q} \]
 
-Si tenemos las premisas $(p \Rightarrow q)$ y $(p)$, entonces la conclusión $(q)$ es válida. Esta es la ley del \textit{modus ponens} de la que se hablará más en la pág. \pageref{def:ponens}.
+Si tenemos las premisas $(p \Rightarrow q)$ y $(p)$, entonces la conclusión $(q)$ es válida. Esta es la ley del \textit{modus!ponens} de la que se hablará más en la pág. \pageref{def:ponens}.
 
 \subsubsection{Relación entre argumento y razonamiento deductivo válido}
 
 Un argumento puede ser válido o inválido. Un argumento válido es aquel en el que la conclusión se sigue necesariamente de las premisas, de esta manera, representa un razonamiento deductivo válido. Por otro lado, un argumento inválido es aquel en el que la conclusión no se sigue lógicamente de las premisas, incluso si las premisas son verdaderas.
 
 
-\begin{fmd-example}[Argumento válido]
+\begin{fmd-example}[Argumento válido] \index{argumento!válido}
 	\[ \frac{\begin{array}{l}
 			p \implies  q\\
 			p
@@ -893,7 +893,7 @@ Un argumento puede ser válido o inválido. Un argumento válido es aquel en el 
 	Este argumento es válido porque si las dos premisas son verdaderas, la conclusión también debe ser verdadera.
 \end{fmd-example}
 
-\begin{fmd-example}[Argumento inválido]
+\begin{fmd-example}[Argumento inválido] \index{argumento!inválido}
 	\[ \frac{\begin{array}{l}
 			p \implies  q\\
 			q
@@ -909,8 +909,8 @@ Un argumento puede ser válido o inválido. Un argumento válido es aquel en el 
 El razonamiento deductivo válido es esencial en la lógica matemática y en muchas otras disciplinas, ya que nos permite construir argumentos sólidos y confiables. Al utilizar argumentos válidos, podemos estar seguros de que si nuestras premisas son verdaderas, nuestra conclusión también lo será.
 
 \subsection{Reglas de Inferencia}
-
-Las \textit{reglas de inferencia} son patrones lógicos fundamentales que nos permiten deducir nuevas proposiciones a partir de un conjunto de proposiciones dadas (premisas). Son herramientas esenciales en la construcción de argumentos válidos y en la demostración de teoremas en lógica matemática.
+\index{reglas de inferencia}
+Las \gls{reglasinferencia} son patrones lógicos fundamentales que nos permiten deducir nuevas proposiciones a partir de un conjunto de proposiciones dadas (premisas). Son herramientas esenciales en la construcción de argumentos válidos y en la demostración de teoremas en lógica matemática.
 
 Son como las reglas de un juego. El juego se juega con proposiciones o fórmulas lógicas. Se empieza con conjuntos de fórmulas que se denominan \textit{premisas}. El objeto del juego es utilizar las reglas de inferencia de manera que conduzcan a otras fórmulas que se denominan \textit{conclusiones}. El paso lógico de las premisas a la conclusión es una \textit{deducción}.\vspace{3mm}
 
@@ -928,7 +928,7 @@ La idea de inferencia es: \textit{de premisas verdaderas se obtienen sólo concl
 
 
 \begin{enumerate}[label=\alph*)]
-	\item Ley del \textit{modus ponens}: \label{def:ponens}
+	\item Ley del \textit{modus ponens}: \label{def:ponens} \index{modus!ponens}
 	\[ p \implies q, \ p \ \vdash \ q \]
 	Donde:
 	\begin{itemize}
@@ -957,7 +957,7 @@ La idea de inferencia es: \textit{de premisas verdaderas se obtienen sólo concl
 		\end{itemize}
 	\end{fmd-example}
 	
-	\item Ley del \textit{modus tollens}:
+	\item Ley del \textit{modus tollens}: \index{modus!tollens}
 	\[ (p \implies q), \neg q \ \vdash \ \neg p \]
 	
 	Es otra regla de inferencia que se utiliza para derivar una conclusión negando el consecuente de una afirmación condicional.
@@ -984,7 +984,7 @@ La idea de inferencia es: \textit{de premisas verdaderas se obtienen sólo concl
 		\end{itemize}
 	\end{fmd-example}
 	
-	\item Ley del \textit{silogismo hipotético}:
+	\item Ley del \textit{silogismo hipotético}: \index{silogismo!hipotético}
 	\[ (p \implies q), (q \implies r) \vdash \left( p \implies r \right)  \]
 	
 	Nos permite combinar dos afirmaciones condicionales para obtener una nueva afirmación condicional
@@ -1029,7 +1029,7 @@ La idea de inferencia es: \textit{de premisas verdaderas se obtienen sólo concl
 	
 	La ley del silogismo disyuntivo se basa en la idea de que si tenemos dos opciones ($p$ o $q$) y descartamos una de ellas ($\neg p$ o $\neg q$), la otra opción debe ser la correcta.
 	
-	\begin{fmd-example}[Silogismo disyuntivo]
+	\begin{fmd-example}[Silogismo disyuntivo] \index{silogismo!disyuntivo}
 		\begin{itemize}
 			\item \textit{Premisa 1}: ``Hoy iré al cine o me quedaré en casa estudiando'' ($p \lor q$)
 			\item \textit{Premisa 2}: ``No iré al cine hoy'' ($\neg p$)
@@ -1037,7 +1037,7 @@ La idea de inferencia es: \textit{de premisas verdaderas se obtienen sólo concl
 		\end{itemize}
 	\end{fmd-example}
 	
-	\item Ley de \textit{adición} o adición disyuntiva:
+	\item Ley de \textit{adición} o adición disyuntiva: \index{adición!disyuntiva}
 	\[ p \vdash p \lor q \]
 	Notación clásica:
 	\[
@@ -1060,7 +1060,7 @@ La idea de inferencia es: \textit{de premisas verdaderas se obtienen sólo concl
 		\end{itemize}
 	\end{fmd-example}
 	
-	\item Ley de \textit{adjunción} o adición conjuntiva:
+	\item Ley de \textit{adjunción} o adición conjuntiva: \index{adjunción} \index{adición!conjuntiva}
 	\[ p, q \ \vdash \ p \lor q \]
 	Notación clásica:
 	\[
@@ -1115,8 +1115,8 @@ La idea de inferencia es: \textit{de premisas verdaderas se obtienen sólo concl
 
 \subsection{Falacias formales}
 
-\subsubsection{Falacias lógicas}
-Una \textit{falacia} es un razonamiento incorrecto pero con apariencia de correcto.
+\subsubsection{Falacias lógicas} \index{falacias!lógicas}
+Una \gls{falacia} es un razonamiento incorrecto pero con apariencia de correcto. \index{falacias}
 \[ \mbox{\textbf{Falacias}}
 \begin{cases}
 	\mbox{Formales}&\\
@@ -1167,9 +1167,9 @@ Algunos ejemplos:
 \end{itemize}
 
 \subsubsection{Falacias formales}
-\vspace{1em}
+\vspace{1em} \index{falacias!formales}
 \begin{fmd-definition}[Falacias formales]
-Las \textit{falacias formales} son errores de razonamiento que ocurren debido a una estructura lógica incorrecta en un argumento, independientemente de la verdad o falsedad de las proposiciones involucradas. Por lo tanto, el problema radica en la forma del argumento, no en su contenido.
+Las \glspl{falaciaformal} son errores de razonamiento que ocurren debido a una estructura lógica incorrecta en un argumento, independientemente de la verdad o falsedad de las proposiciones involucradas. Por lo tanto, el problema radica en la forma del argumento, no en su contenido.
 \end{fmd-definition}
 
 A pesar de parecer convincentes a primera vista, las falacias formales violan las reglas de inferencia válidas, lo que las hace inválidas desde el punto de vista lógico. Identificar y evitar estas falacias es crucial para construir argumentos sólidos y confiables.
@@ -1177,7 +1177,7 @@ A pesar de parecer convincentes a primera vista, las falacias formales violan la
 Veamos algunos ejemplos comunes de falacias formales:
 
 \begin{enumerate}
-	\item \textbf{Afirmación del consecuente}
+	\item \textbf{Afirmación del consecuente} \index{falacia!de afirmación del consecuente}
 	
 	\begin{itemize}
 		\item Estructura:
@@ -1194,7 +1194,7 @@ Veamos algunos ejemplos comunes de falacias formales:
 		\end{itemize}
 	\end{itemize}
 	
-	\item \textbf{Negación del antecedente}
+	\item \textbf{Negación del antecedente} \index{falacia!de negación del antecedente}
 	\begin{itemize}
 		\item Estructura:
 		\[ \begin{array}{l}
@@ -1210,7 +1210,7 @@ Veamos algunos ejemplos comunes de falacias formales:
 		\end{itemize}
 	\end{itemize}
 	
-	\item \textbf{Falacia del término medio no distribuido}
+	\item \textbf{Falacia del término medio no distribuido} \index{falacia!del término medio no distribuido}
 	\begin{itemize}
 		\item Estructura:
 		\begin{itemize}[itemsep=-5pt]
@@ -1226,7 +1226,7 @@ Veamos algunos ejemplos comunes de falacias formales:
 		\end{itemize}
 	\end{itemize}
 	
-	\item \textbf{Falacia de la división}
+	\item \textbf{Falacia de la división} \index{falacia!de la división}
 	\begin{itemize}
 		\item Estructura:
 		\begin{itemize}[itemsep=-5pt]
@@ -1245,13 +1245,13 @@ Reconocer las falacias formales es esencial para evaluar críticamente los argum
 
 
 \section{Lógica predicativa}
-
+\index{lógica!predicativa}
 La lógica predicativa, también conocida como lógica de primer orden o cálculo de predicados, es una extensión de la lógica proposicional que nos permite expresar relaciones y propiedades de objetos, así como cuantificar sobre ellos. Mientras que la lógica proposicional se limita a tratar proposiciones completas como unidades indivisibles, la lógica predicativa nos permite descomponer las proposiciones en sujetos y predicados, lo que nos da un mayor poder expresivo para formalizar el lenguaje natural y razonar sobre él.
 
 
 \subsubsection{Conceptos clave}
 \vspace{1em}
-\begin{fmd-definition}[Función proposicional $P(x)$]
+\begin{fmd-definition}[Función proposicional $P(x)$] \index{función!proposicional}
 	Función proposicional en una variable o indeterminada $x$ es toda oración en la que figura $x$ como sujeto u objeto directo, la cual se convierte en proposición para cada especificación de $x$.
 \end{fmd-definition}
 
@@ -1270,17 +1270,17 @@ La lógica predicativa, también conocida como lógica de primer orden o cálcul
 \end{fmd-example}
 
 \begin{itemize}
-	\item \textbf{Predicados}: Los predicados son funciones proposicionales que toman uno o más argumentos (objetos) y devuelven un valor de verdad (verdadero o falso). Representan propiedades o relaciones entre objetos. Por ejemplo, ``ser rojo'' o ``ser mayor que'' son predicados.
+	\item \textbf{Predicados}: Los predicados son funciones proposicionales que toman uno o más argumentos (objetos) y devuelven un valor de verdad (verdadero o falso). Representan propiedades o relaciones entre objetos. Por ejemplo, ``ser rojo'' o ``ser mayor que'' son predicados. \index{predicados}
 	\item \textbf{Constantes}: Las constantes representan objetos específicos en el dominio del discurso. Por ejemplo, ``Juan'' o ``5'' son constantes.
 	\item \textbf{Variables}: Las variables representan objetos genéricos o desconocidos en el dominio del discurso. Se utilizan para cuantificar sobre objetos. Por ejemplo, $x$ o $y$ son variables.
 \end{itemize}
 
 Los cuantificadores nos permiten expresar afirmaciones sobre la cantidad de objetos que cumplen una determinada propiedad o relación.
 
-\subsection{Cuantificador existencial}
-El cuantificador existencial se utiliza para afirmar que existe al menos un elemento en un conjunto o dominio que cumple una determinada propiedad o relación.
+\subsection{Cuantificador existencial} \index{cuantificador!existencial} \index{existencial}
+El \gls{cuantificadore} se utiliza para afirmar que existe al menos un elemento en un conjunto o dominio que cumple una determinada propiedad o relación.
 \begin{itemize}
-	\item Símbolo: $\exists$ (se lee ``existe'' o ``hay'')
+	\item Símbolo: \glsentrysymbol{cuantificadore} (se lee ``existe'' o ``hay'')
 	\item Estructura: $\exists \, x \ P(x)$, donde:
 	\begin{itemize}
 		\item $\exists \, x$: Indica que existe al menos un elemento x en el dominio que satisface la afirmación.
@@ -1293,11 +1293,11 @@ El cuantificador existencial se utiliza para afirmar que existe al menos un elem
 \end{fmd-example}
 
 \subsection{Cuantificador universal}
-
-El cuantificador universal se utiliza para afirmar que una propiedad o relación se cumple para todos los elementos de un conjunto o dominio específico.
+\index{cuantificador!universal} \index{universal}
+El \gls{cuantificadoru} se utiliza para afirmar que una propiedad o relación se cumple para todos los elementos de un conjunto o dominio específico.
 
 \begin{itemize}
-	\item Símbolo: $\forall$ (se lee ``para todo'' o ``para cada'')
+	\item Símbolo: \glsentrysymbol{cuantificadoru} (se lee ``para todo'' o ``para cada'')
 	\item Estructura: $\forall x \ P(x)$, donde:
 	\begin{itemize}
 		\item $\forall x$: Indica que la afirmación se aplica a todos los elementos $x$ en el dominio.
@@ -1311,7 +1311,7 @@ El cuantificador universal se utiliza para afirmar que una propiedad o relación
 
 \subsection{Negación de cuantificadores}
 La negación de una proposición universal es una proposición existencial, y viceversa.
-
+\index{negación!de cuantificadores}
 \begin{enumerate}[label=\roman*)]
 	\item $\neg \left( \forall x \ P(x) \right) \equiv \exists \ x \ \neg P(x)$
 	
@@ -1321,7 +1321,7 @@ La negación de una proposición universal es una proposición existencial, y vi
 		\item Negación: $\exists \, x \ \neg P(x)$, ``Existe al menos una $x$ para la cual $P(x)$ es falso''
 	\end{itemize}
 	
-	\begin{fmd-example}[Negación del universal]
+	\begin{fmd-example}[Negación del universal] \index{negación!del universasl}
 		\begin{itemize}
 			\item Original: ``Todos los gatos son negros'', ($\forall x \ P(x)$, donde $x$ es un gato, $P(x)$ ``$x$ es negro'')
 			\item Negación: ``Existe al menos un gato que no es negro'', ($\exists \ x \ \neg P(x)$).
@@ -1336,7 +1336,7 @@ La negación de una proposición universal es una proposición existencial, y vi
 		\item Negación: $\forall x \ \neg P(x)$, ``Para toda $x$, $P(x)$ es falso'' 
 	\end{itemize}
 	
-	\begin{fmd-example}[Negación del existencial]
+	\begin{fmd-example}[Negación del existencial] \index{negación!del existencial}
 		\begin{itemize}
 		\item Original: ``Algunos estudiantes aprobaron el examen'' o ``Al menos un estudiante aprobó el examen'' ($\exists \, x \ P(x)$, donde $x$ es un estudiante, $P(x)$ ``$x$ aprobó el examen'')
 		
@@ -1346,9 +1346,9 @@ La negación de una proposición universal es una proposición existencial, y vi
 \end{enumerate}
 
 
-\section{Sistema axiomático de Peano}
+\section{Sistema axiomático de Peano} \index{Peano}
 
-\subsection{Axiomas de Peano} \label{sec:peano}
+\subsection{Axiomas de Peano} \label{sec:peano} \index{axiomas!de Peano}
 \textbf{Sistema axiomático}:
 
 \begin{itemize}
@@ -1371,7 +1371,7 @@ Dado $n \in \mathbb{N}$, su imagen $s(n)$ se llama su \textbf{sucesor}.
 	\item N3 es una formulación del \textbf{principio de inducción matemática}. La condición $n \in X \implies s(n) \in X$ es equivalente a $s(X) \subseteq X$.
 \end{itemize}
 
-\subsection{Principio de inducción} \label{sec:induccion}
+\subsection{Principio de inducción} \label{sec:induccion} \index{principio!de inducción} \index{inducción}
 La idea básica es: $P$ es un propiedad válida de 1 hasta $n \in \mathbb{N}$, se argumenta que su sucesor $s(n)$ también satisface la propiedad $P$, entonces $P$ es válido $\forall n \in \mathbb{N}$. En otras palabras:
 
 \begin{itemize}
@@ -1403,7 +1403,7 @@ Estas definen la ley de composición interna en $\mathbb{N}$ y se cumplen $\fora
 	\item \textit{Ley de corte o cancelación}: $a+b = a + c \implies b=c$ y $ab=ac \implies b=c$
 \end{enumerate}
 
-Se define la \textbf{potenciación} en $\mathbb{N}$, mediante:
+Se define la \textbf{potenciación} en $\mathbb{N}$, mediante: \index{potenciación}
 
 \begin{fmd-definition}[Potenciación en $\N$]
 	\begin{enumerate}[label=\alph*)]
@@ -1438,7 +1438,7 @@ Se define la \textbf{potenciación} en $\mathbb{N}$, mediante:
 	\end{enumerate}
 \end{fmd-definition}
 
-\begin{fmd-theorem}[Principio del buen orden]
+\begin{fmd-theorem}[Principio del buen orden] \index{principio!del buen orden} \index{buen orden}
 	Si $A \subseteq \mathbb{N}$ es un conjunto no vacío, entonces admite un elemento mínimo $a_0 \in A$, es decir, $\exists a_0 \in A / a_0 \le a, \forall a \in A$.
 \end{fmd-theorem}
 
@@ -1451,7 +1451,7 @@ Se define la \textbf{potenciación} en $\mathbb{N}$, mediante:
 \end{fmd-proof}
 
 \subsection{Teorema fundamental de la aritmética} \label{sec:arit}
-
+\index{teorema!fundamental de la aritmética}
 Previos:
 \begin{itemize}
 	\item Decimos que $q$ es un \textit{múltiplo} de $p$ si $\exists n \in \mathbb{N} / q = np$
@@ -1474,7 +1474,7 @@ Previos:
 Falta probar la unicidad de la descomposición prima.
 
 
-\subsection{Conjuntos finitos e infinitos} \label{sec:finitos}
+\subsection{Conjuntos finitos e infinitos} \label{sec:finitos} \index{conjuntos!finitos e infinitos}
 \vspace{1em}
 \begin{fmd-definition}[Conjuntos finitos e infinitos]
 	Dado un natural $n \in \mathbb{N}$, escribiremos:
@@ -1495,7 +1495,7 @@ Falta probar la unicidad de la descomposición prima.
 \end{itemize}
 
 \subsubsection{Numerabilidad}
-
+\index{numerabilidad}
 No todos los conjuntos infinitos tienen la misma cardinalidad. Un conjunto es \textit{numerable} si y solo si es biyectable con $\N$. Un conjunto es \textit{contable} si y sólo si es finito o numerable.
 
 \begin{fmd-example}
@@ -1506,7 +1506,7 @@ No todos los conjuntos infinitos tienen la misma cardinalidad. Un conjunto es \t
 	\end{enumerate}
 \end{fmd-example}
 
-\begin{fmd-theorem}[Teorema de Cantor]
+\begin{fmd-theorem}[Teorema de Cantor] \index{Cantor} \index{teorema!de Cantor}
 	El conjunto potencia $\mathcal{P}(A)$ de cualquier conjunto $A$ tiene una cardinalidad estrictamente mayor que la cardinalidad de $A$:
 	\[ |\mathcal{P}(A)| >  |A| \]
 	
