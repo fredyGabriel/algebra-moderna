@@ -74,7 +74,7 @@ Las proposiciones se representan mediante letras (como $p$, $q$, $r$) y se combi
 A continuación presentamos varios \glspl{operadorlogico} y sus correspondientes \gls{tablav}. En una tabla de verdad se evalúan todos los posibles valores de verdad de las proposiciones componentes y se determina el valor de verdad resultante de la proposición completa. \index{tabla!de verdad}
 
 \subsubsection{Negación $\neg$} \index{negación}
-La \gls{negacion} de una proposición $p$ se denota como $\neg p$ o $\sim p$. Representa la idea de que algo no es verdadero. Por ejemplo, si $p$ es ``llueve'', entonces $\neg p$ sería ``no llueve''. Su tabla de verdad es la siguiente:
+La \gls{negacion} de una proposición $p$ se denota como $\neg p$ o $\sim p$. Representa la idea de que algo no es verdadero. Por ejemplo, si $p$ es ``llueve'', entonces $\neg p$ sería ``no llueve'', tabla \ref{tab:negacion}.
 
 \begin{table}[h]
 	\centering
@@ -84,9 +84,11 @@ La \gls{negacion} de una proposición $p$ se denota como $\neg p$ o $\sim p$. Re
 		$V$ & $F$ \\ 
 		$F$ & $V$ \\ \hline
 	\end{tabular}
+	\caption{Tabla de verdad de la negación.}
+	\label{tab:negacion}
 \end{table}
 
-La operación de negación ($\neg$) es análoga a la complementación ($^c$) de la teoría de conjuntos. El paralelismo se construye al considerar la pertenencia de un conjunto como una proposición $p$, si un elemento pertenece a $A$, $p$ es verdadero. El complemento $A^c$ contiene todos los elementos que no pertenecen a $A$, entonces $p$ es falso, por lo tanto $\neg p$ es verdadero.
+La operación de negación ($\neg$) es análoga a la complementación ($^c$) de la teoría de conjuntos. El paralelismo se construye al considerar la pertenencia de un conjunto como una proposición $p$, si un elemento pertenece a $A$, $p$ es verdadero. El complemento $A^c$ contiene todos los elementos que no pertenecen a $A$, entonces $p$ es falso, por lo tanto $\neg p$ es verdadero, fig. \ref{fig:negacion}.
 
 \begin{figure}[h]
 	\centering
@@ -100,13 +102,14 @@ La operación de negación ($\neg$) es análoga a la complementación ($^c$) de 
 		\node at (4, 1.5) {$\neg p$ es $V$};
 		\node at (4.1, 1) {($p$ es $F$)};
 	\end{tikzpicture}
-	\caption*{\(A^c\) es equivalente a $\neg p$}
+	\caption{\(A^c\) es equivalente a $\neg p$}
+	\label{fig:negacion}
 \end{figure}
 
 \subsubsection{Conjunción \glsentrysymbol{conjuncion}} \index{conjunción}
-La \gls{conjuncion} de dos proposiciones $p$ y $q$ se denota como $p \land q$. Representa la idea de que ambas proposiciones son verdaderas. Por ejemplo, si $p$ es ``es lunes'' y $q$ es ``tengo una reunión'', entonces $p \land q$ sería ``es lunes y tengo una reunión''. Su tabla de verdad es:
+La \gls{conjuncion} de dos proposiciones $p$ y $q$ se denota como $p \land q$. Representa la idea de que ambas proposiciones son verdaderas. Por ejemplo, si $p$ es ``es lunes'' y $q$ es ``tengo una reunión'', entonces $p \land q$ sería ``es lunes y tengo una reunión''. Su tabla de verdad se muestra en la tabla \ref{tab:conjuncion}.
 
-\begin{table}[h]
+\begin{table}[H]
 	\centering
 	\begin{tabular}{|c|c|c|}
 		\hline
@@ -117,10 +120,12 @@ La \gls{conjuncion} de dos proposiciones $p$ y $q$ se denota como $p \land q$. R
 		$F$ & $V$ & $F$ \\
 		$F$ & $F$ & $F$ \\
 		\hline
-	\end{tabular}	
+	\end{tabular}
+	\caption{Tabla de verdad de la conjunción.}
+	\label{tab:conjuncion}
 \end{table}
 
-La operación lógica de conjunción es análoga a la intersección de la teoría de conjuntos. La intersección $A \cap B$ contiene solo los elementos que pertenecen a $A$ y a $B$ ($p \land q$ es $V$).
+La operación lógica de conjunción es análoga a la intersección de la teoría de conjuntos. La intersección $A \cap B$ contiene solo los elementos que pertenecen a $A$ y a $B$ ($p \land q$ es $V$), fig. \ref{fig:conjuncion}.
 
 \begin{figure}[h]
 	\centering
@@ -144,13 +149,14 @@ La operación lógica de conjunción es análoga a la intersección de la teorí
 	\node at (0, .5) {\(A \cap B\)};
 	\node at (0, -.5) {\((p \land q)\)};
 \end{tikzpicture}
-\caption*{$A \cap B$ equivalente a $p \land q$}
+\caption{$A \cap B$ equivalente a $p \land q$}
+\label{fig:conjuncion}
 \end{figure}
 
 \subsubsection{Disyunción inclusiva \glsentrysymbol{disyuncion}} \index{disyunción!inclusiva}
-La \gls{disyuncion} de dos proposiciones $p$ y $q$ se denota como $p \lor q$. Representa la idea de que al menos una de las proposiciones es verdadera. Por ejemplo, si $p$ es ``estudiaré'' y $q$ es ``veré una película'', entonces $p \lor q$ sería ``estudiaré o veré una película''. La tabla de verdad correspondiente es:
+La \gls{disyuncion} de dos proposiciones $p$ y $q$ se denota como $p \lor q$. Representa la idea de que al menos una de las proposiciones es verdadera. Por ejemplo, si $p$ es ``estudiaré'' y $q$ es ``veré una película'', entonces $p \lor q$ sería ``estudiaré o veré una película'', tabla \ref{tab:disyuncion}.
 
-\begin{table}[h]
+\begin{table}[H]
 	\centering
 	\begin{tabular}{|c|c|c|} \hline
 		 $p$ & $q$ & $p$ $\lor q$ \\ \hline
@@ -159,11 +165,13 @@ La \gls{disyuncion} de dos proposiciones $p$ y $q$ se denota como $p \lor q$. Re
 		 $F$ & $V$ & $V$ \\
 		 $F$ & $F$ & $F$ \\ \hline
 	\end{tabular}
+	\caption{Tabla de verdad de la disyunción.}
+	\label{tab:disyuncion}
 \end{table}
 
-La operación lógica de disyunción es análoga a la unión de la teoría de conjuntos. La unión $A \cup B$ contiene los elementos que pertenecen a $A$ o a $B$ o a ambos, en otras palabras, siempre y cuando un elemento pertenezca a $A$ o a $B$ o a ambos $p \lor q$ será $V$.
+La operación lógica de disyunción es análoga a la unión de la teoría de conjuntos. La unión $A \cup B$ contiene los elementos que pertenecen a $A$ o a $B$ o a ambos, en otras palabras, siempre y cuando un elemento pertenezca a $A$ o a $B$ o a ambos $p \lor q$ será $V$, fig. \ref{fig:disyuncion}.
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering
 	\begin{tikzpicture}
 		% Dibujar el universal
@@ -189,12 +197,13 @@ La operación lógica de disyunción es análoga a la unión de la teoría de co
 		\node at (0, 2.5) {\(A \cup B\)};
 		\node at (0, 2) {\((p \lor q)\)};
 	\end{tikzpicture}
-	\caption*{$A \cup B$ equivalente a $p \lor q$}
+	\caption{$A \cup B$ equivalente a $p \lor q$}
+	\label{fig:disyuncion}
 \end{figure}
 
 \subsubsection{Diferencia simétrica o disyunción excluyente $\oplus$}
 \index{diferencia simétrica} \index{disyunción!excluyente}
-La diferencia simétrica o \gls{disyuncione} es verdadera cuando \textit{exactamente una} de las dos proposiciones es verdadera, por ejemplo ``$p$ o $q$ pero no ambos''. Se denota por $p \oplus q$ o $p \nleftrightarrow q$ o $p \underline{\vee} q$. La tabla de verdad correspondiente es:
+La diferencia simétrica o \gls{disyuncione} es verdadera cuando \textit{exactamente una} de las dos proposiciones es verdadera, por ejemplo ``$p$ o $q$ pero no ambos''. Se denota por $p \oplus q$ o $p \nleftrightarrow q$ o $p \underline{\vee} q$, tabla \ref{tab:disyuncion_excluyente}.
 
 \begin{table}[H]
 	\centering
@@ -205,6 +214,8 @@ La diferencia simétrica o \gls{disyuncione} es verdadera cuando \textit{exactam
 		$F$ & $V$ & $V$ \\
 		$F$ & $F$ & $F$ \\ \hline
 	\end{tabular}
+	\caption{Tabla de verdad de la disyunción excluyente.}
+	\label{tab:disyuncion_excluyente}
 \end{table}
 
 \begin{fmd-example}[Disyunción excluyente]
@@ -215,7 +226,7 @@ La diferencia simétrica o \gls{disyuncione} es verdadera cuando \textit{exactam
 	\end{itemize}
 \end{fmd-example}
 
-Esta operación es análoga a la diferencia simétrica de la teoría de conjuntos. $A \triangle B$ contiene los elementos que pertenecen a $A$ o a $B$ pero no a ambos.
+Esta operación es análoga a la diferencia simétrica de la teoría de conjuntos. $A \triangle B$ contiene los elementos que pertenecen a $A$ o a $B$ pero no a ambos, fig. \ref{fig:disyuncion_excluyente}.
 
 \begin{figure}[h]
 	\centering
@@ -249,7 +260,8 @@ Esta operación es análoga a la diferencia simétrica de la teoría de conjunto
 		\node at (0, 2.5) {\(A \triangle B\)};
 		\node at (0, 2) {\((p \oplus q)\)};
 	\end{tikzpicture}
-	\caption*{$A \triangle B$ equivalente a $p \oplus q$}
+	\caption{$A \triangle B$ equivalente a $p \oplus q$}
+	\label{fig:disyuncion_excluyente}
 \end{figure}
 
 
@@ -314,7 +326,7 @@ Paralelismo con la tabla de verdad:
 
 
 \subsubsection{Doble implicación o bicondicional $\iff$} \index{doble implicación} \index{implicación!doble} \index{implicación!condicional} \index{bicondicional} \index{si y solo si}
- La doble implicación, o \gls{bicondicional}, o proposición ``si y solo si'' se denota como $p \iff q$. Representa la idea de que $p$ es verdadero si y solo si $q$ también lo es. Puede verse, si es verdadera, como cumplimiento en ambos sentidos las implicaciones $p \implies q$ y $q \implies b$. Su tabla de verdad es la siguiente:
+ La doble implicación, o \gls{bicondicional}, o proposición ``si y solo si'' se denota como $p \iff q$. Representa la idea de que $p$ es verdadero si y solo si $q$ también lo es. Puede verse, si es verdadera, como cumplimiento en ambos sentidos las implicaciones $p \implies q$ y $q \implies b$. Tabla \ref{tab:bicondicional}.
 
 \begin{table}[H]
 	\centering

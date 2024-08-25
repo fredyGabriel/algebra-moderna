@@ -28,25 +28,27 @@ Además, se introduce el concepto de función, tipos de funciones (inyectiva, so
 
 Estos objetos pueden ser números, letras, personas, animales, o cualquier otra cosa que deseemos considerar juntos. En otras palabras, un conjunto es como una ``caja'' que contiene elementos relacionados.
 
-\subsubsection{Ejemplos de conjuntos}
+\begin{fmd-example}[Conjuntos]
+	\begin{enumerate}
+		\item Conjunto de números naturales ($\N$):
+		
+		El conjunto de todos los números naturales es un ejemplo fundamental. Se denota como $\N$ y contiene los números $\{ 1, 2, 3, 4, 5, \ldots \}$.
+		
+		\item Conjunto de vocales: $\{a, e, i, o, u\}$.
+		
+		\item Conjunto de días de la semana:
+		
+		$\{ \text{lunes}, \text{martes}, \text{miércoles}, \text{jueves}, \text{viernes}, \text{sábado}, \text{domingo} \}$
+		
+		\item Conjunto de números pares: $\{2, 4, 6, 8, 10, \ldots \}$
+		
+		\item Conjunto de colores primarios: $\{\text{rojo}, \text{azul}, \text{amarillo}\}$.
+	\end{enumerate}
+\end{fmd-example}
 
-\begin{itemize}
-	\item Conjunto de números naturales ($\N$):
-	
-	El conjunto de todos los números naturales es un ejemplo fundamental. Se denota como $\N$ y contiene los números $\{ 1, 2, 3, 4, 5, \ldots \}$.
-	
-	\item Conjunto de vocales: $\{a, e, i, o, u\}$.
-	
-	\item Conjunto de días de la semana:
-	
-	$\{ \text{lunes}, \text{martes}, \text{miércoles}, \text{jueves}, \text{viernes}, \text{sábado}, \text{domingo} \}$
-	
-	\item Conjunto de números pares: $\{2, 4, 6, 8, 10, \ldots \}$
-	
-	\item Conjunto de colores primarios: $\{\text{rojo}, \text{azul}, \text{amarillo}\}$.
-\end{itemize}
-
-En un conjunto, los elementos no se repiten, y el orden no importa. Notar que los elementos de un conjunto se escriben entre llaves $\{ \}$.
+\begin{lgnote}
+	En un conjunto, los elementos no se repiten, y el orden no importa. Los elementos de un conjunto se escriben entre llaves $\{ \}$.
+\end{lgnote}
 
 \subsubsection{Notación}
 Para denotar conjuntos utilizaremos generalmente letras mayúsculas $(A, B, C, \ldots)$, y para especificar elementos se usarán letras minúsculas \( (a, b, c, \ldots) \), a menos que dichos elementos sean, a su vez, conjuntos.
@@ -87,19 +89,19 @@ La proposición $a \in A$ se lee ``$a$ \textit{pertenece} a $A$'', o bien ``el e
 
 \subsubsection{Notación por extensión}
 
-La notación por extensión \index{conjunto!por extensión} lista cada elemento del conjunto de forma individual.
+La \gls{notacionextension} \index{conjunto!por extensión} lista cada elemento del conjunto de forma individual.
 
-Ejemplos:
-
-\begin{enumerate}
-	\item Conjunto de números pares menores que 10: $E = \{2, 4, 6, 8\}$
-	\item Conjunto de vocales: \(V = \{a, e, i, o, u\}\)
-	\item Conjunto de meses del año: \(M = \{\text{enero}, \text{febrero}, \ldots, \text{diciembre}\}\)
-\end{enumerate}
+\begin{fmd-example}[Notación por extensión]
+	\begin{enumerate}
+		\item Conjunto de números pares menores que 10: $E = \{2, 4, 6, 8\}$
+		\item Conjunto de vocales: \(V = \{a, e, i, o, u\}\)
+		\item Conjunto de meses del año: \(M = \{\text{enero}, \text{febrero}, \ldots, \text{diciembre}\}\)
+	\end{enumerate}
+\end{fmd-example}
 
 \subsubsection{Notación por comprensión}
-
-En la notación por comprensión \index{conjunto!por comprensión}, describimos las propiedades o características que deben cumplir los elementos del conjunto, luego, utilizamos una condición lógica para definir el conjunto.
+\index{conjunto!por comprensión}
+En la \gls{notacioncompresion}, describimos las propiedades o características que deben cumplir los elementos del conjunto, luego, utilizamos una condición lógica para definir el conjunto.
 
 En general su estructura tiene la forma:
 \[ A = \{ x \in U \mid P(x) \}\]
@@ -107,18 +109,15 @@ el conjunto cuyos elementos verifican la propiedad $P(x)$, o más brevemente, si
 \[ A = \{ x \mid P(x) \}\]
 se lee: ``$A$ es el conjunto formado por los elementos $x$, tales que $P(x)$'', en donde $P(x)$ es un función proposicional.
 
-Un objeto $a$ del universal pertenece al conjunto $A$ \textbf{si y sólo si} verifica la propiedad $P(x)$. En símbolos:
-\[ a \in A \iff P(a) \]
-en consecuencia:
-\[ a \not \in A \iff \neg P(a) \]
+Un objeto $a$ del universal pertenece al conjunto $A$ \gls{siysolosi} verifica la propiedad $P(x)$, en consecuencia, el elemento $a$ no pertenece al conjunto $A$ si no cumple la propiedad $P(x)$.
 
-\begin{fmd-example}
+\begin{fmd-example}[Notación por comprensión]
 	\begin{enumerate}
-		\item Conjunto de números pares: \(P = \{x \in \mathbb{N} \mid x = 2 k \land k \in \mathbb{N} \}\)
+		\item Conjunto de números pares: \(P = \{x \in \mathbb{N} \mid x = 2 k \mbox{ con } k \in \mathbb{N} \}\)
 		
 		``Son todos los números naturales $x$ tal que cada $x$ es igual al doble de un número natural $k$''.
 		
-		\item Conjunto de números primos menores que 20: \[N = \{x \in \mathbb{N} \mid (x \mbox{ es un número primo}) \land (x < 20) \}\]
+		\item Conjunto de números primos menores que 20: \[N = \{x \in \mathbb{N} \mid (x \mbox{ es un número primo}) \mbox{ y } (x < 20) \}\]
 		``Son todos los números naturales que son a la vez primos y menores que 20''
 		
 		\item Conjunto de letras del alfabeto: \(L = \{x \mid x \mbox{ es una letra del alfabeto}\}\)
@@ -145,10 +144,7 @@ La \gls{inclusion} tiene la siguiente definición: \index{inclusión}
 	Notación:  \[A \subset B\]
 \end{fmd-definition}
 
-\begin{itemize}
-	
-	\item Ejemplos:
-	
+\begin{fmd-example}[Inclusión]
 	\begin{enumerate}
 		\item Consideremos los conjuntos: \(A = \{1, 2\}\) y \(B = \{1, 2, 3\}\).
 		
@@ -163,15 +159,18 @@ La \gls{inclusion} tiene la siguiente definición: \index{inclusión}
 			Aquí, \(C \subset D\), ya que todo número par es también entero.
 		\end{itemize}
 	\end{enumerate}
-	
+\end{fmd-example}
+
+
+\begin{itemize}
 	\item Propiedades de la inclusión
 	\begin{enumerate}[label=\roman*)]
 		\item \textbf{Reflexibidad}: Todo conjunto es parte de sí mismo.
 		\[ A \subset A \]
 		\item \textbf{Transitividad}: Si un conjunto es parte de otro y este es parte de un tercero, el primero está incluido en el tercero:
-		\[ A \subset B \mbox{ y } B \subset C \implies A \subset C \]
-		\item \textbf{Antisimetría}: Si un conjunto es parte de otro y éste es parte del primero, entonces son iguales.
-		\[ A \subset B \mbox{ y } B \subset A \implies A = B \]
+		\[\mbox{Si } A \subset B \mbox{ y } B \subset C \mbox{ entonces } A \subset C \]
+		\item \textbf{Antisimetría}: Si un conjunto es parte de otro y éste es parte del primero, entonces son iguales\footnote{Este hecho se usa para establecer la igualdad de conjuntos dada en la definición \ref{def:igualdad_conjuntos}}.
+		\[\mbox{Si } A \subset B \mbox{ y } B \subset A \mbox{ entonces } A = B \]
 	\end{enumerate}
 	
 	\item Observaciones:
@@ -184,6 +183,14 @@ La \gls{inclusion} tiene la siguiente definición: \index{inclusión}
 		\[ \emptyset \subset A \]
 	\end{enumerate}
 \end{itemize}
+
+\subsubsection{Igualdad de conjuntos}
+\vspace{1em}
+\index{igualdad de conjuntos} \index{conjuntos!igualdad de}
+\begin{fmd-definition}[\gls{igualdad_conjuntos}] \label{def:igualdad_conjuntos}
+	Dos conjuntos son iguales si tienen exactamente los mismos elementos. Una forma práctica de establecer si dos conjuntos son iguales es determinar si se contienen el uno al otro, esto es:
+	Si \[ A \subset B \mbox{ y } B \subset A \mbox{ entonces } A = B \]
+\end{fmd-definition}
 
 \subsubsection{Diagrama de Venn}
 \index{diagrama de Venn}
@@ -231,8 +238,6 @@ El \gls{venn} es una representación visual de los conjuntos utilizando diagrama
 		\end{venndiagram2sets}
 		\caption*{$A \cup B$}
 	\end{figure}
-	\item Ejemplo:
-	Si \(A = \{1, 2, 3\}\) y \(B = \{3, 4, 5\}\), entonces \(A \cup B = \{1, 2, 3, 4, 5\}\).
 	
 	\item Propiedades:
 	\begin{enumerate}[label=\roman*)]
@@ -241,6 +246,10 @@ El \gls{venn} es una representación visual de los conjuntos utilizando diagrama
 		\item Conmutatividad: \( A \cup B = B \cup A\)
 	\end{enumerate}
 \end{itemize}
+
+\begin{example}[Unión]
+	Si \(A = \{1, 2, 3\}\) y \(B = \{3, 4, 5\}\), entonces \(A \cup B = \{1, 2, 3, 4, 5\}\).
+\end{example}
 
 \subsubsection{Intersección \glsentrysymbol{interseccion}}
 \vspace{1em} \index{intersección}
@@ -262,8 +271,6 @@ El \gls{venn} es una representación visual de los conjuntos utilizando diagrama
 		\end{venndiagram2sets}
 		\caption*{\(A \cap B \)}
 	\end{figure}
-	\item Ejemplo:
-	Si \(A = \{1, 2, 3\}\) y \(B = \{3, 4, 5\}\), entonces \(A \cap B = \{3\}\).
 	
 	\item Propiedades:
 	\begin{enumerate}[label=\roman*)]
@@ -272,6 +279,10 @@ El \gls{venn} es una representación visual de los conjuntos utilizando diagrama
 		\item Conmutatividad: \( A \cap B = B \cap A\) \index{conmutatividad}
 	\end{enumerate}
 \end{itemize}
+
+\begin{example}[Intersección]
+	Si \(A = \{1, 2, 3\}\) y \(B = \{3, 4, 5\}\), entonces \(A \cap B = \{3\}\).
+\end{example}
 
 \subsubsection{Complemento $(A^c)$}
 \vspace{1em} \index{complemento}
@@ -298,7 +309,6 @@ El \gls{venn} es una representación visual de los conjuntos utilizando diagrama
 		\end{tikzpicture}
 		\caption*{\(A^c\)}
 	\end{figure}
-	\item  Ejemplo: Si \(U\) es el conjunto de números naturales y \(A\) el conjunto de números pares,  \(A = \{2, 4, 6, \ldots \}\), entonces \(A^c\) es el conjunto de números impares, \(A^c = \{1, 3, 5, 7, \ldots\}\).
 	\item Propiedades:
 	\begin{enumerate}
 		\item Involución $(A^c)^c = A$.
@@ -309,6 +319,10 @@ El \gls{venn} es una representación visual de los conjuntos utilizando diagrama
 		\item El complemento del universal es el vacío: \( U^c = \emptyset \)
 	\end{enumerate}
 \end{itemize}
+
+\begin{example}[Complemento]
+	Si \(U\) es el conjunto de números naturales y \(A\) el conjunto de números pares,  \(A = \{2, 4, 6, \ldots \}\), entonces \(A^c\) es el conjunto de números impares, \(A^c = \{1, 3, 5, 7, \ldots\}\).
+\end{example}
 
 \subsubsection{Diferencia $(-, \setminus)$}
 
@@ -332,13 +346,15 @@ El \gls{venn} es una representación visual de los conjuntos utilizando diagrama
 		\end{venndiagram2sets}
 		\caption*{$A \setminus B$}
 	\end{figure}
-	\item Ejemplo:
-	Si \(A = \{1, 2, 3\}\) y \(B = \{3, 4, 5\}\), entonces \(A - B = \{1, 2\}\).
 	\item Propiedades:
 	\begin{enumerate}[label=\roman*)]
 		\item La diferencia entre dos conjuntos es igual a la intersección del primero con el complemento del segundo: \( A \setminus B = A \cap B^c \)
 	\end{enumerate}
 \end{itemize}
+
+\begin{example}[Diferencia de conjuntos]
+	Si \(A = \{1, 2, 3\}\) y \(B = \{3, 4, 5\}\), entonces \(A - B = \{1, 2\}\).
+\end{example}
 
 \subsubsection{Diferencia simétrica $\triangle$}
 \vspace{1em}
@@ -365,13 +381,23 @@ El \gls{venn} es una representación visual de los conjuntos utilizando diagrama
 			\caption*{$A \triangle B$}
 		\end{figure}
 	
-	\item Ejemplos:
+	\item Propiedades:
+	\begin{enumerate}[label=\roman*)]
+		\item Conmutatividad: \(A \triangle B = B \triangle A\)
+		\item Asociatividad: \((A \triangle B) \triangle C = A \triangle (B \triangle C)\)
+		\item Existencia del neutro\footnote{El elemento neutro se define formalmente en \ref{sec:axiomas-grupo}, pág. \pageref{sec:axiomas-grupo}}: \( A \triangle \emptyset = \emptyset \triangle A = A \)
+		\item Existencia de inversas\footnote{Ibid.}: \( A \triangle A = \emptyset \)
+	\end{enumerate}
+\end{itemize}
+
+\begin{example}[Diferencia simétrica]
+	\
 	\begin{enumerate}
 		\item Consideremos los conjuntos: \(A = \{1, 2, 3, 4\}\) y \(B = \{3, 4, 5, 6\}\). Entonces, la diferencia simétrica es:
 		
 		$$A \triangle B = \{1, 2, 5, 6\}$$
 		
-		Los elementos 1 y 2 están solo en \(A\), 5 y 6 están solo en \(B\), y los elementos 3 y 4 se excluyen porque están en ambos conjuntos.
+		Los elementos 1 y 2 están solo en \(A\), 5 y 6 están solo en \(B\). Los elementos 3 y 4 se excluyen porque están en ambos conjuntos.
 		
 		\item Consideremos los conjuntos:
 		\begin{itemize}
@@ -383,15 +409,7 @@ El \gls{venn} es una representación visual de los conjuntos utilizando diagrama
 		$$C \triangle D = \{x \mid x \text{ es par y no es 2, o } x \text{ es primo y no es 2}\}$$
 		El número 2 se excluye porque es el único par que también es primo.
 	\end{enumerate}
-	
-	\item Propiedades:
-	\begin{enumerate}[label=\roman*)]
-		\item Conmutatividad: \(A \triangle B = B \triangle A\)
-		\item Asociatividad: \((A \triangle B) \triangle C = A \triangle (B \triangle C)\)
-		\item Existencia del neutro: \( A \triangle \emptyset = \emptyset \triangle A = A \)
-		\item Existencia de inversas: \( A \triangle A = \emptyset \)
-	\end{enumerate}
-\end{itemize}
+\end{example}
 
 
 \subsubsection{Conjunto potencia o conjunto de partes $\mathcal{P}(A)$}
@@ -406,9 +424,9 @@ El \gls{venn} es una representación visual de los conjuntos utilizando diagrama
 	El conjunto potencia de un conjunto \(A\) es una colección que contiene a todos los posibles subconjuntos de \(A\), incluyendo el conjunto vacío (\(\emptyset\)) y el propio conjunto \(A\).
 \end{fmd-definition}
 
-\begin{itemize}
-	\item Ejemplos:
-	
+
+\begin{example}[Conjunto potencia]
+	\
 	\begin{enumerate}
 		\item Consideremos el conjunto: \(A = \{1, 2\}\)
 		
@@ -423,9 +441,11 @@ El \gls{venn} es una representación visual de los conjuntos utilizando diagrama
 		$$\mathcal{P}(B) = \{\emptyset, \{a\}, \{b\}, \{c\}, \{a, b\}, \{a, c\}, \{b, c\}, \{a, b, c\}\}$$
 		En este caso, hay \(2^3 = 8\) elementos en el conjunto potencia.
 	\end{enumerate}
-	
+\end{example}
+
+\begin{lgnote}
 	En general, si un conjunto \(A\) tiene \(n\) elementos, entonces su conjunto potencia \(\mathcal{P}(A)\) tiene \(2^n\) elementos.
-\end{itemize}
+\end{lgnote}
 
 \subsubsection{Producto cartesiano}
 \vspace{1em}
@@ -441,9 +461,9 @@ El \gls{venn} es una representación visual de los conjuntos utilizando diagrama
 	Esto es, el producto cartesiano combina cada elemento de un conjunto con cada elemento del otro conjunto, formando pares ordenados donde el orden de los elementos es importante.
 \end{fmd-definition}
 
-\begin{itemize}
-	\item Ejemplos:
-	
+
+\begin{example}[Producto cartesiano]
+	\
 	\begin{enumerate}
 		\item Consideremos los conjuntos: \(A = \{1, 2\}\) y \(B = \{x, y\}\), entonces, el producto cartesiano es:
 		$$A \times B = \{(1, x), (1, y), (2, x), (2, y)\}$$
@@ -451,11 +471,13 @@ El \gls{venn} es una representación visual de los conjuntos utilizando diagrama
 		\item Consideremos los conjuntos: \(C = \{a, b\}\) y \(D = \{1, 2, 3\}\), el producto cartesiano es:
 		$$C \times D = \{(a, 1), (a, 2), (a, 3), (b, 1), (b, 2), (b, 3)\}$$
 	\end{enumerate}
-	
+\end{example}
+
+\begin{itemize}
 	\item Observaciones:
 	
 	\begin{enumerate}
-		\item El producto cartesiano no es conmutativo, esto es, en general, \(A \times B \neq B \times A\).
+		\item El producto cartesiano no es conmutativo, en general, \(A \times B \neq B \times A\).
 		\item Si \(A\) tiene \(m\) elementos y \(B\) tiene \(n\) elementos, entonces \(A \times B\) tiene \(m \cdot n\) elementos.
 		\item El producto cartesiano se puede extender a más de dos conjuntos. Por ejemplo, el producto cartesiano de tres conjuntos \(A\), \(B\) y \(C\) es:
 		$$A \times B \times C = \{(a, b, c) \mid a \in A, b \in B, c \in C\}$$
@@ -621,9 +643,9 @@ Algunas aplicaciones:
 
 \section{Relaciones y particiones}
 \index{relaciones!y particiones}
-	Una \textit{relación} es un vínculo o una correspondencia. Se trata de la correspondencia que existe entre dos conjuntos: a cada elemento del primer conjunto le corresponde al menos un elemento del segundo conjunto.
+	Una \gls{relacion} es un vínculo o una correspondencia. Se trata de la correspondencia que existe entre dos conjuntos: a cada elemento del primer conjunto le corresponde al menos un elemento del segundo conjunto.
 	
-	Cuando a cada elemento de un conjunto le corresponde solo uno del otro, se habla de \textit{función}. Esto quiere decir que las funciones siempre son, a su vez, relaciones, pero que las relaciones no siempre son funciones.
+	Cuando a cada elemento de un conjunto le corresponde solo uno del otro, se habla de \gls{funcion}. Esto quiere decir que las funciones siempre son, a su vez, relaciones, pero que las relaciones no siempre son funciones.
 
 \begin{fmd-definition}[Relaciones] \index{relaciones}
 	Dados dos conjuntos $A$ y $B$, una \gls{relacion} entre ellos es un subconjunto $\mathcal{R} \subset A \times B$, en el que el par ordenado $(a, b) \in \mathcal{R}$ con $a \in A$ y $b \in B$, así decimos que $a$ está relacionado con $b$ y se denota:
@@ -826,19 +848,8 @@ se lee: \emph{$f$ es una función o aplicación de $A$ en $B$}, o bien \emph{$f$
 
 \begin{fmd-definition}[Función] \index{función}
 	$f$ es una función o aplicación de $A$ en $B$ si y sólo si $f$ es una relación
-	entre $A$ y $B$, tal que todo elemento de $A$ tiene un único correspondiente en
-	$B$.
+	entre $A$ y $B$ (en consecuencia, $f \subset A \times B$), tal que todo elemento de $A$ tiene un único correspondiente en $B$.
 \end{fmd-definition}
-
-o bien:
-\begin{definition}[Función]
-	$f$ es una función o aplicación de $A$ en $B$ si y sólo si $f$ es un subconjunto
-	de $A \times B$ que satisface las siguientes condiciones de existencia y unicidad:
-	\begin{enumerate}
-		\item $\forall a \in A, \ \exists \ b \in B / (a, b) \in f$
-		\item $(a, b) \in f \wedge (a, c) \in f \implies b = c$
-	\end{enumerate}
-\end{definition}
 
 \textbf{Observaciones}:
 \begin{itemize}
@@ -847,8 +858,7 @@ o bien:
 	por la función $f$.
 	\item Si $f$ es como arriba, una aplicación o un \textit{mapeo} de $A$ a $B$ a menudo se escribe $x \mapsto f(x)$ para denotar la imagen de $x$ por $f$. Por ejemplo: Si $A = \R$ y  $B = \R^{+}$, sea $f: \R \rightarrow \R^{+}$ la aplicación $f(x) = x^2$, significa el mapeo cuyo valor en $x$ es $x^2$. Podemos también decir: $f$ es la aplicación tal que $x \mapsto x^2$ ($x$ se mapea a $x^2$ o $x$ se transforma en $x^2$ o $x$ se aplica a $x^2$). En este caso la imagen de $f$ es el conjunto de números reales no negativos.
 	\item Una función queda especificada si se da el dominio $A$, el codominio $B$,
-	y además la relación $f \subset A \times B$, que satisface las condiciones 1 y
-	2 de la definición.
+	y además la relación $f \subset A \times B$, que satisface las condiciones de la definición.
 	\item Por ser un conjunto, $f$ puede estar dado por \textit{extensión}, como conjunto de pares ordenados, o bien por \textit{comprensión}, mediante una fórmula o ley de correspondencia que permita asignar a cada objeto del dominio su imagen en el codominio.
 \end{itemize}%
 
@@ -904,25 +914,23 @@ o bien:
 				\draw[blue, thick, -latex] (c) to [bend left = -25] (B1);
 			\end{tikzpicture}
 		\end{figure}
+		
+		\item Si $A$ es el conjunto de las personas y $f$ es la relación en $A$ definida por:
+		\[(x, y) \in f \iff x \mbox{ es hijo de } y\]
+		entonces $f$ es una función de $A$ en $A$, ya que toda persona tiene padre y
+		este es único.
+		
+		En cambio la relación definida en el mismo $A$ mediante:
+		\[ (x,y) \in f \iff x \mbox{ es padre de } y \]
+		no es una función de $A$ en $A$, ya que existen en $A$ personas que no son padres,
+		es decir, elementos del dominio que carecen de imagen en el codominio, por otra
+		parte, tampoco se verifica la unicidad pues existen personas que son padres de más
+		de un hijo.
 	\end{enumerate}
 \end{fmd-example}
 
-\begin{enumerate}
-	\setcounter{enumi}{2}
-	\item Si $A$ es el conjunto de las personas y $f$ es la relación en $A$ definida por:
-	\[(x, y) \in f \iff x \mbox{ es hijo de } y\]
-	entonces $f$ es una función de $A$ en $A$, ya que toda persona tiene padre y
-	este es único.
-\end{enumerate}
-En cambio la relación definida en el mismo $A$ mediante:
-\[ (x,y) \in f \iff x \mbox{ es padre de } y \]
-no es una función de $A$ en $A$, ya que existen en $A$ personas que no son padres,
-es decir, elementos del dominio que carecen de imagen en el codominio, por otra
-parte, tampoco se verifica la unicidad pues existen personas que son padres de más
-de un hijo.
-
 \begin{lgnote}
-	Si una relación es función, la relación inversa no lo es necesariamente
+	Si una relación es una función, la relación inversa no lo es necesariamente.
 \end{lgnote}
 
 \subsection{Representación cartesiana de funciones} \label{sec:cartesiano}
@@ -1006,14 +1014,16 @@ y el codominio, del eje vertical.
 	Notar que $f \ne g$ aunque $f \subset g$.
 \end{fmd-example}
 
-\begin{example}
+\begin{example}[Función de dos variables]
+	\
+	
 	Consideremos $A = \{1, 2\}$, $B = \{1,2,3,4\}$ y la función:
 	\[ f: A^2 \rightarrow B \]
 	que asigna a cada elemento del dominio $A^2$, la suma de sus componentes:
 	\[ f(x, y) = x + y \]
 	\begin{enumerate}
 		\item Representación en una tabla de simple entrada.
-		\begin{table}
+		\begin{table}[H]
 			\centering
 			\begin{tabular}{c|c}
 				$(x, y)$ & $f(x, y) = x + y$\\ \hline
@@ -1029,7 +1039,7 @@ y el codominio, del eje vertical.
 	\begin{enumerate}
 		\setcounter{enumi}{1}
 		\item Representación en una tabla de doble entrada.
-		\begin{table}
+		\begin{table}[H]
 			\centering
 			\begin{tabular}{c|cc}
 				$f$ & 1 & 2\\ \hline
@@ -1192,13 +1202,14 @@ Una función $f: A \rightarrow B$ es inyectiva si, y solo si, cuando dos element
 
 \begin{itemize}
 	\item En la inyectividad no puede darse que elementos distintos del dominio den la misma
-	imagen.
+	imagen, fig. \ref{fig:inyectiva_discreta}.
 	\item En el diagrama de Venn no puede presentarse ninguna bifurcación de elementos del 
 	dominio hacia el codominio.
 	\item En la representación plana cartesiana no puede ocurrir que una ordenada
-	corresponda a más de una abscisa.
+	corresponda a más de una abscisa, fig. \ref{fig:inyectiva_continua}.
 \end{itemize}
 
+% TODO: pasar cada gráfica a standalone para llamarlas y referenciarlas independientemente.
 \begin{figure}[H]
 	\centering
 	\begin{minipage}{.3\textwidth}
@@ -1321,6 +1332,8 @@ Una función $f: A \rightarrow B$ es inyectiva si, y solo si, cuando dos element
 			\node at (1.5,-2.7) {Sí es inyectiva};
 		\end{tikzpicture}
 	\end{minipage}
+	\caption{Identificación de funciones inyectivas discretas}
+	\label{fig:inyectiva_discreta}
 \end{figure}
 
 \begin{figure}[H]
@@ -1328,6 +1341,7 @@ Una función $f: A \rightarrow B$ es inyectiva si, y solo si, cuando dos element
 	\begin{minipage}{.45\textwidth}
 		\centering
 		\begin{figure}[H]
+			\centering
 			\begin{tikzpicture}[scale=.5]
 				\begin{axis}[axis lines=middle, xticklabels={}, yticklabels={}]
 					\addplot[blue, very thick] {x^3};
@@ -1339,6 +1353,7 @@ Una función $f: A \rightarrow B$ es inyectiva si, y solo si, cuando dos element
 	\begin{minipage}{.45\textwidth}
 		\centering
 		\begin{figure}[H]
+			\centering
 			\begin{tikzpicture}[scale=.5]
 				\begin{axis}[axis lines=middle, xticklabels={}, yticklabels={}]
 					\addplot[blue, very thick] {x^2};
@@ -1347,6 +1362,8 @@ Una función $f: A \rightarrow B$ es inyectiva si, y solo si, cuando dos element
 			\caption*{$f:\mathbb{R} \rightarrow \mathbb{R}_0^{+} / f(x) = x^2$\\No es inyectiva}
 		\end{figure}
 	\end{minipage}
+	\caption{Identificación de funciones inyectivas continuas.}
+	\label{fig:inyectiva_continua}
 \end{figure}
 
 \subsubsection{Función sobreyectiva} \index{función!sobreyectiva}
@@ -1355,8 +1372,7 @@ Una función $f: A \rightarrow B$ es inyectiva si, y solo si, cuando dos element
 	Una función $f: A \rightarrow B$ es \textit{sobreyectiva} si, y solo si, para cada elemento $y \in B$, existe al menos un elemento $x \in A$ tal que $y = f(x)$.
 \end{fmd-definition}
 \begin{itemize}
-	\item El conjunto de las imágenes (\gls{rango} o \textit{recorrido}) \index{rango} se identifica con el codominio de la función. No hay elementos del codominio que no sea la imagen de \textit{al menos un} elemento del dominio, en otras palabras, el rango y el codominio coinciden.
-	\item El ejemplo 3 corresponde a funciones sobreyectivas.
+	\item El conjunto de las imágenes (\gls{rango} o \textit{recorrido}) \index{rango} se identifica con el codominio de la función. No hay elementos del codominio que no sea la imagen de \textit{al menos un} elemento del dominio, en otras palabras, el rango y el codominio coinciden, figs. \ref{fig:sobreyectiva_discreta} y \ref{fig:sobreyectiva_continua}.
 	\item Es usual nombrar a las funciones sobreyectivas como ``sobre'' o ``suryectiva''
 \end{itemize}
 
@@ -1481,6 +1497,8 @@ Una función $f: A \rightarrow B$ es inyectiva si, y solo si, cuando dos element
 			\node at (1.5,-2.7) {No es sobreyectiva};
 		\end{tikzpicture}
 	\end{minipage}
+	\caption{Función sobreyectiva, caso discreto.}
+	\label{fig:sobreyectiva_discreta}
 \end{figure}
 
 \begin{figure}[H]
@@ -1488,6 +1506,7 @@ Una función $f: A \rightarrow B$ es inyectiva si, y solo si, cuando dos element
 	\begin{minipage}{.45\textwidth}
 		\centering
 		\begin{figure}[H]
+			\centering
 			\begin{tikzpicture}[scale=.5]
 				\begin{axis}[axis lines=middle, xticklabels={}, yticklabels={}]
 					\addplot[blue, very thick] {x^3};
@@ -1499,6 +1518,7 @@ Una función $f: A \rightarrow B$ es inyectiva si, y solo si, cuando dos element
 	\begin{minipage}{.45\textwidth}
 		\centering
 		\begin{figure}[H]
+			\centering
 			\begin{tikzpicture}[scale=.5]
 				\begin{axis}[axis lines=middle, xticklabels={}, yticklabels={}]
 					\addplot[blue, very thick] {x^2};
@@ -1507,6 +1527,8 @@ Una función $f: A \rightarrow B$ es inyectiva si, y solo si, cuando dos element
 			\caption*{$f:\mathbb{R} \rightarrow \mathbb{R}_0^{+} / f(x) = x^2$\\Sí es sobreyectiva}
 		\end{figure}
 	\end{minipage}
+	\caption{Ejemplos de funciones sobreyectivas continuas.}
+	\label{fig:sobreyectiva_continua}
 \end{figure}
 
 \subsubsection{Función biyectiva}
@@ -1514,11 +1536,10 @@ Una función $f: A \rightarrow B$ es inyectiva si, y solo si, cuando dos element
 \begin{fmd-definition}[Función biyectiva]
 	$f:A \rightarrow B \mbox{ es biyectiva si } f \mbox{ es inyectiva y sobreyectiva}$.
 \end{fmd-definition}
-\begin{itemize}
-	\item Las funciones del ejemplo 3 son biyectivas.
-\end{itemize}
 
-Notar que si  $f: A \rightarrow B$ no es biyectiva, entonces no es inyectiva o no es sobreyectiva.
+\begin{lgnote}
+	Si $f: A \rightarrow B$ no es biyectiva, entonces no es inyectiva o no es sobreyectiva, figuras \ref{fig:biyectiva_discreta} y \ref{fig:biyectiva_continua}.
+\end{lgnote}
 
 \begin{figure}[H]
 	\centering
@@ -1601,7 +1622,7 @@ Notar que si  $f: A \rightarrow B$ no es biyectiva, entonces no es inyectiva o n
 			\draw[-latex, red] (A4) to [bend left = 10] (B4);
 			
 			% Caption
-			\node at (1.5,-2.7) {No es biyectiva};
+			\node at (1.5,-2.7) {No es inyectiva};
 		\end{tikzpicture}
 	\end{minipage}
 	\begin{minipage}{.32\textwidth}
@@ -1639,9 +1660,11 @@ Notar que si  $f: A \rightarrow B$ no es biyectiva, entonces no es inyectiva o n
 			\draw[-latex, red] (A3) to [bend left = 10] (B3);
 			
 			% Caption
-			\node at (1.5,-2.7) {No es biyectiva};
+			\node at (1.5,-2.7) {No es sobreyectiva};
 		\end{tikzpicture}
 	\end{minipage}
+	\caption{Identificación de función biyectiva discreta.}
+	\label{fig:biyectiva_discreta}
 \end{figure}
 
 \begin{figure}[H]
@@ -1649,6 +1672,7 @@ Notar que si  $f: A \rightarrow B$ no es biyectiva, entonces no es inyectiva o n
 	\begin{minipage}{.45\textwidth}
 		\centering
 		\begin{figure}[H]
+			\centering
 			\begin{tikzpicture}[scale=.5]
 				\begin{axis}[axis lines=middle, xticklabels={}, yticklabels={}]
 					\addplot[blue, very thick] {x^3};
@@ -1660,6 +1684,7 @@ Notar que si  $f: A \rightarrow B$ no es biyectiva, entonces no es inyectiva o n
 	\begin{minipage}{.45\textwidth}
 		\centering
 		\begin{figure}[H]
+			\centering
 			\begin{tikzpicture}[scale=.5]
 				\begin{axis}[axis lines=middle, xticklabels={}, yticklabels={}]
 					\addplot[blue, very thick] {x^2};
@@ -1668,6 +1693,8 @@ Notar que si  $f: A \rightarrow B$ no es biyectiva, entonces no es inyectiva o n
 			\caption*{$f:\mathbb{R} \rightarrow \mathbb{R}_0^{+} / f(x) = x^2$\\No es biyectiva}
 		\end{figure}
 	\end{minipage}
+	\caption{Función biyectiva continua.}
+	\label{fig:biyectiva_continua}
 \end{figure}
 
 \begin{fmd-example}
@@ -1802,7 +1829,7 @@ Notar que si  $f: A \rightarrow B$ no es biyectiva, entonces no es inyectiva o n
 	\[ f = \{ (x, b) / x \in A \} \]
 	
 	A menos que $A$ sea unitario, la función constante \textbf{no es inyectiva}, y
-	\textbf{es sobreyectiva} si $B$ se reduce a un único elemento.
+	\textbf{es sobreyectiva} si $B$ se reduce a un único elemento, fig. \ref{fig:funcion_constante}.
 \end{itemize}
 \begin{figure}[H]
 	\centering
@@ -1814,6 +1841,8 @@ Notar que si  $f: A \rightarrow B$ no es biyectiva, entonces no es inyectiva o n
 			\node[above] at (40, 150) {$b$};
 		\end{axis}
 	\end{tikzpicture}
+	\caption{Función constante}
+	\label{fig:funcion_constante}
 \end{figure}
 
 \begin{itemize}
@@ -1829,7 +1858,7 @@ Notar que si  $f: A \rightarrow B$ no es biyectiva, entonces no es inyectiva o n
 	La identidad en $A$ es la diagonal de $A^2$. Como relación es reflexiva,
 	simétrica y transitiva, o sea, de equivalencia en $A$; además es antisimétrica.\vspace{1mm}
 	
-	La función $i_A$ es obviamente \textbf{biyectiva}.
+	La función $i_A$ es obviamente biyectiva, fig. \ref{fig:funcion_identidad}.
 		\begin{figure}[H]
 			\centering
 			\begin{tikzpicture}
@@ -1839,6 +1868,8 @@ Notar que si  $f: A \rightarrow B$ no es biyectiva, entonces no es inyectiva o n
 					\addplot[thick] {x};
 				\end{axis}
 			\end{tikzpicture}
+			\caption{Función identidad}
+			\label{fig:funcion_identidad}
 		\end{figure}
 \end{itemize}
 
@@ -1849,9 +1880,7 @@ Notar que si  $f: A \rightarrow B$ no es biyectiva, entonces no es inyectiva o n
 	$P_2: A \times B \rightarrow B$ definidas por $ P_1(a, b) = a \quad \mbox{y}
 	\quad P_2(a, b) = b$\vspace{1mm}
 	
-	Tales funciones se llaman \textit{primera y segunda proyección del producto
-		cartesiano}, y asignan a cada par ordenado la primera y la segunda componentes,
-	respectivamente. En un gráfico cartesiano se tiene:
+	Tales funciones se llaman \textit{primera y segunda proyección del producto cartesiano}, y asignan a cada par ordenado la primera y la segunda componentes, respectivamente, fig. \ref{fig:funcion_proyeccion}.
 	
 	\begin{figure}[H]
 		\centering
@@ -1873,7 +1902,8 @@ Notar que si  $f: A \rightarrow B$ no es biyectiva, entonces no es inyectiva o n
 			\draw[dashed] (4,1) -- (4,0);
 			\draw[dashed] (1,3) -- (0,3);
 		\end{tikzpicture}		
-		
+		\caption{Función proyección}
+		\label{fig:funcion_proyeccion}
 	\end{figure}
 \end{itemize}
 
@@ -1971,7 +2001,7 @@ Sean $f: A \rightarrow B$ y $g: B \rightarrow C$
 		\draw[-latex, blue, thick] (b) to [bend left = 15] (c);
 		\draw[-latex, blue, thick] (a) to [bend right = 25] (c);
 	\end{tikzpicture}
-	\caption{}
+	\caption{Composición de funciones}
 	\label{fig:compos1}
 \end{figure}
 El codominio de $f$ es dominio de $g$, pero es suficiente que el codominio de la
@@ -2108,7 +2138,7 @@ $\left( h \circ g \right) \circ f = h \circ \left( g \circ f \right)$
 		\node at (4, 2.8) {$g \circ f$};
 		\node at (10, -2.8) {$h \circ g$};
 	\end{tikzpicture}
-	\caption{}
+	\caption{Asociatividad de la composición}
 	\label{fig:compos3}
 \end{figure}
 
@@ -2300,7 +2330,7 @@ Siendo $f$ inyectiva y sobreyectiva resulta biyectiva.
 				\item La $x$ asociada a $y$ es única, por ser $f$ inyectiva.
 				
 				En efecto, si $x$ y $x'$ fueran antecedentes distintos de $y$ por $f$
-				se tendría $x \ne x' \land f(x) = f(x') = y$, lo que es absurdo por la
+				se tendría $x \ne x'$ y $f(x) = f(x') = y$, lo que es absurdo por la
 				inyectividad de $f$.
 			\end{enumerate}
 		\item Hay que probar que $g \circ f = i_A$.
@@ -2383,7 +2413,7 @@ La función $g$ se llama inversa y se denota por $f^{-1}$.
 		\item[T)] $\exists \, g: B \rightarrow A / g \circ f = i_A$
 	\end{itemize}\vspace{3mm}
 	
-	La función $f$ no es necesariamente sobreyectiva. Nos apoyamos en el diagrama de la fig: \ref{fig:inversas2}.
+	La función $f$ no es necesariamente sobreyectiva. Nos apoyamos en el diagrama de la figura siguiente:
 	\begin{figure}[H]
 		\centering
 		\begin{tikzpicture}[scale=1]
@@ -2413,8 +2443,6 @@ La función $g$ se llama inversa y se denota por $f^{-1}$.
 			\draw[red, thick, -latex] (x2) to [bend right = 15] (y2);
 			\draw[red, thick, -latex] (y1) to [bend left = 20] (x1);
 		\end{tikzpicture}
-		\caption{}
-		\label{fig:inversas2}
 	\end{figure}
 	
 	\begin{proof}
@@ -2440,8 +2468,8 @@ La función $g$ se llama inversa y se denota por $f^{-1}$.
 		\end{itemize}\vspace{3mm}
 		\begin{proof}
 			Sean $x', x'' \in A / f(x') = f(x'')$, entonces
-			\[ g[f(x')] = g[f(x'')] \implies (g \circ f)(x') = (g \circ f)(x'') \]
-			por hipótesis: \[i_A(x') = i_A(x'') \implies x' = x''\]
+			\[ g[f(x')] = g[f(x'')] \mbox{o, lo que es lo mismo } (g \circ f)(x') = (g \circ f)(x'') \]
+			por hipótesis: \[\mbox{Si } i_A(x') = i_A(x'') \mbox{ entonces } x' = x''\]
 			
 			en consecuencia $f$ es 1-1\
 		\end{proof}
@@ -2504,25 +2532,25 @@ Sean $f : X \rightarrow Y$ y $A \subset X$ \index{imagen}
 		\draw[blue, thick, -latex] ($(b) + (.5,-.1)$) to [bend right = 10]
 		($(b) + (3, -.5)$);
 	\end{tikzpicture}
-	\caption{}
+	\caption{Imagen de subconjuntos}
 	\label{fig:imagenes}
 \end{figure}
-\[ f(A) = \{ f(x) / x \in A \} \mbox{ o bien } f(A) = \{y \in Y / \exists \, 
-x \in A \land f(x) = y \} \]
-De acuerdo con la definición: $y \in f(A) \iff \exists \, x \in A / y = f(x)$
+\[ f(A) = \{ f(x) / x \in A \} \mbox{ o bien } f(A) = \{y \in Y / \mbox{ existe } \, 
+x \in A \mbox{ y } f(x) = y \} \]
+De acuerdo con la definición: $y \in f(A) \mbox{ si y solo si existe } x \in A / y = f(x)$
 
 Si $A = X$, entonces $f(X)$ es la imagen del dominio por $f$. Además
-$f(\varnothing) = \varnothing$. $f$ es sobreyectiva si y sólo si $f(X) = Y$.
+$f(\emptyset) = \emptyset$. $f$ es sobreyectiva si y sólo si $f(X) = Y$.
 
 \subsubsection{Propiedades de la imagen}
 Sean $f: X \rightarrow Y$ y $A$ y $B$ subconjuntos del dominio.
 \begin{enumerate}[label=\textbf{\alph*)}]
 	\item Si un subconjunto del dominio es parte de otro, entonces la misma relación
 	vale para sus imágenes.
-	\[ f: X \rightarrow Y, A \subset B, B \subset X \mbox{ y } A \subset B \implies
+	\[ f: X \rightarrow Y, A \subset B, B \subset X \mbox{ y } A \subset B \mbox{ entonces }
 	f(A) \subset f(B)\]
 	En efecto, sea
-	\[ z \in f(A) \rightarrow \exists \, x \in A / f(x) = z \rightarrow \exists \, x
+	\[ z \in f(A) \rightarrow \mbox{ hay algún } \, x \in A / f(x) = z \rightarrow \mbox{ existe } \, x
 	\in B / f(x) = z \rightarrow z \in f(B) \]
 \end{enumerate}
 
@@ -2564,7 +2592,7 @@ Sean $f: X \rightarrow Y$ y $A$ y $B$ subconjuntos del dominio.
 			\draw[-latex, blue, thick] (a) to [bend left = 10] (fa);
 			\draw[-latex, blue, thick] (b) to [bend right = 15] (fb);
 		\end{tikzpicture}
-		\caption{}
+		\caption{Imagen de la unión de dos subconjuntos.}
 		\label{fig:imagenes2}
 	\end{figure}
 \end{enumerate}
@@ -2573,7 +2601,7 @@ Sean $f: X \rightarrow Y$ y $A$ y $B$ subconjuntos del dominio.
 	\setcounter{enumi}{2}
 	\item La imagen de la intersección de dos subconjuntos del dominio está incluida
 	en la intersección de sus imágenes.
-	\[ f: X \rightarrow Y, A \subset X \land B \subset X \implies f\left( 
+	\[ \mbox{Si } f: X \rightarrow Y, A \subset X \mbox{ y } B \subset X \mbox{ entonces } f\left( 
 	A \cap B \right) \subset f(A) \cap f(B) \]
 	
 	El siguiente ejemplo prueba que no es válida la inclusión en el otro sentido.
@@ -2584,8 +2612,8 @@ Sean $f: X \rightarrow Y$ y $A$ y $B$ subconjuntos del dominio.
 	Se tiene $A \cap B = \{ 4 \}$, $f\left( A \cap B \right) = \{16\}$, $f(A) \cap f(B)
 	= \{ 4, 9, 16\}$
 	
-	Resulta
-	\[ f\left( A \cap B \right) \subsetneqq f(A) \cap f(B) \]
+	Resulta:
+	\[ f\left( A \cap B \right) \not \subset f(A) \cap f(B) \]
 \end{enumerate}
 
 \subsection{Imágenes inversas de subconjuntos del codominio} \label{sec:invcon}
@@ -2615,8 +2643,10 @@ Sean $f: X \rightarrow Y$ y $A \subset Y$.
 			\node at ($(y) + (-1,-1)$) {$A$};
 			
 			% Flechas
-			\draw[-latex, blue, thick] (x) to [bend left = 20] (y);
+			\draw[latex-, blue, thick] (x) to [bend left = 20] (y);
 		\end{tikzpicture}
+		\caption{Definición de preimagen}
+		\label{fig:preimagen}
 	\end{figure}
 	\[ f^{-1}(A) = \{ x \in X / f(x) \in A \} \]
 	Es claro que: $ x \in f^{-1}(A)$ si, y solo si $f(x) \in A $, en palabras, un elemento del dominio pertenece a la preimagen de $A$ si y sólo si su imagen pertenece a $A$.
@@ -2695,15 +2725,15 @@ Sean $f:X \rightarrow Y$ y los subconjuntos $A \subset Y$, $B \subset Y$.
 			\node at ($(fb) + (-1,-1)$) {$B$};
 			
 			% Flechas
-			\draw[-latex, blue, thick] (a) to [bend left = 10] (fa);
-			\draw[-latex, blue, thick] (b) to [bend right = 15] (fb);
+			\draw[latex-, blue, thick] (a) to [bend left = 10] (fa);
+			\draw[latex-, blue, thick] (b) to [bend right = 15] (fb);
 		\end{tikzpicture}
-		\caption{}
+		\caption{Preimagen de la unión $A \cup B$.}
 		\label{fig:imagenes3}
 	\end{figure}
 	\[ x \in f^{-1}\left( A \cup B \right) \rightarrow f(x) \in A \cup B \rightarrow
-	f(x) \in A \vee f(x) \in B \]
-	\[ \rightarrow x \in f^{-1}(A) \vee x \in f^{-1}(B) \rightarrow x \in f^{-1}
+	f(x) \in A \mbox{ o } f(x) \in B \]
+	\[ \rightarrow x \in f^{-1}(A) \mbox{ o } x \in f^{-1}(B) \rightarrow x \in f^{-1}
 	(A) \cup f^{-1} (B)\]
 \end{enumerate}
 
@@ -2711,10 +2741,9 @@ Sean $f:X \rightarrow Y$ y los subconjuntos $A \subset Y$, $B \subset Y$.
 	\setcounter{enumi}{1}
 	\item La preimagen de la intersección es igual a la intersección de las preimágenes.
 	\[ f^{-1} \left( A \cap B \right) = f^{-1}(A) \cap f^{-1}(B) \]
-	Se tiene
-	\[ x \in f^{-1}\left( A \cap B \right) \iff f(x) \in A \cap B \iff f(x) \in A
-	\land f(x) \in B \]
-	\[ \iff x \in f^{-1}(A) \land x \in f^{-1}(B) \iff x \in f^{-1}(A) \cap f^{-1}
+	Se tiene:
+	\[x \in f^{-1}\left( A \cap B \right) \mbox{ si y sólo si } f(x) \in A \cap B \mbox{ que es verdad si } f(x) \in A \mbox{ y } f(x) \in B \]
+	\[ \mbox{ por tanto } x \in f^{-1}(A) \mbox{ y } x \in f^{-1}(B) \mbox{ si y solo si } x \in f^{-1}(A) \cap f^{-1}
 	(B) \]
 \end{enumerate}
 
@@ -2724,10 +2753,7 @@ Sean $f:X \rightarrow Y$ y los subconjuntos $A \subset Y$, $B \subset Y$.
 	igual al complemento de su preimagen.
 	\[ f^{-1}\left( A^c \right) = \left[ f^{-1}(A) \right]^c \]
 	En efecto:
-	\[ x \in f^{-1}\left( A^c \right) \iff f(x) \in A^c \iff f(x) \not \in A 
-	\iff \sim \left[ f(x) \in A \right] \]
-	\[ \iff \sim \left[ x \in f^{-1}(A) \right] \iff x \not \in f^{-1}(A) \iff 
-	x \in \left[ f^{-1}(A) \right]^c\]
+	\[ x \in f^{-1}\left( A^c \right) \mbox{ si y sólo si } f(x) \in A^c \mbox{ por tanto } x \not \in f^{-1}(A) \mbox{ de donde } x \in \left[ f^{-1}(A) \right]^c\]
 \end{enumerate}
 
 \begin{fmd-example}
