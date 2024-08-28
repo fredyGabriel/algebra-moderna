@@ -818,6 +818,16 @@ Si la implicación directa es $V$, también lo es la contrarrecíproca, y no pod
 
 \subsubsection{Demostración matemática}
 \index{demostración!matemática}
+
+Consideremos, previamente, los siguientes conceptos:
+\begin{itemize}
+	\item Decimos que $q$ es un \textit{múltiplo} de $p$ si $\exists n \in \mathbb{N} \ / \ q = np$
+	\item También decimos que $n$ y $p$ son \textit{factores} de $q$ o que \textit{dividen} a $q$.
+	\item Un elemento $p\in \mathbb{N}$ distinto de 1 se llama \textit{primo} si sus únicos factores son el 1 y el propio $p$.
+	\item Dos números enteros son \textit{coprimos} cuando no tienen ningún divisor común positivo aparte del 1.
+\end{itemize}
+
+
 Se presenta continuamente la necesidad de demostrar la verdad de
 \[ \begin{array}{c}
 	p\\
@@ -1556,7 +1566,7 @@ La negación de una proposición universal es una proposición existencial, y vi
 
 \section{Sistema axiomático de Peano} \index{Peano}
 
-\subsection{Axiomas de Peano} \label{sec:peano} \index{axiomas!Peano}
+\subsection{Axiomas de Peano}
 \textbf{Sistema axiomático}:
 
 \begin{itemize}
@@ -1566,7 +1576,7 @@ La negación de una proposición universal es una proposición existencial, y vi
 	\item \textit{Teoremas}: propiedades que se deducen de los axiomas.
 \end{itemize}
 
-\textbf{Axiomas de Peano}
+\textbf{Axiomas de Peano}\footnote{Giuseppe Peano, 1858-1932. Matemático, lógico y filósofo italiano.} \label{sec:peano} \index{axiomas!Peano}
 \begin{itemize}
 	\item[N1]: Existe una función inyectiva, la función ``siguiente'', $s: \mathbb{N} \rightarrow \mathbb{N} \setminus \{1\}$;
 	\item[N2]: Existe un único elemento en $\mathbb{N}$, denotado por 1, tal que: $\forall n \in \mathbb{N}, 1 \ne s(n)$;
@@ -1707,26 +1717,63 @@ Se define la \textbf{potenciación} en $\mathbb{N}$, mediante: \index{potenciaci
 
 \subsection{Teorema fundamental de la aritmética} \label{sec:arit}
 \index{teorema!aritmética}
-Previos:
+\vspace{1em}
+\begin{fmd-theorem}[Teorema Fundamental de la Aritmética]\label{teo:aritmetica}
+	Todo número entero mayor que 1 puede ser expresado de forma única (salvo por el orden de los factores) como un producto de números primos.
+\end{fmd-theorem}
+\begin{fmd-proof}
+	
 \begin{itemize}
-	\item Decimos que $q$ es un \textit{múltiplo} de $p$ si $\exists n \in \mathbb{N} \ / \ q = np$
-	\item También decimos que $n$ y $p$ son \textit{factores} de $q$ o que \textit{dividen} a $q$.
-	\item Un elemento $p\in \mathbb{N}$ distinto de 1 se llama \textit{primo} si sus únicos factores son el 1 y el propio $p$.
+	\item Hipótesis: Sea $n \in \mathbb{N}$ y $n > 1$.
+	\item Tesis: Existen primos $p_1, p_2, \ldots, p_k$ (no necesariamente distintos) tales que:
+	\[n = p_1 \cdot p_2 \cdot \ldots \cdot p_k\]
+	Además, esta factorización es única salvo el orden de los factores.
 \end{itemize}
 
-\begin{fmd-theorem}[Teorema fundamental de la aritmética] \label{teo:aritmetica}
-	Todo número natural $p\ne 1$ es primo o puede descomponerse como producto de números primos. La descomposición prima es única a menos de orden de los factores.
-\end{fmd-theorem}
+\textit{Demostración}:
 
+La demostración se realiza en dos partes: existencia y unicidad.
 
-\begin{fmd-proof}
-	Consideremos el conjunto:
-	\[P \coloneqq \{ p \in \mathbb{N}; p \ne 1 \mbox{ y } p \mbox{ no es primo ni es producto de factores primos} \}\]
-	Si la afirmación del teorema fuese falso, el conjunto $P$ sería no vacío, y por lo tanto, por el
-	Principio del Buen Orden, debe tener un elemento mínimo. Llamemos $p_0$ a dicho elemento.
-	Tenemos que $p_0 \ne 1$, y $p_0$ no es primo, por lo cual tiene factores $q$, $n$ distintos de 1 y del propio $p_0$, luego, tenemos $p_0 = qn$, con $q$ y $n$ ambos menores que $p_0$, y ambos distintos del 1. Pero $p_0$ tampoco es producto de factores primos, por lo cual o bien $q$ o bien $n$ no es primo. Pero esto contradice la minimalidad de $p_0$ como elemento de $P$. Esta contradicción indica que debemos tener $P = \emptyset$.
+\begin{enumerate}
+	\item \textbf{Existencia}:
+	
+	Procedemos por inducción sobre $n$.
+	
+	\begin{itemize}
+		\item \textit{Base}: Para $n = 2$, la afirmación es trivial ya que 2 es primo.
+		
+		\item \textit{Paso inductivo}: Supongamos que la afirmación es cierta para todo número natural menor que $n$. Consideremos $n$.
+		
+		Si $n$ es primo, la factorización es trivial.
+		
+		Si $n$ no es primo, entonces existen $a, b \in \mathbb{N}$ tales que $1 < a, b < n$ y $n = a \cdot b$. Por hipótesis de inducción, $a$ y $b$ tienen factorizaciones en primos:
+		
+		\[a = p_1 \cdot p_2 \cdot \ldots \cdot p_r\]
+		\[b = q_1 \cdot q_2 \cdot \ldots \cdot q_s\]
+		
+		Por lo tanto,
+		\[n = a \cdot b = (p_1 \cdot p_2 \cdot \ldots \cdot p_r) \cdot (q_1 \cdot q_2 \cdot \ldots \cdot q_s)\]
+		
+		Lo que demuestra la existencia de la factorización para $n$.
+	\end{itemize}
+	
+	\item \textbf{Unicidad}:
+	
+	Supongamos que $n$ tiene dos factorizaciones:
+	\[n = p_1 \cdot p_2 \cdot \ldots \cdot p_r = q_1 \cdot q_2 \cdot \ldots \cdot q_s\]
+	donde $p_i$ y $q_j$ son primos.
+	
+	Como $p_1$ divide al producto $q_1 \cdot q_2 \cdot \ldots \cdot q_s$, por el lema de Euclides, $p_1$ debe dividir a algún $q_j$. Sin pérdida de generalidad, supongamos que $p_1 | q_1$.
+	
+	Como $q_1$ es primo, debe ser que $p_1 = q_1$. Dividiendo ambos lados por $p_1$, obtenemos:
+	
+	\[p_2 \cdot \ldots \cdot p_r = q_2 \cdot \ldots \cdot q_s\]
+	
+	Repitiendo este proceso, concluimos que $r = s$ y que cada $p_i$ es igual a algún $q_j$.
+	
+	Por lo tanto, las dos factorizaciones son iguales salvo el orden de los factores.
+\end{enumerate}
 \end{fmd-proof}
-Falta probar la unicidad de la descomposición prima.
 
 
 \subsection{Conjuntos finitos e infinitos} \label{sec:finitos} \index{conjuntos!finitos} \index{conjuntos!infinitos}
