@@ -1,12 +1,12 @@
 \chapter{Lógica matemática}
 
-\section{Introducción}
+\section*{Introducción}
 
 Este capítulo introduce los principios y reglas de la lógica matemática, una disciplina que permite analizar argumentos, deducir conclusiones y establecer conexiones entre proposiciones. Se estudian los conceptos de proposición, operadores lógicos (conjunción, disyunción, negación, implicación, bicondicional), tablas de verdad y equivalencias lógicas.
 Se analizan las tautologías y contradicciones, proposiciones compuestas que siempre son verdaderas o siempre son falsas, respectivamente. Se introduce la lógica predicativa, una extensión de la lógica proposicional que permite expresar relaciones entre objetos y cuantificar sobre ellos utilizando cuantificadores universales y existenciales.
 Finalmente, se presenta el sistema axiomático de Peano, un conjunto de axiomas que permite construir formalmente los números naturales y demostrar teoremas básicos de la aritmética, como el principio de inducción matemática.
 
-\subsection{Relevancia en ingeniería}
+\subsection*{Relevancia en ingeniería}
 
 \begin{itemize}
 	\item \textit{Diseño de circuitos digitales}: La lógica matemática es la base del diseño de circuitos digitales, donde se utilizan compuertas lógicas para implementar funciones booleanas.
@@ -1461,6 +1461,186 @@ Veamos algunos ejemplos comunes de falacias formales:
 
 Reconocer las falacias formales es esencial para evaluar críticamente los argumentos y evitar ser engañado por razonamientos que parecen válidos pero que en realidad son lógicamente defectuosos. Al estudiar y comprender estas falacias, podemos fortalecer nuestras habilidades de razonamiento y construir argumentos más sólidos y persuasivos.
 
+\rule{\textwidth}{.5pt}
+
+\subsection{Ejercicios}
+
+\begin{enumerate}[label=\textbf{\arabic*}.]
+	\item Escribe en símbolos:
+	\begin{enumerate}[itemsep=-2pt, label=\alph*)]
+		\item ``Me quedo en casa si y solo si llueve y hace frío, o si no llueve pero hace frío.''
+		\item ``Si el aumento de la inflación implica la disminución de la balanza de pagos, entonces, si no disminuye la balanza de pagos no aumenta la inflación''.
+		\item ``Si $x = 1$ e $y = 2$, entonces $z = 3$. Si, si $y = 2$, $z = 3$ entonces $w = 0$. $x = 1$. Por consiguiente, $w = 0$''.
+	\end{enumerate}
+	
+	\item Formalice los argumentos, utilizando variables proposicionales, y determine si son válidos.
+	\begin{enumerate}[label=\alph*)]
+		\item \begin{itemize}[itemsep=-3pt]
+			\item Si estudio mucho, entonces aprobaré el examen.
+			\item Si apruebo el examen, entonces pasaré el curso.
+			\item Conclusión Si estudio mucho, entonces pasaré el curso.
+		\end{itemize}
+		\item \begin{itemize}[itemsep=-3pt]
+			\item Si el sistema es seguro, entonces los datos están encriptados.
+			\item Los datos no están encriptados.
+			\item Por lo tanto, el sistema no es seguro.
+		\end{itemize}
+	\end{enumerate}
+	
+	\item Exprese en lenguaje natural:
+	\begin{enumerate}[label=\alph*)]
+		\item \( (p \land \neg q) \lor (r \land (p \lor q))  \)
+		
+		Siendo:
+		\begin{itemize}[itemsep=-3pt]
+			\item $p$: ``El número es par''
+			\item $q$: ``El número es divisible por 3''
+			\item $r$: ``El número es mayor que 10''.
+		\end{itemize}
+		
+		\item $\neg [(p \implies q) \iff (r \land \neg s)] \lor (\neg p \land t)$
+		
+		Siendo:
+		\begin{itemize}[itemsep=-3pt]
+			\item $p$: ``El proyecto se completa a tiempo''
+			\item $q$: ``El cliente está satisfecho''
+			\item $r$: ``Se cumplen todos los requisitos técnicos''
+			\item $s$: ``Se excede el presupuesto''
+			\item $t$: ``Se implementan nuevas tecnologías''
+		\end{itemize}
+	\end{enumerate}
+	\item Construya las tablas de verdad para las siguientes proposiciones y determine si son tautologías, contradicciones o contingencias:
+	\begin{enumerate}[label=\alph*)]
+		\item $p \oplus q = \neg (p \land q) \land (p \lor q)$;
+		\item $\left[(p \implies q) \land (q \implies r)\right] \implies (p \implies r)$
+	\end{enumerate}
+	
+	\item Usando leyes lógicas, determine si las siguientes proposiciones son tautologías, contradicciones o contingencias:
+	\begin{enumerate}
+		\item \( (p \land q) \land (\neg p \lor \neg q) \)
+		\item $\left[ (p \land q) \implies r \right] \iff \left[p \implies (q \implies r)\right]$
+	\end{enumerate}
+	
+	\item Demuestre las siguientes equivalencias lógicas:
+	\begin{enumerate}[label=\alph*)]
+		\item $ \neg(p \lor (q \land r)) \equiv (\neg p \land \neg q) \lor (\neg p \land \neg r)$
+		\item $(p \implies q) \land (r \implies s) \equiv (\neg q \lor s) \lor (\neg p \lor r)$
+	\end{enumerate}
+	
+	\item Simplifique las siguientes expresiones:
+	\begin{enumerate}[label=\alph*)]
+		\item \( (p \land q) \lor (p \land \neg q) \lor (\neg p \land q) \lor (\neg p \land \neg q) \)
+		\item $\neg [(p \lor q) \land (\neg p \lor r)] \lor (q \land r)$
+	\end{enumerate}
+	
+	\item Utilizando el método de reducción al absurdo, demuestre que la siguiente proposición es una tautología:
+	\[ \left[(p \implies q) \land p\right] \implies q \]
+	
+	\item Un ingeniero de software está diseñando un sistema de control de acceso que requiere que se cumplan dos condiciones para permitir el acceso:
+	
+	\begin{itemize}[itemsep=-2pt]
+		\item La persona debe tener una tarjeta de acceso válida;
+		\item La persona debe ingresar el código de acceso correcto.
+	\end{itemize}
+	Escriba una expresión lógica que represente la condición necesaria y suficiente para permitir el acceso al sistema.
+	
+	\item Un circuito lógico tiene tres entradas, $A$, $B$ y $C$, y una salida, $S$. La salida $S$ es verdadera si y solo si al menos dos de las entradas son verdaderas. Diseñe una expresión lógica que represente el comportamiento de este circuito.
+	
+	\item Considere la siguiente proposición: ``Si un número es divisible por 6, entonces es divisible por 2 y por 3''. Escriba la contrarrecíproca de esta proposición.
+	
+	\item Un ingeniero civil está diseñando un sistema de drenaje para una carretera. El sistema debe activarse si se cumplen las siguientes condiciones:
+	\begin{itemize}[itemsep=-3pt]
+		\item El nivel de agua en el sensor 1 supera un umbral crítico ($p$).
+		\item El nivel de agua en el sensor 2 supera un umbral crítico ($q$).
+		\item No hay un corte de energía en el sistema ($r$).
+	\end{itemize}
+	
+	Escriba una expresión lógica que represente la condición necesaria y suficiente para que el sistema de drenaje se active.
+	
+	% Ingeniería Electromecánica
+	\item Un sistema electromecánico tiene tres componentes principales: un motor ($m$), un sensor de temperatura ($t$) y un interruptor de emergencia ($e$). El sistema funcionará correctamente solo si se cumplen las siguientes condiciones:
+	
+	\begin{itemize}[itemsep=-3pt]
+		\item El motor está encendido y el sensor de temperatura no detecta un sobrecalentamiento, o
+		\item El interruptor de emergencia está apagado.
+	\end{itemize}
+	
+	Escriba una expresión lógica que represente el funcionamiento correcto del sistema.
+	
+	% Ingeniería Eléctrica
+	\item Un circuito lógico tiene cuatro entradas, $A$, $B$, $C$ y $D$, y una salida, $Y$. La salida $Y$ es verdadera si y solo si se cumplen las siguientes condiciones:
+	
+	\begin{itemize}[itemsep=-3pt]
+		\item $A$ y $B$ son verdaderas, o
+		\item $C$ es verdadera y $D$ es falsa.
+	\end{itemize}
+	
+	Diseñe una expresión lógica que represente el comportamiento de este circuito y simplifique la expresión resultante tanto como sea posible.
+	
+	% Ingeniería Industrial
+	\item Una empresa de logística tiene tres almacenes: $A$, $B$ y $C$. Un pedido puede ser enviado desde cualquiera de estos almacenes, pero se deben cumplir ciertas condiciones para seleccionar el almacén adecuado:
+	
+	\begin{itemize}[itemsep=-3pt]
+		\item Si el pedido es urgente y el almacén $A$ tiene el producto en stock, entonces se envía desde $A$.
+		\item Si el pedido no es urgente y el almacén $B$ tiene el producto en stock y el costo de envío desde $B$ es menor que desde $C$, entonces se envía desde $B$.
+		\item En cualquier otro caso, se envía desde $C$.
+	\end{itemize}
+	Escriba una expresión lógica que represente la selección del almacén para un pedido dado.
+	
+	% Ingeniería Civil
+	\item Un puente levadizo se abrirá solo si se cumplen todas las siguientes condiciones:
+	
+	\begin{itemize}[itemsep=-3pt]
+		\item Hay un barco que necesita pasar ($b$).
+		\item El puente no está en mantenimiento ($m$).
+		\item Se ha emitido una señal de autorización desde el centro de control ($s$).
+	\end{itemize}	
+	Además, el puente se cerrará inmediatamente si se detecta un vehículo en el puente ($v$), independientemente de cualquier otra condición.
+	
+	Escriba expresiones lógicas que representen las condiciones para abrir y cerrar el puente.
+	
+	% Ingeniería Electromecánica
+	\item Un sistema de control de temperatura en un edificio utiliza dos termostatos ($T_1$ y $T_2$) y un sistema de calefacción ($C$). El sistema de calefacción se encenderá si se cumple alguna de las siguientes condiciones:
+	\begin{itemize}[itemsep=-3pt]
+		\item La temperatura medida por $T_1$ es inferior a la temperatura deseada ($d_1$) y la temperatura medida por $T_2$ también es inferior a la temperatura deseada ($d_2$).
+		\item La temperatura medida por $T_1$ es inferior a un umbral crítico ($c_1$), independientemente de la temperatura medida por $T_2$.
+	\end{itemize}	
+	Escriba una expresión lógica que represente el encendido del sistema de calefacción.
+	
+	% Ingeniería Eléctrica
+	\item Un sistema de alarma contra incendios se activará si se detecta humo ($h$) o si se detecta un aumento rápido de temperatura ($t$). Sin embargo, la alarma no se activará si el sistema está en modo de prueba ($p$).
+	
+	Escriba una expresión lógica que represente la activación de la alarma contra incendios.
+	
+	% Ingeniería Industrial
+	\item Una línea de producción tiene tres estaciones de trabajo: $E_1$, $E_2$ y $E_3$. Un producto debe pasar por las tres estaciones en orden. Sin embargo, si la estación $E_2$ está fuera de servicio ($f$), el producto puede pasar directamente de $E_1$ a $E_3$.
+	
+	Escriba una expresión lógica que represente el flujo de un producto a través de la línea de producción.
+	
+	% Desafío - Combinación de campos
+	\item Un sistema de control de tráfico en una intersección utiliza sensores para detectar la presencia de vehículos en cada carril ($v_1$, $v_2$, $v_3$, $v_4$) y semáforos para controlar el flujo de tráfico ($s_1$, $s_2$). El sistema debe cumplir las siguientes condiciones:
+	\begin{itemize}[itemsep=-3pt]
+		\item Si hay un vehículo en el carril 1 y no hay vehículos en el carril 3, entonces el semáforo 1 debe estar en verde y el semáforo 2 en rojo.
+		\item Si hay un vehículo en el carril 2 o en el carril 4, entonces el semáforo 2 debe estar en verde y el semáforo 1 en rojo.
+		\item Si no hay vehículos en ningún carril, ambos semáforos deben estar en rojo.
+	\end{itemize}
+	
+	Escriba expresiones lógicas que representen el control de los semáforos en esta intersección.
+	
+	% Desafío - Pensamiento crítico
+	\item Un ingeniero está diseñando un sistema de seguridad para una bóveda bancaria. El sistema requiere que se cumplan tres condiciones para abrir la bóveda:
+	
+	\begin{itemize}[itemsep=-3pt]
+		\item Se debe ingresar la contraseña correcta ($c$).
+		\item Se debe escanear una huella dactilar autorizada ($h$).
+		\item Se debe ingresar un código de seguridad de un solo uso generado por un token ($t$).
+	\end{itemize}	
+	Sin embargo, si se detecta un intento de intrusión ($i$), la bóveda se bloqueará inmediatamente, incluso si se cumplen las tres condiciones anteriores.
+	
+	Escriba una expresión lógica que represente la apertura de la bóveda.
+\end{enumerate}
+
+\rule{\textwidth}{.5pt}
 
 \section{Lógica predicativa}
 \index{lógica!predicativa}
@@ -1563,6 +1743,96 @@ La negación de una proposición universal es una proposición existencial, y vi
 	\end{fmd-example}
 \end{enumerate}
 
+\rule{\textwidth}{.5pt}
+
+\subsection{Ejercicios}
+
+\begin{enumerate}[label=\textbf{\arabic*}.]
+	
+	% Ingeniería Civil
+	\item Exprese la siguientes afirmaciones en lenguaje simbólico utilizando cuantificadores y predicados:
+	\begin{enumerate}
+		% Ingeniería Civil
+		\item ``Todos los edificios construidos con hormigón armado son resistentes a los terremotos, pero algunos edificios no son resistentes a los terremotos''.
+		
+		% Ingeniería Electromecánica
+		\item ``Existe al menos un motor eléctrico que es eficiente y silencioso, pero no todos los motores eléctricos son eficientes''.
+		
+		% Ingeniería Eléctrica
+		\item Niegue la siguiente proposición: ``Para todo circuito eléctrico, si el circuito está cerrado y hay una fuente de voltaje, entonces fluirá corriente''.
+		
+		% Ingeniería Industrial
+		\item ``Existe un proceso de producción que minimiza el costo y maximiza la calidad, pero no todos los procesos de producción maximizan la calidad''.
+		
+		% Ingeniería Genérica
+		\item ``Para todo ingeniero, si el ingeniero tiene experiencia y está motivado, entonces será exitoso en su carrera''.
+	\end{enumerate}
+	
+	\item Utilice lógica predicativa para justificar su respuesta.
+	
+	\begin{enumerate}
+		% Ingeniería Civil
+		\item Un ingeniero civil está analizando la resistencia de diferentes materiales de construcción. Se sabe que:
+		\begin{itemize}[itemsep=-3pt]
+			\item Todos los materiales compuestos son ligeros.
+			\item Algunos materiales compuestos son resistentes a la corrosión.
+			\item Todos los materiales metálicos son resistentes a la corrosión.
+			\item Ningún material metálico es ligero.
+		\end{itemize}
+		
+		?`Se puede concluir que todos los materiales resistentes a la corrosión son ligeros?
+		
+		% Ingeniería Electromecánica
+		\item Un ingeniero electromecánico está diseñando un sistema de control para un robot. El sistema debe cumplir las siguientes especificaciones:
+		\begin{itemize}[itemsep=-3pt]
+			\item El robot debe detenerse si detecta un obstáculo o si recibe una señal de parada de emergencia.
+			\item El robot debe moverse hacia adelante solo si no detecta un obstáculo y no recibe una señal de parada de emergencia.
+		\end{itemize}
+		Formalice estas especificaciones.
+		
+		% Ingeniería Eléctrica
+		\item Un ingeniero eléctrico está analizando un circuito digital complejo. Se sabe que:
+		\begin{itemize}[itemsep=-3pt]
+			\item Si la señal A es alta y la señal B es baja, entonces la salida Y es alta.
+			\item Si la señal C es alta o la señal D es baja, entonces la salida Y es baja.
+		\end{itemize}
+		?`Es posible que la salida Y sea alta si la señal A es baja?
+		
+		% Ingeniería Industrial
+		\item Una empresa de manufactura produce dos tipos de productos: A y B. Se sabe que:
+		
+		\begin{itemize}[itemsep=-3pt]
+			\item Todos los productos A son rentables.
+			\item Algunos productos B son rentables.
+			\item Todos los productos rentables tienen alta demanda.
+		\end{itemize}
+		?`Se puede concluir que todos los productos B tienen alta demanda?
+		
+		% Ingeniería Genérica
+		\item Un equipo de ingenieros está trabajando en un proyecto de investigación y desarrollo. Se sabe que:
+		
+		\begin{itemize}[itemsep=-3pt]
+			\item Si el proyecto es innovador y tiene potencial comercial, entonces recibirá financiación.
+			\item El proyecto es innovador.
+			\item El proyecto no ha recibido financiación.
+		\end{itemize}
+		?`Qué se puede concluir sobre el potencial comercial del proyecto?
+	\end{enumerate}
+	
+	\item Considere la siguiente afirmación:
+	
+	``Para todos los números reales $x$ e $y$, si $x$ es positivo e $y$ es negativo, entonces $xy$ es negativo.''
+	
+	Exprese esta afirmación utilizando cuantificadores y predicados, y luego demuestre su validez utilizando lógica simbólica.
+	
+	\item Sea $f: \mathbb{R} \rightarrow \mathbb{R}$ una función. Utilice lógica simbólica para demostrar la equivalencia de las siguientes afirmaciones:
+	\begin{itemize}[itemsep=-3pt]
+		\item $f$ es inyectiva.
+		\item Para todos los números reales $x$ e $y$, si $f(x) = f(y)$, entonces $x = y$.
+	\end{itemize}
+\end{enumerate}
+
+\rule{\textwidth}{.5pt}
 
 \section{Sistema axiomático de Peano} \index{Peano}
 
@@ -1835,26 +2105,3 @@ No todos los conjuntos infinitos tienen la misma cardinalidad. Un conjunto es \t
 		En ambos casos llegamos a una contradicción. Por lo tanto, nuestra suposición inicial de que existe una función sobreyectiva $f: A \rightarrow \mathcal{P}(A)$ debe ser falsa, lo que implica que la cardinalidad de $\mathcal{P}(A)$ es estrictamente mayor que la cardinalidad de $A$.
 	\end{proof}
 \end{fmd-theorem}
-
-
-\section{Ejercicios}
-
-{ \color{red} Incompleto }
-
-\begin{enumerate}[label=\textbf{\arabic*}.]
-	\item Escribe en símbolos:
-	\begin{itemize}
-		\item ``Si no hay ruidos y no estás sordo, entonces debes oírme''.
-		\item ``Iré al cine o al teatro, si me invitas''.
-		\item ``Si el aumento de la inflación implica la disminución de la balanza de pagos, entonces, 
-		si no disminuye la balanza de pagos no aumenta la inflación''.
-		\item ``Federico irá a Encarnación o a Virgen del Paraná si y sólo si gana la lotería y no se 
-		arruina con las apuestas''.
-		\item ``Si $x = 1$ e $y = 2$, entonces $z = 3$. Si, si $y = 2$, $z = 3$ entonces $w = 0$. $x = 1$. Por consiguiente, $w = 0$''.
-	\end{itemize}
-	\item Realiza la tabla de valores de verdad para probar:
-	\begin{itemize}
-		\item $p \oplus q = \neg (p \land q) \land (p \lor q)$;
-		\item La distributividad de la conjunción respecto de la disyunción.
-	\end{itemize}
-\end{enumerate}
