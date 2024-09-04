@@ -1,13 +1,13 @@
 \chapter{Conjuntos y funciones}
 
-\section{Introducción}
+\section*{Introducción}
 
 Este capítulo introduce los conceptos fundamentales de \glspl{conjunto} y \glspl{funcion}, herramientas matemáticas esenciales en diversas áreas de la ingeniería. Se aborda la definición de conjunto, sus diferentes representaciones (extensión y comprensión), y las operaciones básicas entre conjuntos como unión, intersección, diferencia y complemento. Se estudian las relaciones de pertenencia e inclusión entre conjuntos, y el concepto de conjunto vacío y conjunto universal.
 
 Además, se introduce el concepto de función, tipos de funciones (inyectiva, sobreyectiva, biyectiva) y su representación cartesiana. Se estudian operaciones entre funciones como la composición y la función inversa, y se analizan ejemplos de funciones especiales relevantes en matemáticas.
 
 
-\subsection{Relevancia en ingeniería}
+\subsection*{Relevancia en ingeniería}
 
 \begin{itemize}
 	\item \textit{Modelado de sistemas}: Los conjuntos se utilizan para representar colecciones de objetos o elementos en un sistema, como por ejemplo, un conjunto de usuarios de una red de telecomunicaciones, un conjunto de componentes en un circuito eléctrico o para analizar las propiedades del suelo de un terreno;
@@ -640,7 +640,60 @@ Algunas aplicaciones:
 	\end{itemize}
 \end{fmd-example}
 
+\rule{\textwidth}{.5pt}
 
+\subsection{Ejercicios}
+
+\begin{enumerate}
+	
+	\item Sean $A$, $B$ y $C$ conjuntos. Demuestre que las siguientes afirmaciones son equivalentes: $A = B$; $A \cap B = A$; $A \cup B = B$; $A \setminus B = \emptyset$; $B^c = A^c$.
+	
+	\item Sean $A$ y $B$ conjuntos. Simplifique la siguiente expresión:
+	\( (A \cap B^c) \cup (A^c \cap B) \cup (A \cap B) \)
+	\item Sean $A$, $B$ y $C$ conjuntos. Demuestre que: \( A \triangle (B \triangle C) = (A \triangle B) \triangle C \)
+	
+	\item Sea $A$ un conjunto finito. Demuestre que $|\mathcal{P}(A)| = 2^{|A|}$.
+	
+	\item Sean $A=\{1,2,3\}$, $B=\{a,b\}$ y $C=\{x,y,z\}$. Encuentre $(A \times B) \cap (A \times C)$
+	
+	\item Sea $A=\{\emptyset, \{\emptyset\}\}$. Encuentre $P(P(A))$
+	
+	\item Sean $A$ y $B$ conjuntos. Demuestre que $A$ y $B$ son disjuntos si y solo si $A \setminus B=A$.
+	
+	\item Sean $A$ y $B$ conjuntos finitos. Si $|A \cup B|=10$, $|A \cap B|=3$ y $|A|=7$, ?`cuál es la cardinalidad de $B$?
+	
+	\item En un sistema de comunicación, se transmiten mensajes utilizando un alfabeto de 5 símbolos. Cada mensaje tiene una longitud de 3 símbolos.
+	\begin{enumerate}[itemsep=-3pt]
+		\item ?`Cuántos mensajes diferentes se pueden transmitir?
+		\item Si se introduce un nuevo símbolo en el alfabeto, ?`cuántos mensajes adicionales se pueden transmitir?
+	\end{enumerate}
+	
+	\item Defina un conjunto bien ordenado y dé un ejemplo de un conjunto que no esté bien ordenado.
+	
+	\item En un sistema de control, se tienen tres sensores que miden diferentes variables. El sensor $A$ detecta eventos en el conjunto $\{1,2,3,4\}$, el sensor $B$ en el conjunto $\{3,4,5,6\}$ y el sensor $C$ en el conjunto $\{1,3,5,7\}$.
+	\begin{enumerate}[itemsep=-3pt]
+		\item ?`Qué eventos son detectados por al menos dos sensores?
+		\item ?`Qué eventos son detectados por los tres sensores?
+		\item Si se considera un evento crítico aquel que es detectado por al menos dos sensores, ?`cuáles son los eventos críticos?
+	\end{enumerate}
+
+	\item Una imagen digital binaria (en blanco y negro) se puede representar como un subconjunto del plano $\mathbb{R}^2$. Cada punto de la imagen corresponde a un píxel, que puede ser blanco o negro.
+	\begin{enumerate}[itemsep=-3pt]
+		\item Defina matemáticamente una imagen digital en blanco y negro.
+		\item ?`Cómo se representaría la operación de ``invertir los colores'' de una imagen utilizando la teoría de conjuntos?
+	\end{enumerate}
+	
+	\item En un sistema de aprendizaje automático, se tienen dos conjuntos de datos: un conjunto de entrenamiento $A$ y un conjunto de prueba $B$. El conjunto de entrenamiento se utiliza para ajustar los parámetros del modelo, y el conjunto de prueba se utiliza para evaluar su rendimiento.
+	\begin{enumerate}[itemsep=-3pt]
+		\item ?`Por qué es importante que $A$ y $B$ sean disjuntos?
+		\item ?`Qué problemas podrían surgir si $A$ y $B$ no fueran disjuntos?
+	\end{enumerate}
+	
+	\item Investigue y presente un problema abierto en la teoría de conjuntos que tenga relevancia en la ingeniería o en las ciencias de la computación.
+	
+\end{enumerate}
+
+\rule{\textwidth}{.5pt}
 \section{Relaciones y particiones}
 \index{relaciones!particiones}
 	Una \gls{relacion} es un vínculo o una correspondencia. Se trata de la correspondencia que existe entre dos conjuntos: a cada elemento del primer conjunto le corresponde al menos un elemento del segundo conjunto.
@@ -781,6 +834,16 @@ Las clases de equivalencia conforman una partición del conjunto $A$.
 		$[z_1] \cup [z_2] \cup [z_6] = A$
 	\end{minipage}
 \end{fmd-example}
+
+\rule{\textwidth}{.5pt}
+
+\subsection{Ejercicios}
+
+\begin{enumerate}
+	
+	\item Sea $A$ un conjunto y sea $\{B_i\}_{i \in I}$ una partición de $A$. Demuestre que para cualquier conjunto $C$, se cumple que:
+	\[ C \cap A = \bigcup_{i \in I} (C \cap B_i) \]
+\end{enumerate}
 
 \section{Funciones}
 Esta sección está basada en \cite{rojoAlgebra8vaEd} cap. 4. \index{funciones}
@@ -2801,7 +2864,6 @@ Sean $f:X \rightarrow Y$ y los subconjuntos $A \subset Y$, $B \subset Y$.
 	\]
 \end{fmd-example}
 
-
 \subsection{Restricción y extensión de una función} \label{sec:restr}
 \vspace{3mm} \index{función!restricción} \index{restricción!función}
 \begin{fmd-definition}[Restricción de una función]
@@ -2825,3 +2887,18 @@ Sea $y_0 \in Y$, definimos:
 	g(x) & \mbox{si } x \in A\\
 	y_0 & \mbox{si } x \in X - A
 \end{cases} \]
+
+\rule{\textwidth}{.5pt}
+
+\subsection{Ejercicios}
+
+\begin{enumerate}
+	\item Sean $A$ y $B$ conjuntos. Demuestre que existe una biyección entre $\mathcal{P}(A \times B)$ y el conjunto de todas las relaciones de $A$ en $B$.
+	
+	\item Sean $A$ y $B$ conjuntos finitos y sea $f: A \to B$ una función. 
+	\begin{enumerate}
+		\item Demuestre que si $f$ es inyectiva, entonces $|A| \leq |B|$.
+		\item Demuestre que si $f$ es sobreyectiva, entonces $|A| \geq |B|$.
+		\item Demuestre que si $f$ es biyectiva, entonces $|A| = |B|$.
+	\end{enumerate}
+\end{enumerate}

@@ -958,11 +958,11 @@ En consecuencia, la negación de la primera equivale a la negación de la segund
 \[ \neg (p \implies q) \iff \neg [ \neg (p \land \neg q)] \]
 
 y por la propiedad de \textit{involución} se tiene:
-\[ \neg (p \implies q) \iff (p \land \neg q) \]
+\[ \boxed{\neg (p \implies q) \iff (p \land \neg q)} \]
 
 La negación de una implicación no es una implicación, sino la conjunción del antecedente con la negación del consecuente.
 
-\begin{fmd-example}[Negación de una implicación \(\neg (p \implies q) \iff (p \land \neg q)  \)]
+\begin{fmd-example}[Negación de una implicación]
 	Sean las implicaciones:
 	
 	\begin{enumerate}[label=\roman*)]
@@ -1536,6 +1536,8 @@ Reconocer las falacias formales es esencial para evaluar críticamente los argum
 	\item Utilizando el método de reducción al absurdo, demuestre que la siguiente proposición es una tautología:
 	\[ \left[(p \implies q) \land p\right] \implies q \]
 	
+	\item Demuestre por contradicción que si $A \subset B$ y $B \cap C=\emptyset$, entonces $A \cap C= \emptyset$.
+	
 	\item Un ingeniero de software está diseñando un sistema de control de acceso que requiere que se cumplan dos condiciones para permitir el acceso:
 	
 	\begin{itemize}[itemsep=-2pt]
@@ -1768,54 +1770,53 @@ La negación de una proposición universal es una proposición existencial, y vi
 		\item ``Para todo ingeniero, si el ingeniero tiene experiencia y está motivado, entonces será exitoso en su carrera''.
 	\end{enumerate}
 	
-	\item Utilice lógica predicativa para justificar su respuesta.
+	\item Considere los siguientes casos. Utilice lógica predicativa para justificar su respuesta.
 	
 	\begin{enumerate}
 		% Ingeniería Civil
 		\item Un ingeniero civil está analizando la resistencia de diferentes materiales de construcción. Se sabe que:
-		\begin{itemize}[itemsep=-3pt]
+		\begin{enumerate}[itemsep=-3pt, label=\roman*)]
 			\item Todos los materiales compuestos son ligeros.
 			\item Algunos materiales compuestos son resistentes a la corrosión.
 			\item Todos los materiales metálicos son resistentes a la corrosión.
 			\item Ningún material metálico es ligero.
-		\end{itemize}
+		\end{enumerate}
 		
 		?`Se puede concluir que todos los materiales resistentes a la corrosión son ligeros?
 		
 		% Ingeniería Electromecánica
 		\item Un ingeniero electromecánico está diseñando un sistema de control para un robot. El sistema debe cumplir las siguientes especificaciones:
-		\begin{itemize}[itemsep=-3pt]
+		\begin{enumerate}[itemsep=-3pt, label=\roman*)]
 			\item El robot debe detenerse si detecta un obstáculo o si recibe una señal de parada de emergencia.
 			\item El robot debe moverse hacia adelante solo si no detecta un obstáculo y no recibe una señal de parada de emergencia.
-		\end{itemize}
+		\end{enumerate}
 		Formalice estas especificaciones.
 		
 		% Ingeniería Eléctrica
 		\item Un ingeniero eléctrico está analizando un circuito digital complejo. Se sabe que:
-		\begin{itemize}[itemsep=-3pt]
+		\begin{enumerate}[itemsep=-3pt, label=\roman*)]
 			\item Si la señal A es alta y la señal B es baja, entonces la salida Y es alta.
 			\item Si la señal C es alta o la señal D es baja, entonces la salida Y es baja.
-		\end{itemize}
+		\end{enumerate}
 		?`Es posible que la salida Y sea alta si la señal A es baja?
 		
 		% Ingeniería Industrial
 		\item Una empresa de manufactura produce dos tipos de productos: A y B. Se sabe que:
 		
-		\begin{itemize}[itemsep=-3pt]
+		\begin{enumerate}[itemsep=-3pt, label=\roman*)]
 			\item Todos los productos A son rentables.
 			\item Algunos productos B son rentables.
 			\item Todos los productos rentables tienen alta demanda.
-		\end{itemize}
+		\end{enumerate}
 		?`Se puede concluir que todos los productos B tienen alta demanda?
 		
 		% Ingeniería Genérica
 		\item Un equipo de ingenieros está trabajando en un proyecto de investigación y desarrollo. Se sabe que:
-		
-		\begin{itemize}[itemsep=-3pt]
+		\begin{enumerate}[itemsep=-3pt, label=\roman*)]
 			\item Si el proyecto es innovador y tiene potencial comercial, entonces recibirá financiación.
 			\item El proyecto es innovador.
 			\item El proyecto no ha recibido financiación.
-		\end{itemize}
+		\end{enumerate}
 		?`Qué se puede concluir sobre el potencial comercial del proyecto?
 	\end{enumerate}
 	
@@ -1826,10 +1827,10 @@ La negación de una proposición universal es una proposición existencial, y vi
 	Exprese esta afirmación utilizando cuantificadores y predicados, y luego demuestre su validez utilizando lógica simbólica.
 	
 	\item Sea $f: \mathbb{R} \rightarrow \mathbb{R}$ una función. Utilice lógica simbólica para demostrar la equivalencia de las siguientes afirmaciones:
-	\begin{itemize}[itemsep=-3pt]
+	\begin{enumerate}[itemsep=-3pt]
 		\item $f$ es inyectiva.
 		\item Para todos los números reales $x$ e $y$, si $f(x) = f(y)$, entonces $x = y$.
-	\end{itemize}
+	\end{enumerate}
 \end{enumerate}
 
 \rule{\textwidth}{.5pt}
@@ -2070,13 +2071,63 @@ La demostración se realiza en dos partes: existencia y unicidad.
 \index{numerabilidad}
 No todos los conjuntos infinitos tienen la misma cardinalidad. Un conjunto es \textit{numerable} si y solo si es biyectable con $\N$. Un conjunto es \textit{contable} si y sólo si es finito o numerable.
 
-\begin{fmd-example}
-	\begin{enumerate}
-		\item El conjunto de los enteros $\Z$ es numerable.
-		\item El conjunto de los números racionales $\Q$ es numerable.
-		\item $\R$, el conjunto de los números reales no es numerable.
-	\end{enumerate}
-\end{fmd-example}
+\begin{fmd-theorem}[Numerabilidad de $\Z$]
+	El conjunto de los enteros $\Z$ es numerable.
+\end{fmd-theorem}
+
+\begin{fmd-proof}
+	$\Z$ es numerable si existe una función biyectiva $f: \N \rightarrow \Z$
+	
+	Observamos lo siguiente:
+	
+	\[ \begin{array}{lcccccccc}
+		\N: & 1 & 2 & 3 & 4 & 5 & 6 & 7 & \cdots\\
+		f & \downarrow & \downarrow & \downarrow & \downarrow & \downarrow & \downarrow & \downarrow & \cdots\\
+		\Z: & 0 & -1 & 1 & -2 & 2 & -3 & 3 & \cdots
+	\end{array} \]
+	De donde:
+	\[ f(n) = \begin{cases}
+		\dfrac{n-1}{2} & \text{ si } n \text{ es impar}\\[3mm]
+		- \dfrac{n}{2} & \text{ si } n \text{ es par}
+	\end{cases} \]
+	
+	Probemos que esta función es biyectiva:
+	
+	\begin{itemize}
+		\item Inyectividad
+		\[ n_1, n_2 \in \N, \quad f(n_1) = f(n_2) \implies n_1 = n_2\]
+		\begin{enumerate}[label=\arabic*)]
+			\item $n_1$, $n_2$ impares:
+			\[ f(n_1) = f(n_2) \rightarrow \dfrac{n_1 - 1}{2} = \dfrac{n_2 - 1}{2} \implies n_1 = n_2 \]
+			\item $n_1$, $n_2$ pares:
+			\[ f(n_1) = f(n_2) \rightarrow -\dfrac{n_1}{2} = -\dfrac{n_2}{2} \implies n_1 = n_2 \]
+		\end{enumerate}
+		$f(n)$ es inyectiva.
+		
+		\item Sobreyectividad
+		
+		Debemos probar que: \( \forall z \in \Z \ \exists \, n \in \N : f(n) = z \)
+		\begin{enumerate}[label=\arabic*)]
+			\item $z = 0$:
+			\[ z = f(n) = \dfrac{n - 1}{2} = 0 \implies n = 1 \]
+			\item $z > 0$:
+			\[ z = f(n) = \dfrac{n - 1}{2} \implies n = 2z + 1 \]
+			\item $z < 0$:
+			\[ z = f(n) = -\dfrac{n}{2} \implies n = -2z \]
+		\end{enumerate}
+		$f(n)$ es sobreyectiva.
+	\end{itemize}
+	
+	$f(n)$ es biyectiva, por tanto, por definición de numerabilidad, $\Z$ es numerable.
+\end{fmd-proof}
+
+\begin{theorem}[Numerabilidad de $\Q$]
+	El conjunto de los números racionales $\Q$ es numerable.
+\end{theorem}
+
+\begin{theorem}[$\R$ no es numerable]
+	$\R$, el conjunto de los números reales no es numerable.
+\end{theorem}
 
 \begin{fmd-theorem}[Teorema de Cantor] \index{Cantor} \index{teorema!Cantor}
 	El conjunto potencia $\mathcal{P}(A)$ de cualquier conjunto $A$ tiene una cardinalidad estrictamente mayor que la cardinalidad de $A$:
@@ -2105,3 +2156,52 @@ No todos los conjuntos infinitos tienen la misma cardinalidad. Un conjunto es \t
 		En ambos casos llegamos a una contradicción. Por lo tanto, nuestra suposición inicial de que existe una función sobreyectiva $f: A \rightarrow \mathcal{P}(A)$ debe ser falsa, lo que implica que la cardinalidad de $\mathcal{P}(A)$ es estrictamente mayor que la cardinalidad de $A$.
 	\end{proof}
 \end{fmd-theorem}
+
+\rule{\textwidth}{.5pt}
+
+\subsection{Ejercicios}
+
+\begin{enumerate}
+% Axiomas de Peano y Principio de Inducción
+\item Demuestre por inducción:
+\begin{enumerate}
+	\item Para todo número natural $n$, la suma de los primeros $n$ números impares es igual a $n^2$.
+	\item Para todo número natural $n \geq 1$, \( 1^3 + 2^3 + \dots + n^3 = \left[ \dfrac{n(n+1)}{2} \right]^2 \)
+	\item Para la sucesión definida por recurrencia: $a_1 = 2$, $a_{n+1} = 3a_n - 1$; $a_n = \frac{3^n + 1}{2}$ para todo $n \in \mathbb{N}$.
+\end{enumerate}
+
+\item Demuestre que todo número natural $n > 1$ tiene un divisor primo. (Sugerencia: use el principio del buen orden)
+
+% Teorema Fundamental de la Aritmética
+\item Demuestre que $\sqrt{6}$ es irracional utilizando el Teorema Fundamental de la Aritmética.
+
+\item Dé un ejemplo de dos conjuntos infinitos $A$ y $B$ tales que $A \cap B$ sea finito y no vacío.
+
+% Conjuntos Finitos e Infinitos, Numerabilidad
+\item Demuestre que el conjunto de todas las sucesiones finitas de 0's y 1's es numerable.
+
+\item Sea $A$ un conjunto contable. Demuestre que el conjunto de todas las funciones de $A$ en $\{0, 1\}$ es no numerable.
+
+% Aplicaciones a la Ingeniería
+\item Un circuito digital tiene $n$ entradas. ?`Cuántas funciones booleanas diferentes se pueden construir con estas $n$ entradas?
+
+\item Un ingeniero civil está diseñando un puente colgante con $n$ cables principales numerados de 1 a $n$. La tensión en cada cable se determina según las siguientes condiciones:
+
+\begin{enumerate}[itemsep=-3pt, label=\roman*)]
+	\item La tensión en el primer cable ($T_1$) es de 1000 kN.
+	\item Para cada cable subsiguiente, la tensión aumenta en un 10\% respecto al cable anterior y se le suma una carga constante de 50 kN.
+\end{enumerate}
+
+\begin{enumerate}
+	\item Formule una relación de recurrencia que describa la tensión en el k-ésimo cable.
+	\item Utilizando el principio de inducción matemática, demuestre que la fórmula general para la tensión en el k-ésimo cable es:
+	
+	\[ T_k = 1000 \cdot 1.1^{k-1} + 500 \cdot (1.1^{k-1} - 1), \quad \text{para } k \geq 1 \]
+	
+	\item Calcule la tensión en el décimo cable ($T_{10}$) utilizando la fórmula demostrada.
+\end{enumerate}
+
+% Conexiones con otras áreas de la matemática / Problemas históricos
+\item Demuestre que hay infinitos números primos de la forma $4k + 3$, donde $k$ es un entero no negativo. (Sugerencia: Adapte la demostración de Euclides de la infinitud de los primos)
+
+\end{enumerate}
