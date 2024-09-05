@@ -320,6 +320,10 @@ El \gls{venn} es una representación visual de los conjuntos utilizando diagrama
 	\end{enumerate}
 \end{itemize}
 
+\begin{lgnote}
+	El símbolo $\implies$ es la implicación o condicional ``\textit{si ..., entonces}''. Se explica con rigor en \ref{sec:condicional}.
+\end{lgnote}
+
 \begin{example}[Complemento]
 	Si \(U\) es el conjunto de números naturales y \(A\) el conjunto de números pares,  \(A = \{2, 4, 6, \ldots \}\), entonces \(A^c\) es el conjunto de números impares, \(A^c = \{1, 3, 5, 7, \ldots\}\).
 \end{example}
@@ -723,7 +727,7 @@ Conforme a la definición, las relaciones de equivalencia satisfacen:
 	\[ \forall x, y \in A: x \equiv y \implies y \equiv x \]
 	
 	\item \textbf{Transitividad}: Si un elemento es equivalente a otro y éste es equivalente a un tercero, entonces el primero es equivalente al tercero.
-	\[ \forall x, y, z \in A: x \equiv y \land y \equiv z \implies x \equiv z \]
+	\[ \forall x, y, z \in A: x \equiv y \text{ y } y \equiv z \implies x \equiv z \]
 \end{enumerate}
 
 \subsubsection{Clases de equivalencia y conjunto cociente}
@@ -779,7 +783,7 @@ En la fig. se muestra, en un diagrama, las relaciones.
 
 \begin{fmd-definition}[Partición] \index{partición}
 	Dado un conjunto no vacío $A$, una \gls{particion} de $A$ es una colección finita o infinita de conjuntos de $A$ que cumplen:
-	\[ A_i \cap A_j = \emptyset \; \forall \, i \ne j \quad \land \quad \cup_{i=1}^n A_i = A \]
+	\[ A_i \cap A_j = \emptyset \; \forall \, i \ne j \quad \text{ y } \quad \cup_{i=1}^n A_i = A \]
 \end{fmd-definition}
 
 En la fig. \ref{fig:particion} se muestra en un diagrama, una partición de $A$.
@@ -811,6 +815,10 @@ Toda relación de equivalencia definida en un conjunto no vacío determina una p
 		\item $\forall a \in A, \exists i \in I / a \in A_i$
 	\end{enumerate}
 \end{fmd-theorem}
+
+\begin{lgnote}
+	El símbolo $\iff$ se lee ``si y sólo si'', es la doble implicación que se explica con rigor en \ref{sec:bicondicional}.
+\end{lgnote}
 
 Las clases de equivalencia conforman una partición del conjunto $A$.
 
