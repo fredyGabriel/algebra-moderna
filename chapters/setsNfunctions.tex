@@ -482,6 +482,8 @@ El \gls{venn} es una representación visual de los conjuntos utilizando diagrama
 	
 	\begin{enumerate}
 		\item El producto cartesiano no es conmutativo, en general, \(A \times B \neq B \times A\).
+		\item No es asociativo: \( (A \times B) \times C \neq A \times (B \times C) \), ya que $((a, b), c)$ y $(a, (b, c))$ son estructuras diferentes\footnote{Aunque no sean iguales como conjuntos, en algunas aplicaciones es común que estas expresiones se interpreten de manera equivalente o que los paréntesis se omitan si el contexto es claro, pero desde el punto de vista estricto de teoría de conjuntos, no son iguales.}.
+		\item No tiene elemento neutro: No hay un conjunto $E$ tal que $A \times E = A$ para todo conjunto $A$.
 		\item Si \(A\) tiene \(m\) elementos y \(B\) tiene \(n\) elementos, entonces \(A \times B\) tiene \(m \cdot n\) elementos.
 		\item El producto cartesiano se puede extender a más de dos conjuntos. Por ejemplo, el producto cartesiano de tres conjuntos \(A\), \(B\) y \(C\) es:
 		$$A \times B \times C = \{(a, b, c) \mid a \in A, b \in B, c \in C\}$$
@@ -491,10 +493,18 @@ El \gls{venn} es una representación visual de los conjuntos utilizando diagrama
 	
 	\item Propiedades:
 	\begin{enumerate}[label=\roman*)]
-		\item El producto cartesiano es \textbf{distributivo} respecto de la unión:
+		\item \textbf{Distributividad respecto de la unión}
 		\[ \left( A \cup B \right) \times C = \left( A \times C \right) \cup \left( B \times C \right) \]
+		\[ A \times (B \cup C) = (A \times B) \cup (A \times C) \]
+		\item \textbf{Distributividad respecto de la intersección}
+		\[ \left( A \cap B \right) \times C = \left( A \times C \right) \cap \left( B \times C \right) \]
+	\[ A \times (B \cap C) = (A \times B) \cap (A \times C) \]
+		\item \textbf{Distributividad respecto de la diferencia}
+	\[ \left( A \setminus B \right) \times C = \left( A \times C \right) \setminus \left( B \times C \right) \]
+	\[ A \times (B \setminus C) = (A \times B) \setminus (A \times C) \]
+	\item \textbf{Elemento absorbente}. El conjunto vacío actúa como elemento absorbente, esto es, para cualquier conjunto $A$:
+	\[ A \times \emptyset = \emptyset \times A = \emptyset \]
 	\end{enumerate}
-	
 \end{itemize}
 
 
