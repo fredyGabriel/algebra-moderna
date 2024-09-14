@@ -483,7 +483,10 @@ El \gls{venn} es una representación visual de los conjuntos utilizando diagrama
 	\begin{enumerate}
 		\item El producto cartesiano no es conmutativo, en general, \(A \times B \neq B \times A\).
 		\item No es asociativo: \( (A \times B) \times C \neq A \times (B \times C) \), ya que $((a, b), c)$ y $(a, (b, c))$ son estructuras diferentes\footnote{Aunque no sean iguales como conjuntos, en algunas aplicaciones es común que estas expresiones se interpreten de manera equivalente o que los paréntesis se omitan si el contexto es claro, pero desde el punto de vista estricto de teoría de conjuntos, no son iguales.}.
-		\item No tiene elemento neutro: No hay un conjunto $E$ tal que $A \times E = A$ para todo conjunto $A$.
+		\item No tiene elemento neutro\footnote{El concepto de elemento neutro se presenta en detalle en la sección \ref{sec:axiomas-grupo}, pág. \pageref{sec:axiomas-grupo}}: No hay un conjunto $E$ tal que $A \times E = A$ para todo conjunto $A$.
+		\item El conjunto vacío actúa como \textit{elemento absorbente}, es decir	, para cualquier conjunto $A$:
+		\[ A \times \emptyset = \emptyset \times A = \emptyset \]
+		Esto se debe a que el producto cartesiano consiste en pares ordenados, y no es posible formar ningún par donde uno de los componentes proviene del conjunto vacío.
 		\item Si \(A\) tiene \(m\) elementos y \(B\) tiene \(n\) elementos, entonces \(A \times B\) tiene \(m \cdot n\) elementos.
 		\item El producto cartesiano se puede extender a más de dos conjuntos. Por ejemplo, el producto cartesiano de tres conjuntos \(A\), \(B\) y \(C\) es:
 		$$A \times B \times C = \{(a, b, c) \mid a \in A, b \in B, c \in C\}$$
@@ -502,8 +505,6 @@ El \gls{venn} es una representación visual de los conjuntos utilizando diagrama
 		\item \textbf{Distributividad respecto de la diferencia}
 	\[ \left( A \setminus B \right) \times C = \left( A \times C \right) \setminus \left( B \times C \right) \]
 	\[ A \times (B \setminus C) = (A \times B) \setminus (A \times C) \]
-	\item \textbf{Elemento absorbente}. El conjunto vacío actúa como elemento absorbente, esto es, para cualquier conjunto $A$:
-	\[ A \times \emptyset = \emptyset \times A = \emptyset \]
 	\end{enumerate}
 \end{itemize}
 
@@ -513,30 +514,30 @@ El \gls{venn} es una representación visual de los conjuntos utilizando diagrama
 \subsubsection{Propiedades fundamentales}
 
 \begin{itemize}
-	\item \textbf{Idempotencia}:
+	\item \textbf{Idempotencia}
 	\begin{itemize}[itemsep=0pt]
 		\item \( A \cup A = A \)
 		\item \( A \cap A = A \)
 	\end{itemize}
-	\item \textbf{Conmutatividad}:
+	\item \textbf{Conmutatividad}
 	\begin{itemize}[itemsep=0pt]
 		\item \(A \cup B = B \cup A\)
 		\item \(A \cap B = B \cap A\)
 	\end{itemize}
 	
-	\item \textbf{Asociatividad}:
+	\item \textbf{Asociatividad}
 	\begin{itemize}[itemsep=0pt]
 		\item \((A \cup B) \cup C = A \cup (B \cup C)\)
 		\item \((A \cap B) \cap C = A \cap (B \cap C)\)
 	\end{itemize}
 	
-	\item \textbf{Distributividad}:
+	\item \textbf{Distributividad}
 	\begin{itemize}[itemsep=0pt]
 		\item \(A \cup (B \cap C) = (A \cup B) \cap (A \cup C)\)
 		\item \(A \cap (B \cup C) = (A \cap B) \cup (A \cap C)\)
 	\end{itemize}
 		
-	\item \textbf{Leyes de De Morgan}:
+	\item \textbf{Leyes de De Morgan}
 	
 	\begin{enumerate}[label={\textbf{\arabic*})}]
 		\item El complemento de la unión de dos conjuntos es igual a la intersección de los complementos de dichos conjuntos.
@@ -546,7 +547,7 @@ El \gls{venn} es una representación visual de los conjuntos utilizando diagrama
 		\[ (A \cap B)^c = A^c \cup B^c \]
 	\end{enumerate}
 	
-	\item\textbf{Elemento neutro}\footnote{El concepto de elemento neutro se presenta en detalle en la sección \ref{sec:axiomas-grupo}, pág. \pageref{sec:axiomas-grupo}}:
+	\item\textbf{Elemento neutro}
 	\begin{itemize}
 		\item De la unión es el conjunto vacío: \(A \cup \emptyset = A\)
 		\item De la intersección es el universal: \(A \cap U = A\)
@@ -558,7 +559,7 @@ El \gls{venn} es una representación visual de los conjuntos utilizando diagrama
 		\item Para la diferencia simétrica, $A$ es su propia inversa: \( A \triangle A = \emptyset \)
 	\end{itemize}
 	
-	\item \textbf{Otras propiedades}:
+	\item \textbf{Otras propiedades}
 	\begin{itemize}
 		\item \(A \cup A^c = U\)
 		\item \(A \cap A^c = \emptyset\)
