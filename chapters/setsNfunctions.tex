@@ -163,17 +163,17 @@ La \gls{inclusion} tiene la siguiente definición: \index{inclusión}
 
 
 \begin{itemize}
-	\item Propiedades de la inclusión
+	\item \textbf{Propiedades}
 	\begin{enumerate}[label=\roman*)]
-		\item \textbf{Reflexibidad}: Todo conjunto es parte de sí mismo.
+		\item \textit{Reflexibidad}: Todo conjunto es parte de sí mismo.
 		\[ A \subset A \]
-		\item \textbf{Transitividad}: Si un conjunto es parte de otro y este es parte de un tercero, el primero está incluido en el tercero:
+		\item \textit{Transitividad}: Si un conjunto es parte de otro y este es parte de un tercero, el primero está incluido en el tercero:
 		\[\mbox{Si } A \subset B \mbox{ y } B \subset C \mbox{ entonces } A \subset C \]
-		\item \textbf{Antisimetría}: Si un conjunto es parte de otro y éste es parte del primero, entonces son iguales\footnote{Este hecho se usa para establecer la igualdad de conjuntos dada en la definición \ref{def:igualdad_conjuntos}}.
+		\item \textit{Antisimetría}: Si un conjunto es parte de otro y éste es parte del primero, entonces son iguales\footnote{Este hecho se usa para establecer la igualdad de conjuntos dada en la definición \ref{def:igualdad_conjuntos}}.
 		\[\mbox{Si } A \subset B \mbox{ y } B \subset A \mbox{ entonces } A = B \]
 	\end{enumerate}
 	
-	\item Observaciones:
+	\item \textbf{Observaciones}
 	
 	\begin{enumerate}
 		\item En repetidas ocasiones se necesitará demostrar que un conjunto es parte de otro; entonces, de acuerdo con la definición, será suficiente demostrar que cualquier elemento del primero pertenece al segundo, esto significa que en la inclusión no puede darse que haya un elemento de $A$ que no pertenezca a $B$.
@@ -230,7 +230,7 @@ El \gls{venn} es una representación visual de los conjuntos utilizando diagrama
 \end{fmd-definition}
 
 \begin{itemize}
-	\item Diagrama de Venn
+	\item \textbf{Diagrama de Venn}
 	\begin{figure}[H]
 		\centering
 		\begin{venndiagram2sets}
@@ -239,7 +239,7 @@ El \gls{venn} es una representación visual de los conjuntos utilizando diagrama
 		\caption*{$A \cup B$}
 	\end{figure}
 	
-	\item Propiedades:
+	\item \textbf{Propiedades}
 	\begin{enumerate}[label=\roman*)]
 		\item Idempotencia\footnote{La idempotencia se define en la pág. \index{idempotencia} \pageref{def:idempotencia}, definición \ref{def:idempotencia}.}: \( A \cup A = A \)
 		\item Asociatividad: \( \left( A \cup B \right) \cup C = A \cup \left( B \cup C \right) \)
@@ -263,7 +263,7 @@ El \gls{venn} es una representación visual de los conjuntos utilizando diagrama
 \end{fmd-definition}
 
 \begin{itemize}
-	\item Diagrama de Venn
+	\item \textbf{Diagrama de Venn}
 	\begin{figure}[H]
 		\centering
 		\begin{venndiagram2sets}
@@ -272,7 +272,7 @@ El \gls{venn} es una representación visual de los conjuntos utilizando diagrama
 		\caption*{\(A \cap B \)}
 	\end{figure}
 	
-	\item Propiedades:
+	\item \textbf{Propiedades}
 	\begin{enumerate}[label=\roman*)]
 		\item Idempotencia: \( A \cap A = A \) \index{idempotencia}
 		\item Asociatividad: \( \left( A \cap B \right) \cap C = A \cap \left( B \cap C \right) \) \index{asociatividad}
@@ -296,7 +296,7 @@ El \gls{venn} es una representación visual de los conjuntos utilizando diagrama
 \end{fmd-definition}
 
 \begin{itemize}
-	\item Diagrama de Venn
+	\item \textbf{Diagrama de Venn}
 	
 	\begin{figure}[H]
 		\centering
@@ -309,8 +309,8 @@ El \gls{venn} es una representación visual de los conjuntos utilizando diagrama
 		\end{tikzpicture}
 		\caption*{\(A^c\)}
 	\end{figure}
-	\item Propiedades:
-	\begin{enumerate}
+	\item \textbf{Propiedades}
+	\begin{enumerate}[label=\roman*)]
 		\item Involución $(A^c)^c = A$.
 		
 		De donde: Si \( A^c = B \) entonces \( B^c = A \)
@@ -342,7 +342,7 @@ El \gls{venn} es una representación visual de los conjuntos utilizando diagrama
 \end{fmd-definition}
 
 \begin{itemize}
-	\item Diagrama de Venn
+	\item \textbf{Diagrama de Venn}
 	\begin{figure}[H]
 		\centering
 		\begin{venndiagram2sets}
@@ -350,14 +350,42 @@ El \gls{venn} es una representación visual de los conjuntos utilizando diagrama
 		\end{venndiagram2sets}
 		\caption*{$A \setminus B$}
 	\end{figure}
-	\item Propiedades:
+	\item \textbf{Observaciones}
 	\begin{enumerate}[label=\roman*)]
+		\item No es conmutativa: \( A \setminus B \neq B \setminus A \)
+		\item No es asociativa: \( \left(A \setminus B\right) \setminus C \neq A \setminus \left( B \setminus C\right) \)
+	\end{enumerate}
+	\item \textbf{Propiedades}:
+	\begin{enumerate}[label=\roman*)]
+		\item Elemento neutro por la derecha: \( A \setminus \emptyset = A \)
+		\item Elemento absorbente por la izquierda: \( \emptyset \setminus A = \emptyset \) 
 		\item La diferencia entre dos conjuntos es igual a la intersección del primero con el complemento del segundo: \( A \setminus B = A \cap B^c \)
+		\item Idempotencia: \( A \setminus A = \emptyset \)
+		\item Diferencia con el conjunto universal:
+		\begin{enumerate}
+			\item \( U \setminus A = A^c \)
+			\item \( A \setminus U = \emptyset \)
+		\end{enumerate}
+		\item Diferencia con el conjunto vacío:
+		\begin{enumerate}
+			\item \( A \setminus \emptyset = A \)
+			\item \( \emptyset \setminus A = \emptyset \)
+		\end{enumerate}
+		\item Distributividad por la izquierda respecto de la intersección: \[ A \cap (B \setminus C) = (A \cap B) \setminus (A \cap C) \]
+		\item Distributividad por la derecha respecto de la unión: \[ (A \cup B) \setminus C = (A \setminus C) \cup (B \setminus C) \]
+		\item Otras propiedades:
+		\begin{enumerate}
+			\item \( A \subset B \iff A \setminus B = \emptyset \)
+			\item $A \setminus (A \setminus B) = A \cap B$
+		\end{enumerate}
 	\end{enumerate}
 \end{itemize}
+\begin{lgnote}
+	El símbolo $\iff$ es la doble implicación o bicondicional ``\textit{si y solo si}''. Se explica con rigor en \ref{sec:bicondicional}.
+\end{lgnote}
 
 \begin{example}[Diferencia de conjuntos]
-	Si \(A = \{1, 2, 3\}\) y \(B = \{3, 4, 5\}\), entonces \(A - B = \{1, 2\}\).
+	Si \(A = \{1, 2, 3\}\) y \(B = \{3, 4, 5\}\), entonces \(A \setminus B = \{1, 2\}\).
 \end{example}
 
 \subsubsection{Diferencia simétrica $\triangle$}
@@ -376,7 +404,7 @@ El \gls{venn} es una representación visual de los conjuntos utilizando diagrama
 \end{fmd-definition}
 
 \begin{itemize}
-	\item Diagrama de Venn
+	\item \textbf{Diagrama de Venn}
 		\begin{figure}[H]
 			\centering
 			\begin{venndiagram2sets}
@@ -385,7 +413,7 @@ El \gls{venn} es una representación visual de los conjuntos utilizando diagrama
 			\caption*{$A \triangle B$}
 		\end{figure}
 	
-	\item Propiedades:
+	\item \textbf{Propiedades}
 	\begin{enumerate}[label=\roman*)]
 		\item Conmutatividad: \(A \triangle B = B \triangle A\)
 		\item Asociatividad: \((A \triangle B) \triangle C = A \triangle (B \triangle C)\)
@@ -414,7 +442,6 @@ El \gls{venn} es una representación visual de los conjuntos utilizando diagrama
 		El número 2 se excluye porque es el único par que también es primo.
 	\end{enumerate}
 \end{example}
-
 
 \subsubsection{Conjunto potencia o conjunto de partes $\mathcal{P}(A)$}
 \vspace{1em}
@@ -478,7 +505,7 @@ El \gls{venn} es una representación visual de los conjuntos utilizando diagrama
 \end{example}
 
 \begin{itemize}
-	\item Observaciones:
+	\item \textbf{Observaciones}
 	
 	\begin{enumerate}
 		\item El producto cartesiano no es conmutativo, en general, \(A \times B \neq B \times A\).
@@ -494,15 +521,15 @@ El \gls{venn} es una representación visual de los conjuntos utilizando diagrama
 		\[ A \times A \times A = A^3 = \{(a, b, c) \mid a, b, c \in A\} \]
 	\end{enumerate}
 	
-	\item Propiedades:
+	\item \textbf{Propiedades}
 	\begin{enumerate}[label=\roman*)]
-		\item \textbf{Distributividad respecto de la unión}
+		\item Distributividad respecto de la unión
 		\[ \left( A \cup B \right) \times C = \left( A \times C \right) \cup \left( B \times C \right) \]
 		\[ A \times (B \cup C) = (A \times B) \cup (A \times C) \]
-		\item \textbf{Distributividad respecto de la intersección}
+		\item Distributividad respecto de la intersección
 		\[ \left( A \cap B \right) \times C = \left( A \times C \right) \cap \left( B \times C \right) \]
 	\[ A \times (B \cap C) = (A \times B) \cap (A \times C) \]
-		\item \textbf{Distributividad respecto de la diferencia}
+		\item Distributividad respecto de la diferencia
 	\[ \left( A \setminus B \right) \times C = \left( A \times C \right) \setminus \left( B \times C \right) \]
 	\[ A \times (B \setminus C) = (A \times B) \setminus (A \times C) \]
 	\end{enumerate}
@@ -524,7 +551,7 @@ El \gls{venn} es una representación visual de los conjuntos utilizando diagrama
 	\end{example}
 	
 	Alternativamente:
-	\[(A \times B)^c = \{ (x, y) \mid x \not \in A \text{ o } y \not \in B \}\]
+	\[(A \times B)^c = \{ (x, y) \mid x \in A^c \text{ o } y \in B^c \} = \{ (x, y) \mid x \not \in A \text{ o } y \not \in B \}\]
 	de donde:
 	\[ (A \times B)^c = (A^c \times B^c) \cup (A^c \times B) \cup (A \times B^c) \]
 	y, por lo tanto:
@@ -542,33 +569,33 @@ El \gls{venn} es una representación visual de los conjuntos utilizando diagrama
 \index{álgebra!conjuntos}
 \subsubsection{Propiedades fundamentales}
 
-\begin{itemize}
-	\item \textbf{Idempotencia}
-	\begin{itemize}[itemsep=0pt]
+\begin{enumerate}
+	\item Idempotencia
+	\begin{enumerate}[itemsep=0pt]
 		\item \( A \cup A = A \)
 		\item \( A \cap A = A \)
-	\end{itemize}
-	\item \textbf{Conmutatividad}
-	\begin{itemize}[itemsep=0pt]
+	\end{enumerate}
+	\item Conmutatividad
+	\begin{enumerate}[itemsep=0pt]
 		\item \(A \cup B = B \cup A\)
 		\item \(A \cap B = B \cap A\)
-	\end{itemize}
+	\end{enumerate}
 	
-	\item \textbf{Asociatividad}
-	\begin{itemize}[itemsep=0pt]
+	\item Asociatividad
+	\begin{enumerate}[itemsep=0pt]
 		\item \((A \cup B) \cup C = A \cup (B \cup C)\)
 		\item \((A \cap B) \cap C = A \cap (B \cap C)\)
-	\end{itemize}
+	\end{enumerate}
 	
-	\item \textbf{Distributividad}
-	\begin{itemize}[itemsep=0pt]
+	\item Distributividad
+	\begin{enumerate}[itemsep=0pt]
 		\item \(A \cup (B \cap C) = (A \cup B) \cap (A \cup C)\)
 		\item \(A \cap (B \cup C) = (A \cap B) \cup (A \cap C)\)
-	\end{itemize}
+	\end{enumerate}
 		
-	\item \textbf{Leyes de De Morgan}
+	\item Leyes de De Morgan
 	
-	\begin{enumerate}[label={\textbf{\arabic*})}]
+	\begin{enumerate}
 		\item El complemento de la unión de dos conjuntos es igual a la intersección de los complementos de dichos conjuntos.
 		\[ (A \cup B)^c = A^c \cap B^c \]
 		
@@ -576,25 +603,25 @@ El \gls{venn} es una representación visual de los conjuntos utilizando diagrama
 		\[ (A \cap B)^c = A^c \cup B^c \]
 	\end{enumerate}
 	
-	\item\textbf{Elemento neutro}
-	\begin{itemize}
+	\item Elemento neutro
+	\begin{enumerate}
 		\item De la unión es el conjunto vacío: \(A \cup \emptyset = A\)
 		\item De la intersección es el universal: \(A \cap U = A\)
 		\item De la diferencia simétrica es el conjunto vacío: \( A \triangle \emptyset = \emptyset \triangle A = A \)
-	\end{itemize}
+	\end{enumerate}
 	
-	\item \textbf{Existencia de inversas\footnote{ibid.}}:
+	\item Existencia de inversas\footnote{ibid.}:
 	\begin{itemize}
 		\item Para la diferencia simétrica, $A$ es su propia inversa: \( A \triangle A = \emptyset \)
 	\end{itemize}
 	
-	\item \textbf{Otras propiedades}
-	\begin{itemize}
+	\item Otras propiedades
+	\begin{enumerate}
 		\item \(A \cup A^c = U\)
 		\item \(A \cap A^c = \emptyset\)
-	\end{itemize}
+	\end{enumerate}
 	
-\end{itemize}
+\end{enumerate}
 
 \subsubsection{Operaciones generalizadas}
 
@@ -861,10 +888,6 @@ Toda relación de equivalencia definida en un conjunto no vacío determina una p
 		\item $\forall a \in A, \exists i \in I / a \in A_i$
 	\end{enumerate}
 \end{fmd-theorem}
-
-\begin{lgnote}
-	El símbolo $\iff$ se lee ``si y sólo si'', es la doble implicación que se explica con rigor en \ref{sec:bicondicional}.
-\end{lgnote}
 
 Las clases de equivalencia conforman una partición del conjunto $A$.
 

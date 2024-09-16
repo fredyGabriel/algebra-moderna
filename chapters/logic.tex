@@ -1218,7 +1218,6 @@ La idea de inferencia es: \textit{de premisas verdaderas se obtienen sólo concl
 	\end{fmd-example}
 \end{enumerate}
 
-\textbf{Ejercicios:}
 \begin{fmd-example}
 	\begin{enumerate}
 		\item Justificar la validez del razonamiento:
@@ -1747,6 +1746,45 @@ La negación de una proposición universal es una proposición existencial, y vi
 	\end{fmd-example}
 \end{enumerate}
 
+
+\begin{fmd-example}
+	Todos los estudiantes de matemáticas son inteligentes. Algunos estudiantes de matemáticas son músicos. Ningún músico es aburrido. Por lo tanto, algunos estudiantes inteligentes no son aburridos.
+	
+	\begin{enumerate}
+		\item Proposiciones:
+		\begin{itemize}[label={}]
+			\item $p$: ``x es estudiante de matemáticas''
+			\item $q$: ``x es inteligente''
+			\item $r$: ``x es músico''
+			\item $s$: ``x es aburrido''
+		\end{itemize}
+		\item Premisas:
+		\begin{itemize}[label={}]
+			\item \textit{Premisa 1}: $ \forall x \left(p(x) \implies q(x)\right) $
+			\item \textit{Premisa 2}: $ \exists x \left(p(x) \land r(x) \right) $
+			\item \textit{Premisa 3}: $ \forall x \left(r(x) \implies \neg s(x)\right) $
+		\end{itemize}
+		\item Conclusión a demostrar: \[ \exists x \left( q(x) \land \neg s(x) \right) \]
+		\item Demostración:
+		
+		Consideremos un estudiante $x=a$ que cumple con la premisa 2.
+		\[
+		\begin{array}{lll}
+			1) & \exists x \left( p(x) \land r(x) \right) & \text{premisa 2}\\
+			2) & \therefore r(a) & \text{estudiante músico}\\
+			3) & r(a) \implies \neg s(a) & \text{premisa 3} \\
+			4) & \neg s(a) & \text{modus ponens con 2) y 3)} \\
+			5) & p(a) \implies q(a) & \text{premisa 1} \\
+			6) & p(a) & \text{de la premisa 2}\\
+			7) & q(a) & \text{modus ponens con 5) y 6)}\\
+			8) & q(a) \land \neg s(a) & \text{conjunción de 4) y 7)}\\
+			9) & \exists x \left( q(x) \land \neg s(x) \right) & \text{de 8)}
+		\end{array}
+		\]
+	\end{enumerate}
+	
+\end{fmd-example}
+
 \rule{\textwidth}{.5pt}
 
 \subsection{Ejercicios}
@@ -1821,6 +1859,20 @@ La negación de una proposición universal es una proposición existencial, y vi
 		\end{enumerate}
 		?`Qué se puede concluir sobre el potencial comercial del proyecto?
 	\end{enumerate}
+	
+	\item Ningún filósofo es ignorante. Algunos filósofos son estoicos. Todos los epicúreos son hedonistas. Si alguien es hedonista, entonces no es estoico. Demostrar que algunos filósofos no son epicúreos.
+	
+	\item Todas las personas que estudian lógica son racionales. Algunas personas que estudian lógica son filósofos. Si alguien es filósofo y no es matemático, entonces es idealista. No existe ningún idealista que sea racional. Demostrar que algunas personas que estudian lógica son matemáticos.
+	
+	\item En la escena de un crimen se encuentran tres sospechosos: Alicia, Bruno y Carlos. Se sabe lo siguiente:
+	\begin{enumerate}
+		\item Si Alicia es culpable, entonces el arma homicida es un cuchillo y Bruno es cómplice.
+		\item Si el arma homicida es una pistola, entonces Carlos es culpable o Bruno miente en su declaración.
+		\item Si Bruno dice la verdad, entonces Alicia es inocente o el arma homicida no es un cuchillo.
+		\item El arma homicida es una pistola y Bruno dice la verdad.
+	\end{enumerate}
+	Determine quién es el culpable.
+	
 	
 	\item Considere la siguiente afirmación:
 	
@@ -2047,7 +2099,6 @@ La demostración se realiza en dos partes: existencia y unicidad.
 	Por lo tanto, las dos factorizaciones son iguales salvo el orden de los factores.
 \end{enumerate}
 \end{fmd-proof}
-
 
 \subsection{Conjuntos finitos e infinitos} \label{sec:finitos} \index{conjuntos!finitos} \index{conjuntos!infinitos}
 \vspace{1em}
