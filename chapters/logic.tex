@@ -1216,6 +1216,23 @@ La idea de inferencia es: \textit{de premisas verdaderas se obtienen sólo concl
 			\item \textit{Conclusión}: ``Por lo tanto, el cielo es azul y la hierva es verde'' ($p \land q$)
 		\end{itemize}
 	\end{fmd-example}
+	
+	\item \textbf{Simplificación conjuntiva}:
+	\[ p \land q \ \vdash \ p \qquad \text{o bien } q \]
+	Notación clásica:
+	\[
+	\begin{array}{l}
+		p \land q\\ \hline
+		\therefore p
+	\end{array}
+	\]
+	Si sabemos que \(p\) y \(q\) son ambas verdaderas, entonces podemos concluir que \(p\) es verdadera (y también que \(q\) es verdadera).
+	\begin{fmd-example}[Simplificación conjuntiva]
+		\begin{itemize}
+			\item \textit{Premisa 1}: ``Está lloviendo y hace frío'' ($p \land q$)
+			\item \textit{Conclusión}: ``Está lloviendo'' ($p$) (o bien, ``hace frío'' ($q$))
+		\end{itemize}
+	\end{fmd-example}
 \end{enumerate}
 
 \begin{fmd-example}
@@ -1710,6 +1727,22 @@ El \gls{cuantificadoru} se utiliza para afirmar que una propiedad o relación se
 	``Todos los perros ladran'' se formalizaría como: $\forall x \ \left(P(x) \implies L(x)\right)$ donde $P(x)$ significa ``$x$ es un perro'' y $L(x)$ significa ``$x$ ladra''.
 \end{fmd-example}
 
+\subsubsection{Instanciación universal}
+Si tenemos una premisa que establece que una propiedad se cumple para todos los elementos de un dominio (es decir, una fórmula con un cuantificador universal $\forall$), podemos inferir que esa propiedad se cumple para cualquier elemento específico de ese dominio.
+
+\begin{itemize}[label={}]
+	\item Premisa: $\forall x \ P(x)$ (Para todo $x$, se cumple $P(x)$)
+	\item Conclusión: $P(a)$  (Para un elemento específico $a$, se cumple $P(a)$)
+\end{itemize}
+
+\begin{example}[Instanciación universal]
+	\,
+	\begin{itemize}[label={}]
+		\item Premisa: ``Todos los perros ladran'' ($\forall x P(x) \implies L(x) $)
+		\item Conclusión: ``Si $a$ es un perro, entonces $a$ ladra'' ($ P(a) \implies L(a)$)
+	\end{itemize}
+\end{example}
+
 \subsection{Negación de cuantificadores}
 La negación de una proposición universal es una proposición existencial, y viceversa.
 \index{negación!cuantificadores}
@@ -1771,7 +1804,8 @@ La negación de una proposición universal es una proposición existencial, y vi
 		\[
 		\begin{array}{lll}
 			1) & \exists x \left( p(x) \land r(x) \right) & \text{premisa 2}\\
-			2) & \therefore r(a) & \text{estudiante músico}\\
+			2) & p(a) \land r(a) & \text{instanciación universal}\\
+			2) & \therefore r(a) & \text{simplificación conjuntiva}\\
 			3) & r(a) \implies \neg s(a) & \text{premisa 3} \\
 			4) & \neg s(a) & \text{modus ponens con 2) y 3)} \\
 			5) & p(a) \implies q(a) & \text{premisa 1} \\
