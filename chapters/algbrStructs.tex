@@ -1203,14 +1203,14 @@ Si $H$ es un subgrupo de orden $k$ del grupo finito $G$, entonces toda clase izq
 \end{itemize}
 \end{fmd-theorem}
 \begin{fmd-proof}
-	Debemos probar que $H$ y $gH$ son coordinables, y para ello difinimos:
-	\[ f: H \rightarrow gH \mbox{ mediante } f(a) = g * a \]
+Sea $G$ un grupo finito y $H$ un subgrupo de $G$ con $|H|=k$. Consideremos una clase lateral izquierda arbitraria $gH$ de $H$ en $G$, donde $g \in G$.
+
+Definamos una función $f:H \rightarrow gH$ dada por $f(h)=gh$ para todo $h \in H$.
 	\begin{enumerate}[label=\roman*)]
-		\item $f$ es la restricción de la \textit{translación a izquierda} $f_g: G \rightarrow G$ al subconjunto $H$ y en consecuencia es inyectiva.
-		\item $f$ es sobreyectiva, pues para todo $y \in gH$ existe $x = g'*y$ tal que:
-		\[ f(x) = f(g' * y) = g * g' * x = x \]
+		\item Primero, vamos a demostrar que $f$ es inyectiva. Supongamos que $f(h_1)=f(h_2)$ para algunos $h_1, h_2 \in H$. Entonces, $gh_1 = gh_2$. Por la ley de cancelación izquierda en $G$, tenemos que $h_1 = h_2$.  Por lo tanto, $f$ es inyectiva.
+		\item Ahora, vamos a demostrar que $f$ es sobreyectiva. Sea $x$ un elemento arbitrario de $gH$. Entonces, $x=gh$ para algún $h \in H$. Por lo tanto, $f(h)=gh=x$, lo que demuestra que $f$ es sobreyectiva.
 	\end{enumerate}
-	En consecuencia, $f$ es biyectiva y $|gH| = |H| = k$
+	En consecuencia, $f$ es biyectiva y $|gH| = |H| = k$.
 \end{fmd-proof}
 
 \begin{fmd-theorem}[Lagrange] \label{teo:Lagrange}
@@ -1312,33 +1312,7 @@ En general, para los enteros múdulo $n$ con la operación suma:
 		$(\Z_4, \bdot)$ no es un grupo, es un semigrupo con neutro.
 	\end{center}
 	
-	\item $(\Z^{*}_4, \bdot)$
-	
-	Si se excluye el cero, se tiene la tabla \ref{tab:mod4pa}.
-	
-	\begin{table}[H]
-		\centering
-		\begin{tabular}{c|cccc}
-			$\bdot$ & 1 & 2 & 3\\
-			\hline
-			1 & 1 & 2 & 3\\
-			2 & 2 & 1 & 3\\
-			3 & 3 & 3 & 1
-		\end{tabular}
-		\caption{Enteros módulo 4, excluyendo el cero $(\Z^{*}_4, \cdot)$.}
-		\label{tab:mod4pa}
-	\end{table}
-	
-	\begin{itemize}
-		\item[G1:] Es asociativa \cmark
-		\item[G2:] Elemento neutro \xmark
-	\end{itemize}
-	
-	\begin{center}
-		$(\Z^{*}_4, \bdot)$ no es un grupo, es un semigrupo.
-	\end{center}
-	
-	\item $(\Z^{*}_3, \bdot)$
+		\item $(\Z^{*}_3, \bdot)$
 	
 	Si se excluye el cero, se tiene la tabla \ref{tab:mod3pa}.
 	
@@ -1368,6 +1342,30 @@ En general, para los enteros múdulo $n$ con la operación suma:
 	\begin{center}
 		$(\Z^{*}_3, \bdot)$ es un grupo abeliano.
 	\end{center}
+	
+	\item $(\Z^{*}_4, \bdot)$
+	
+	Notar que si intentamos excluir el cero de $\Z_4$, con el cual resultó la tabla \ref{tab:mod4p}, utilizando el conjunto $\Z^{*}_4 = \{ 1, 2, 3 \}$, se tiene la tabla \ref{tab:mod4pa}.
+	
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{c|cccc}
+			$\bdot$ & 1 & 2 & 3\\
+			\hline
+			1 & 1 & 2 & 3\\
+			2 & 2 & 0 & 2\\
+			3 & 3 & 2 & 1
+		\end{tabular}
+		\caption{Operación de multiplicación para los enteros módulo 4, excluyendo el cero $(\Z^{*}_4, \cdot)$.}
+		\label{tab:mod4pa}
+	\end{table}
+	La operación no es cerrada, pues sigue apareciendo el cero, en $2 \times 2 \equiv 0 \mod 4$.
+	
+	\begin{center}
+		$(\Z^{*}_4, \bdot)$ no es un grupo.
+	\end{center}
+	
+	Esto ocurre debido a que 4 no es primo, en general, cualquier entero $n$ no primo tendrá divisores primos tales que su producto sea igual a $n$ y por tanto cero módulo $n$, consecuentemente la multiplicación no será cerrada.
 \end{itemize}
 
 \begin{proposition} \label{prop:primo}
@@ -1388,7 +1386,7 @@ Notemos que a cada $x \in \Z$ le corresponderá el elemento de $\Z_4$ que result
 Por lo tanto, podemos decir que todos los números de $\Z$ con el mismo residuo de la división entre 4 serán equivalentes (se puede verificar fácilmente que cumple con las propiedades de equivalencia), se dice que son congruentes módulo 4.
 
 Por ejemplo:
-\[ 4753 \equiv 1 \, (\mbox{mod } 4); \qquad 1234 \equiv 2 \, (\mbox{mod } 4) \]
+\[ 4753 \equiv 1 \mod 4; \qquad 1234 \equiv 2 \mod 4 \]
 
 \emph{Dos enteros $a, b \in \Z$ son congruentes módulo $n$ si al dividir entre $n$ dan el mismo residuo}.
 

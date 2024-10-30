@@ -1,0 +1,254 @@
+\begin{theindex}
+
+  \item adición
+    \subitem conjuntiva, 70
+    \subitem disyuntiva, 70
+  \item adjunción, 70
+  \item argumento, 66
+    \subitem inválido, 67
+    \subitem válido, 67
+  \item asociatividad, 9
+  \item axiomas
+    \subitem grupo, 87
+    \subitem Peano, 78
+
+  \indexspace
+
+  \item bicondicional, 51
+
+  \indexspace
+
+  \item Cantor, 84
+  \item clases
+    \subitem equivalencia, 18
+  \item complemento, 9
+  \item composición
+    \subitem funciones, 32
+  \item condicional, 49
+  \item condición
+    \subitem necesaria, 51
+    \subitem suficiente, 51
+  \item conjunción, 47
+  \item conjunto, 3
+    \subitem cociente, 19
+    \subitem comprensión, 5
+    \subitem de partes, 12
+    \subitem dif. sim., 10
+    \subitem diferencia, 10
+    \subitem extensión, 5
+    \subitem potencia, 12
+    \subitem universal, 4
+    \subitem vacío, 5
+  \item conjuntos
+    \subitem finitos, 82
+    \subitem igualdad, 7
+    \subitem infinitos, 82
+  \item conmutatividad, 9
+  \item contingencia, 55
+  \item contradicción, 55
+  \item contraria, 60
+  \item contrarrecíproca, 61
+  \item cuantificador
+    \subitem existencial, 76
+    \subitem universal, 77
+
+  \indexspace
+
+  \item demostración
+    \subitem matemática, 62
+  \item diagrama Venn, 7
+  \item diferencia
+    \subitem simétrica, 48
+  \item disyunción
+    \subitem excluyente, 48
+    \subitem inclusiva, 48
+
+  \indexspace
+
+  \item elemento
+    \subitem inverso, 87
+    \subitem neutro, 87
+  \item estructuras algebraicas, 86
+  \item existencial, 76
+  \item extensión
+    \subitem función, 44
+
+  \indexspace
+
+  \item falacia
+    \subitem afirm. consec, 74
+    \subitem división, 75
+    \subitem neg. antec, 74
+    \subitem término medio, 75
+  \item falacias, 71
+    \subitem formales, 74
+    \subitem lógicas, 71
+  \item funciones, 20
+    \subitem composición, 32
+    \subitem especiales, 29
+    \subitem iguales, 33
+  \item función, 20, 21
+    \subitem biyectiva, 25, 27
+    \subitem canónica, 31
+    \subitem constante, 29
+    \subitem extension, 44
+    \subitem identidad, 30
+    \subitem inversa, 35
+    \subitem inyectiva, 25
+    \subitem proposicional, 75
+    \subitem proyección, 30
+    \subitem restricción, 44
+    \subitem sobreyectiva, 25, 26
+
+  \indexspace
+
+  \item grupo, 87
+    \subitem abeliano, 88
+    \subitem esp. lineal, 95
+    \subitem funciones, 98
+    \subitem gral. lineal, 95
+    \subitem Klein, 90
+    \subitem matrices, 92
+    \subitem vectores, 93
+  \item grupos
+    \subitem números, 91
+    \subitem permutaciones, 98
+    \subitem simetría, 98
+
+  \indexspace
+
+  \item homomorfismo
+    \subitem grupos, 95
+    \subitem imagen, 106
+
+  \indexspace
+
+  \item idempotencia, 8, 9, 88
+  \item imagen, 40
+    \subitem homomorfismo, 106
+    \subitem inversa, 42
+  \item implicación, 49
+    \subitem condicional, 51
+    \subitem doble, 51
+  \item inclusión, 6
+  \item inducción, 78
+  \item intersección, 8
+    \subitem generalizada, 15
+  \item inverso, 87
+
+  \indexspace
+
+  \item ley
+    \subitem cancelación, 89
+    \subitem corte, 89
+  \item lógica
+    \subitem predicativa, 75
+    \subitem proposicional, 45
+
+  \indexspace
+
+  \item mapa nulo, 97
+  \item matriz
+    \subitem invertible, 95
+  \item modus
+    \subitem ponens, 68
+    \subitem tollens, 68
+  \item monoide, 88
+
+  \indexspace
+
+  \item negación, 47
+    \subitem cuantificadores, 77
+    \subitem existencial, 77
+    \subitem implicación, 65
+    \subitem universasl, 77
+  \item neutro, 87
+  \item numerabilidad, 83
+
+  \indexspace
+
+  \item operación
+    \subitem binaria, 87
+  \item operador
+    \subitem lógico, 46
+  \item orden
+    \subitem elemento, 104
+    \subitem grupo, 89
+
+  \indexspace
+
+  \item partición, 19
+  \item Peano, 78
+  \item pertenencia, 5
+  \item potenciación, 80
+  \item predicados, 76
+  \item preimagen, 42
+  \item principio
+    \subitem buen orden, 81
+    \subitem inducción, 78
+  \item producto
+    \subitem cartesiano, 12
+    \subitem matrices, 94
+  \item proposiciones
+    \subitem condicionales, 60
+  \item proposición, 46
+    \subitem contraria, 60
+    \subitem contrarrecíproca, 61
+    \subitem equivalente, 58
+    \subitem recíproca, 60
+
+  \indexspace
+
+  \item rango, 26
+  \item razonamiento
+    \subitem válido, 66
+  \item recíproca, 60
+  \item reglas
+    \subitem inferencia, 67
+  \item relaciones, 17
+    \subitem equivalencia, 17
+    \subitem particiones, 17
+  \item restricción
+    \subitem función, 44
+
+  \indexspace
+
+  \item semigrupo, 88
+  \item si y solo si, 51
+  \item silogismo
+    \subitem disyuntivo, 70
+    \subitem hipotético, 69
+  \item sistemas
+    \subitem numéricos, 91
+  \item subgrupo, 101
+    \subitem cíclico, 103
+    \subitem distinguido, 106
+    \subitem trivial, 102
+
+  \indexspace
+
+  \item tabla
+    \subitem Cayley, 89
+    \subitem verdad, 47
+  \item tautología, 53
+  \item teorema
+    \subitem aritmética, 81
+    \subitem Cantor, 84
+
+  \indexspace
+
+  \item unicidad
+    \subitem inverso, 89
+    \subitem neutro, 88
+  \item universal, 77
+  \item unión, 8
+    \subitem disjunta, 16
+    \subitem generalizada, 15
+
+  \indexspace
+
+  \item álgebra
+    \subitem conjuntos, 13
+    \subitem proposiciones, 59
+
+\end{theindex}

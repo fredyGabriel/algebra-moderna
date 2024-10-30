@@ -1,0 +1,60 @@
+\glossaryentry{conjunto?\glossentry{conjunto}|setentrycounter[]{page}"\glsnumberformat}{3}
+\glossaryentry{función?\glossentry{funcion}|setentrycounter[]{page}"\glsnumberformat}{3}
+\glossaryentry{conjunto?\glossentry{conjunto}|setentrycounter[]{page}"\glsnumberformat}{4}
+\glossaryentry{elemento?\glossentry{elemento}|setentrycounter[]{page}"\glsnumberformat}{4}
+\glossaryentry{conjunto universal ("\ensuremath {U})?\glossentry{conjuntouniversal}|setentrycounter[]{page}"\glsnumberformat}{4}
+\glossaryentry{conjunto vacío ("\ensuremath {"\emptyset })?\glossentry{conjuntovacio}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{conjunto unitario?\glossentry{conjuntounitario}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{pertenencia ("\ensuremath {"\in })?\glossentry{pertenencia}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{notación por extensión?\glossentry{notacionextension}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{notación por comprensión?\glossentry{notacioncompresion}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{si y sólo si ("\ensuremath {"\iff })?\glossentry{siysolosi}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{conjunto vacío ("\ensuremath {"\emptyset })?\glossentry{conjuntovacio}|setentrycounter[]{page}"\glsnumberformat}{6}
+\glossaryentry{inclusión ("\ensuremath {"\subset })?\glossentry{inclusion}|setentrycounter[]{page}"\glsnumberformat}{6}
+\glossaryentry{igualdad de conjuntos?\glossentry{igualdad_conjuntos}|setentrycounter[]{page}"\glsnumberformat}{7}
+\glossaryentry{diagrama de Venn?\glossentry{venn}|setentrycounter[]{page}"\glsnumberformat}{7}
+\glossaryentry{unión ("\ensuremath {"\cup })?\glossentry{union}|setentrycounter[]{page}"\glsnumberformat}{8}
+\glossaryentry{intersección ("\ensuremath {"\cap })?\glossentry{interseccion}|setentrycounter[]{page}"\glsnumberformat}{9}
+\glossaryentry{complemento "\ensuremath {A^c}?\glossentry{complemento}|setentrycounter[]{page}"\glsnumberformat}{9}
+\glossaryentry{diferencia simétrica ("\ensuremath {"\triangle })?\glossentry{difsimetrica}|setentrycounter[]{page}"\glsnumberformat}{11}
+\glossaryentry{conjunto potencia ("\ensuremath {"\mathcal {P}(A)})?\glossentry{conjuntopotencia}|setentrycounter[]{page}"\glsnumberformat}{13}
+\glossaryentry{producto cartesiano "\ensuremath {(A "\times B)}?\glossentry{productocartesiano}|setentrycounter[]{page}"\glsnumberformat}{13}
+\glossaryentry{unión disjunta?\glossentry{uniondisjunta}|setentrycounter[]{page}"\glsnumberformat}{18}
+\glossaryentry{relación ("\ensuremath {"\mathcal {R}})?\glossentry{relacion}|setentrycounter[]{page}"\glsnumberformat}{20}
+\glossaryentry{función?\glossentry{funcion}|setentrycounter[]{page}"\glsnumberformat}{20}
+\glossaryentry{relación ("\ensuremath {"\mathcal {R}})?\glossentry{relacion}|setentrycounter[]{page}"\glsnumberformat}{20}
+\glossaryentry{relación de equivalencia ("\ensuremath {"\equiv })?\glossentry{relequivalencia}|setentrycounter[]{page}"\glsnumberformat}{20}
+\glossaryentry{clase de equivalencia ("\ensuremath {[a]})?\glossentry{clasequiv}|setentrycounter[]{page}"\glsnumberformat}{21}
+\glossaryentry{conjunto cociente?\glossentry{conjuntocociente}|setentrycounter[]{page}"\glsnumberformat}{22}
+\glossaryentry{partición?\glossentry{particion}|setentrycounter[]{page}"\glsnumberformat}{22}
+\glossaryentry{dominio?\glossentry{dominio}|setentrycounter[]{page}"\glsnumberformat}{23}
+\glossaryentry{codominio?\glossentry{codominio}|setentrycounter[]{page}"\glsnumberformat}{23}
+\glossaryentry{función?\glossentry{funcion}|setentrycounter[]{page}"\glsnumberformat}{23}
+\glossaryentry{preimagen?\glossentry{preimagen}|setentrycounter[]{page}"\glsnumberformat}{27}
+\glossaryentry{función inyectiva?\glossentry{funcioninyectiva}|setentrycounter[]{page}"\glsnumberformat}{28}
+\glossaryentry{función sobreyectiva?\glossentry{funcionsobreyectiva}|setentrycounter[]{page}"\glsnumberformat}{28}
+\glossaryentry{función biyectiva?\glossentry{funcionbiyectiva}|setentrycounter[]{page}"\glsnumberformat}{28}
+\glossaryentry{rango?\glossentry{rango}|setentrycounter[]{page}"\glsnumberformat}{29}
+\glossaryentry{composición de funciones "\ensuremath {(g "\circ f)}?\glossentry{composicion}|setentrycounter[]{page}"\glsnumberformat}{35}
+\glossaryentry{función inversa?\glossentry{funcioninversa}|setentrycounter[]{page}"\glsnumberformat}{39}
+\glossaryentry{proposición?\glossentry{proposicion}|setentrycounter[]{page}"\glsnumberformat}{50}
+\glossaryentry{operador lógico?\glossentry{operadorlogico}|setentrycounter[]{page}"\glsnumberformat}{50}
+\glossaryentry{tabla de verdad?\glossentry{tablav}|setentrycounter[]{page}"\glsnumberformat}{50}
+\glossaryentry{negación ("\ensuremath {"\neg })?\glossentry{negacion}|setentrycounter[]{page}"\glsnumberformat}{51}
+\glossaryentry{conjunción ("\ensuremath {"\land })?\glossentry{conjuncion}|setentrycounter[]{page}"\glsnumberformat}{51}
+\glossaryentry{disyunción ("\ensuremath {"\lor })?\glossentry{disyuncion}|setentrycounter[]{page}"\glsnumberformat}{52}
+\glossaryentry{disyunción excluyente ("\ensuremath {"\oplus })?\glossentry{disyuncione}|setentrycounter[]{page}"\glsnumberformat}{52}
+\glossaryentry{implicación ("\ensuremath {"\implies })?\glossentry{implicacion}|setentrycounter[]{page}"\glsnumberformat}{53}
+\glossaryentry{bicondicional ("\ensuremath {"\iff })?\glossentry{bicondicional}|setentrycounter[]{page}"\glsnumberformat}{55}
+\glossaryentry{tautología?\glossentry{tautologia}|setentrycounter[]{page}"\glsnumberformat}{57}
+\glossaryentry{contradicción?\glossentry{contradiccion}|setentrycounter[]{page}"\glsnumberformat}{59}
+\glossaryentry{contingencia?\glossentry{contingencia}|setentrycounter[]{page}"\glsnumberformat}{59}
+\glossaryentry{argumento?\glossentry{argumento}|setentrycounter[]{page}"\glsnumberformat}{70}
+\glossaryentry{razonamiento deductivo válido?\glossentry{razonamiento}|setentrycounter[]{page}"\glsnumberformat}{70}
+\glossaryentry{reglas de inferencia?\glossentry{reglasinferencia}|setentrycounter[]{page}"\glsnumberformat}{71}
+\glossaryentry{falacia?\glossentry{falacia}|setentrycounter[]{page}"\glsnumberformat}{76}
+\glossaryentry{falacia formal?\glossentry{falaciaformal}|setentrycounter[]{page}"\glsnumberformat}{78}
+\glossaryentry{cuantificador existencial ("\ensuremath {"\exists })?\glossentry{cuantificadore}|setentrycounter[]{page}"\glsnumberformat}{84}
+\glossaryentry{cuantificador universal ("\ensuremath {"\forall })?\glossentry{cuantificadoru}|setentrycounter[]{page}"\glsnumberformat}{85}
+\glossaryentry{grupo?\glossentry{grupo}|setentrycounter[]{page}"\glsnumberformat}{99}
+\glossaryentry{grupo abeliano?\glossentry{grupoabeliano}|setentrycounter[]{page}"\glsnumberformat}{100}
